@@ -1,0 +1,87 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "74E320110511_bottle",
+  "@type": "Dataset",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/time",
+      "minValue": 1305857459,
+      "maxValue": 1306864800
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/latitude",
+      "unitsText": "degree_north",
+      "minValue": 56.666,
+      "maxValue": 63.322
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/longitude",
+      "unitsText": "degree_east",
+      "minValue": -20.218,
+      "maxValue": -6.143
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "btm_depth",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_floor_depth_below_sea_surface",
+      "unitsText": "meters",
+      "minValue": 16.0,
+      "maxValue": 2758.0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pressure",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_pressure",
+      "unitsText": "dbar",
+      "minValue": 4.2,
+      "maxValue": 2747.9
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_temperature",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_temperature",
+      "unitsText": "degC",
+      "minValue": 2.45,
+      "maxValue": 11.09
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_salinity",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_practical_salinity",
+      "unitsText": "1",
+      "minValue": 33.96,
+      "maxValue": 35.5
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_oxygen",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_oxygen_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 219.9,
+      "maxValue": 333.2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_carbon",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_dissolved_inorganic_carbon_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 2071.6,
+      "maxValue": 2181.2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_time",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/time",
+      "minValue": 1305857459,
+      "maxValue": 1306864800
+    }
+  ]
+}

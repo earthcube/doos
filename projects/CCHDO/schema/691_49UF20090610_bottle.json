@@ -1,0 +1,143 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "49UF20090610_bottle",
+  "@type": "Dataset",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/time",
+      "minValue": 1245113220,
+      "maxValue": 1249654800
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/latitude",
+      "unitsText": "degree_north",
+      "minValue": -4.9943,
+      "maxValue": 49.9812
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/longitude",
+      "unitsText": "degree_east",
+      "minValue": 136.9948,
+      "maxValue": 165.0297
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "btm_depth",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_floor_depth_below_sea_surface",
+      "unitsText": "meters",
+      "minValue": 2362.0,
+      "maxValue": 6209.0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pressure",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_pressure",
+      "unitsText": "dbar",
+      "minValue": 0.0,
+      "maxValue": 2038.6
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_temperature",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_temperature",
+      "unitsText": "degC",
+      "minValue": 1.7951,
+      "maxValue": 30.817
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_salinity",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_practical_salinity",
+      "unitsText": "1",
+      "minValue": 32.9905,
+      "maxValue": 36.0069
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_salinity",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_practical_salinity",
+      "unitsText": "1",
+      "minValue": 33.0121,
+      "maxValue": 35.5746
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "oxygen",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_oxygen_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 17.0,
+      "maxValue": 343.0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "silicate",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_silicate_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 0.6,
+      "maxValue": 167.54
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrate",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_nitrate_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": -0.01,
+      "maxValue": 45.1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrite",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_nitrite_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 0.0,
+      "maxValue": 1.63
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "phosphate",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_phosphate_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 0.0,
+      "maxValue": 3.2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_carbon",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_dissolved_inorganic_carbon_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 1889.9,
+      "maxValue": 2445.6
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_total_h_scale",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_ph_reported_on_total_scale",
+      "unitsText": "1",
+      "minValue": 7.373,
+      "maxValue": 8.1432
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_temperature",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/temperature_of_analysis_of_sea_water",
+      "unitsText": "degC",
+      "minValue": 25.0,
+      "maxValue": 25.0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_time",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/time",
+      "minValue": 1245113220,
+      "maxValue": 1249658340
+    }
+  ]
+}

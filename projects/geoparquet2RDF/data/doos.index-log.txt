@@ -1,0 +1,44 @@
+2025-12-03 09:17:16.675 - INFO: [1mQLever IndexBuilder, compiled on Wed Nov 12 15:33:30 UTC 2025 using git hash 8c99fe[22m
+2025-12-03 09:17:16.680 - INFO: Locale was not specified in settings file, default is en_US
+2025-12-03 09:17:16.680 - INFO: You specified "locale = en_US" and "ignore-punctuation = 0"
+2025-12-03 09:17:16.680 - INFO: You specified "num-triples-per-batch = 100,000", choose a lower value if the index builder runs out of memory
+2025-12-03 09:17:16.680 - INFO: By default, integers that cannot be represented by QLever will throw an exception
+2025-12-03 09:17:16.680 - WARN: Implicitly using the parallel parser for a single input file for reasons of backward compatibility; this is deprecated, please use the command-line option --parse-parallel or -p
+2025-12-03 09:17:16.680 - INFO: Processing triples from single input stream /dev/stdin (parallel = true) ...
+2025-12-03 09:17:16.680 - INFO: Parsing input triples and creating partial vocabularies, one per batch ...
+2025-12-03 09:17:16.844 - INFO: Triples parsed: 46,702 [average speed 0.4 M/s] 
+2025-12-03 09:17:16.856 - INFO: Number of triples created (including QLever-internal ones): 46,702 [may contain duplicates]
+2025-12-03 09:17:16.856 - INFO: Number of partial vocabularies created: 1
+2025-12-03 09:17:16.856 - INFO: Merging partial vocabularies ...
+2025-12-03 09:17:16.859 - INFO: Words merged: 9,863 [average speed 3.7 M/s] 
+2025-12-03 09:17:16.864 - INFO: Finished writing compressed internal vocabulary, size = 159 kB [uncompressed = 679.7 kB, ratio = 23%]
+2025-12-03 09:17:16.864 - INFO: Number of words in external vocabulary: 9,863
+2025-12-03 09:17:16.865 - INFO: Converting triples from local IDs to global IDs ...
+2025-12-03 09:17:16.869 - INFO: Triples converted: 46,702 [average speed 15.2 M/s] 
+2025-12-03 09:17:16.871 - INFO: Creating permutations SPO and SOP ...
+2025-12-03 09:17:16.874 - INFO: Number of inputs to `uniqueView`: 46,702
+2025-12-03 09:17:16.874 - INFO: Number of unique elements: 46,702
+2025-12-03 09:17:16.874 - INFO: Triples sorted: 46,702 [average speed 25.9 M/s] 
+2025-12-03 09:17:16.885 - INFO: Statistics for SPO: #relations = 7,374, #blocks = 1, #triples = 46,702
+2025-12-03 09:17:16.885 - INFO: Statistics for SOP: #relations = 7,374, #blocks = 1, #triples = 46,702
+2025-12-03 09:17:16.885 - INFO: Number of distinct patterns: 3
+2025-12-03 09:17:16.885 - INFO: Number of subjects with pattern: 7,374 [all]
+2025-12-03 09:17:16.885 - INFO: Total number of distinct subject-predicate pairs: 41,786
+2025-12-03 09:17:16.885 - INFO: Average number of predicates per subject: 5.7
+2025-12-03 09:17:16.885 - INFO: Average number of subjects per predicate: 3,214
+2025-12-03 09:17:16.886 - INFO: Creating permutations OSP and OPS ...
+2025-12-03 09:17:16.893 - INFO: Triples sorted: 46,702 [average speed 8.1 M/s] 
+2025-12-03 09:17:16.908 - INFO: Statistics for OSP: #relations = 12,293, #blocks = 1, #triples = 46,702
+2025-12-03 09:17:16.908 - INFO: Statistics for OPS: #relations = 12,293, #blocks = 1, #triples = 46,702
+2025-12-03 09:17:16.908 - INFO: Adding 7,374 triples to the POS and PSO permutation for the internal `ql:has-pattern` ...
+2025-12-03 09:17:16.909 - INFO: Creating permutations PSO and POS ...
+2025-12-03 09:17:16.909 - INFO: Number of inputs to `uniqueView`: 7,374
+2025-12-03 09:17:16.909 - INFO: Number of unique elements: 7,374
+2025-12-03 09:17:16.909 - INFO: Triples sorted: 7,374 [average speed 48.2 M/s] 
+2025-12-03 09:17:16.912 - INFO: Statistics for PSO: #relations = 1, #blocks = 1, #triples = 7,374
+2025-12-03 09:17:16.912 - INFO: Statistics for POS: #relations = 1, #blocks = 1, #triples = 7,374
+2025-12-03 09:17:16.913 - INFO: Creating permutations PSO and POS ...
+2025-12-03 09:17:16.915 - INFO: Triples sorted: 46,702 [average speed 30.7 M/s] 
+2025-12-03 09:17:16.931 - INFO: Statistics for PSO: #relations = 13, #blocks = 1, #triples = 46,702
+2025-12-03 09:17:16.931 - INFO: Statistics for POS: #relations = 13, #blocks = 1, #triples = 46,702
+2025-12-03 09:17:16.931 - INFO: Index build completed

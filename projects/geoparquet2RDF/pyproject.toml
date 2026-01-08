@@ -1,0 +1,13 @@
+[project]
+name = "geoparquet2rdf"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "geopandas>=1.1.1",
+    "morph-kgc>=2.9.0",
+    "pyarrow>=22.0.0",
+    "pyld>=2.0.4",
+    "qlever>=0.5.33",
+]

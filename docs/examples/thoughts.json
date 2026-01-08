@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "Dataset",
+  "@id": "https://registry.org/permanentUrlToThisJsonDoc",
+  "name": "A concise but descriptive name of the dataset",
+  "description": "An extended, free-text description of what's in the dataset, who created it, and other attributes",
+  "url": "https://urlToTheDatasetOrLandingPage.org/",
+  "keywords": ["Keyword 1", "Keyword 2", "Keyword 3"],
+  "potentialAction": {
+    "@type": "DownloadAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "s3://your-bucket-name/path/to/file",
+      "encodingType": "application/octet-stream",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "protocol",
+        "value": "s3"
+      }
+    }
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "contentUrl": "http://urlToDirectDownloadOfThisDataset.org/",
+      "encodingFormat": "text/csv"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "s3://urlToDirectDownloadOfThisDataset.org/prefix/object",
+      "encodingFormat": "text/csv",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "protocol",
+          "value": "s3"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "s3Url",
+          "value": "s3://your-bucket-name/path/to/file"
+        }
+      ]
+    }
+  ],
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoShape",
+      "description": "schema.org expects lat long (Y X) coordinate order",
+      "polygon": "10.161667 142.014,18.033833 142.014,18.033833 147.997833,10.161667 147.997833,10.161667 142.014"
+    },
+    "additionalProperty": {
+      "@type": "PropertyValue",
+      "propertyID": "https://dbpedia.org/page/Spatial_reference_system",
+      "value": "https://www.w3.org/2003/01/geo/wgs84_pos"
+    }
+  },
+  "provider": [
+    {
+      "@type": "Organization",
+      "legalName": "Legal Name of Organisation which generated the dataset",
+      "name": "Other Name of Organisation which generated the dataset",
+      "url": "https://organisationWebsite.org/"
+    }
+  ]
+}

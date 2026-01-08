@@ -1,0 +1,632 @@
+
+{
+  "@context": {"@vocab":"https://schema.org/"},
+  "@type": "Dataset",
+  "name": "JASL/UHSLC Research Quality Tide Gauge Data (hourly)",
+  "headline": "global_hourly_rqds",
+  "description": "The Joint Archive for Sea Level (JASL) Research Quality Data Set (RQDS) is a collaboration between the University of Hawaii Sea Level Center (UHSLC) and the World Data Center for Oceanography of the National Centers for Environmental Information (NCEI), National Oceanic and Atmospheric Administration (NOAA). The objective of the JASL RQDS is to assemble a well-documented, quality-controlled archive of hourly and daily sea level values that is appropriate for scientific research applications. The JASL RQDS is the largest global collection of quality-controlled hourly sea level data, and ongoing efforts seek to acquire new sites and uncover historic records as available.\nacknowledgement=The JASL/UHSLC Research Quality Data Set is supported by the National Oceanic and Atmospheric Administration (NOAA) via the National Centers for Environmental Information (NCEI) and the Office of Climate Observations (OCO).\nacknowledgment=The JASL/UHSLC Research Quality Data Set is supported by the National Oceanic and Atmospheric Administration (NOAA) via the National Centers for Environmental Information (NCEI) and the Office of Climate Observations (OCO).\ncdm_data_type=TimeSeries\ncdm_timeseries_variables=uhslc_id, latitude, longitude\nConventions=CF-1.6, ACDD-1.3, COARDS, NCCSV-1.2\nEasternmost_Easting=358.86\nfeatureType=TimeSeries\ngeospatial_lat_max=78.938\ngeospatial_lat_min=-77.85\ngeospatial_lat_units=degrees_north\ngeospatial_lon_max=358.86\ngeospatial_lon_min=3.412\ngeospatial_lon_units=degrees_east\ninfoUrl=https://uhslc.soest.hawaii.edu/data/\ninstitution=University of Hawaii Sea Level Center\nNorthernmost_Northing=78.938\nprocessing_level=The JASL receives hourly data from regional and national sea level networks operating world-wide. JASL RQDS data undergo a level 1 quality assessment focused on variability (e.g., unit and timing evaluation, outlier detection, combination of multiple channels into a primary channel, etc.) followed by a level 2 quality assessment focused on datum stability (e.g., tide gauge datum evaluation, assessment of level ties to tide gauge benchmarks, comparison with nearby stations, etc.).\nsourceUrl=(local files)\nSouthernmost_Northing=-77.85\nstandard_name_vocabulary=CF Standard Name Table v55\nsubsetVariables=latitude, longitude, station_name, station_country, station_country_code, record_id, uhslc_id, version, gloss_id, ssc_id, decimation_method, reference_code, reference_offset\ntime_coverage_end=2019-12-31T22:59:59Z\ntime_coverage_start=1846-01-04T00:00:00Z\nWesternmost_Easting=3.412",
+  "url": "https://osmc.noaa.gov/erddap/tabledap/global_hourly_rqds.html",
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "ERDDAP Data Server at OSMC",
+    "sameAs": "https://osmc.noaa.gov/erddap"
+  },
+  "keywords": [
+    "3166-1",
+    "archive",
+    "center",
+    "centers",
+    "code",
+    "commission",
+    "control",
+    "country",
+    "data",
+    "database",
+    "decimation",
+    "decimation_method",
+    "each",
+    "environmental",
+    "facility",
+    "gauge",
+    "global",
+    "gloss",
+    "gloss_id",
+    "hawaii",
+    "hour",
+    "hourly",
+    "i.e.",
+    "identifier",
+    "information",
+    "intergovernmental",
+    "ioc",
+    "iso",
+    "jasl",
+    "jasl/uhslc",
+    "joint",
+    "latitude",
+    "level",
+    "longitude",
+    "meteorological",
+    "method",
+    "monitoring",
+    "name",
+    "national",
+    "ncei",
+    "nesdis",
+    "noaa",
+    "number",
+    "numeric",
+    "observing",
+    "oceanographic",
+    "offset",
+    "organisation",
+    "produced",
+    "quality",
+    "record",
+    "record_id",
+    "reference",
+    "reference_code",
+    "reference_offset",
+    "relative",
+    "research",
+    "rqds",
+    "sea",
+    "sea_level",
+    "sealevel",
+    "set",
+    "ssc",
+    "ssc_id",
+    "station",
+    "station_country",
+    "station_country_code",
+    "station_name",
+    "system",
+    "tide",
+    "time",
+    "uhslc",
+    "uhslc_id",
+    "unique",
+    "university",
+    "used",
+    "version",
+    "vliz",
+    "wmo",
+    "wmo/ioc",
+    "world"
+  ],
+  "license": "The data may be used and redistributed for free but is not intended\nfor legal use, since it may contain inaccuracies. Neither the data\nContributor, ERD, NOAA, nor the United States Government, nor any\nof their employees or contractors, makes any warranty, express or\nimplied, including warranties of merchantability and fitness for a\nparticular purpose, or assumes any legal liability for the accuracy,\ncompleteness, or usefulness, of this information.",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "sea_level",
+      "alternateName": "relative sea level",
+      "description": "relative sea level",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": -32767
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "relative sea level"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "platform",
+          "value": "station_name, station_country, station_country_code, uhslc_id, gloss_id, ssc_id"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "source",
+          "value": "in situ tide gauge water level observations"
+        }
+      ],
+      "maxValue": 10090,
+      "minValue": -31082,
+      "unitText": "millimeters"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "alternateName": "Time",
+      "description": "Time",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "T"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        }
+      ],
+      "maxValue": "2019-12-31T22:59:59Z",
+      "minValue": "1846-01-04T00:00:00Z",
+      "propertyID": "time"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "alternateName": "Latitude",
+      "description": "Latitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "Y"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 90
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -90
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Latitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "latitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "valid_max",
+          "value": 90
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "valid_min",
+          "value": -90
+        }
+      ],
+      "maxValue": 78.938,
+      "minValue": -77.85,
+      "propertyID": "latitude",
+      "unitText": "degrees_north"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "alternateName": "Longitude",
+      "description": "Longitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lon"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "X"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 180
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -180
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "valid_max",
+          "value": 360
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "valid_min",
+          "value": 0
+        }
+      ],
+      "maxValue": 358.86,
+      "minValue": 3.412,
+      "propertyID": "longitude",
+      "unitText": "degrees_east"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "station_name",
+      "alternateName": "station name",
+      "description": "station name",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "station name"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "station_country",
+      "alternateName": "station country (ISO 3166-1)",
+      "description": "station country (ISO 3166-1)",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "station country (ISO 3166-1)"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "station_country_code",
+      "alternateName": "station country code (ISO 3166-1 numeric)",
+      "description": "station country code (ISO 3166-1 numeric)",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "comment",
+          "value": "These are 3-digit country codes (e.g., 003) stored as integers."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "station country code (ISO 3166-1 numeric)"
+        }
+      ],
+      "maxValue": 887,
+      "minValue": 10
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "record_id",
+      "alternateName": "unique identifier for each record (i.e., station and version) in the database",
+      "description": "unique identifier for each record (i.e., station and version) in the database",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "unique identifier for each record (i.e., station and version) in the database"
+        }
+      ],
+      "maxValue": 9151,
+      "minValue": 11
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "uhslc_id",
+      "alternateName": "unique station ID number used by the University of Hawaii Sea Level Center (UHSLC)",
+      "description": "unique station ID number used by the University of Hawaii Sea Level Center (UHSLC)",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "cf_role",
+          "value": "timeseries_id"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 100
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "unique station ID number used by the University of Hawaii Sea Level Center (UHSLC)"
+        }
+      ],
+      "maxValue": 915,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "version",
+      "alternateName": "station version",
+      "description": "station version",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "comment",
+          "value": "The station version is a letter from A to Z differentiating segments of a station record that cannot be linked to a common benchmark."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "station version"
+        }
+      ],
+      "maxValue": 69,
+      "minValue": 65
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "gloss_id",
+      "alternateName": "unique station ID number used by the WMO/IOC Global Sea Level Observing System (GLOSS)",
+      "description": "unique station ID number used by the WMO/IOC Global Sea Level Observing System (GLOSS)",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 100
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "unique station ID number used by the WMO/IOC Global Sea Level Observing System (GLOSS)"
+        }
+      ],
+      "maxValue": 352,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ssc_id",
+      "alternateName": "unique station ID code in the Sealevel Station Catalog (SSC) produced by the WMO/IOC Sea Level Monitoring Facility (VLIZ)",
+      "description": "unique station ID code in the Sealevel Station Catalog (SSC) produced by the WMO/IOC Sea Level Monitoring Facility (VLIZ)",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "comment",
+          "value": "Note that SSC IDs vary in length. The IDs are padded with space characters to produce the retangular character matrix provided here."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "unique station ID code in the Sealevel Station Catalog (SSC) produced by the WMO/IOC Sea Level Monitoring Facility (VLIZ)"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "decimation_method",
+      "alternateName": "decimation method",
+      "description": "decimation method",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 5
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_meanings",
+          "value": "filtered, average, spot readings, other"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_values",
+          "value": "1, 2, 3, 4"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "decimation method"
+        }
+      ],
+      "maxValue": 4,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "reference_code",
+      "alternateName": "reference code",
+      "description": "reference code",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 5
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_meanings",
+          "value": "data referenced to datum, data not referenced to datum"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_values",
+          "value": "R, X"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "reference code"
+        }
+      ],
+      "maxValue": 82,
+      "minValue": 82
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "reference_offset",
+      "alternateName": "reference offset",
+      "description": "reference offset",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "comment",
+          "value": "This is a constant offset to be added to each data value to make the data relative to the tide staff zero or primary datum."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "reference offset"
+        }
+      ],
+      "maxValue": 10000,
+      "minValue": 0,
+      "unitText": "millimeters"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "University of Hawaii Sea Level Center (UHSLC)",
+    "email": "philiprt@hawaii.edu, markm@soest.hawaii.edu",
+    "sameAs": "http://uhslc.soest.hawaii.edu"
+  },
+  "dateCreated": "2020-10-28T00:31:38Z",
+  "identifier": "global_hourly_rqds",
+  "temporalCoverage": "1846-01-04T00:00:00Z/2019-12-31T22:59:59Z",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "-77.85 -180 78.938 180"
+    }
+  }
+}

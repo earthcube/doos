@@ -1,0 +1,18 @@
+2025-12-15 08:40:28.288 - INFO: [1mQLever Server, compiled on Wed Dec  3 09:02:37 UTC 2025 using git hash 562396[22m
+2025-12-15 08:40:28.294 - INFO: Initializing server ...
+2025-12-15 08:40:28.295 - INFO: The git hash used to build this index was "8c99fe"
+2025-12-15 08:40:28.296 - INFO: Reading vocabulary from file doos.vocabulary.words ...
+2025-12-15 08:40:28.297 - INFO: Done, number of words: 9,863
+2025-12-15 08:40:28.297 - INFO: Number of words in internal vocabulary (these are also part of the external vocabulary): 15
+2025-12-15 08:40:28.301 - INFO: Registered PSO permutation: #relations = 1, #blocks = 1, #triples = 7,374
+2025-12-15 08:40:28.302 - INFO: Registered PSO permutation: #relations = 13, #blocks = 1, #triples = 46,702
+2025-12-15 08:40:28.302 - INFO: Registered POS permutation: #relations = 1, #blocks = 1, #triples = 7,374
+2025-12-15 08:40:28.303 - INFO: Registered POS permutation: #relations = 13, #blocks = 1, #triples = 46,702
+2025-12-15 08:40:28.304 - INFO: Registered OPS permutation: #relations = 12,293, #blocks = 1, #triples = 46,702
+2025-12-15 08:40:28.304 - INFO: Registered OSP permutation: #relations = 12,293, #blocks = 1, #triples = 46,702
+2025-12-15 08:40:28.305 - INFO: Registered SPO permutation: #relations = 7,374, #blocks = 1, #triples = 46,702
+2025-12-15 08:40:28.306 - INFO: Registered SOP permutation: #relations = 7,374, #blocks = 1, #triples = 46,702
+2025-12-15 08:40:28.306 - INFO: Reading patterns from file doos.index.patterns ...
+2025-12-15 08:40:28.306 - INFO: Sorting random result tables to estimate the sorting performance of this machine ...
+2025-12-15 08:40:28.308 - INFO: Access token for restricted API calls is ""
+2025-12-15 08:40:28.308 - INFO: The server is ready, listening for requests on port 7007 ...

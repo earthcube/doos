@@ -1,0 +1,89 @@
+direction: right
+
+
+classes: {
+data: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: "#44C7B1"
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+input: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: lightblue
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+code: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: honeydew
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+group: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: pink
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+}
+
+
+
+do: Deep Ocean
+oih: OIH
+
+do.class: group
+oih.class: group
+
+erdapp: ERDAPP\n Kevin Obrien
+
+erdapp.class: code
+
+argo: Argo
+r2r: R2R
+obis: OBIS
+os: OceanSites
+cc: CCHDO
+
+argo.class: data
+r2r.class: data
+obis.class: data
+os.class: data
+cc.class: data
+
+
+oih -> obis
+oih -> argo
+oih -> emodnet
+
+do -> obis
+do -> argo
+do -> r2r
+do -> os
+do -> cc
+
+argo -> erdapp
+argo -> ftp
+argo -> http
+
+ftp.class: code
+http.class: code
+
+cc -> erdapp
+

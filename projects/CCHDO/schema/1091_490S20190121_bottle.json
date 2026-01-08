@@ -1,0 +1,128 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "490S20190121_bottle",
+  "@type": "Dataset",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/time",
+      "minValue": 1548487680,
+      "maxValue": 1549982760
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/latitude",
+      "unitsText": "degree_north",
+      "minValue": -65.8512,
+      "maxValue": -63.2455
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/longitude",
+      "unitsText": "degree_east",
+      "minValue": 128.3686,
+      "maxValue": 150.0026
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "btm_depth",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_floor_depth_below_sea_surface",
+      "unitsText": "meters",
+      "minValue": 199.0,
+      "maxValue": 4193.0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pressure",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_pressure",
+      "unitsText": "dbar",
+      "minValue": 4.2,
+      "maxValue": 4270.5
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_temperature",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_temperature",
+      "unitsText": "degC",
+      "minValue": -1.8518,
+      "maxValue": 2.609
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_salinity",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_practical_salinity",
+      "unitsText": "1",
+      "minValue": 33.2759,
+      "maxValue": 34.7389
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_salinity",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_practical_salinity",
+      "unitsText": "1",
+      "minValue": 33.2824,
+      "maxValue": 34.7394
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_oxygen",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_oxygen_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 173.5,
+      "maxValue": 369.06
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "oxygen",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_oxygen_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 172.32,
+      "maxValue": 365.79
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ref_temperature",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_temperature",
+      "unitsText": "degC",
+      "minValue": -1.85161,
+      "maxValue": 2.60884
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_fluor",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_chlorophyll_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.051,
+      "maxValue": 7.503
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "par",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/downwelling_photosynthetic_photon_flux_in_sea_water",
+      "unitsText": "umol m-2 s-1",
+      "minValue": 0.197,
+      "maxValue": 73.382
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_beamcp",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/volume_beam_attenuation_coefficient_of_radiative_flux_in_sea_water_corrected_for_pure_water_attenuance",
+      "unitsText": "m^-1",
+      "minValue": 0.0021,
+      "maxValue": 0.6439
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "package_depth",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/depth",
+      "unitsText": "meters",
+      "minValue": 4.2,
+      "maxValue": 4187.1
+    }
+  ]
+}

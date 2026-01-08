@@ -1,0 +1,302 @@
+
+{
+  "@context": {"@vocab":"https://schema.org/"},
+  "@type": "Dataset",
+  "name": "OSMC normalized observations from GTS",
+  "headline": "OSMC_Points",
+  "description": "OSMC normalized In-situ Real time GTS data\ncdm_altitude_proxy=observation_depth\ncdm_data_type=Point\nConventions=COARDS, CF-1.0, Unidata Dataset Discovery v1.0\nEasternmost_Easting=180.0\nfeatureType=Point\ngeospatial_lat_max=89.0\ngeospatial_lat_min=-89.0\ngeospatial_lat_units=degrees_north\ngeospatial_lon_max=180.0\ngeospatial_lon_min=-180.0\ngeospatial_lon_units=degrees_east\ninfoUrl=http://www.osmc.noaa.gov\ninstitution=OSMC\nNorthernmost_Northing=89.0\nsourceUrl=(source database)\nSouthernmost_Northing=-89.0\nstandard_name_vocabulary=CF-11\nsubsetVariables=parameter,platform\nWesternmost_Easting=-180.0",
+  "url": "https://osmc.noaa.gov/erddap/tabledap/OSMC_Points.html",
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "ERDDAP Data Server at OSMC",
+    "sameAs": "https://osmc.noaa.gov/erddap"
+  },
+  "keywords": [
+    "atmosphere",
+    "biology",
+    "biosphere",
+    "earth science",
+    "environment",
+    "ocean"
+  ],
+  "license": "The data may be used and redistributed for free but is not intended\nfor legal use, since it may contain inaccuracies. Neither the data\nContributor, ERD, NOAA, nor the United States Government, nor any\nof their employees or contractors, makes any warranty, express or\nimplied, including warranties of merchantability and fitness for a\nparticular purpose, or assumes any legal liability for the accuracy,\ncompleteness, or usefulness, of this information.",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "PLATFORM_CODE",
+      "alternateName": "Station ID",
+      "description": "Station ID",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Identifier"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Station ID"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "alternateName": "Time",
+      "description": "Time",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "T"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        }
+      ],
+      "propertyID": "time"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "alternateName": "Latitude",
+      "description": "Latitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "Y"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Latitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "latitude"
+        }
+      ],
+      "maxValue": 89,
+      "minValue": -89,
+      "propertyID": "latitude",
+      "unitText": "degrees_north"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "alternateName": "Longitude",
+      "description": "Longitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lon"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "X"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "longitude"
+        }
+      ],
+      "maxValue": 180,
+      "minValue": -180,
+      "propertyID": "longitude",
+      "unitText": "degrees_east"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "platform",
+      "alternateName": "platform",
+      "description": "platform",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Unknown"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "parameter",
+      "alternateName": "parameter",
+      "description": "parameter",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Unknown"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "OBSERVATION_VALUE",
+      "alternateName": "OBSERVATION_VALUE",
+      "description": "OBSERVATION_VALUE",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Unknown"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "OBSERVATION_DEPTH",
+      "alternateName": "OBSERVATION_DEPTH",
+      "description": "OBSERVATION_DEPTH",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "cdm_altitude_proxy",
+          "value": "observation_depth"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "COUNTRY_NAME",
+      "alternateName": "COUNTRY_NAME",
+      "description": "COUNTRY_NAME",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Statistics"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "organization_name",
+      "alternateName": "ORGANIZATION NAME",
+      "description": "ORGANIZATION NAME",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Unknown"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "ORGANIZATION NAME"
+        }
+      ]
+    }
+  ],
+  "identifier": "OSMC_Points",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "-89 -180 89 180"
+    }
+  }
+}

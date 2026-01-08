@@ -1,0 +1,28 @@
+#
+# qlever get-data  #
+# qlever index     #
+# qlever start     #
+# removed from ui section: UI_CONFIG = XYZ
+
+[data]
+NAME              = doos
+BASE_URL          = https://doos.org/hackathon
+GET_DATA_CMD      = cp FOO ./data
+DESCRIPTION       = BVBRC metadata ${BASE_URL}
+TEXT_DESCRIPTION  = BVBRC release graph description
+FORMAT            = nt
+
+[index]
+INPUT_FILES     = ./output/*
+CAT_INPUT_FILES = cat ${INPUT_FILES}
+SETTINGS_JSON   = { "add-text-index": true, "ascii-prefixes-only": false, "num-triples-per-batch": 100000 }
+
+[server]
+PORT               = 7007
+TIMEOUT            = 240s
+
+[runtime]
+SYSTEM = docker
+IMAGE  = docker.io/adfreiburg/qlever:latest
+
+[ui]

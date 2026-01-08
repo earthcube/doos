@@ -1,0 +1,386 @@
+
+{
+  "@context": {"@vocab":"https://schema.org/"},
+  "@type": "Dataset",
+  "name": "JCOMMPS Active WMO ID LIST",
+  "headline": "wmo_list",
+  "description": "JCOMMPS Active WMO ID LIST\ncdm_data_type=Other\nConventions=COARDS, CF-1.6, ACDD-1.3\ninfoUrl=???\ninstitution=OSMC JCOMMOPS\nsourceUrl=(local files)\nstandard_name_vocabulary=CF Standard Name Table v55\nsubsetVariables=ARGOS_PROG,TELECOM_SYSTEM,PTFM_NAME,PTFM_FAMILY,PTFM_TYPE,PROGRAM,ROLE,AGENCY,COUNTRY\ntime_coverage_end=2025-12-31\ntime_coverage_start=1900-01-01",
+  "url": "https://osmc.noaa.gov/erddap/tabledap/wmo_list.html",
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "ERDDAP Data Server at OSMC",
+    "sameAs": "https://osmc.noaa.gov/erddap"
+  },
+  "keywords": [
+    "agency",
+    "alloc",
+    "argos",
+    "ARGOS_PROG",
+    "contact",
+    "CONTACT_NAME",
+    "country",
+    "data",
+    "date",
+    "dealloc",
+    "DEALLOC_DATE",
+    "email",
+    "family",
+    "local",
+    "meteorological",
+    "name",
+    "organisation",
+    "prog",
+    "program",
+    "ptfm",
+    "PTFM_FAMILY",
+    "PTFM_NAME",
+    "PTFM_TYPE",
+    "role",
+    "source",
+    "system",
+    "telecom",
+    "TELECOM_ID",
+    "TELECOM_SYSTEM",
+    "time",
+    "type",
+    "wmo",
+    "world"
+  ],
+  "license": "The data may be used and redistributed for free but is not intended\nfor legal use, since it may contain inaccuracies. Neither the data\nContributor, ERD, NOAA, nor the United States Government, nor any\nof their employees or contractors, makes any warranty, express or\nimplied, including warranties of merchantability and fitness for a\nparticular purpose, or assumes any legal liability for the accuracy,\ncompleteness, or usefulness, of this information.",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "WMO",
+      "alternateName": "WMO",
+      "description": "WMO",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "WMO"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "TELECOM_ID",
+      "alternateName": "TELECOM ID",
+      "description": "TELECOM ID",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "TELECOM ID"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "TELECOM_SYSTEM",
+      "alternateName": "TELECOM SYSTEM",
+      "description": "TELECOM SYSTEM",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "TELECOM SYSTEM"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PTFM_NAME",
+      "alternateName": "PTFM NAME",
+      "description": "PTFM NAME",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "PTFM NAME"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PTFM_FAMILY",
+      "alternateName": "PTFM FAMILY",
+      "description": "PTFM FAMILY",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "PTFM FAMILY"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PTFM_TYPE",
+      "alternateName": "PTFM TYPE",
+      "description": "PTFM TYPE",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "PTFM TYPE"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CONTACT_NAME",
+      "alternateName": "CONTACT NAME",
+      "description": "CONTACT NAME",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "CONTACT NAME"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "EMAIL",
+      "alternateName": "EMAIL",
+      "description": "EMAIL",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "EMAIL"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PROGRAM",
+      "alternateName": "PROGRAM",
+      "description": "PROGRAM",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "PROGRAM"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ROLE",
+      "alternateName": "ROLE",
+      "description": "ROLE",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "ROLE"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AGENCY",
+      "alternateName": "AGENCY",
+      "description": "AGENCY",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "AGENCY"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "COUNTRY",
+      "alternateName": "COUNTRY",
+      "description": "COUNTRY",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "COUNTRY"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "alternateName": "ALLOC DATE",
+      "description": "ALLOC DATE",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "T"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "ALLOC DATE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "source_name",
+          "value": "ALLOC_DATE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_precision",
+          "value": "1970-01-01"
+        }
+      ],
+      "maxValue": "2025-12-31",
+      "minValue": "1900-01-01",
+      "propertyID": "time"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DEALLOC_DATE",
+      "alternateName": "DEALLOC DATE",
+      "description": "DEALLOC DATE",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "DEALLOC DATE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_precision",
+          "value": "1970-01-01"
+        }
+      ],
+      "maxValue": 1.6989696E9,
+      "minValue": -6.14920032E10,
+      "propertyID": "time",
+      "unitText": "seconds since 1970-01-01T00:00:00Z"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ARGOS_PROG",
+      "alternateName": "ARGOS PROG",
+      "description": "ARGOS PROG",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "ARGOS PROG"
+        }
+      ]
+    }
+  ],
+  "identifier": "wmo_list",
+  "temporalCoverage": "1900-01-01/2025-12-31"
+}

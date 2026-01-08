@@ -1,0 +1,20 @@
+PREFIX schema: <https://schema.org/>
+
+SELECT DISTINCT ?g ?subj ?vm ?name ?minValue ?maxValue ?propertyId ?unitCode ?unitText
+WHERE {
+  GRAPH ?g {
+    ?subj schema:variableMeasured ?vm .
+    ?vm a schema:PropertyValue ;
+        schema:name ?name ;
+        schema:minValue ?minValue ;
+        schema:maxValue ?maxValue .
+
+    OPTIONAL { ?vm schema:propertyID ?propertyId . }
+    OPTIONAL { ?vm schema:unitCode   ?unitCode . }
+    OPTIONAL { ?vm schema:unitText   ?unitText . }
+  }
+  FILTER(CONTAINS(STR(?g), "bodc"))
+}
+ORDER BY ?name ?subj
+
+

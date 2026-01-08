@@ -1,0 +1,86 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "35COSURTPAC_5_bottle",
+  "@type": "Dataset",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/time",
+      "minValue": 505699200,
+      "maxValue": 507102300
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/latitude",
+      "unitsText": "degree_north",
+      "minValue": -20.0,
+      "maxValue": 10.0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/longitude",
+      "unitsText": "degree_east",
+      "minValue": 164.967,
+      "maxValue": 166.083
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "btm_depth",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_floor_depth_below_sea_surface",
+      "unitsText": "meters"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pressure",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_pressure",
+      "unitsText": "dbar",
+      "minValue": 0.0,
+      "maxValue": 1016.0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_temperature_unk",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_temperature",
+      "unitsText": "degC",
+      "minValue": 3.96,
+      "maxValue": 30.46
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_salinity",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_practical_salinity",
+      "unitsText": "1",
+      "minValue": 33.56,
+      "maxValue": 35.99
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "phosphate_l",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mole_concentration_of_phosphate_in_sea_water",
+      "unitsText": "umol l-1",
+      "minValue": 0.0,
+      "maxValue": 3.7
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrite_nitrate_l",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mole_concentration_of_nitrate_and_nitrite_in_sea_water",
+      "unitsText": "umol l-1",
+      "minValue": 0.0,
+      "maxValue": 29.34
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "chlorophyll_a",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_chlorophyll_a_in_sea_water",
+      "unitsText": "ug/l",
+      "minValue": 0.0,
+      "maxValue": 0.99
+    }
+  ]
+}

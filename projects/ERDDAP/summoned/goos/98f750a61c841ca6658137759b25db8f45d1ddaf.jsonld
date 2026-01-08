@@ -1,0 +1,188 @@
+
+{
+  "@context": {"@vocab":"https://schema.org/"},
+  "@type": "Dataset",
+  "name": "IOOS GTS counts",
+  "headline": "ioos_obs_counts",
+  "description": "IOOS GTS counts\ncdm_data_type=Other\nConventions=COARDS, CF-1.6, ACDD-1.3\ninfoUrl=https://ioos.noaa.gov/\ninstitution=IOOS, NDBC\nsourceUrl=(local files)\nstandard_name_vocabulary=CF Standard Name Table v29\nsubsetVariables=locationID,region,sponsor\ntime_coverage_end=2021-07-01T00:00:00Z\ntime_coverage_start=2019-01-01T00:00:00Z",
+  "url": "https://osmc.noaa.gov/erddap/tabledap/ioos_obs_counts.html",
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "ERDDAP Data Server at OSMC",
+    "sameAs": "https://osmc.noaa.gov/erddap"
+  },
+  "keywords": [
+    "data",
+    "identifier",
+    "integrated",
+    "ioos",
+    "local",
+    "locationID",
+    "met",
+    "observing",
+    "ocean",
+    "region",
+    "source",
+    "sponsor",
+    "system",
+    "time",
+    "time2",
+    "wave"
+  ],
+  "license": "The data may be used and redistributed for free but is not intended\nfor legal use, since it may contain inaccuracies. Neither the data\nContributor, ERD, NOAA, nor the United States Government, nor any\nof their employees or contractors, makes any warranty, express or\nimplied, including warranties of merchantability and fitness for a\nparticular purpose, or assumes any legal liability for the accuracy,\ncompleteness, or usefulness, of this information.",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "alternateName": "Time",
+      "description": "Time",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "T"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_precision",
+          "value": "1970-01T"
+        }
+      ],
+      "maxValue": "2021-07-01T00:00:00Z",
+      "minValue": "2019-01-01T00:00:00Z",
+      "propertyID": "time"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "locationID",
+      "alternateName": "Location ID",
+      "description": "Location ID",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Location ID"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "region",
+      "alternateName": "Region",
+      "description": "Region",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Region"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "sponsor",
+      "alternateName": "Sponsor",
+      "description": "Sponsor",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sponsor"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "met",
+      "alternateName": "Met",
+      "description": "Met",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Met"
+        }
+      ],
+      "maxValue": 25028,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "wave",
+      "alternateName": "Wave",
+      "description": "Wave",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Wave"
+        }
+      ],
+      "maxValue": 17806,
+      "minValue": 0
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "IOOS",
+    "email": "data.ioos@noaa.gov",
+    "sameAs": "https://ioos.noaa.gov/"
+  },
+  "identifier": "ioos_obs_counts",
+  "temporalCoverage": "2019-01-01T00:00:00Z/2021-07-01T00:00:00Z"
+}

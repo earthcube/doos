@@ -1,0 +1,1083 @@
+
+{
+  "@context": {"@vocab":"https://schema.org/"},
+  "@type": "Dataset",
+  "name": "OSMC 90 day RT data",
+  "headline": "OSMC_30day",
+  "description": "Observing System Monitoring Center (OSMC) 30 day RT data. OSMC data from a local source.\ncdm_altitude_proxy=observation_depth\ncdm_data_type=Point\nConventions=COARDS, CF-1.6, ACDD-1.3\nEasternmost_Easting=180.0\nfeatureType=Point\ngeospatial_lat_max=89.0\ngeospatial_lat_min=-89.0\ngeospatial_lat_units=degrees_north\ngeospatial_lon_max=180.0\ngeospatial_lon_min=-180.0\ngeospatial_lon_units=degrees_east\ninfoUrl=???\ninstitution=OSMC\nNorthernmost_Northing=89.0\nsourceUrl=(source database)\nSouthernmost_Northing=-89.0\nstandard_name_vocabulary=CF Standard Name Table v29\nsubsetVariables=platform_type,country\nWesternmost_Easting=-180.0",
+  "url": "https://osmc.noaa.gov/erddap/tabledap/OSMC_30day.html",
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "ERDDAP Data Server at OSMC",
+    "sameAs": "https://osmc.noaa.gov/erddap"
+  },
+  "keywords": [
+    "center",
+    "data",
+    "day",
+    "monitoring",
+    "observing",
+    "osmc",
+    "system"
+  ],
+  "license": "The data may be used and redistributed for free but is not intended\nfor legal use, since it may contain inaccuracies. Neither the data\nContributor, ERD, NOAA, nor the United States Government, nor any\nof their employees or contractors, makes any warranty, express or\nimplied, including warranties of merchantability and fitness for a\nparticular purpose, or assumes any legal liability for the accuracy,\ncompleteness, or usefulness, of this information.",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "platform_code",
+      "alternateName": "WMO id or Ship call sign",
+      "description": "WMO id or Ship call sign",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Identifier"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "WMO id or Ship call sign"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "platform_type",
+      "alternateName": "platform type",
+      "description": "platform type",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Identifier"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "platform type"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "country",
+      "alternateName": "country",
+      "description": "country",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Statistics"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "country"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "alternateName": "observation date",
+      "description": "observation date",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "T"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "observation date"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        }
+      ],
+      "propertyID": "time"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "alternateName": "Latitude",
+      "description": "Latitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "Y"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Latitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "latitude"
+        }
+      ],
+      "maxValue": 89,
+      "minValue": -89,
+      "propertyID": "latitude",
+      "unitText": "degrees_north"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "alternateName": "Longitude",
+      "description": "Longitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lon"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "X"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "longitude"
+        }
+      ],
+      "maxValue": 180,
+      "minValue": -180,
+      "propertyID": "longitude",
+      "unitText": "degrees_east"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "observation_depth",
+      "alternateName": "observation depth",
+      "description": "observation depth",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Height"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "Z"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "cdm_altitude_proxy",
+          "value": "observation_depth"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "observation depth"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "sst",
+      "alternateName": "sea surface temperature",
+      "description": "sea surface temperature",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "sea surface temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_surface_temperature"
+        }
+      ],
+      "propertyID": "sea_surface_temperature",
+      "unitText": "Deg C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "atmp",
+      "alternateName": "air temperature",
+      "description": "air temperature",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "air temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "air_temperature"
+        }
+      ],
+      "propertyID": "air_temperature",
+      "unitText": "Deg C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "precip",
+      "alternateName": "precipitation",
+      "description": "precipitation",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Meteorology"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "precipitation"
+        }
+      ],
+      "unitText": "mm"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "sss",
+      "alternateName": "sea surface salinity",
+      "description": "sea surface salinity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Meteorology"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "sea surface salinity"
+        }
+      ],
+      "unitText": "1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ztmp",
+      "alternateName": "profile water temperature",
+      "description": "profile water temperature",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "profile water temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_water_temperature"
+        }
+      ],
+      "propertyID": "sea_water_temperature",
+      "unitText": "Deg C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "zsal",
+      "alternateName": "profile salinity",
+      "description": "profile salinity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Salinity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "profile salinity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_water_salinity"
+        }
+      ],
+      "propertyID": "sea_water_salinity"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "slp",
+      "alternateName": "sea level pressure",
+      "description": "sea level pressure",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Pressure"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "sea level pressure"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "air_pressure_at_sea_level"
+        }
+      ],
+      "propertyID": "air_pressure_at_sea_level",
+      "unitText": "hPa"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "windspd",
+      "alternateName": "wind speed",
+      "description": "wind speed",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Wind"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "wind speed"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "wind_speed"
+        }
+      ],
+      "propertyID": "wind_speed",
+      "unitText": "m/s"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "winddir",
+      "alternateName": "wind from direction",
+      "description": "wind from direction",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 360
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Wind"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "wind from direction"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "wind_from_direction"
+        }
+      ],
+      "propertyID": "wind_from_direction",
+      "unitText": "Deg true"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "wvht",
+      "alternateName": "sea surface wave significant height",
+      "description": "sea surface wave significant height",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Surface Waves"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "sea surface wave significant height"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_surface_wave_significant_height"
+        }
+      ],
+      "propertyID": "sea_surface_wave_significant_height",
+      "unitText": "m"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "waterlevel",
+      "alternateName": "waterlevel",
+      "description": "waterlevel",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Sea Level"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "waterlevel"
+        }
+      ],
+      "unitText": "m"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "clouds",
+      "alternateName": "cloud cover",
+      "description": "cloud cover",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Meteorology"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "cloud cover"
+        }
+      ],
+      "unitText": "oktas"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "dewpoint",
+      "alternateName": "dew point temperature",
+      "description": "dew point temperature",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Meteorology"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "dew point temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "dew_point_temperature"
+        }
+      ],
+      "propertyID": "dew_point_temperature",
+      "unitText": "Deg C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "uo",
+      "alternateName": "eastward sea water velocity",
+      "description": "eastward sea water velocity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Currents"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "eastward sea water velocity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "eastward_sea_water_velocity"
+        }
+      ],
+      "propertyID": "eastward_sea_water_velocity",
+      "unitText": "m s-1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "vo",
+      "alternateName": "northward sea water velocity",
+      "description": "northward sea water velocity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Currents"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "northward sea water velocity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "northward_sea_water_velocity"
+        }
+      ],
+      "propertyID": "northward_sea_water_velocity",
+      "unitText": "m s-1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "wo",
+      "alternateName": "upward sea water velocity",
+      "description": "upward sea water velocity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Currents"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "upward sea water velocity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "upward_sea_water_velocity"
+        }
+      ],
+      "propertyID": "upward_sea_water_velocity",
+      "unitText": "m s-1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "rainfall_rate",
+      "alternateName": "rainfall rate",
+      "description": "rainfall rate",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 1.0E-4
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Meteorology"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "rainfall rate"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "rainfall_rate"
+        }
+      ],
+      "propertyID": "rainfall_rate",
+      "unitText": "m s-1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hur",
+      "alternateName": "relative humidity",
+      "description": "relative humidity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Meteorology"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "relative humidity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "relative_humidity"
+        }
+      ],
+      "propertyID": "relative_humidity"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "sea_water_elec_conductivity",
+      "alternateName": "sea water electrical conductivity",
+      "description": "sea water electrical conductivity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 40
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 30
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Salinity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "sea water electrical conductivity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_water_electrical_conductivity"
+        }
+      ],
+      "propertyID": "sea_water_electrical_conductivity",
+      "unitText": "S m-1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "sea_water_pressure",
+      "alternateName": "sea water pressure",
+      "description": "sea water pressure",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Pressure"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "sea water pressure"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "std_name",
+          "value": "sea_water_pressure"
+        }
+      ],
+      "unitText": "dbar"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "rlds",
+      "alternateName": "surface downwelling longwave flux in air",
+      "description": "surface downwelling longwave flux in air",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Heat Flux"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "surface downwelling longwave flux in air"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "surface_downwelling_longwave_flux_in_air"
+        }
+      ],
+      "propertyID": "surface_downwelling_longwave_flux_in_air",
+      "unitText": "W m-2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "rsds",
+      "alternateName": "surface downwelling shortwave flux in air",
+      "description": "surface downwelling shortwave flux in air",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Heat Flux"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "surface downwelling shortwave flux in air"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "surface_downwelling_shortwave_flux_in_air"
+        }
+      ],
+      "propertyID": "surface_downwelling_shortwave_flux_in_air",
+      "unitText": "W m-2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "waterlevel_met_res",
+      "alternateName": "meteorological residual tidal elevation",
+      "description": "meteorological residual tidal elevation",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Sea Level"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "meteorological residual tidal elevation"
+        }
+      ],
+      "unitText": "m"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "waterlevel_wrt_lcd",
+      "alternateName": "tidal elevation WRT local chart datum",
+      "description": "tidal elevation WRT local chart datum",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Sea Level"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "tidal elevation WRT local chart datum"
+        }
+      ],
+      "unitText": "m"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "water_col_ht",
+      "alternateName": "water column height",
+      "description": "water column height",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Sea Level"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "water column height"
+        }
+      ],
+      "unitText": "m"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "wind_to_direction",
+      "alternateName": "wind to direction",
+      "description": "wind to direction",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 360
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Wind"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "wind to direction"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "wind_to_direction"
+        }
+      ],
+      "propertyID": "wind_to_direction",
+      "unitText": "degree"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "lon360",
+      "alternateName": "longitude",
+      "description": "longitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "longitude"
+        }
+      ],
+      "propertyID": "longitude",
+      "unitText": "degree_east"
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "OSMC"
+  },
+  "identifier": "OSMC_30day",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "-89 -180 89 180"
+    }
+  }
+}

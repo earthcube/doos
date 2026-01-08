@@ -1,0 +1,89 @@
+direction: right
+
+
+title:  |md
+  # DeCODER ODIS Graph Graph Connections
+
+| { near: top-center }
+
+classes: {
+data: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: "#44C7B1"
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+input: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: lightblue
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+code: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: honeydew
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+group: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: pink
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+}
+
+*.class: code
+
+ds: DOOS Partners {
+
+TPAC
+CCHDO
+Argo
+Ocean Sites
+*.class: data
+}
+
+dc: DeCODER {
+  doos: DOOS
+  sh: DOOS \n Data Shape
+
+  doos -> sh
+*.class: data
+}
+
+ds -> dc
+
+
+oih: ODIS / Ocean InfoHub {
+  sh: ODIS \n Data Shape
+*.class: data
+}
+
+
+
+dc.sh <-> oih.sh: Graph to Graph\n Exchanges
+
+odp: ODIS Partners \n of interest to DOOS{
+obis: OBIS
+goos: GOOS
+o: More...
+*.class: data
+}
+
+oih <- odp

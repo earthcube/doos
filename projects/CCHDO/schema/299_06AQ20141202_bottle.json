@@ -1,0 +1,295 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "06AQ20141202_bottle",
+  "@type": "Dataset",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/time",
+      "minValue": 1417654620,
+      "maxValue": 1422374820
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/latitude",
+      "unitsText": "degree_north",
+      "minValue": -70.5742,
+      "maxValue": -37.0977
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/longitude",
+      "unitsText": "degree_east",
+      "minValue": -9.0567,
+      "maxValue": 12.9333
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "btm_depth",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_floor_depth_below_sea_surface",
+      "unitsText": "meters",
+      "minValue": 923.0,
+      "maxValue": 5475.0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pressure",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_pressure",
+      "unitsText": "dbar",
+      "minValue": 5.0,
+      "maxValue": 5465.0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_temperature",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_temperature",
+      "unitsText": "degC",
+      "minValue": -1.9005,
+      "maxValue": 18.9701
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_salinity",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_practical_salinity",
+      "unitsText": "1",
+      "minValue": 33.332,
+      "maxValue": 35.6274
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_salinity",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_practical_salinity",
+      "unitsText": "1",
+      "minValue": 33.404,
+      "maxValue": 34.8394
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_oxygen",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_oxygen_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 166.4,
+      "maxValue": 358.8
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "oxygen",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_oxygen_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 169.5,
+      "maxValue": 362.5
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "silicate",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_silicate_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 0.0,
+      "maxValue": 135.77
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrate",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_nitrate_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 0.12,
+      "maxValue": 35.49
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrite",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_nitrite_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": -0.01,
+      "maxValue": 0.45
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "phosphate",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_phosphate_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 0.08,
+      "maxValue": 2.45
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_carbon",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_dissolved_inorganic_carbon_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 2041.6,
+      "maxValue": 2276.1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_total_h_scale",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_ph_reported_on_total_scale",
+      "unitsText": "1",
+      "minValue": 7.468,
+      "maxValue": 7.9674
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_temperature",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/temperature_of_analysis_of_sea_water",
+      "unitsText": "degC",
+      "minValue": 25.0,
+      "maxValue": 25.0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_tot_chl_a",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_chlorophyll_a_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.113,
+      "maxValue": 1.102
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_tot_chl_b",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_chlorophyll_b_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.005,
+      "maxValue": 0.068
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_tot_chl_c",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_chlorophyll_c_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.026,
+      "maxValue": 0.45
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_alpha_beta_carotenes",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_carotene_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.002,
+      "maxValue": 0.014
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_19butanoyloxyfucoxanthin",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_19_butanoyloxyfucoxanthin_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.001,
+      "maxValue": 0.059
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_19_hexanoyloxyfucoxanthin",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_19_hexanoyloxyfucoxanthin_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.018,
+      "maxValue": 0.328
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_diadinoxanthin",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_diadinoxanthin_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.006,
+      "maxValue": 0.083
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_peridinin",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_peridinin_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.001,
+      "maxValue": 0.023
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_zeaxanthin",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_zeaxanthin_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.001,
+      "maxValue": 0.047
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_monovinyl_chlorophyll_a",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_monovinyl_chlorophyll_a_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.111,
+      "maxValue": 1.006
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_divinyl_chlorophyll_a",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_divinyl_chlorophyll_a_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.029,
+      "maxValue": 0.036
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_chlorophyllide_a",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_chlorophyllide_a_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.001,
+      "maxValue": 0.108
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_chlorophyll_c1_c2",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_chlorophyll_c1_and_chlorophyll_c2_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.02,
+      "maxValue": 0.314
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_chlorophyll_c3",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_chlorophyll_c3_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.006,
+      "maxValue": 0.136
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_lutein",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_lutein_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.001,
+      "maxValue": 0.002
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_violaxanthin",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_violaxanthin_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.001,
+      "maxValue": 0.004
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hplc_prasinoxanthin",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_prasinoxanthin_in_sea_water",
+      "unitsText": "mg/m^3",
+      "minValue": 0.001,
+      "maxValue": 0.012
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_time",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/time",
+      "minValue": 1417654620,
+      "maxValue": 1422378060
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "potential_temperature_c",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_potential_temperature",
+      "unitsText": "degC",
+      "minValue": -1.9041,
+      "maxValue": 18.9674
+    }
+  ]
+}

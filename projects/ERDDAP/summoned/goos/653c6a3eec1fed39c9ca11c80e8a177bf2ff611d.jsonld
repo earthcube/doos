@@ -1,0 +1,7458 @@
+
+{
+  "@context": {"@vocab":"https://schema.org/"},
+  "@type": "Dataset",
+  "name": "CCHDO GO SHIP bottle data",
+  "headline": "cchdo_bottle",
+  "description": "CCHDO GO SHIP bottle data from netcdf\ncchdo_parameters_version=params 0.1.20\ncchdo_software_version=hydro 1.0.2.2\ncdm_data_type=Profile\ncdm_profile_variables=profile_id, section_id, expocode\ncomment=BOTTLE,test\nConventions=CF-1.8 CCHDO-1.0.2.1.dev23+g9a6c86b.d20220808, COARDS, ACDD-1.3, NCCSV-1.1\nEasternmost_Easting=179.9997\nfeatureType=Profile\ngeospatial_lat_max=90.0\ngeospatial_lat_min=-78.638\ngeospatial_lat_units=degrees_north\ngeospatial_lon_max=179.9997\ngeospatial_lon_min=-179.9983\ngeospatial_lon_units=degrees_east\ngeospatial_vertical_max=9460.0\ngeospatial_vertical_min=-100.0\ngeospatial_vertical_positive=down\ngeospatial_vertical_units=m\ninfoUrl=https://cchdo.ucsd.edu/\ninstitution=CCHDO\nkeywords_vocabulary=GCMD Science Keywords\nNorthernmost_Northing=90.0\nsourceUrl=(local files)\nSouthernmost_Northing=-78.638\nstandard_name_vocabulary=CF Standard Name Table v70\nsubsetVariables=section_id, expocode, profile_id, cast, sample, station\ntime_coverage_end=2022-07-27T11:57:00Z\ntime_coverage_start=1972-07-24T09:11:00Z\nWesternmost_Easting=-179.9983",
+  "url": "https://osmc.noaa.gov/erddap/tabledap/cchdo_bottle.html",
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "ERDDAP Data Server at OSMC",
+    "sameAs": "https://osmc.noaa.gov/erddap"
+  },
+  "keywords": [
+    "active",
+    "activity",
+    "alkalinity",
+    "ammonia",
+    "ammonium",
+    "ammonium_error",
+    "ammonium_qc",
+    "analysis",
+    "aphotic",
+    "arbitrary",
+    "argon",
+    "argon_error",
+    "argon_l",
+    "argon_qc",
+    "atmosphere",
+    "atmospheric",
+    "attenuance",
+    "attenuation",
+    "available",
+    "barium",
+    "barium_l",
+    "barium_l_qc",
+    "bbp700",
+    "beam",
+    "below",
+    "beta700",
+    "bottle",
+    "bottle_number",
+    "bottle_number_qc",
+    "bottle_salinity",
+    "bottle_salinity_qc",
+    "bottle_time",
+    "carbon",
+    "carbon_tetrachloride",
+    "carbon_tetrachloride_error",
+    "carbon_tetrachloride_l",
+    "carbon_tetrachloride_qc",
+    "cast",
+    "cdom",
+    "cdomsl",
+    "cdomsl_qc",
+    "cdomsn",
+    "cdomsn_qc",
+    "cfc",
+    "cfc11",
+    "cfc_11",
+    "cfc_113",
+    "cfc_113_error",
+    "cfc_113_qc",
+    "cfc_11_error",
+    "cfc_11_l",
+    "cfc_11_l_qc",
+    "cfc_12",
+    "cfc_12_error",
+    "cfc_12_l",
+    "cfc_12_qc",
+    "chemistry",
+    "chloroflourocarbon",
+    "chlorofluorocarbons",
+    "chlorophyll",
+    "chlorophyll_a",
+    "chlorophyll_a_qc",
+    "chlorophyll_a_ug_kg",
+    "coefficient",
+    "colored",
+    "concentration",
+    "concentration_of_colored_dissolved_organic_matter_in_sea_water_expressed_as_equivalent_mass_fraction_of_quinine_sulfate_dihydrate",
+    "conductivity",
+    "container",
+    "corrected",
+    "ctd",
+    "ctd_bbp700",
+    "ctd_bbp700_qc",
+    "ctd_beamcp",
+    "ctd_beamcp_qc",
+    "ctd_beta700",
+    "ctd_beta700_qc",
+    "ctd_beta700_raw",
+    "ctd_cdom",
+    "ctd_cdom_raw",
+    "ctd_cdom_raw_qc",
+    "ctd_fluor",
+    "ctd_fluor_arbitrary",
+    "ctd_fluor_qc",
+    "ctd_fluor_raw",
+    "ctd_oxygen",
+    "ctd_oxygen_ml_l",
+    "ctd_oxygen_ml_l_qc",
+    "ctd_oxygen_umol_l",
+    "ctd_salinity",
+    "ctd_salinity_qc",
+    "ctd_temperature",
+    "ctd_temperature_68",
+    "ctd_temperature_qc",
+    "ctd_temperature_unk",
+    "ctd_transmissometer",
+    "ctd_transmissometer_qc",
+    "ctd_transmissometer_raw",
+    "ctd_turbidity_ftu",
+    "ctd_turbidity_ntu",
+    "ctd_turbidity_ntu_qc",
+    "d15n",
+    "d15n_nitrite_nitrate",
+    "d15n_nitrite_nitrate_error",
+    "d15n_nitrite_nitrate_qc",
+    "d15n_no3",
+    "d15n_no3_error",
+    "d15n_no3_qc",
+    "d18o",
+    "d18o_nitrate",
+    "d18o_nitrate_error",
+    "d18o_nitrate_qc",
+    "d18o_nitrite_nitrate",
+    "d18o_nitrite_nitrate_error",
+    "d18o_nitrite_nitrate_qc",
+    "data",
+    "del",
+    "del_carbon_13_dic",
+    "del_carbon_13_dic_error",
+    "del_carbon_13_dic_qc",
+    "del_carbon_14_dic",
+    "del_carbon_14_dic_error",
+    "del_carbon_14_dic_qc",
+    "del_oxygen_18",
+    "del_oxygen_18_error",
+    "del_oxygen_18_qc",
+    "delta",
+    "delta_helium_3",
+    "delta_helium_3_error",
+    "delta_helium_3_qc",
+    "density",
+    "depth",
+    "dic",
+    "dihydrate",
+    "dioxide",
+    "dissolved",
+    "dissolved_organic_carbon",
+    "dissolved_organic_carbon_qc",
+    "dissolved_organic_nitrogen",
+    "dissolved_organic_nitrogen_qc",
+    "downwelling",
+    "downwelling_photosynthetic_photon_flux_in_sea_water",
+    "earth",
+    "Earth Science > Atmosphere > Atmospheric Chemistry > Halocarbons And Halogens",
+    "Earth Science > Atmosphere > Atmospheric Chemistry > Halocarbons And Halogens > Chlorofluorocarbons",
+    "Earth Science > Oceans > Ocean Chemistry > Ammonia",
+    "Earth Science > Oceans > Ocean Chemistry > Chlorophyll",
+    "Earth Science > Oceans > Ocean Chemistry > Nitrate",
+    "Earth Science > Oceans > Ocean Chemistry > Nitrite",
+    "Earth Science > Oceans > Ocean Chemistry > Nitrogen",
+    "Earth Science > Oceans > Ocean Chemistry > Oxygen",
+    "Earth Science > Oceans > Ocean Chemistry > pH",
+    "Earth Science > Oceans > Ocean Chemistry > Phosphate",
+    "Earth Science > Oceans > Ocean Chemistry > Silicate",
+    "Earth Science > Oceans > Ocean Optics > Aphotic/Photic Zone",
+    "Earth Science > Oceans > Ocean Optics > Photosynthetically Active Radiation",
+    "Earth Science > Oceans > Ocean Optics > Radiance",
+    "Earth Science > Oceans > Ocean Pressure > Water Pressure",
+    "Earth Science > Oceans > Ocean Temperature > Water Temperature",
+    "Earth Science > Oceans > Salinity/Density > Salinity",
+    "equivalent",
+    "error",
+    "expocode",
+    "expressed",
+    "fco2",
+    "fco2_qc",
+    "fco2_temperature",
+    "fco2_temperature_qc",
+    "flag",
+    "floor",
+    "fluor",
+    "flux",
+    "fraction",
+    "ftu",
+    "fugacity",
+    "fugacity_of_carbon_dioxide_in_sea_water",
+    "function",
+    "geometry",
+    "geometry_container",
+    "halocarbons",
+    "halogens",
+    "helium",
+    "helium_error",
+    "helium_l",
+    "helium_l_qc",
+    "hexifluoride",
+    "inorganic",
+    "krypton",
+    "krypton_error",
+    "krypton_l",
+    "krypton_l_error",
+    "krypton_l_qc",
+    "latitude",
+    "levels",
+    "line",
+    "line_id",
+    "local",
+    "longitude",
+    "mass",
+    "mass_concentration_of_chlorophyll_a_in_sea_water",
+    "mass_concentration_of_chlorophyll_in_sea_water",
+    "mass_fraction_of_chlorophyll_a_in_sea_water",
+    "matter",
+    "mol",
+    "mole",
+    "mole_concentration_of_ammonium_in_sea_water",
+    "mole_concentration_of_dissolved_molecular_oxygen_in_sea_water",
+    "mole_concentration_of_nitrate_and_nitrite_in_sea_water",
+    "mole_concentration_of_nitrate_in_sea_water",
+    "mole_concentration_of_phosphate_in_sea_water",
+    "mole_concentration_of_phosphate_in_sea_water standard_error",
+    "mole_concentration_of_silicate_in_sea_water",
+    "molecular",
+    "moles",
+    "moles_of_cfc11_per_unit_mass_in_sea_water",
+    "moles_of_cfc11_per_unit_mass_in_sea_water standard_error",
+    "moles_of_dissolved_inorganic_carbon_per_unit_mass_in_sea_water",
+    "moles_of_nitrate_and_nitrite_per_unit_mass_in_sea_water",
+    "moles_of_nitrate_per_unit_mass_in_sea_water",
+    "moles_of_nitrate_per_unit_mass_in_sea_water standard_error",
+    "moles_of_nitrite_per_unit_mass_in_sea_water",
+    "moles_of_nitrite_per_unit_mass_in_sea_water standard_error",
+    "moles_of_oxygen_per_unit_mass_in_sea_water",
+    "moles_of_phosphate_per_unit_mass_in_sea_water",
+    "moles_of_phosphate_per_unit_mass_in_sea_water standard_error",
+    "moles_of_silicate_per_unit_mass_in_sea_water",
+    "moles_of_silicate_per_unit_mass_in_sea_water standard_error",
+    "n02",
+    "N_LEVELS",
+    "N_PROF",
+    "nh4",
+    "nitrate",
+    "nitrate_error",
+    "nitrate_qc",
+    "nitrite",
+    "nitrite_error",
+    "nitrite_nitrate",
+    "nitrite_nitrate_l",
+    "nitrite_nitrate_l_qc",
+    "nitrite_qc",
+    "nitrogen",
+    "nitrous",
+    "nitrous_oxide",
+    "nitrous_oxide_qc",
+    "no3",
+    "number",
+    "O2",
+    "ocean",
+    "oceans",
+    "optics",
+    "organic",
+    "oxide",
+    "oxygen",
+    "oxygen_ml_l",
+    "oxygen_qc",
+    "par",
+    "par_qc",
+    "par_raw",
+    "partial",
+    "partial_co2_temperature",
+    "partial_co2_temperature_qc",
+    "partial_pressure_of_carbon_dioxide_in_sea_water",
+    "partial_pressure_of_co2",
+    "partial_pressure_of_co2_qc",
+    "particulate",
+    "particulate_organic_carbon",
+    "particulate_organic_carbon_l",
+    "particulate_organic_carbon_l_qc",
+    "particulate_organic_nitrogen",
+    "particulate_organic_nitrogen_l",
+    "particulate_organic_nitrogen_l_qc",
+    "particulate_organic_nitrogen_mol",
+    "per",
+    "ph_sws",
+    "ph_sws_qc",
+    "ph_temperature",
+    "ph_temperature_qc",
+    "ph_total_h_scale",
+    "ph_total_h_scale_qc",
+    "ph_unknown_scale",
+    "ph_unknown_scale_qc",
+    "phaeophytin",
+    "phaeophytin_qc",
+    "phaeophytin_ug_l",
+    "phosphate",
+    "phosphate_error",
+    "phosphate_l",
+    "phosphate_l_error",
+    "phosphate_qc",
+    "photic",
+    "photon",
+    "photosynthetic",
+    "photosynthetically",
+    "po4",
+    "practical",
+    "pressure",
+    "prof",
+    "profile",
+    "profile_type",
+    "pure",
+    "quinine",
+    "radiance",
+    "radiation",
+    "radiative",
+    "radium",
+    "radium_226",
+    "radium_226_error",
+    "radium_226_qc",
+    "radium_228",
+    "radium_228_error",
+    "radium_228_qc",
+    "raw",
+    "ref_temperature",
+    "ref_temperature_c",
+    "ref_temperature_qc",
+    "reported",
+    "rev_pressure",
+    "rev_pressure_qc",
+    "rev_temperature",
+    "rev_temperature_90",
+    "rev_temperature_c",
+    "rev_temperature_qc",
+    "salinity",
+    "sample",
+    "scale",
+    "scattering",
+    "science",
+    "sea",
+    "sea_water_ph_reported_on_total_scale",
+    "sea_water_practical_salinity",
+    "sea_water_pressure",
+    "sea_water_temperature",
+    "sea_water_turbidity",
+    "seawater",
+    "section",
+    "section_id",
+    "silicate",
+    "silicate_error",
+    "silicate_l",
+    "silicate_qc",
+    "sonde",
+    "source",
+    "standard",
+    "station",
+    "status",
+    "status_flag",
+    "sulfate",
+    "sulfur",
+    "sulfur_hexifluoride",
+    "sulfur_hexifluoride_l",
+    "sulfur_hexifluoride_l_qc",
+    "surface",
+    "sws",
+    "temperature",
+    "temperature_of_analysis_of_sea_water",
+    "test",
+    "tetrachloride",
+    "time",
+    "total",
+    "total_alkalinity",
+    "total_alkalinity_qc",
+    "total_carbon",
+    "total_carbon_qc",
+    "total_dissolved_nitrogen",
+    "total_dissolved_nitrogen_qc",
+    "total_organic_carbon",
+    "total_organic_carbon_l",
+    "total_organic_carbon_l_qc",
+    "transmissometer",
+    "tritium",
+    "tritium_activity",
+    "tritium_activity_error",
+    "tritium_activity_qc",
+    "tritium_error",
+    "turbidity",
+    "type",
+    "unit",
+    "volume",
+    "volume_beam_attenuation_coefficient_of_radiative_flux_in_sea_water_corrected_for_pure_water_attenuance",
+    "volume_fraction_of_oxygen_in_sea_water",
+    "volume_scattering_function_of_radiative_flux_in_sea_water",
+    "water",
+    "xenon",
+    "xenon_error",
+    "xenon_l",
+    "xenon_l_error",
+    "xenon_l_qc",
+    "zone"
+  ],
+  "license": "The data may be used and redistributed for free but is not intended\nfor legal use, since it may contain inaccuracies. Neither the data\nContributor, ERD, NOAA, nor the United States Government, nor any\nof their employees or contractors, makes any warranty, express or\nimplied, including warranties of merchantability and fitness for a\nparticular purpose, or assumes any legal liability for the accuracy,\ncompleteness, or usefulness, of this information.",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "profile_id",
+      "alternateName": "Unique Profile ID",
+      "description": "Unique Profile ID",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "cf_role",
+          "value": "profile_id"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Unique Profile ID"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "expocode",
+      "alternateName": "Expocode",
+      "description": "Expocode",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "geometry",
+          "value": "geometry_container"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Expocode"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "EXPOCODE"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "section_id",
+      "alternateName": "Section Id",
+      "description": "Section Id",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "geometry",
+          "value": "geometry_container"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Section Id"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "SECT_ID"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "line_id",
+      "alternateName": "Line Id",
+      "description": "Line Id",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Line Id"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "station",
+      "alternateName": "Station",
+      "description": "Station",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "geometry",
+          "value": "geometry_container"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Station"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "STNNBR"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cast",
+      "alternateName": "Cast",
+      "description": "Cast",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 2.147483647E9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.0f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "geometry",
+          "value": "geometry_container"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Cast"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "CASTNO"
+        }
+      ],
+      "maxValue": 8420,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "sample",
+      "alternateName": "Sample",
+      "description": "Sample",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sample"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "SAMPNO"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_number",
+      "alternateName": "Bottle Number",
+      "description": "Bottle Number",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Bottle Number"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_number_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 25,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "alternateName": "Time",
+      "description": "Time",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "T"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "calendar",
+          "value": "gregorian"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "geometry",
+          "value": "geometry_container"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "DATE\nTIME"
+        }
+      ],
+      "maxValue": "2022-07-27T11:57:00Z",
+      "minValue": "1972-07-24T09:11:00Z",
+      "propertyID": "time"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "alternateName": "Latitude",
+      "description": "Latitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "Y"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.4f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 90
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -90
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Latitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "latitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "LATITUDE"
+        }
+      ],
+      "maxValue": 90,
+      "minValue": -78.638,
+      "propertyID": "latitude",
+      "unitText": "degrees_north"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "alternateName": "Longitude",
+      "description": "Longitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lon"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "X"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.4f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 180
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -180
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "LONGITUDE"
+        }
+      ],
+      "maxValue": 179.9997,
+      "minValue": -179.9983,
+      "propertyID": "longitude",
+      "unitText": "degrees_east"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth",
+      "alternateName": "Sea Floor Depth Below Sea Surface",
+      "description": "Sea Floor Depth Below Sea Surface",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Height"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateZisPositive",
+          "value": "down"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "Z"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.1f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 8000
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -8000
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarPalette",
+          "value": "TopographyDepth"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Floor Depth Below Sea Surface"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "positive",
+          "value": "down"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "source_name",
+          "value": "btm_depth"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "depth"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "DEPTH"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_unit",
+          "value": "METERS"
+        }
+      ],
+      "maxValue": 9460,
+      "minValue": -100,
+      "propertyID": "depth",
+      "unitText": "m"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pressure",
+      "alternateName": "Sea Water Pressure",
+      "description": "Sea Water Pressure",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "Z"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.1f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 5000
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Pressure"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "positive",
+          "value": "down"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_water_pressure"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "CTDPRS"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_unit",
+          "value": "DBAR"
+        }
+      ],
+      "maxValue": 7921.5,
+      "minValue": -14.3,
+      "propertyID": "sea_water_pressure",
+      "unitText": "dbar"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_temperature_unk",
+      "alternateName": "Sea Water Temperature",
+      "description": "Sea Water Temperature",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 32
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 32.76,
+      "minValue": -2.134,
+      "unitText": "degree_C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_temperature_68",
+      "alternateName": "Sea Water Temperature",
+      "description": "Sea Water Temperature",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 32
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 30.101,
+      "minValue": -1.8941,
+      "unitText": "degree_C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_temperature",
+      "alternateName": "Sea Water Temperature",
+      "description": "Sea Water Temperature",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.4f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 32
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "reference_scale",
+          "value": "ITS-90"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_water_temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "CTDTMP"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_unit",
+          "value": "ITS-90"
+        }
+      ],
+      "maxValue": 35.057,
+      "minValue": -9,
+      "propertyID": "sea_water_temperature",
+      "unitText": "degree_C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_temperature_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 4,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_salinity",
+      "alternateName": "Sea Water Practical Salinity",
+      "description": "Sea Water Practical Salinity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ancillary_variables",
+          "value": "ctd_salinity_qc"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.4f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 37
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 32
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Practical Salinity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "reference_scale",
+          "value": "PSS-78"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_water_practical_salinity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "CTDSAL"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_unit",
+          "value": "PSS-78"
+        }
+      ],
+      "maxValue": 12623.22,
+      "minValue": -9,
+      "propertyID": "sea_water_practical_salinity",
+      "unitText": "1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_salinity_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "conventions",
+          "value": "WOCECTD - WOCE Quality Codes for CTD instrument measurements"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_meanings",
+          "value": "no_flag_assigned not_calibrated acceptable_measurement questionable_measurement bad_measurement not_reported interpolated_over_a_pressure_interval_larger_than_2_dbar despiked not_sampled"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_values",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "status_flag"
+        }
+      ],
+      "maxValue": 25,
+      "minValue": 0,
+      "propertyID": "status_flag"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_salinity",
+      "alternateName": "Sea Water Practical Salinity",
+      "description": "Sea Water Practical Salinity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ancillary_variables",
+          "value": "bottle_salinity_qc"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.4f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 37
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 32
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Practical Salinity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "reference_scale",
+          "value": "PSS-78"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_water_practical_salinity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "SALNTY"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_unit",
+          "value": "PSS-78"
+        }
+      ],
+      "maxValue": 44.2448,
+      "minValue": -9.9999,
+      "propertyID": "sea_water_practical_salinity",
+      "unitText": "1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_salinity_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "conventions",
+          "value": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_meanings",
+          "value": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_values",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "status_flag"
+        }
+      ],
+      "maxValue": 32,
+      "minValue": 0,
+      "propertyID": "status_flag"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_oxygen_ml_l",
+      "alternateName": "Volume Fraction Of Oxygen In Sea Water",
+      "description": "Volume Fraction Of Oxygen In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Volume Fraction Of Oxygen In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 8.4,
+      "minValue": 2.7
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_oxygen_ml_l_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 5,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_oxygen",
+      "alternateName": "Moles Of Oxygen Per Unit Mass In Sea Water",
+      "description": "Moles Of Oxygen Per Unit Mass In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ancillary_variables",
+          "value": "ctd_oxygen_qc"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.4f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Oxygen Per Unit Mass In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "moles_of_oxygen_per_unit_mass_in_sea_water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "CTDOXY"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_unit",
+          "value": "UMOL/KG"
+        }
+      ],
+      "maxValue": 4222,
+      "minValue": -200.4,
+      "propertyID": "moles_of_oxygen_per_unit_mass_in_sea_water",
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_oxygen_umol_l",
+      "alternateName": "Mole Concentration Of Dissolved Molecular Oxygen In Sea Water",
+      "description": "Mole Concentration Of Dissolved Molecular Oxygen In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 500
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Mole Concentration Of Dissolved Molecular Oxygen In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "oxygen_ml_l",
+      "alternateName": "Volume Fraction Of Oxygen In Sea Water",
+      "description": "Volume Fraction Of Oxygen In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Volume Fraction Of Oxygen In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 11.2,
+      "minValue": 0.4
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "oxygen",
+      "alternateName": "Moles Of Oxygen Per Unit Mass In Sea Water",
+      "description": "Moles Of Oxygen Per Unit Mass In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ancillary_variables",
+          "value": "oxygen_qc"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.1f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Oxygen Per Unit Mass In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "moles_of_oxygen_per_unit_mass_in_sea_water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "OXYGEN"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_unit",
+          "value": "UMOL/KG"
+        }
+      ],
+      "maxValue": 6735.9,
+      "minValue": -19162.8,
+      "propertyID": "moles_of_oxygen_per_unit_mass_in_sea_water",
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "oxygen_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "conventions",
+          "value": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_meanings",
+          "value": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_values",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "status_flag"
+        }
+      ],
+      "maxValue": 25,
+      "minValue": 0,
+      "propertyID": "status_flag"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "silicate",
+      "alternateName": "Moles Of Silicate Per Unit Mass In Sea Water",
+      "description": "Moles Of Silicate Per Unit Mass In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ancillary_variables",
+          "value": "silicate_qc"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.2f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Silicate Per Unit Mass In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "moles_of_silicate_per_unit_mass_in_sea_water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "SILCAT"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_unit",
+          "value": "UMOL/KG"
+        }
+      ],
+      "maxValue": 694.61,
+      "minValue": -9,
+      "propertyID": "moles_of_silicate_per_unit_mass_in_sea_water",
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "silicate_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "conventions",
+          "value": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_meanings",
+          "value": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_values",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "status_flag"
+        }
+      ],
+      "maxValue": 25,
+      "minValue": 0,
+      "propertyID": "status_flag"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "silicate_error",
+      "alternateName": "Moles Of Silicate Per Unit Mass In Sea Water Standard Error",
+      "description": "Moles Of Silicate Per Unit Mass In Sea Water Standard Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Silicate Per Unit Mass In Sea Water Standard Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 57.71,
+      "minValue": 0.04,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "silicate_l",
+      "alternateName": "Mole Concentration Of Silicate In Sea Water",
+      "description": "Mole Concentration Of Silicate In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Mole Concentration Of Silicate In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 13,
+      "minValue": -0.4
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ammonium",
+      "alternateName": "Mole Concentration Of Ammonium In Sea Water",
+      "description": "Mole Concentration Of Ammonium In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 5
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Mole Concentration Of Ammonium In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "mole_concentration_of_ammonium_in_sea_water"
+        }
+      ],
+      "maxValue": 75.9,
+      "minValue": -0.3,
+      "propertyID": "mole_concentration_of_ammonium_in_sea_water",
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ammonium_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 25,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ammonium_error",
+      "alternateName": "Ammonium Error",
+      "description": "Ammonium Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ammonium Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.52,
+      "minValue": 0.01,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrate",
+      "alternateName": "Moles Of Nitrate Per Unit Mass In Sea Water",
+      "description": "Moles Of Nitrate Per Unit Mass In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ancillary_variables",
+          "value": "nitrate_qc"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.2f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Nitrate Per Unit Mass In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "moles_of_nitrate_per_unit_mass_in_sea_water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "NITRAT"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_unit",
+          "value": "UMOL/KG"
+        }
+      ],
+      "maxValue": 97.59,
+      "minValue": -9,
+      "propertyID": "moles_of_nitrate_per_unit_mass_in_sea_water",
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrate_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "conventions",
+          "value": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_meanings",
+          "value": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_values",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "status_flag"
+        }
+      ],
+      "maxValue": 25,
+      "minValue": 0,
+      "propertyID": "status_flag"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrate_error",
+      "alternateName": "Moles Of Nitrate Per Unit Mass In Sea Water Standard Error",
+      "description": "Moles Of Nitrate Per Unit Mass In Sea Water Standard Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Nitrate Per Unit Mass In Sea Water Standard Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 8.56,
+      "minValue": 0,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrite",
+      "alternateName": "Moles Of Nitrite Per Unit Mass In Sea Water",
+      "description": "Moles Of Nitrite Per Unit Mass In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Nitrite Per Unit Mass In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 75.97,
+      "minValue": -0.15,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrite_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 36,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrite_error",
+      "alternateName": "Moles Of Nitrite Per Unit Mass In Sea Water Standard Error",
+      "description": "Moles Of Nitrite Per Unit Mass In Sea Water Standard Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Nitrite Per Unit Mass In Sea Water Standard Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.05,
+      "minValue": 0,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "phosphate",
+      "alternateName": "Moles Of Phosphate Per Unit Mass In Sea Water",
+      "description": "Moles Of Phosphate Per Unit Mass In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ancillary_variables",
+          "value": "phosphate_qc"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.2f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Phosphate Per Unit Mass In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "moles_of_phosphate_per_unit_mass_in_sea_water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "PHSPHT"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_unit",
+          "value": "UMOL/KG"
+        }
+      ],
+      "maxValue": 75.94,
+      "minValue": -9,
+      "propertyID": "moles_of_phosphate_per_unit_mass_in_sea_water",
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "phosphate_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "conventions",
+          "value": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_meanings",
+          "value": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_values",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "status_flag"
+        }
+      ],
+      "maxValue": 7,
+      "minValue": 0,
+      "propertyID": "status_flag"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "phosphate_error",
+      "alternateName": "Moles Of Phosphate Per Unit Mass In Sea Water Standard Error",
+      "description": "Moles Of Phosphate Per Unit Mass In Sea Water Standard Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Phosphate Per Unit Mass In Sea Water Standard Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.826,
+      "minValue": 0,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "phosphate_l",
+      "alternateName": "Mole Concentration Of Phosphate In Sea Water",
+      "description": "Mole Concentration Of Phosphate In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 4
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Mole Concentration Of Phosphate In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 3.7,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "phosphate_l_error",
+      "alternateName": "Mole Concentration Of Phosphate In Sea Water Standard Error",
+      "description": "Mole Concentration Of Phosphate In Sea Water Standard Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 0.1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Mole Concentration Of Phosphate In Sea Water Standard Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrite_nitrate",
+      "alternateName": "Moles Of Nitrate And Nitrite Per Unit Mass In Sea Water",
+      "description": "Moles Of Nitrate And Nitrite Per Unit Mass In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Nitrate And Nitrite Per Unit Mass In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 82.62,
+      "minValue": -0.23,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrite_nitrate_l",
+      "alternateName": "Mole Concentration Of Nitrate And Nitrite In Sea Water",
+      "description": "Mole Concentration Of Nitrate And Nitrite In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Mole Concentration Of Nitrate And Nitrite In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 36.08,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrite_nitrate_l_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 5,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cfc_11",
+      "alternateName": "Moles Of Cfc11 Per Unit Mass In Sea Water",
+      "description": "Moles Of Cfc11 Per Unit Mass In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ancillary_variables",
+          "value": "cfc_11_qc"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.3f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Cfc11 Per Unit Mass In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "moles_of_cfc11_per_unit_mass_in_sea_water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "CFC-11"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_unit",
+          "value": "PMOL/KG"
+        }
+      ],
+      "maxValue": 123.585,
+      "minValue": -99,
+      "propertyID": "moles_of_cfc11_per_unit_mass_in_sea_water",
+      "unitText": "pmol/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cfc_11_error",
+      "alternateName": "Moles Of Cfc11 Per Unit Mass In Sea Water Standard Error",
+      "description": "Moles Of Cfc11 Per Unit Mass In Sea Water Standard Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Cfc11 Per Unit Mass In Sea Water Standard Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.009,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cfc_11_l",
+      "alternateName": "CFC 11 L",
+      "description": "CFC 11 L",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "CFC 11 L"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 5.492,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cfc_11_l_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cfc_12",
+      "alternateName": "CFC 12",
+      "description": "CFC 12",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ancillary_variables",
+          "value": "cfc_12_qc"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.3f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "CFC 12"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "CFC-12"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_unit",
+          "value": "PMOL/KG"
+        }
+      ],
+      "maxValue": 99,
+      "minValue": -144.057,
+      "unitText": "pmol/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cfc_12_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "conventions",
+          "value": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_meanings",
+          "value": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "flag_values",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "status_flag"
+        }
+      ],
+      "maxValue": 25,
+      "minValue": 0,
+      "propertyID": "status_flag"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cfc_12_error",
+      "alternateName": "Cfc 12 Error",
+      "description": "Cfc 12 Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Cfc 12 Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.007,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cfc_12_l",
+      "alternateName": "CFC 12 L",
+      "description": "CFC 12 L",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "CFC 12 L"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 2.695,
+      "minValue": 0.001
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cfc_113",
+      "alternateName": "CFC 113",
+      "description": "CFC 113",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ancillary_variables",
+          "value": "cfc_113_qc"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format",
+          "value": "%.3f"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "C_format_source",
+          "value": "input_file"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "CFC 113"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_name",
+          "value": "CFC113"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "whp_unit",
+          "value": "PMOL/KG"
+        }
+      ],
+      "maxValue": 41.024,
+      "minValue": -99,
+      "unitText": "pmol/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cfc_113_error",
+      "alternateName": "Cfc 113 Error",
+      "description": "Cfc 113 Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Cfc 113 Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cfc_113_2",
+      "alternateName": "CFC 113",
+      "description": "CFC 113",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "CFC 113"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cfc_113_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "sulfur_hexifluoride",
+      "alternateName": "Sulfur Hexifluoride",
+      "description": "Sulfur Hexifluoride",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sulfur Hexifluoride"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 109.992,
+      "minValue": -174.171
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "sulfur_hexifluoride_l",
+      "alternateName": "Sulfur Hexifluoride L",
+      "description": "Sulfur Hexifluoride L",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sulfur Hexifluoride L"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "sulfur_hexifluoride_l_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 1,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_carbon",
+      "alternateName": "Moles Of Dissolved Inorganic Carbon Per Unit Mass In Sea Water",
+      "description": "Moles Of Dissolved Inorganic Carbon Per Unit Mass In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Moles Of Dissolved Inorganic Carbon Per Unit Mass In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 4582.7,
+      "minValue": -9,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_carbon_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 25,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_alkalinity",
+      "alternateName": "Total Alkalinity",
+      "description": "Total Alkalinity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Total Alkalinity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 6092,
+      "minValue": -131.23,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_alkalinity_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 36,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "fco2",
+      "alternateName": "Fugacity Of Carbon Dioxide In Sea Water",
+      "description": "Fugacity Of Carbon Dioxide In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Fugacity Of Carbon Dioxide In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 2888.6,
+      "minValue": 96.19
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "fco2_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "fco2_temperature",
+      "alternateName": "Temperature Of Analysis Of Sea Water",
+      "description": "Temperature Of Analysis Of Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 40
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Temperature Of Analysis Of Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 20,
+      "minValue": -1.834,
+      "unitText": "degree_C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "fco2_temperature_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "partial_pressure_of_co2",
+      "alternateName": "Partial Pressure Of Carbon Dioxide In Sea Water",
+      "description": "Partial Pressure Of Carbon Dioxide In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Partial Pressure Of Carbon Dioxide In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 2617.9,
+      "minValue": 173
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "partial_pressure_of_co2_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "partial_co2_temperature",
+      "alternateName": "Temperature Of Analysis Of Sea Water",
+      "description": "Temperature Of Analysis Of Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 40
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Temperature Of Analysis Of Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 20.8,
+      "minValue": -1.6718,
+      "unitText": "degree_C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "partial_co2_temperature_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_total_h_scale",
+      "alternateName": "Sea Water Ph Reported On Total Scale",
+      "description": "Sea Water Ph Reported On Total Scale",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 7
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Ph Reported On Total Scale"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 9,
+      "minValue": 6.795
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_total_h_scale_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_unknown_scale",
+      "alternateName": "Ph Unknown Scale",
+      "description": "Ph Unknown Scale",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ph Unknown Scale"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 10.3,
+      "minValue": 7.22
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_unknown_scale_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_sws",
+      "alternateName": "PH SWS",
+      "description": "PH SWS",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "PH SWS"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 10.6537,
+      "minValue": -9
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_sws_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_temperature",
+      "alternateName": "Temperature Of Analysis Of Sea Water",
+      "description": "Temperature Of Analysis Of Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 40
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Temperature Of Analysis Of Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 26.260000000000048,
+      "minValue": -272.15,
+      "unitText": "degree_C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_temperature_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 3,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "dissolved_organic_carbon",
+      "alternateName": "Dissolved Organic Carbon",
+      "description": "Dissolved Organic Carbon",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Dissolved Organic Carbon"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 423,
+      "minValue": -99.9,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "dissolved_organic_carbon_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "tritium_activity",
+      "alternateName": "Tritium Activity",
+      "description": "Tritium Activity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Tritium Activity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "tritium_activity_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 1,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "tritium_activity_error",
+      "alternateName": "Tritium Activity Error",
+      "description": "Tritium Activity Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Tritium Activity Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "tritium",
+      "alternateName": "Tritium",
+      "description": "Tritium",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Tritium"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 183,
+      "minValue": -9
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "tritium_error",
+      "alternateName": "Tritium Error",
+      "description": "Tritium Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 0.1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Tritium Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 9,
+      "minValue": -9
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "helium",
+      "alternateName": "Helium",
+      "description": "Helium",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Helium"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 47.203,
+      "minValue": -9
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "helium_error",
+      "alternateName": "Helium Error",
+      "description": "Helium Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Helium Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 38.8,
+      "minValue": -0.005
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "helium_l",
+      "alternateName": "Helium L",
+      "description": "Helium L",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Helium L"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "helium_l_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 1,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "delta_helium_3",
+      "alternateName": "Delta Helium 3",
+      "description": "Delta Helium 3",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 100
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Delta Helium 3"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 15579.7,
+      "minValue": -99.89
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "delta_helium_3_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 7,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "delta_helium_3_error",
+      "alternateName": "Delta Helium 3 Error",
+      "description": "Delta Helium 3 Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 5
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Delta Helium 3 Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 90.25,
+      "minValue": -9
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ref_temperature_c",
+      "alternateName": "Sea Water Temperature",
+      "description": "Sea Water Temperature",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 32
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 31.3464,
+      "minValue": -9,
+      "unitText": "degree_C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ref_temperature",
+      "alternateName": "Sea Water Temperature",
+      "description": "Sea Water Temperature",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 32
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 31.3522,
+      "minValue": -1.8301,
+      "unitText": "degree_C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ref_temperature_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 5,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "rev_pressure",
+      "alternateName": "Sea Water Pressure",
+      "description": "Sea Water Pressure",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 5000
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Pressure"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 6552,
+      "minValue": -1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "rev_pressure_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "rev_temperature_c",
+      "alternateName": "Sea Water Temperature",
+      "description": "Sea Water Temperature",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 32
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 46.422,
+      "minValue": -0.056,
+      "unitText": "degree_C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "rev_temperature",
+      "alternateName": "Sea Water Temperature",
+      "description": "Sea Water Temperature",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 32
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 22.445,
+      "minValue": -0.127,
+      "unitText": "degree_C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "rev_temperature_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 2,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "rev_temperature_90",
+      "alternateName": "Sea Water Temperature",
+      "description": "Sea Water Temperature",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 32
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 29.935,
+      "minValue": -1.856,
+      "unitText": "degree_C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "del_carbon_13_dic",
+      "alternateName": "Del Carbon 13 Dic",
+      "description": "Del Carbon 13 Dic",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Del Carbon 13 Dic"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 4.21,
+      "minValue": -9
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "del_carbon_13_dic_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "del_carbon_13_dic_error",
+      "alternateName": "Del Carbon 13 Dic Error",
+      "description": "Del Carbon 13 Dic Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 0.1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Del Carbon 13 Dic Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.08,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "del_carbon_14_dic",
+      "alternateName": "Del Carbon 14 Dic",
+      "description": "Del Carbon 14 Dic",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Del Carbon 14 Dic"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 174.7,
+      "minValue": -979.1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "del_carbon_14_dic_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "del_carbon_14_dic_error",
+      "alternateName": "Del Carbon 14 Dic Error",
+      "description": "Del Carbon 14 Dic Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 0.1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Del Carbon 14 Dic Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 71.5,
+      "minValue": -9
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "dissolved_organic_nitrogen",
+      "alternateName": "Dissolved Organic Nitrogen",
+      "description": "Dissolved Organic Nitrogen",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Dissolved Organic Nitrogen"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 605.6,
+      "minValue": -19.5,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "dissolved_organic_nitrogen_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 3,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_organic_carbon",
+      "alternateName": "Total Organic Carbon",
+      "description": "Total Organic Carbon",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Total Organic Carbon"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 82.98,
+      "minValue": 40.77,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_organic_carbon_l",
+      "alternateName": "Total Organic Carbon L",
+      "description": "Total Organic Carbon L",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Total Organic Carbon L"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 504,
+      "minValue": 28
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_organic_carbon_l_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 5,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "particulate_organic_carbon",
+      "alternateName": "Particulate Organic Carbon",
+      "description": "Particulate Organic Carbon",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Particulate Organic Carbon"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 943.164,
+      "minValue": -20.0039896
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "particulate_organic_carbon_l",
+      "alternateName": "Particulate Organic Carbon L",
+      "description": "Particulate Organic Carbon L",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Particulate Organic Carbon L"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "particulate_organic_carbon_l_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 1,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "particulate_organic_nitrogen",
+      "alternateName": "Particulate Organic Nitrogen",
+      "description": "Particulate Organic Nitrogen",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Particulate Organic Nitrogen"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 153.483,
+      "minValue": -5.10261987
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "particulate_organic_nitrogen_l",
+      "alternateName": "Particulate Organic Nitrogen L",
+      "description": "Particulate Organic Nitrogen L",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Particulate Organic Nitrogen L"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "particulate_organic_nitrogen_l_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 1,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "particulate_organic_nitrogen_mol",
+      "alternateName": "Particulate Organic Nitrogen Mol",
+      "description": "Particulate Organic Nitrogen Mol",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Particulate Organic Nitrogen Mol"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 16.767,
+      "minValue": 0.005
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_dissolved_nitrogen",
+      "alternateName": "Total Dissolved Nitrogen",
+      "description": "Total Dissolved Nitrogen",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Total Dissolved Nitrogen"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 88.43,
+      "minValue": 0.82,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_dissolved_nitrogen_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 5,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "del_oxygen_18",
+      "alternateName": "Del Oxygen 18",
+      "description": "Del Oxygen 18",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Del Oxygen 18"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 12.46,
+      "minValue": -9
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "del_oxygen_18_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "del_oxygen_18_error",
+      "alternateName": "Del Oxygen 18 Error",
+      "description": "Del Oxygen 18 Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 0.1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Del Oxygen 18 Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.05,
+      "minValue": -0.05
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "carbon_tetrachloride",
+      "alternateName": "Carbon Tetrachloride",
+      "description": "Carbon Tetrachloride",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Carbon Tetrachloride"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 195.674,
+      "minValue": -9
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "carbon_tetrachloride_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 25,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "carbon_tetrachloride_error",
+      "alternateName": "Carbon Tetrachloride Error",
+      "description": "Carbon Tetrachloride Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Carbon Tetrachloride Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "carbon_tetrachloride_l",
+      "alternateName": "Carbon Tetrachloride L",
+      "description": "Carbon Tetrachloride L",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Carbon Tetrachloride L"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 7.113,
+      "minValue": -0.002
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "barium",
+      "alternateName": "Barium",
+      "description": "Barium",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Barium"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 158.1,
+      "minValue": 37
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "barium_l",
+      "alternateName": "Barium L",
+      "description": "Barium L",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Barium L"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 106.2,
+      "minValue": 42.6
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "barium_l_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 2,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_fluor",
+      "alternateName": "Mass Concentration Of Chlorophyll In Sea Water",
+      "description": "Mass Concentration Of Chlorophyll In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 30
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0.03
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarScale",
+          "value": "Log"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Mass Concentration Of Chlorophyll In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 33.381,
+      "minValue": -0.225
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_fluor_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 5,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_fluor_arbitrary",
+      "alternateName": "Ctd Fluor Arbitrary",
+      "description": "Ctd Fluor Arbitrary",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ctd Fluor Arbitrary"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_fluor_raw",
+      "alternateName": "Ctd Fluor Raw",
+      "description": "Ctd Fluor Raw",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ctd Fluor Raw"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 33.982,
+      "minValue": -0.212
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "par",
+      "alternateName": "Downwelling Photosynthetic Photon Flux In Sea Water",
+      "description": "Downwelling Photosynthetic Photon Flux In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 70
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Downwelling Photosynthetic Photon Flux In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 983.664,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "par_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 4,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "par_raw",
+      "alternateName": "Par Raw",
+      "description": "Par Raw",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Par Raw"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 965.7,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cdomsl",
+      "alternateName": "Cdomsl",
+      "description": "Cdomsl",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Cdomsl"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.1865,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cdomsl_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 5,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cdomsn",
+      "alternateName": "Cdomsn",
+      "description": "Cdomsn",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Cdomsn"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.1058,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cdomsn_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 5,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "radium_226",
+      "alternateName": "Radium 226",
+      "description": "Radium 226",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Radium 226"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 31.6,
+      "minValue": 1.62
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "radium_226_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 2,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "radium_226_error",
+      "alternateName": "Radium 226 Error",
+      "description": "Radium 226 Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 0.1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Radium 226 Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.76,
+      "minValue": 0.16
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "radium_228",
+      "alternateName": "Radium 228",
+      "description": "Radium 228",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Radium 228"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 17.51,
+      "minValue": -0.77
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "radium_228_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 2,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "radium_228_error",
+      "alternateName": "Radium 228 Error",
+      "description": "Radium 228 Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 0.1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Radium 228 Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 1.48,
+      "minValue": 0.21
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_transmissometer",
+      "alternateName": "Ctd Transmissometer",
+      "description": "Ctd Transmissometer",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ctd Transmissometer"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 101.4,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_transmissometer_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 5,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_transmissometer_raw",
+      "alternateName": "Ctd Transmissometer Raw",
+      "description": "Ctd Transmissometer Raw",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ctd Transmissometer Raw"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 4.73,
+      "minValue": 0.006
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_beamcp",
+      "alternateName": "Volume Beam Attenuation Coefficient Of Radiative Flux In Sea Water Corrected For Pure Water Attenuance",
+      "description": "Volume Beam Attenuation Coefficient Of Radiative Flux In Sea Water Corrected For Pure Water Attenuance",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 500
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -500
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Volume Beam Attenuation Coefficient Of Radiative Flux In Sea Water Corrected For Pure Water Attenuance"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 1.5834,
+      "minValue": -0.0032
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_beamcp_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 4,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_beta700",
+      "alternateName": "Volume Scattering Function Of Radiative Flux In Sea Water",
+      "description": "Volume Scattering Function Of Radiative Flux In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 500
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -500
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Volume Scattering Function Of Radiative Flux In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_beta700_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_beta700_raw",
+      "alternateName": "Ctd Beta700 Raw",
+      "description": "Ctd Beta700 Raw",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ctd Beta700 Raw"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 1.988,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_bbp700",
+      "alternateName": "CTD BBP700",
+      "description": "CTD BBP700",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "CTD BBP700"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_bbp700_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_turbidity_ftu",
+      "alternateName": "Ctd Turbidity Ftu",
+      "description": "Ctd Turbidity Ftu",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ctd Turbidity Ftu"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 6.531,
+      "minValue": 0.033
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_turbidity_ntu",
+      "alternateName": "Sea Water Turbidity",
+      "description": "Sea Water Turbidity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water Turbidity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_turbidity_ntu_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_cdom",
+      "alternateName": "Concentration Of Colored Dissolved Organic Matter In Sea Water Expressed As Equivalent Mass Fraction Of Quinine Sulfate Dihydrate",
+      "description": "Concentration Of Colored Dissolved Organic Matter In Sea Water Expressed As Equivalent Mass Fraction Of Quinine Sulfate Dihydrate",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Concentration Of Colored Dissolved Organic Matter In Sea Water Expressed As Equivalent Mass Fraction Of Quinine Sulfate Dihydrate"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.704,
+      "minValue": 0.162
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_cdom_raw",
+      "alternateName": "Ctd Cdom Raw",
+      "description": "Ctd Cdom Raw",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ctd Cdom Raw"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 4.814,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_cdom_raw_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 2,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrous_oxide",
+      "alternateName": "Nitrous Oxide",
+      "description": "Nitrous Oxide",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Nitrous Oxide"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 113.195,
+      "minValue": -0.66
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrous_oxide_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "chlorophyll_a_ug_kg",
+      "alternateName": "Mass Fraction Of Chlorophyll A In Sea Water",
+      "description": "Mass Fraction Of Chlorophyll A In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Mass Fraction Of Chlorophyll A In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 44.88,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "chlorophyll_a",
+      "alternateName": "Mass Concentration Of Chlorophyll A In Sea Water",
+      "description": "Mass Concentration Of Chlorophyll A In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 30
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0.03
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarScale",
+          "value": "Log"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Mass Concentration Of Chlorophyll A In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 16383,
+      "minValue": -900
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "chlorophyll_a_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "phaeophytin",
+      "alternateName": "Phaeophytin",
+      "description": "Phaeophytin",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Phaeophytin"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 4.05,
+      "minValue": -0.5
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "phaeophytin_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 5,
+      "minValue": 2
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "phaeophytin_ug_l",
+      "alternateName": "Phaeophytin Ug L",
+      "description": "Phaeophytin Ug L",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Phaeophytin Ug L"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 6.46,
+      "minValue": -900
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "argon",
+      "alternateName": "Argon",
+      "description": "Argon",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Argon"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 17.19,
+      "minValue": 9.54,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "argon_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "argon_error",
+      "alternateName": "Argon Error",
+      "description": "Argon Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Argon Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.14,
+      "minValue": 0.01,
+      "unitText": "µmole/kg"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "argon_l",
+      "alternateName": "Argon L",
+      "description": "Argon L",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Argon L"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "d15n_no3",
+      "alternateName": "Mole Concentration Of Nitrate In Sea Water",
+      "description": "Mole Concentration Of Nitrate In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Mole Concentration Of Nitrate In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "mole_concentration_of_nitrate_in_sea_water"
+        }
+      ],
+      "maxValue": 19.94,
+      "minValue": 4.5,
+      "propertyID": "mole_concentration_of_nitrate_in_sea_water"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "d15n_no3_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 5,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "d15n_no3_error",
+      "alternateName": "D15n No3 Error",
+      "description": "D15n No3 Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 0.1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "D15n No3 Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 2.85,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "d15n_nitrite_nitrate",
+      "alternateName": "Mole Concentration Of Nitrate In Sea Water",
+      "description": "Mole Concentration Of Nitrate In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Mole Concentration Of Nitrate In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "mole_concentration_of_nitrate_in_sea_water"
+        }
+      ],
+      "maxValue": 18.17,
+      "minValue": 4.54,
+      "propertyID": "mole_concentration_of_nitrate_in_sea_water"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "d15n_nitrite_nitrate_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 2,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "d15n_nitrite_nitrate_error",
+      "alternateName": "D15n Nitrite Nitrate Error",
+      "description": "D15n Nitrite Nitrate Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 0.1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "D15n Nitrite Nitrate Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "d18o_nitrite_nitrate",
+      "alternateName": "Mole Concentration Of Nitrate In Sea Water",
+      "description": "Mole Concentration Of Nitrate In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Mole Concentration Of Nitrate In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "mole_concentration_of_nitrate_in_sea_water"
+        }
+      ],
+      "maxValue": 16.89,
+      "minValue": 1.44,
+      "propertyID": "mole_concentration_of_nitrate_in_sea_water"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "d18o_nitrite_nitrate_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 2,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "d18o_nitrite_nitrate_error",
+      "alternateName": "D18o Nitrite Nitrate Error",
+      "description": "D18o Nitrite Nitrate Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 0.1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "D18o Nitrite Nitrate Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "d18o_nitrate",
+      "alternateName": "Mole Concentration Of Nitrate In Sea Water",
+      "description": "Mole Concentration Of Nitrate In Sea Water",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Mole Concentration Of Nitrate In Sea Water"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "mole_concentration_of_nitrate_in_sea_water"
+        }
+      ],
+      "maxValue": 16.82,
+      "minValue": 1.44,
+      "propertyID": "mole_concentration_of_nitrate_in_sea_water"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "d18o_nitrate_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 5,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "d18o_nitrate_error",
+      "alternateName": "D18o Nitrate Error",
+      "description": "D18o Nitrate Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 0.1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "D18o Nitrate Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_time",
+      "alternateName": "Bottle Time",
+      "description": "Bottle Time",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Bottle Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        }
+      ],
+      "maxValue": 1.65892362E9,
+      "minValue": 9.3049422E8,
+      "unitText": "seconds since 1970-01-01T00:00:00Z"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "krypton",
+      "alternateName": "Krypton",
+      "description": "Krypton",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Krypton"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 3.9878,
+      "minValue": 2.02
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "krypton_error",
+      "alternateName": "Krypton Error",
+      "description": "Krypton Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Krypton Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.0116,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "krypton_l",
+      "alternateName": "Krypton L",
+      "description": "Krypton L",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Krypton L"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "krypton_l_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 1,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "krypton_l_error",
+      "alternateName": "Krypton L Error",
+      "description": "Krypton L Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Krypton L Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "xenon",
+      "alternateName": "Xenon",
+      "description": "Xenon",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Xenon"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.60463,
+      "minValue": 0.26
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "xenon_error",
+      "alternateName": "Xenon Error",
+      "description": "Xenon Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Xenon Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ],
+      "maxValue": 0.00175,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "xenon_l",
+      "alternateName": "Xenon L",
+      "description": "Xenon L",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Xenon L"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "xenon_l_qc",
+      "alternateName": "Status Flag",
+      "description": "Status Flag",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status Flag"
+        }
+      ],
+      "maxValue": 1,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "xenon_l_error",
+      "alternateName": "Xenon L Error",
+      "description": "Xenon L Error",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Xenon L Error"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "profile_type",
+      "alternateName": "Profile Type",
+      "description": "Profile Type",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Profile Type"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "geometry_container",
+      "alternateName": "Geometry Container",
+      "description": "Geometry Container",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "geometry_type",
+          "value": "point"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Geometry Container"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "node_coordinates",
+          "value": "longitude latitude"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "N_PROF",
+      "alternateName": "N PROF",
+      "description": "N PROF",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 9.223372036854776E18
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "N PROF"
+        }
+      ],
+      "maxValue": 190,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "N_LEVELS",
+      "alternateName": "N LEVELS",
+      "description": "N LEVELS",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 9.223372036854776E18
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "N LEVELS"
+        }
+      ],
+      "maxValue": 38,
+      "minValue": 0
+    }
+  ],
+  "identifier": "cchdo_bottle",
+  "temporalCoverage": "1972-07-24T09:11:00Z/2022-07-27T11:57:00Z",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "-78.638 -179.9983 90 179.9997"
+    }
+  }
+}

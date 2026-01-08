@@ -1,0 +1,99 @@
+direction: right
+
+
+title:  |md
+  # DeCODER ODIS Graph Graph Connections
+
+| { near: top-center }
+
+classes: {
+data: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: "#44C7B1"
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+input: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: lightblue
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+code: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: honeydew
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+group: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: pink
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+}
+
+*.class: code
+
+ds: DOOS Partners {
+
+TPAC
+CCHDO
+Argo
+Ocean Sites
+*.class: data
+}
+
+  note: |md
+   # Shape mediation
+
+   - can a URI express a profile defined by a shape
+   - can a diff of these shapes be done to create a shared set
+   - can the shared set form a SPARQL query to pull data from each provider
+   - those query results saved to a data frame / parquet
+   - implemeted as a ROA drive approach 
+
+| { near: bottom-center }
+
+dc: DeCODER {
+  doos: DOOS
+  sh: DOOS \n Data Shape
+
+  doos -> sh
+*.class: data
+}
+
+ds -> dc
+
+
+oih: ODIS / Ocean InfoHub {
+  sh: ODIS \n Data Shape
+*.class: data
+}
+
+
+
+dc.sh <-> oih.sh: Shape mediation
+
+odp: ODIS Partners \n of interest to DOOS{
+obis: OBIS
+goos: GOOS
+*.class: data
+}
+
+oih <- odp

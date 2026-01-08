@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "33RR20220430_bottle",
+  "@type": "Dataset",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/time",
+      "minValue": 1651437780,
+      "maxValue": 1654679040,
+      "description": null
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/latitude",
+      "unitsText": "degree_north",
+      "minValue": 20.9996,
+      "maxValue": 32.507,
+      "description": "Latitude is positive northward; its units of degree_north (or equivalent) indicate this explicitly. In a latitude-longitude system defined with respect to a rotated North Pole, the standard name of grid_latitude should be used instead of latitude. Grid latitude is positive in the grid-northward direction, but its units should be plain degree."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/longitude",
+      "unitsText": "degree_east",
+      "minValue": 133.0289,
+      "maxValue": -161.2131,
+      "description": "Longitude is positive eastward; its units of degree_east (or equivalent) indicate this explicitly. In a latitude-longitude system defined with respect to a rotated North Pole, the standard name of grid_longitude should be used instead of longitude. Grid longitude is positive in the grid-eastward direction, but its units should be plain degree."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "btm_depth",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_floor_depth_below_sea_surface",
+      "unitsText": "meters",
+      "minValue": 168.0,
+      "maxValue": 6221.0,
+      "description": "The sea_floor_depth_below_sea_surface is the vertical distance between the sea surface and the seabed as measured at a given point in space including the variance caused by tides and possibly waves."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pressure",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_pressure",
+      "unitsText": "dbar",
+      "minValue": 2.2,
+      "maxValue": 6130.2,
+      "description": "\"Sea water pressure\" is the pressure that exists in the medium of sea water.  It includes the pressure due to overlying sea water, sea ice, air and any other medium that may be present. For sea water pressure excluding the pressure due to overlying media other than sea water, the standard name sea_water_pressure_due_to_sea_water should be used."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_temperature",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_temperature",
+      "unitsText": "degC",
+      "minValue": 1.4396,
+      "maxValue": 27.9135,
+      "description": "Sea water temperature is the in situ temperature of the sea water. To specify the depth at which the temperature applies use a vertical coordinate variable or scalar coordinate variable. There are standard names for sea_surface_temperature, sea_surface_skin_temperature, sea_surface_subskin_temperature and sea_surface_foundation_temperature which can be used to describe data located at the specified surfaces. For observed data, depending on the period during which the observation was made, the measured in situ temperature was recorded against standard \"scales\". These historical scales include the International Practical Temperature Scale of 1948 (IPTS-48; 1948-1967), the International Practical Temperature Scale of 1968 (IPTS-68, Barber, 1969; 1968-1989) and the International Temperature Scale of 1990 (ITS-90, Saunders 1990; 1990 onwards). Conversion of data between these scales follows t68 = t48 - (4.4 x 10e-6) * t48(100 - t - 48); t90 = 0.99976 * t68. Observations made prior to 1948 (IPTS-48) have not been documented and therefore a conversion cannot be certain. Differences between t90 and t68 can be up to 0.01 at temperatures of 40 C and above; differences of 0.002-0.007 occur across the standard range of ocean temperatures (-10 - 30 C). The International Equation of State of Seawater 1980 (EOS-80, UNESCO, 1981) and the Practical Salinity Scale (PSS-78) were both based on IPTS-68, while the Thermodynamic Equation of Seawater 2010 (TEOS-10) is based on ITS-90. References: Barber, 1969, doi: 10.1088/0026-1394/5/2/001; UNESCO, 1981; Saunders, 1990, WOCE Newsletter, 10, September 1990. It is strongly recommended that a variable with this standard name should have a units_metadata attribute, with one of the values \"on-scale\" or \"difference\", whichever is appropriate for the data, because it is essential to know whether the temperature is on-scale (meaning relative to the origin of the scale indicated by the units) or refers to temperature differences (implying that the origin of the temperature scale is irrevelant), in order to convert the units correctly (cf. https://cfconventions.org/cf-conventions/cf-conventions.html#temperature-units)."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_salinity",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_practical_salinity",
+      "unitsText": "1",
+      "minValue": 33.9569,
+      "maxValue": 35.4109,
+      "description": "Practical Salinity, S_P, is a determination of the salinity of sea water, based on its electrical conductance. The measured conductance, corrected for temperature and pressure, is compared to the conductance of a standard potassium chloride solution, producing a value on the Practical Salinity Scale of 1978 (PSS-78). This name should not be used to describe salinity observations made before 1978, or ones not based on conductance measurements. Conversion of Practical Salinity to other precisely defined salinity measures should use the appropriate formulas specified by TEOS-10. Other standard names for precisely defined salinity quantities are sea_water_absolute_salinity (S_A); sea_water_preformed_salinity (S_*),  sea_water_reference_salinity (S_R); sea_water_cox_salinity (S_C), used for salinity observations between 1967 and 1977; and sea_water_knudsen_salinity (S_K), used for salinity observations between 1901 and 1966. Salinity quantities that do not match any of the precise definitions should be given the more general standard name of sea_water_salinity. Reference: www.teos-10.org; Lewis, 1980 doi:10.1109/JOE.1980.1145448."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_salinity",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_practical_salinity",
+      "unitsText": "1",
+      "minValue": 33.9543,
+      "maxValue": 35.3934,
+      "description": "Practical Salinity, S_P, is a determination of the salinity of sea water, based on its electrical conductance. The measured conductance, corrected for temperature and pressure, is compared to the conductance of a standard potassium chloride solution, producing a value on the Practical Salinity Scale of 1978 (PSS-78). This name should not be used to describe salinity observations made before 1978, or ones not based on conductance measurements. Conversion of Practical Salinity to other precisely defined salinity measures should use the appropriate formulas specified by TEOS-10. Other standard names for precisely defined salinity quantities are sea_water_absolute_salinity (S_A); sea_water_preformed_salinity (S_*),  sea_water_reference_salinity (S_R); sea_water_cox_salinity (S_C), used for salinity observations between 1967 and 1977; and sea_water_knudsen_salinity (S_K), used for salinity observations between 1901 and 1966. Salinity quantities that do not match any of the precise definitions should be given the more general standard name of sea_water_salinity. Reference: www.teos-10.org; Lewis, 1980 doi:10.1109/JOE.1980.1145448."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ctd_oxygen",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_oxygen_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 14.7,
+      "maxValue": 258.5,
+      "description": "moles_of_X_per_unit_mass_inY is also called \"molality\" of X in Y, where X is a material constituent of Y."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "oxygen",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_oxygen_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 15.1,
+      "maxValue": 259.8,
+      "description": "moles_of_X_per_unit_mass_inY is also called \"molality\" of X in Y, where X is a material constituent of Y."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "silicate",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_silicate_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 0.0,
+      "maxValue": 166.82,
+      "description": "moles_of_X_per_unit_mass_inY is also called \"molality\" of X in Y, where X is a material constituent of Y."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrate",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_nitrate_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": -0.01,
+      "maxValue": 44.13,
+      "description": "moles_of_X_per_unit_mass_inY is also called \"molality\" of X in Y, where X is a material constituent of Y."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nitrite",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_nitrite_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 0.0,
+      "maxValue": 0.62,
+      "description": "moles_of_X_per_unit_mass_inY is also called \"molality\" of X in Y, where X is a material constituent of Y."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "phosphate",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_phosphate_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": -0.01,
+      "maxValue": 3.19,
+      "description": "moles_of_X_per_unit_mass_inY is also called \"molality\" of X in Y, where X is a material constituent of Y."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cfc_11",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_cfc11_per_unit_mass_in_sea_water",
+      "unitsText": "pmol/kg",
+      "minValue": 0.001,
+      "maxValue": 3.252,
+      "description": "The construction \"moles_of_X_per_unit_mass_in_Y\" is also called \"molality\" of X in Y, where X is a material constituent of Y. A chemical or biological species denoted by X may be described by a single term such as \"nitrogen\" or a phrase such as \"nox_expressed_as_nitrogen\". The chemical formula of CFC11 is CFCl3. The IUPAC name for CFC11 is trichloro(fluoro)methane."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_carbon",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/moles_of_dissolved_inorganic_carbon_per_unit_mass_in_sea_water",
+      "unitsText": "umol/kg",
+      "minValue": 1949.4,
+      "maxValue": 2385.3,
+      "description": "The construction \"moles_of_X_per_unit_mass_in_Y\" is also called \"molality\" of X in Y, where X is a material constituent of Y.  A chemical species or biological group denoted by X may be described by a single term such as \"nitrogen\" or a phrase such as \"nox_expressed_as_nitrogen\". \"Dissolved inorganic carbon\" describes a family of chemical species in solution, including carbon dioxide, carbonic acid and the carbonate and bicarbonate anions. \"Dissolved inorganic carbon\" is the term used in standard names for all species belonging to the family that are represented within a given model. The list of individual species that are included in a quantity having a group chemical standard name can vary between models. Where possible, the data variable should be accompanied by a complete description of the species represented, for example, by using a comment attribute."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_total_h_scale",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_ph_reported_on_total_scale",
+      "unitsText": "1",
+      "minValue": 7.2977,
+      "maxValue": 8.0897,
+      "description": "'sea_water_pH_reported_on_total_scale' is the measure of acidity of seawater, defined as the negative logarithm of the concentration of dissolved hydrogen ions plus bisulfate ions in a sea water medium; it can be measured or calculated; when measured the scale is defined according to a series of buffers prepared in artificial seawater containing bisulfate.  The quantity may be written as pH(total) = -log([H+](free) + [HSO4-])."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ph_temperature",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/temperature_of_analysis_of_sea_water",
+      "unitsText": "degC",
+      "minValue": 24.43,
+      "maxValue": 25.82,
+      "description": "The temperature_of_analysis_of_sea_water is the reference temperature for the effects of temperature on the measurement of another variable. This temperature should be measured, but may have been calculated, or assumed. For example, the temperature of the sample when measuring pH, or the temperature of equilibration in the case of dissolved gases. The linkage between the data variable and the variable with a standard_name of temperature_of_analysis_of_sea_water is achieved using the ancillary_variables attribute on the data variable. It is strongly recommended that a variable with this standard name should have a units_metadata attribute, with one of the values \"on-scale\" or \"difference\", whichever is appropriate for the data, because it is essential to know whether the temperature is on-scale (meaning relative to the origin of the scale indicated by the units) or refers to temperature differences (implying that the origin of the temperature scale is irrevelant), in order to convert the units correctly (cf. https://cfconventions.org/cf-conventions/cf-conventions.html#temperature-units)."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ref_temperature",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/sea_water_temperature",
+      "unitsText": "degC",
+      "minValue": 1.4395,
+      "maxValue": 27.8823,
+      "description": "Sea water temperature is the in situ temperature of the sea water. To specify the depth at which the temperature applies use a vertical coordinate variable or scalar coordinate variable. There are standard names for sea_surface_temperature, sea_surface_skin_temperature, sea_surface_subskin_temperature and sea_surface_foundation_temperature which can be used to describe data located at the specified surfaces. For observed data, depending on the period during which the observation was made, the measured in situ temperature was recorded against standard \"scales\". These historical scales include the International Practical Temperature Scale of 1948 (IPTS-48; 1948-1967), the International Practical Temperature Scale of 1968 (IPTS-68, Barber, 1969; 1968-1989) and the International Temperature Scale of 1990 (ITS-90, Saunders 1990; 1990 onwards). Conversion of data between these scales follows t68 = t48 - (4.4 x 10e-6) * t48(100 - t - 48); t90 = 0.99976 * t68. Observations made prior to 1948 (IPTS-48) have not been documented and therefore a conversion cannot be certain. Differences between t90 and t68 can be up to 0.01 at temperatures of 40 C and above; differences of 0.002-0.007 occur across the standard range of ocean temperatures (-10 - 30 C). The International Equation of State of Seawater 1980 (EOS-80, UNESCO, 1981) and the Practical Salinity Scale (PSS-78) were both based on IPTS-68, while the Thermodynamic Equation of Seawater 2010 (TEOS-10) is based on ITS-90. References: Barber, 1969, doi: 10.1088/0026-1394/5/2/001; UNESCO, 1981; Saunders, 1990, WOCE Newsletter, 10, September 1990. It is strongly recommended that a variable with this standard name should have a units_metadata attribute, with one of the values \"on-scale\" or \"difference\", whichever is appropriate for the data, because it is essential to know whether the temperature is on-scale (meaning relative to the origin of the scale indicated by the units) or refers to temperature differences (implying that the origin of the temperature scale is irrevelant), in order to convert the units correctly (cf. https://cfconventions.org/cf-conventions/cf-conventions.html#temperature-units)."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_time",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/time",
+      "minValue": 1651437780,
+      "maxValue": 1654686960,
+      "description": null
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_latitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/latitude",
+      "unitsText": "degree_north",
+      "minValue": 20.9995,
+      "maxValue": 32.507,
+      "description": "Latitude is positive northward; its units of degree_north (or equivalent) indicate this explicitly. In a latitude-longitude system defined with respect to a rotated North Pole, the standard name of grid_latitude should be used instead of latitude. Grid latitude is positive in the grid-northward direction, but its units should be plain degree."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "bottle_longitude",
+      "propertyID": "http://vocab.nerc.ac.uk/standard_name/longitude",
+      "unitsText": "degree_east",
+      "minValue": 133.0289,
+      "maxValue": -161.2131,
+      "description": "Longitude is positive eastward; its units of degree_east (or equivalent) indicate this explicitly. In a latitude-longitude system defined with respect to a rotated North Pole, the standard name of grid_longitude should be used instead of longitude. Grid longitude is positive in the grid-eastward direction, but its units should be plain degree."
+    }
+  ]
+}

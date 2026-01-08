@@ -1,0 +1,36 @@
+@prefix : <http://example.org/shapes/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:DatasetShape a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:property [
+        sh:path schema:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "name" ;
+        sh:message "Dataset must have exactly one name"
+    ] ;
+    sh:property [
+        sh:path schema:description ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "description" ;
+        sh:message "Dataset must have exactly one description"
+    ] ;
+    sh:property [
+        sh:path schema:variableMeasured ;
+        sh:qualifiedValueShape :DepBelowSurfShape ;
+        sh:qualifiedMinCount 1 ;
+        sh:name "variableMeasured with specific name" ;
+        sh:message "Dataset must have at least one variableMeasured with name 'DepBelowSurf'"
+    ] .
+
+:DepBelowSurfShape a sh:NodeShape ;
+    sh:property [
+        sh:path schema:name ;
+        sh:hasValue "DepBelowSurf"
+    ] .

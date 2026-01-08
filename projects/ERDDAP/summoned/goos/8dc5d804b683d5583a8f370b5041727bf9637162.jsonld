@@ -1,0 +1,1623 @@
+
+{
+  "@context": {"@vocab":"https://schema.org/"},
+  "@type": "Dataset",
+  "name": "Global Drifter Program - 6 Hour Interpolated QC Drifter Data",
+  "headline": "drifter_6hour_qc",
+  "description": "Global Drifter Program 6-hourly drifting buoy collection. Quality control krigged (interpolation method) data. 6-Hour Drifter data product exists from 1979 to present, well suited for observing larger-scale oceanic processes. NOAA-Atlantic Oceanographic & Meteorological Laboratory (AOML) data from a local source.\nacknowledgement=Lumpkin, Rick; Centurioni, Luca (2019). Global Drifter Program quality-controlled 6-hour interpolated data from ocean surface drifting buoys. [indicate subset used].NOAA National Centers for Environmental Information. Dataset. https://doi.org/10.25921/7ntx-z961. Accessed [date].\ncdm_data_type=Trajectory\ncdm_trajectory_variables=ID\ncomment=Global Drifter Program 6h data\ncontributor_name=NOAA Global Drifter Program\ncontributor_role=Data Acquisition Center\nConventions=CF-1.6, ACDD-1.3, COARDS, NCCSV-1.2\nCurrentProgram=7325\ndoi=10.25921/7ntx-z961\nEasternmost_Easting=180.0\nfeatureType=Trajectory\ngeospatial_bounds=polygon (  180.000  49.560,  353.159  49.560,  353.159  57.420, 180.000  57.420, 180.000  49.560\ngeospatial_lat_max=89.984\ngeospatial_lat_min=-78.305\ngeospatial_lat_resolution=tbd\ngeospatial_lat_units=degrees_north\ngeospatial_lon_max=180.0\ngeospatial_lon_min=-179.999\ngeospatial_lon_resolution=tbd\ngeospatial_lon_units=degrees_east\nhistory=From buoydata_15001_jul22.dat with metadata from dirall.dat and deplog.dat\nid=Global Drifter Program ID 99015\ninfoUrl=https://www.aoml.noaa.gov/phod/dac/dirall.html\ninstitution=NOAA Atlantic Oceanographic and Meteorological Laboratory\nkeywords_vocabulary=GCMD Science Keywords\nlicence=freely available\nManufactureSensorType=SVPBD2\nManufactureVoltage=SVPBD2 volts\nmetadata_link=https://www.aoml.noaa.gov/phod/dac/dirall.html\nNorthernmost_Northing=89.984\nprocessing_level=Level 2 QC by AOML drifter DAC\nsource=source description\nsourceUrl=(local files)\nSouthernmost_Northing=-78.305\nstandard_name_vocabulary=CF Standard Name Table v30\nsubsetVariables=ID,WMO, expno,typedeath, typebuoy,SensorUpgrade,BuoyTypeManufacturer,BuoyTypeSensorArray,FloatDiameter,PurchaserFunding,Transmissions,DeployingCountry,ManufactureYear,ManufactureMonth,DrogueLength,DrogueBallast,DrogueDetectSensor, DeploymentStatus, DeployingShip\ntime_coverage_end=2023-06-15T18:00:00Z\ntime_coverage_start=1979-02-15T00:00:00Z\nWesternmost_Easting=-179.999\nwmo_platform_code=4400923",
+  "url": "https://osmc.noaa.gov/erddap/tabledap/drifter_6hour_qc.html",
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "ERDDAP Data Server at OSMC",
+    "sameAs": "https://osmc.noaa.gov/erddap"
+  },
+  "keywords": [
+    "aground",
+    "alive",
+    "atlantic",
+    "attached",
+    "bad",
+    "batteries",
+    "beginning",
+    "bulk",
+    "buoy",
+    "centered",
+    "circulation",
+    "collection",
+    "control",
+    "currents",
+    "dac",
+    "data",
+    "date",
+    "death",
+    "deploy_date",
+    "deploy_lat",
+    "deploy_lon",
+    "deployment",
+    "derived",
+    "difference",
+    "drifter",
+    "drifting",
+    "drogue",
+    "drogue_lost_date",
+    "earth",
+    "Earth Science > Oceans > Ocean Circulation > Ocean Currents",
+    "Earth Science > Oceans > Ocean Temperature > Sea Surface Temperature",
+    "eastward",
+    "end_date",
+    "end_lat",
+    "end_lon",
+    "err_lat",
+    "err_lon",
+    "err_temp",
+    "error",
+    "experiment",
+    "expno",
+    "fillvalue",
+    "first",
+    "global",
+    "good",
+    "identification",
+    "inactive",
+    "interpolated",
+    "laboratory",
+    "latitude",
+    "lon360",
+    "longitude",
+    "loss",
+    "meteorological",
+    "noaa",
+    "northward",
+    "number",
+    "obs",
+    "observations",
+    "ocean",
+    "oceanographic",
+    "oceans",
+    "organisation",
+    "organization",
+    "picked",
+    "program",
+    "quality",
+    "ran",
+    "science",
+    "sea",
+    "sea surface temperature",
+    "sea_surface_subskin_temperature",
+    "seawater",
+    "see",
+    "sporadic",
+    "standard",
+    "start_date",
+    "start_lat",
+    "start_lon",
+    "status",
+    "still",
+    "stopped",
+    "subskin",
+    "surface",
+    "surface current",
+    "surface_eastward_sea_water_velocity",
+    "surface_northward_sea_water_velocity",
+    "temperature",
+    "time",
+    "trajectory",
+    "transmissions",
+    "transmitting",
+    "type",
+    "typebuoy",
+    "typedeath",
+    "uncertain",
+    "velocity",
+    "vessel",
+    "water",
+    "WMO",
+    "world"
+  ],
+  "license": "The data may be used and redistributed for free but is not intended\nfor legal use, since it may contain inaccuracies. Neither the data\nContributor, ERD, NOAA, nor the United States Government, nor any\nof their employees or contractors, makes any warranty, express or\nimplied, including warranties of merchantability and fitness for a\nparticular purpose, or assumes any legal liability for the accuracy,\ncompleteness, or usefulness, of this information.",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "ID",
+      "alternateName": "Global Drifter Program Buoy ID",
+      "description": "Global Drifter Program Buoy ID",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "cf_role",
+          "value": "trajectory_id"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From buoydata_15001_jul22.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Identifier"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Global Drifter Program Buoy ID"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "WMO",
+      "alternateName": "World Meteorological Organization buoy identification number",
+      "description": "World Meteorological Organization buoy identification number",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 100
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From dirall.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "World Meteorological Organization buoy identification number"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": -999999
+        }
+      ],
+      "maxValue": 8800888,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "expno",
+      "alternateName": "Experiment number",
+      "description": "Experiment number",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 100
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From dirall.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Experiment number"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": -999999
+        }
+      ],
+      "maxValue": 32212,
+      "minValue": 40,
+      "unitText": "count"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "alternateName": "Time",
+      "description": "Time",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "T"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 4.0E10
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From buoydata_15001_jul22.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "valid_max",
+          "value": "3.0E10"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "valid_min",
+          "value": "2.0E8"
+        }
+      ],
+      "maxValue": "2023-06-15T18:00:00Z",
+      "minValue": "1979-02-15T00:00:00Z",
+      "propertyID": "time"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "alternateName": "Latitude",
+      "description": "Latitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "Y"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 90
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -90
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From buoydata_15001_jul22.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Latitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "latitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "valid_max",
+          "value": 90
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "valid_min",
+          "value": -90
+        }
+      ],
+      "maxValue": 89.984,
+      "minValue": -78.305,
+      "propertyID": "latitude",
+      "unitText": "degrees_north"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "alternateName": "Longitude",
+      "description": "Longitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lon"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "X"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 180
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -180
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "longitude"
+        }
+      ],
+      "maxValue": 180,
+      "minValue": -179.999,
+      "propertyID": "longitude",
+      "unitText": "degrees_east"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "lon360",
+      "alternateName": "Longitude",
+      "description": "Longitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "X"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 180
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -180
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "Computed from buoydata_15001_jul22.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "valid_max",
+          "value": 360
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "valid_min",
+          "value": 0
+        }
+      ],
+      "maxValue": 359.999,
+      "minValue": 0,
+      "propertyID": "longitude",
+      "unitText": "degrees_east"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "sst",
+      "alternateName": "Sea Surface Bulk Temperature",
+      "description": "Sea Surface Bulk Temperature",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 32
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From buoydata_15001_jul22.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Surface Bulk Temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_surface_subskin_temperature"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "valid_max",
+          "value": 40
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "valid_min",
+          "value": -15
+        }
+      ],
+      "maxValue": 35.95,
+      "minValue": -13.25,
+      "propertyID": "sea_surface_subskin_temperature",
+      "unitText": "degree_C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "err_sst",
+      "alternateName": "err_sst",
+      "description": "err_sst",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 5
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        }
+      ],
+      "maxValue": 31.623,
+      "minValue": 0.03,
+      "unitText": "degree_C"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ve",
+      "alternateName": "ve",
+      "description": "ve",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 0.5
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -0.5
+        }
+      ],
+      "maxValue": 3.11108,
+      "minValue": -999999
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "vn",
+      "alternateName": "vn",
+      "description": "vn",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 0.5
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -0.5
+        }
+      ],
+      "maxValue": 3.67742,
+      "minValue": -999999
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "err_lat",
+      "alternateName": "err_lat",
+      "description": "err_lat",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        }
+      ],
+      "maxValue": 9530.215,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "err_lon",
+      "alternateName": "err_lon",
+      "description": "err_lon",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        }
+      ],
+      "maxValue": 31.623,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "typebuoy",
+      "alternateName": "Buoy type (see https://www.aoml.noaa.gov/phod/dac/dirall.html)",
+      "description": "Buoy type (see https://www.aoml.noaa.gov/phod/dac/dirall.html)",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From directory file dirall.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Buoy type (see https://www.aoml.noaa.gov/phod/dac/dirall.html)"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "deploy_date",
+      "alternateName": "Deployment date and time",
+      "description": "Deployment date and time",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From deplog.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Deployment date and time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        }
+      ],
+      "maxValue": 1.685232E9,
+      "minValue": 2.877984E8,
+      "propertyID": "time",
+      "unitText": "seconds since 1970-01-01T00:00:00Z"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "deploy_lat",
+      "alternateName": "Deployment latitude",
+      "description": "Deployment latitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 90
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -90
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From deployment log deplog.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Deployment latitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": -999999
+        }
+      ],
+      "maxValue": 89.9,
+      "minValue": -77.81,
+      "unitText": "degrees_north"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "deploy_lon",
+      "alternateName": "Deployment longitude",
+      "description": "Deployment longitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 180
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -180
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From deployment log deplog.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Deployment longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": -999999
+        }
+      ],
+      "maxValue": 180,
+      "minValue": -180,
+      "unitText": "degrees_east"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "start_date",
+      "alternateName": "First good date and time derived by DAC quality control",
+      "description": "First good date and time derived by DAC quality control",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 150
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From directory file dirall.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "First good date and time derived by DAC quality control"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        }
+      ],
+      "maxValue": 1.6854912E9,
+      "minValue": 2.877984E8,
+      "propertyID": "time",
+      "unitText": "seconds since 1970-01-01T00:00:00Z"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "start_lat",
+      "alternateName": "First good latitude derived by DAC quality control",
+      "description": "First good latitude derived by DAC quality control",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 150
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From directory file dirall.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "First good latitude derived by DAC quality control"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": -999999
+        }
+      ],
+      "maxValue": 89.9,
+      "minValue": -77.81,
+      "unitText": "degrees_north"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "start_lon",
+      "alternateName": "First good longitude derived by DAC quality control",
+      "description": "First good longitude derived by DAC quality control",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 150
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From directory file dirall.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "First good longitude derived by DAC quality control"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": -999999
+        }
+      ],
+      "maxValue": 180,
+      "minValue": -179.99,
+      "unitText": "degrees_east"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "end_date",
+      "alternateName": "Last good date and time derived by DAC quality control",
+      "description": "Last good date and time derived by DAC quality control",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 150
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From directory file dirall.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Last good date and time derived by DAC quality control"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        }
+      ],
+      "maxValue": 1.6862688E9,
+      "minValue": 2.897856E8,
+      "propertyID": "time",
+      "unitText": "seconds since 1970-01-01T00:00:00Z"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "end_lat",
+      "alternateName": "Last good latitude derived by DAC quality control",
+      "description": "Last good latitude derived by DAC quality control",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 150
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From directory file dirall.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Last good latitude derived by DAC quality control"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": -999999
+        }
+      ],
+      "maxValue": 99.54,
+      "minValue": -77.49,
+      "unitText": "degrees_north"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "end_lon",
+      "alternateName": "Last good longitude derived by DAC quality control",
+      "description": "Last good longitude derived by DAC quality control",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 150
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From directory file dirall.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Last good longitude derived by DAC quality control"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": -999999
+        }
+      ],
+      "maxValue": 179.99,
+      "minValue": -179.99,
+      "unitText": "degrees_east"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "drogue_lost_date",
+      "alternateName": "Date of drogue loss (_FillValue=drogue still attached; 0=drogue status uncertain from beginning)",
+      "description": "Date of drogue loss (_FillValue=drogue still attached; 0=drogue status uncertain from beginning)",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From directory file dirall.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Date of drogue loss (_FillValue=drogue still attached; 0=drogue status uncertain from beginning)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        }
+      ],
+      "maxValue": 1.6863552E9,
+      "minValue": 0,
+      "propertyID": "time",
+      "unitText": "seconds since 1970-01-01T00:00:00Z"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "typedeath",
+      "alternateName": "Type of death (0=buoy still alive, 1=buoy ran aground, 2=picked up by vessel, 3=stopped transmitting, 4=sporadic transmissions, 5=bad batteries, 6=inactive status)",
+      "description": "Type of death (0=buoy still alive, 1=buoy ran aground, 2=picked up by vessel, 3=stopped transmitting, 4=sporadic transmissions, 5=bad batteries, 6=inactive status)",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": -999999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "history",
+          "value": "From directory file dirall.dat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Type of death (0=buoy still alive, 1=buoy ran aground, 2=picked up by vessel, 3=stopped transmitting, 4=sporadic transmissions, 5=bad batteries, 6=inactive status)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": -999999
+        }
+      ],
+      "maxValue": 6,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DeployingShip",
+      "alternateName": "Deploying Ship",
+      "description": "Deploying Ship",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Deploying Ship"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DeploymentStatus",
+      "alternateName": "Status of Deployment",
+      "description": "Status of Deployment",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Status of Deployment"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BuoyTypeManufacturer",
+      "alternateName": "Buoy Type Manufacturer",
+      "description": "Buoy Type Manufacturer",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Buoy Type Manufacturer"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BuoyTypeSensorArray",
+      "alternateName": "Buoy Type Sensor Array",
+      "description": "Buoy Type Sensor Array",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Buoy Type Sensor Array"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PurchaserFunding",
+      "alternateName": "Purchaser Funding",
+      "description": "Purchaser Funding",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Purchaser Funding"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SensorUpgrade",
+      "alternateName": "Sensor Upgrade",
+      "description": "Sensor Upgrade",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sensor Upgrade"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Transmissions",
+      "alternateName": "Transmissions",
+      "description": "Transmissions",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Transmissions"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DeployingCountry",
+      "alternateName": "Deploying Country",
+      "description": "Deploying Country",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Deploying Country"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DeploymentComments",
+      "alternateName": "Deployment Comments",
+      "description": "Deployment Comments",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Deployment Comments"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ManufactureYear",
+      "alternateName": "Manufacture Year",
+      "description": "Manufacture Year",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Manufacture Year"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ManufactureMonth",
+      "alternateName": "Manufacture Month",
+      "description": "Manufacture Month",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Manufacture Month"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "FloatDiameter",
+      "alternateName": "Float Diameter",
+      "description": "Float Diameter",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Float Diameter"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SubsfcFloatPresence",
+      "alternateName": "Subsfc Float Presence",
+      "description": "Subsfc Float Presence",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Subsfc Float Presence"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DrogueType",
+      "alternateName": "Drogue Type",
+      "description": "Drogue Type",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Drogue Type"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DrogueLength",
+      "alternateName": "Drogue Length",
+      "description": "Drogue Length",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Drogue Length"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DrogueBallast",
+      "alternateName": "Drogue Ballast",
+      "description": "Drogue Ballast",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Drogue Ballast"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DragAreaAboveDrogue",
+      "alternateName": "Drag Area Above Drogue",
+      "description": "Drag Area Above Drogue",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Drag Area Above Drogue"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DragAreaOfDrogue",
+      "alternateName": "Drag Area Of Drogue",
+      "description": "Drag Area Of Drogue",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Drag Area Of Drogue"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DragAreaRatio",
+      "alternateName": "Drag Area Ratio",
+      "description": "Drag Area Ratio",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Drag Area Ratio"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DrogueCenterDepth",
+      "alternateName": "Drogue Center Depth",
+      "description": "Drogue Center Depth",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Drogue Center Depth"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DrogueDetectSensor",
+      "alternateName": "Drogue Detect Sensor",
+      "description": "Drogue Detect Sensor",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Drogue Detect Sensor"
+        }
+      ]
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "AOML drifter DAC",
+    "email": "aoml.dftr@noaa.gov",
+    "sameAs": "https://www.aoml.noaa.gov/phod/gdp"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AOML Drifter DAC",
+    "email": "aoml.dftr@noaa.gov",
+    "sameAs": "https://www.aoml.noaa.gov/phod/gdp"
+  },
+  "dateCreated": "2023-01-14T03:48:25Z",
+  "datePublished": "2023-01-14T03:48:25Z",
+  "dateModified": "2023-01-14T03:48:25Z",
+  "identifier": "drifter_6hour_qc",
+  "temporalCoverage": "1979-02-15T00:00:00Z/2023-06-15T18:00:00Z",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "-78.305 -179.999 89.984 180"
+    }
+  }
+}

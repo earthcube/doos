@@ -1,0 +1,7 @@
+geopandas
+pandas
+rdflib
+pyshacl
+morph_kgc
+pyld
+pyarrow

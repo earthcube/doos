@@ -1,0 +1,159 @@
+
+{
+  "@context": {"@vocab":"https://schema.org/"},
+  "@type": "DataCatalog",
+  "name": "ERDDAP Data Server at OSMC",
+  "url": "https://osmc.noaa.gov/erddap",
+  "publisher": {
+    "@type": "Organization",
+    "name": "OSMC",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "USA",
+      "addressLocality": "7600 Sand Point Way NE, Seattle",
+      "addressRegion": "WA",
+      "postalCode": "98115"
+    },
+    "telephone": "+1 206-555-1212",
+    "email": "kevin.m.obrien@noaa.gov",
+    "sameAs": "http://www.osmc.noaa.gov"
+  },
+  "fileFormat": [
+    "application/geo+json",
+    "application/json",
+    "text/csv"
+  ],
+  "isAccessibleForFree": "True",
+  "dataset": [
+    {
+      "@type": "Dataset",
+      "name": "CCHDO GO SHIP bottle data",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/cchdo_bottle/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "CCHDO GO SHIP ctd data",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/cchdo_ctd/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "Global Drifter Program - 1 Hour Interpolated QC Drifter Data",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/drifter_hourly_qc/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "Global Drifter Program - 6 Hour Interpolated QC Drifter Data",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/drifter_6hour_qc/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "IOOS GTS counts",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/ioos_obs_counts/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "JASL/UHSLC Research Quality Tide Gauge Data (daily)",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/global_daily_rqds/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "JASL/UHSLC Research Quality Tide Gauge Data (hourly)",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/global_hourly_rqds/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "JCOMMPS Active WMO ID LIST",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/wmo_list/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "meop animal profiles",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/MEOP_profiles/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "OSMC 90 day RT data",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/OSMC_30day/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "OSMC Argo Profile data",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/OSMC_PROFILERS/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "OSMC flattened observations from GTS",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/OSMC_flattened/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "OSMC flattened observations from GTS",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/osmc_test/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "OSMC normalized observations from GTS",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/OSMC_Points/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "OSMC Profiles",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/OSMCV4_DUO_PROFILES/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "OSMC surface trajectory data",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/OSMCV4_DUO_SURFACE_TRAJECTORY/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "OSMC TimeSeries data",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/OSMCV4_DUO_TIME_SERIES/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, 1977-present, Air Temperature",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/pmelTaoDyAirt/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, 1977-present, Sea Surface Temperature",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/pmelTaoDySst/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, 1977-present, Temperature",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/pmelTaoDyT/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, 1977-present, Wind",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/pmelTaoDyW/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, 1987-present, Salinity",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/pmelTaoDyS/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, 1988-2020, ADCP",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/pmelTaoDyAdcp/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, 1989-present, Wind Stress",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/pmelTaoDyTau/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, 1992-present, Sea Surface Salinity",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/pmelTaoDySss/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, 1997-present, Precipitation",
+      "sameAs": "https://osmc.noaa.gov/erddap/info/pmelTaoDyRain/index.html"
+    }
+  ]
+}

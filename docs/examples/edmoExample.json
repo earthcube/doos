@@ -1,0 +1,186 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "Dataset",
+  "version": "1.0.0",
+  "provider": {
+    "@id": "https://edmo.seadatanet.org/report/43",
+    "@type": "Organization",
+    "legalName": "British Oceanographic Data Centre",
+    "name": "BODC",
+    "url": "https://www.bodc.ac.uk"
+  },
+  "publisher": {
+    "@id": "https://edmo.seadatanet.org/report/43"
+  },
+  "@id": "https://api.linked-systems.uk/api/schema-org/dataset/1927880",
+  "identifier": 1927880,
+  "datePublished": "2019-06-05T16:00:55Z",
+  "dateModified": "2024-09-10T08:16:49Z",
+  "name": "BODC Series 1927880",
+  "description": "Dataset metadata for BODC Series Reference Number 1927880",
+  "about": [
+    {
+      "@type": "Event",
+      "@id": "https://api.linked-systems.uk/api/schema-org/event/1927880",
+      "url": "https://www.bodc.ac.uk/data/documents/series/1927880/",
+      "name": "Collection Event related to BODC Series 1927880"
+    }
+  ],
+  "keywords": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Vertical spatial coordinates",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/AHGT/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/AHGT/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Reference numbers",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/ACYC/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/ACYC/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Quality control flags",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/ACFL/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/ACFL/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Chlorophyll pigment concentrations in water bodies",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/CPWC/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/CPWC/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Pigments",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/B035/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/B035/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Administration and dimensions",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/Z005/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/Z005/"
+    }
+  ],
+  "url": "https://www.bodc.ac.uk/data/documents/series/1927880/",
+  "isAccessibleForFree": true,
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://bodc.ac.uk/data/open_download/series/1927880/odv/",
+      "encodingFormat": "text/x-odv"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://bodc.ac.uk/data/open_download/series/1927880/odvnc/",
+      "encodingFormat": "application/netcdf"
+    }
+  ],
+  "temporalCoverage": "2013-06-08T03:42:00Z",
+  "license": "https://www.bodc.ac.uk/data/documents/nodb/281368/",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "longitude": "-16.1434",
+      "latitude": "48.64865"
+    }
+  },
+  "creator": [
+    {
+      "@type": "Role",
+      "roleName": "Contact",
+      "creator": {
+        "@type": "Person",
+        "name": "Ms. Anna Rumyantseva",
+        "givenName": "Anna",
+        "familyName": "Rumyantseva",
+        "url": "http://www.southampton.ac.uk/oes/postgraduate/research_students/asr1g12.page"
+      }
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "chl-a_water_GF/F-2um_fluor",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/SCHLFLPN/",
+      "description": "Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate GF/F-2um phase] by filtration, acetone extraction and fluorometry"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "chl-a_water_10-20um_fluor",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/SCHLFLPY/",
+      "description": "Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate 10-20um phase] by filtration, acetone extraction and fluorometry"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SampRef",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/SAMPRFNM/",
+      "description": "Sample reference number"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "chl-a_water_2-5um_fluor",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/SCHLFLPC/",
+      "description": "Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate 2-5um phase] by filtration, acetone extraction and fluorometry"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "chl-a_water_5-10um_fluor",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/SCHLFLPX/",
+      "description": "Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate 5-10um phase] by filtration, acetone extraction and fluorometry"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "RosPos",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ROSPOSID/",
+      "description": "Bottle rosette position identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DepBelowSurf",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/",
+      "description": "Depth (spatial coordinate) relative to water surface in the water body",
+      "minValue": 5,
+      "maxValue": 150
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "chl-a_water>GF/F_FA_fluor",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/CPHLFLP1/",
+      "description": "Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and fluorometry"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "C22_flag",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/BOTTFLAG/",
+      "description": "Sampling process quality flag (BODC C22)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "chl-a_water>20um_fluor",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/SCHLFLPQ/",
+      "description": "Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >20um phase] by filtration, acetone extraction and fluorometry"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "Natural Environment Research Council Swindon Office",
+        "url": "http://www.oceans2025.org/"
+      }
+    }
+  ]
+}
