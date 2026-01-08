@@ -3,6 +3,7 @@
 
 ## ToDO
 
+- [ ] Need to run the [current providers](https://qlever-ui.geocodes-aws-dev.earthcube.org/deepoceans/GxLMVz) against SHACL to validate which are exposing graphs following the depth profile.
 - [ ] Need to test approach in the GeoCroissant examples
 - [ ] ERDDAP exposing JOSN-LD with depth based on DOOS/OIH profile
     - https://github.com/robertdcurrier/erddap2mcp

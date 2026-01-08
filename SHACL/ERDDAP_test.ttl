@@ -1,0 +1,29 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oihval: <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#> .
+
+# Define a shape for the Dataset
+oihval:DatasetShape a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:property [
+        sh:path schema:variableMeasured ;
+        sh:qualifiedValueShape [
+            a sh:NodeShape ;
+            sh:property [
+                sh:path rdf:type ;
+                sh:hasValue schema:PropertyValue ;
+                sh:minCount 1 ;
+                sh:message "The node must be of type schema:PropertyValue." ;
+            ] ;
+            sh:property [
+                sh:path schema:name ;
+                sh:hasValue "latitude" ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:message "The PropertyValue must have the name 'latitude'." ;
+            ] ;
+        ] ;
+        sh:qualifiedMinCount 1 ;  # Ensures at least one PropertyValue has name "latitude"
+        sh:message "At least one PropertyValue in variableMeasured must have the name 'latitude'." ;
+    ] .

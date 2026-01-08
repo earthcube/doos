@@ -1,0 +1,1102 @@
+{
+    "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "Dataset",
+  "name": "AniBOS movement data",
+  "headline": "anibos_movement_data",
+  "description": "Animal Borne Ocean Sensor movement data\ncdm_data_type=Trajectory\ncdm_trajectory_variables=ref, ptt\nConventions=COARDS, CF-1.10, ACDD-1.3, NCCSV-1.1\nEasternmost_Easting=129.23655\nfeatureType=Trajectory\ngeospatial_lat_max=41.21673\ngeospatial_lat_min=-71.99316\ngeospatial_lat_units=degrees_north\ngeospatial_lon_max=129.23655\ngeospatial_lon_min=-172.21965\ngeospatial_lon_units=degrees_east\ninfoUrl=https://anibos.com/\ninstitution=AniBOS\nNorthernmost_Northing=41.21673\nsourceUrl=(local files)\nSouthernmost_Northing=-71.99316\nstandard_name_vocabulary=CF Standard Name Table v70\nsubsetVariables=ref, ptt\ntime_coverage_end=2024-01-20T00:36:11Z\ntime_coverage_start=2023-01-11T13:07:02Z\nWesternmost_Easting=-172.21965",
+  "url": "https://osmc.noaa.gov/erddap/tabledap/anibos_movement_data.html",
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "ERDDAP Data Server at OSMC",
+    "sameAs": "https://osmc.noaa.gov/erddap"
+  },
+  "keywords": [
+    "actual",
+    "actual_ptt",
+    "alt_lat",
+    "alt_lon",
+    "axis",
+    "best",
+    "best_level",
+    "cid",
+    "data",
+    "date",
+    "deleted",
+    "diag",
+    "diag_id",
+    "dur",
+    "ellipse",
+    "ellipse_orientation",
+    "error",
+    "error_radius",
+    "est",
+    "est_speed",
+    "freq",
+    "hdop",
+    "home",
+    "km_from_home",
+    "latitude",
+    "level",
+    "local",
+    "longitude",
+    "major",
+    "mask",
+    "mess",
+    "minor",
+    "n_mess",
+    "n_mess_120",
+    "nops",
+    "orientation",
+    "pass",
+    "pass_dur",
+    "ptt",
+    "radius",
+    "ref",
+    "satellite",
+    "semi",
+    "semi_major_axis",
+    "semi_minor_axis",
+    "source",
+    "speed",
+    "ssm",
+    "ssm_lat",
+    "ssm_lon",
+    "ssm_x",
+    "ssm_x_se",
+    "ssm_y",
+    "ssm_y_se",
+    "time",
+    "v",
+    "v_mask"
+  ],
+  "license": "These data were produced by NOAA and are not subject to copyright protection in the United States. NOAA waives any potential copyright and related rights in these data worldwide through the Creative Commons Zero 1.0 Universal Public Domain Dedication (CC0-1.0).",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "ref",
+      "alternateName": "ref",
+      "description": "ref",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "cf_role",
+          "value": "trajectory_id"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "A three-part code (e.g. rs3-Fred-07) : The first part identifies the batch of tags, the second part is the name or number of the animal, the third part is the year"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ptt",
+      "alternateName": "PTT",
+      "description": "PTT",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 2.147483647E9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "Argo PTT number used"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "PTT"
+        }
+      ],
+      "maxValue": 236109,
+      "minValue": 236085
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "alternateName": "D Date",
+      "description": "D Date",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "T"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "D Date"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "source_name",
+          "value": "d_date"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_precision",
+          "value": "1970-01-01T00:00:00Z"
+        }
+      ],
+      "maxValue": "2024-01-20T00:36:11Z",
+      "minValue": "2023-01-11T13:07:02Z",
+      "propertyID": "time"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "lq",
+      "alternateName": "LQ",
+      "description": "LQ",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 127
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "desciption",
+          "value": "The Location Quality assigned by Argos (-1 = class A, -2 = class B, -9 = class Z)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "LQ"
+        }
+      ],
+      "maxValue": 3,
+      "minValue": -9
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "alternateName": "Latitude",
+      "description": "Latitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "Y"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 90
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -90
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Latitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "latitude"
+        }
+      ],
+      "maxValue": 41.21673,
+      "minValue": -71.99316,
+      "propertyID": "latitude",
+      "unitText": "degrees_north"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "alternateName": "Longitude",
+      "description": "Longitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lon"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "X"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 180
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -180
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "longitude"
+        }
+      ],
+      "maxValue": 129.23655,
+      "minValue": -172.21965,
+      "propertyID": "longitude",
+      "unitText": "degrees_east"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "alt_lat",
+      "alternateName": "Alt Lat",
+      "description": "Alt Lat",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "Alternative solution to position equations (this may have been swapped with LAT,LON by the location filtering algorithm). These fields are simply copies of LAT,LON when Kalman location processing is operating."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Alt Lat"
+        }
+      ],
+      "maxValue": 46.55317,
+      "minValue": -87.5002
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "alt_lon",
+      "alternateName": "Alt Lon",
+      "description": "Alt Lon",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "Alternative solution to position equations (this may have been swapped with LAT,LON by the location filtering algorithm). These fields are simply copies of LAT,LON when Kalman location processing is operating."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Alt Lon"
+        }
+      ],
+      "maxValue": 178.21622,
+      "minValue": -179.18529
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "n_mess",
+      "alternateName": "N Mess",
+      "description": "N Mess",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 127
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "Number of uplinks received during the satellite pass"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "N Mess"
+        }
+      ],
+      "maxValue": 18,
+      "minValue": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "n_mess_120",
+      "alternateName": "N Mess 120",
+      "description": "N Mess 120",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 127
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "Number of uplinks received with signal strength > -120 dB"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "N Mess 120"
+        }
+      ],
+      "maxValue": 10,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "best_level",
+      "alternateName": "Best Level",
+      "description": "Best Level",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 32767
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "Signal strength of strongest uplink (dB)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Best Level"
+        }
+      ],
+      "maxValue": -108,
+      "minValue": -143
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pass_dur",
+      "alternateName": "Pass Dur",
+      "description": "Pass Dur",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 999
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "Duration of satellite overpass (s)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Pass Dur"
+        }
+      ],
+      "maxValue": 876,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "freq",
+      "alternateName": "Freq",
+      "description": "Freq",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "Measured frequency of SRDL signal at the satellite (Hz)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Freq"
+        }
+      ],
+      "maxValue": 4.016852335E8,
+      "minValue": 4.016650983E8
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "v_mask",
+      "alternateName": "V Mask",
+      "description": "V Mask",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 127
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 150
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "Result of the location filtering algorithm: 0 = accepted, 20 = rejected at the 20 dm/s level (see VMASK_THRESHOLD in deployments table). The first and last two points of the track are excluded from the algorithm and are assigned -1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "V Mask"
+        }
+      ],
+      "maxValue": 20,
+      "minValue": -1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "alt",
+      "alternateName": "Alt",
+      "description": "Alt",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "= 1 if the LAT,LON and ALT_LAT, ALT_LON were swapped by the location filters initial plausibility check"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Alt"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "est_speed",
+      "alternateName": "Est Speed",
+      "description": "Est Speed",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "Speed across the surface estimated by the location filtering algorithm (m/s)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Est Speed"
+        }
+      ],
+      "maxValue": 135.16,
+      "minValue": -1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "km_from_home",
+      "alternateName": "Km From Home",
+      "description": "Km From Home",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "Great-circle distance to the HOME_LAT,HOME_LON position specified in the deployments table (km). This is simply the shortest distance between the two points: the path may cross land"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Km From Home"
+        }
+      ],
+      "maxValue": 6558.426,
+      "minValue": 0.033
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "iq",
+      "alternateName": "Iq",
+      "description": "Iq",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 127
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "A two-digit code which gives further information about the location calculation for poor quality locations (see Argos documentation for a complete explanation"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Iq"
+        }
+      ],
+      "maxValue": 68,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nops",
+      "alternateName": "Nops",
+      "description": "Nops",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 127
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Nops"
+        }
+      ],
+      "maxValue": 4,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "deleted",
+      "alternateName": "Deleted",
+      "description": "Deleted",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "The value Y here causes this position to be ignored by the location filtering algorithm. Normally used to remove a very poor position occurring at the beginning of the track"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Deleted"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "actual_ptt",
+      "alternateName": "Actual Ptt",
+      "description": "Actual Ptt",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 2.147483647E9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "When a single SRDL is programmed to use several different PTT numbers, the SMRU system overrides the PTT field to present all the data as if it had been transmitted under a single PTT number. This field records the true PTT number associated with this location."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Actual Ptt"
+        }
+      ],
+      "maxValue": 236109,
+      "minValue": 236085
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "error_radius",
+      "alternateName": "Error Radius",
+      "description": "Error Radius",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 2.147483647E9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 50
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Error Radius"
+        }
+      ],
+      "maxValue": 999290,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "semi_major_axis",
+      "alternateName": "Semi Major Axis",
+      "description": "Semi Major Axis",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 2.147483647E9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Semi Major Axis"
+        }
+      ],
+      "maxValue": 997856,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "semi_minor_axis",
+      "alternateName": "Semi Minor Axis",
+      "description": "Semi Minor Axis",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 2.147483647E9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Semi Minor Axis"
+        }
+      ],
+      "maxValue": 710985,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ellipse_orientation",
+      "alternateName": "Ellipse Orientation",
+      "description": "Ellipse Orientation",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 32767
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ellipse Orientation"
+        }
+      ],
+      "maxValue": 180,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hdop",
+      "alternateName": "Hdop",
+      "description": "Hdop",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 2.147483647E9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Hdop"
+        }
+      ],
+      "maxValue": 94881,
+      "minValue": 95
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "satellite",
+      "alternateName": "Satellite",
+      "description": "Satellite",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Satellite"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "diag_id",
+      "alternateName": "Diag Id",
+      "description": "Diag Id",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 2.147483647E9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Diag Id"
+        }
+      ],
+      "maxValue": 3.94079008E8,
+      "minValue": 3.02267149E8
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ssm_lon",
+      "alternateName": "Ssm Lon",
+      "description": "Ssm Lon",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ssm Lon"
+        }
+      ],
+      "maxValue": 129.179879,
+      "minValue": 19.237744
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ssm_lat",
+      "alternateName": "Ssm Lat",
+      "description": "Ssm Lat",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ssm Lat"
+        }
+      ],
+      "maxValue": -47.308381,
+      "minValue": -68.830095
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ssm_x",
+      "alternateName": "SSM X",
+      "description": "SSM X",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "SSM X"
+        }
+      ],
+      "maxValue": 3477.036618,
+      "minValue": -2544.992246
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ssm_y",
+      "alternateName": "SSM Y",
+      "description": "SSM Y",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "SSM Y"
+        }
+      ],
+      "maxValue": 4847.210276,
+      "minValue": 1368.413259
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ssm_x_se",
+      "alternateName": "Ssm X Se",
+      "description": "Ssm X Se",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ssm X Se"
+        }
+      ],
+      "maxValue": 102.012307,
+      "minValue": 0.007723
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ssm_y_se",
+      "alternateName": "Ssm Y Se",
+      "description": "Ssm Y Se",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Ssm Y Se"
+        }
+      ],
+      "maxValue": 78.139969,
+      "minValue": 0.012073
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cid",
+      "alternateName": "Cid",
+      "description": "Cid",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Cid"
+        }
+      ]
+    }
+  ],
+  "identifier": "anibos_movement_data",
+  "temporalCoverage": "2023-01-11T13:07:02Z/2024-01-20T00:36:11Z",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "-71.99316 -172.21965 41.21673 129.23655"
+    }
+  }
+}
+
