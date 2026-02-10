@@ -1,0 +1,53 @@
+PREFIX schema: <https://schema.org/>
+
+SELECT DISTINCT  ?level  ?topType?prop ?lv1type ?prop1  ?lv2type ?prop2 ?lv3type
+WHERE {
+  {
+    # Level 0 (root)
+    BIND(schema:Dataset AS ?topType )
+	?root a ?topType .
+	?root ?prop ?node .
+    BIND(0 AS ?level)
+  }
+  UNION
+  {
+    # Level 1
+	BIND(schema:Dataset AS ?topType)
+	?root a ?topType .
+    ?root ?prop ?node1 .
+	?node1 a ?lv1type .
+    BIND(1 AS ?level)
+
+   }
+  UNION
+  {
+    # Level 2
+	BIND(schema:Dataset AS ?topType)
+	?root a ?topType .
+    ?root ?prop ?node1 .
+	?node1 a ?lv1type .
+
+    ?node1 ?prop1 ?node2 .
+	?node2 a ?lv2type .
+
+
+    BIND(2 AS ?level)
+  }
+   UNION
+  {
+    # Level 3
+	BIND(schema:Dataset AS ?topType)
+	?root a ?topType .
+    ?root ?prop ?node1 .
+	?node1 a ?lv1type .
+
+    ?node1 ?prop1 ?node2 .
+	?node2 a ?lv2type .
+
+    ?node2 ?prop2 ?node3 .
+	?node3 a ?lv3type .
+
+    BIND(3 AS ?level)
+  }
+}
+ORDER BY ?level

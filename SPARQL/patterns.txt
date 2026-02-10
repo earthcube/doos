@@ -1,0 +1,895 @@
+?dataset <https://schema.org/sameAs> ?sameas
+
+?dataset <https://schema.org/isAccessibleForFree> ?isaccessibleforfree
+
+?dataset <https://schema.org/keywords> ?keywords
+
+?dataset <https://schema.org/license> ?license
+
+?dataset <https://schema.org/measurementTechnique> ?measurementtechnique
+
+?dataset <https://schema.org/name> ?name
+
+?dataset <https://schema.org/producer> ?producer
+
+?dataset <https://schema.org/provider> ?provider
+
+?dataset <https://schema.org/publisher> ?publisher
+
+?dataset <https://schema.org/about> ?about
+
+?dataset <https://schema.org/spatialCoverage> ?spatialcoverage
+
+?dataset <https://schema.org/ssdb> ?ssdb
+
+?dataset <https://schema.org/subjectOf> ?subjectof
+
+?dataset <https://schema.org/temporalCoverage> ?temporalcoverage
+
+?dataset <https://schema.org/url> ?url
+
+?dataset <https://schema.org/variableMeasured> ?variablemeasured
+
+?dataset <https://schema.org/version> ?version
+
+?dataset <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?type
+
+?dataset <https://schema.org/identifier> ?identifier
+
+?dataset <https://schema.org/abstract> ?abstract
+
+?dataset <https://schema.org/additionalProperty> ?additionalproperty
+
+?dataset <https://schema.org/alternateName> ?alternatename
+
+?dataset <https://schema.org/author> ?author
+
+?dataset <https://schema.org/citation> ?citation
+
+?dataset <https://schema.org/contributor> ?contributor
+
+?dataset <https://schema.org/creator> ?creator
+
+?dataset <https://schema.org/creditText> ?credittext
+
+?dataset <https://schema.org/dateModified> ?datemodified
+
+?dataset <https://schema.org/datePublished> ?datepublished
+
+?dataset <https://schema.org/description> ?description
+
+?dataset <https://schema.org/distribution> ?distribution
+
+?dataset <https://schema.org/funding> ?funding
+
+?dataset <https://schema.org/headline> ?headline
+
+?dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog
+
+?dataset <https://schema.org/dateCreated> ?datecreated
+
+?dataset <https://schema.org/keywords> ?keywords_definedterm
+
+?dataset <https://schema.org/license> ?license_creativework
+
+?dataset <https://schema.org/producer> ?producer_researchproject
+
+?dataset <https://schema.org/provider> ?provider_organization
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+
+?dataset <https://schema.org/provider> ?provider_service
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+
+?dataset <https://schema.org/spatialCoverage> ?spatialcoverage_place
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+
+?dataset <https://schema.org/subjectOf> ?subjectof_event
+
+?dataset <https://schema.org/variableMeasured> ?variablemeasured_propertyvalue
+
+?dataset <https://schema.org/publisher> ?publisher_service
+
+?dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_offercatalog
+
+?dataset <https://schema.org/about> ?about_event
+
+?dataset <https://schema.org/additionalProperty> ?additionalproperty_propertyvalue
+
+?dataset <https://schema.org/author> ?author_organization
+
+?dataset <https://schema.org/creator> ?creator_organization
+
+?dataset <https://schema.org/creator> ?creator_person
+
+?dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_service
+
+?dataset <https://schema.org/distribution> ?distribution_datadownload
+
+?dataset <https://schema.org/funding> ?funding_grant
+
+?dataset <https://schema.org/funding> ?funding_monetarygrant
+
+?dataset <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_datacatalog
+
+?dataset <https://schema.org/creator> ?creator_role
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/logo> ?logo_imageobject
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/parentOrganization> ?parentorganization_organization
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/publishingPrinciples> ?publishingprinciples_digitaldocument
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/address> ?address_postaladdress
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/availableChannel> ?availablechannel_servicechannel
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/category> ?category_definedterm
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/contactPoint> ?contactpoint_contactpoint
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/funder> ?funder_organization
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/knowsAbout> ?knowsabout_definedterm
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/knowsAbout> ?knowsabout_definedterm
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/funder> ?funder_organization
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/contactPoint> ?contactpoint_contactpoint
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/category> ?category_definedterm
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/availableChannel> ?availablechannel_servicechannel
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/address> ?address_postaladdress
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/publishingPrinciples> ?publishingprinciples_digitaldocument
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/parentOrganization> ?parentorganization_organization
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/logo> ?logo_imageobject
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/knowsAbout> ?knowsabout_definedterm
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/logo> ?logo_imageobject
+
+?dataset <https://schema.org/variableMeasured> ?variablemeasured_propertyvalue
+?variablemeasured_propertyvalue <https://schema.org/valueReference> ?valuereference_propertyvalue
+
+?dataset <https://schema.org/subjectOf> ?subjectof_event
+?subjectof_event <https://schema.org/potentialAction> ?potentialaction_action
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <http://spdx.org/rdf/terms#checksum> ?checksum_checksum
+
+?dataset <https://schema.org/spatialCoverage> ?spatialcoverage_place
+?spatialcoverage_place <https://schema.org/geo> ?geo_geoshape
+
+?dataset <https://schema.org/spatialCoverage> ?spatialcoverage_place
+?spatialcoverage_place <https://schema.org/geo> ?geo_geoshape
+
+?dataset <https://schema.org/spatialCoverage> ?spatialcoverage_place
+?spatialcoverage_place <https://schema.org/geo> ?geo_geocoordinates
+
+?dataset <https://schema.org/spatialCoverage> ?spatialcoverage_place
+?spatialcoverage_place <https://schema.org/additionalProperty> ?additionalproperty_propertyvalue
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/publishingPrinciples> ?publishingprinciples_digitaldocument
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/parentOrganization> ?parentorganization_organization
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/logo> ?logo_imageobject
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/funder> ?funder_organization
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/contactPoint> ?contactpoint_contactpoint
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/category> ?category_definedterm
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/availableChannel> ?availablechannel_servicechannel
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/address> ?address_postaladdress
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/publishingPrinciples> ?publishingprinciples_digitaldocument
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/parentOrganization> ?parentorganization_organization
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/knowsAbout> ?knowsabout_definedterm
+
+?dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_datacatalog
+?includedindatacatalog_datacatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/funder> ?funder_organization
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/contactPoint> ?contactpoint_contactpoint
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/category> ?category_definedterm
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/availableChannel> ?availablechannel_servicechannel
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/address> ?address_postaladdress
+
+?dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_service
+?includedindatacatalog_service <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_service
+?includedindatacatalog_service <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_offercatalog
+?includedindatacatalog_offercatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_offercatalog
+?includedindatacatalog_offercatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_datacatalog
+?includedindatacatalog_datacatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+
+?dataset <https://schema.org/funding> ?funding_monetarygrant
+?funding_monetarygrant <https://schema.org/funder> ?funder_fundingagency
+
+?dataset <https://schema.org/funding> ?funding_grant
+?funding_grant <https://schema.org/funder> ?funder_organization
+
+?dataset <https://schema.org/distribution> ?distribution_datadownload
+?distribution_datadownload <http://spdx.org/rdf/terms#checksum> ?checksum_checksum
+
+?dataset <https://schema.org/creator> ?creator_role
+?creator_role <https://schema.org/creator> ?creator_person
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_event
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_boattrip
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/subjectOf> ?subjectof_dataset
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/location> ?location_place
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/funding> ?funding_monetarygrant
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/contributor> ?contributor_person
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <http://www.opengis.net/ont/geosparql#hasGeometry> ?hasgeometry_point
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/knowsAbout> ?knowsabout_definedterm
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/funder> ?funder_organization
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/contactPoint> ?contactpoint_contactpoint
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/category> ?category_definedterm
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/availableChannel> ?availablechannel_servicechannel
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/address> ?address_postaladdress
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/publishingPrinciples> ?publishingprinciples_digitaldocument
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/parentOrganization> ?parentorganization_organization
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/logo> ?logo_imageobject
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/knowsAbout> ?knowsabout_definedterm
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/logo> ?logo_imageobject
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/parentOrganization> ?parentorganization_organization
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/publishingPrinciples> ?publishingprinciples_digitaldocument
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/address> ?address_postaladdress
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/availableChannel> ?availablechannel_servicechannel
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/category> ?category_definedterm
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/contactPoint> ?contactpoint_contactpoint
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/funder> ?funder_organization
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+?hasoffercatalog_offercatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+?hasoffercatalog_service <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+?hasoffercatalog_service <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/parentOrganization> ?parentorganization_organization
+?parentorganization_organization <https://schema.org/address> ?address_postaladdress
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_datacatalog
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_offercatalog
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_service
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/funder> ?funder_organization
+?funder_organization <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/funder> ?funder_organization
+?funder_organization <https://schema.org/parentOrganization> ?parentorganization_organization
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+?hasoffercatalog_datacatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+?hasoffercatalog_datacatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+?hasoffercatalog_offercatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+?hasoffercatalog_offercatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+?hasoffercatalog_service <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+?hasoffercatalog_offercatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+?hasoffercatalog_datacatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+?hasoffercatalog_datacatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/funder> ?funder_organization
+?funder_organization <https://schema.org/parentOrganization> ?parentorganization_organization
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/funder> ?funder_organization
+?funder_organization <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_service
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_offercatalog
+
+?dataset <https://schema.org/publisher> ?publisher_organization
+?publisher_organization <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_datacatalog
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/parentOrganization> ?parentorganization_organization
+?parentorganization_organization <https://schema.org/address> ?address_postaladdress
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+?hasoffercatalog_service <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+?hasoffercatalog_service <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+?hasoffercatalog_offercatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+?hasoffercatalog_offercatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/variableMeasured> ?variablemeasured_propertyvalue
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+?hasoffercatalog_datacatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/distribution> ?distribution_datadownload
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/subjectOf> ?subjectof_datadownload_2
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/spatialCoverage> ?spatialcoverage_place
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/publisher> ?publisher_service
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/publisher> ?publisher_researchproject
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/publisher> ?publisher_organization
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/provider> ?provider_service
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/provider> ?provider_researchproject
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/provider> ?provider_organization
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/producer> ?producer_researchproject
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_service
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_offercatalog
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_datacatalog
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/subjectOf> ?subjectof_datadownload
+?subjectof_datadownload <https://schema.org/about> ?about_dataset
+?about_dataset <https://schema.org/funding> ?funding_monetarygrant
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+?hasoffercatalog_service <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/parentOrganization> ?parentorganization_organization
+?parentorganization_organization <https://schema.org/address> ?address_postaladdress
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+?hasoffercatalog_service <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+?hasoffercatalog_service <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+?hasoffercatalog_offercatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+?hasoffercatalog_offercatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+?hasoffercatalog_datacatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+?hasoffercatalog_datacatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/funder> ?funder_organization
+?funder_organization <https://schema.org/parentOrganization> ?parentorganization_organization
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/funder> ?funder_organization
+?funder_organization <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_service
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_offercatalog
+
+?dataset <https://schema.org/publisher> ?publisher_service
+?publisher_service <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_datacatalog
+
+?dataset <https://schema.org/publisher> ?publisher_researchproject
+?publisher_researchproject <https://schema.org/parentOrganization> ?parentorganization_organization
+?parentorganization_organization <https://schema.org/address> ?address_postaladdress
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_boattrip
+?superevent_boattrip <https://schema.org/arrivalBoatTerminal> ?arrivalboatterminal_boatterminal
+
+?dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_service
+?includedindatacatalog_service <https://schema.org/potentialAction> ?potentialaction_searchaction
+?potentialaction_searchaction <https://schema.org/query-input> ?query-input_propertyvaluespecification
+
+?dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_offercatalog
+?includedindatacatalog_offercatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+?potentialaction_searchaction <https://schema.org/query-input> ?query-input_propertyvaluespecification
+
+?dataset <https://schema.org/includedInDataCatalog> ?includedindatacatalog_datacatalog
+?includedindatacatalog_datacatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+?potentialaction_searchaction <https://schema.org/query-input> ?query-input_propertyvaluespecification
+
+?dataset <https://schema.org/funding> ?funding_monetarygrant
+?funding_monetarygrant <https://schema.org/funder> ?funder_fundingagency
+?funder_fundingagency <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_event
+?superevent_event <https://schema.org/subEvent> ?subevent_event
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_event
+?superevent_event <https://schema.org/funding> ?funding_monetarygrant
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_event
+?superevent_event <https://schema.org/departureBoatTerminal> ?departureboatterminal_boatterminal
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_event
+?superevent_event <https://schema.org/contributor> ?contributor_person
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_event
+?superevent_event <https://schema.org/arrivalBoatTerminal> ?arrivalboatterminal_boatterminal
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_event
+?superevent_event <http://www.opengis.net/ont/geosparql#hasGeometry> ?hasgeometry_linestring
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_boattrip
+?superevent_boattrip <https://schema.org/subEvent> ?subevent_event
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_boattrip
+?superevent_boattrip <https://schema.org/funding> ?funding_monetarygrant
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_boattrip
+?superevent_boattrip <https://schema.org/departureBoatTerminal> ?departureboatterminal_boatterminal
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_boattrip
+?superevent_boattrip <https://schema.org/contributor> ?contributor_person
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_datacatalog
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/superEvent> ?superevent_boattrip
+?superevent_boattrip <http://www.opengis.net/ont/geosparql#hasGeometry> ?hasgeometry_linestring
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/subjectOf> ?subjectof_dataset
+?subjectof_dataset <https://schema.org/variableMeasured> ?variablemeasured_propertyvalue
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/subjectOf> ?subjectof_dataset
+?subjectof_dataset <https://schema.org/spatialCoverage> ?spatialcoverage_place
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/subjectOf> ?subjectof_dataset
+?subjectof_dataset <https://schema.org/publisher> ?publisher_organization
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/subjectOf> ?subjectof_dataset
+?subjectof_dataset <https://schema.org/provider> ?provider_organization
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/subjectOf> ?subjectof_dataset
+?subjectof_dataset <https://schema.org/keywords> ?keywords_definedterm
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/subjectOf> ?subjectof_dataset
+?subjectof_dataset <https://schema.org/funding> ?funding_grant
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/subjectOf> ?subjectof_dataset
+?subjectof_dataset <https://schema.org/distribution> ?distribution_datadownload
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/subjectOf> ?subjectof_dataset
+?subjectof_dataset <https://schema.org/creator> ?creator_role
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/subjectOf> ?subjectof_dataset
+?subjectof_dataset <https://schema.org/additionalProperty> ?additionalproperty_propertyvalue
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/subjectOf> ?subjectof_dataset
+?subjectof_dataset <https://schema.org/about> ?about_event_2
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/location> ?location_place
+?location_place <http://www.opengis.net/ont/geosparql#> ?ont_geoshape
+
+?dataset <https://schema.org/about> ?about_event
+?about_event <https://schema.org/funding> ?funding_monetarygrant
+?funding_monetarygrant <https://schema.org/funder> ?funder_organization
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_service
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/funder> ?funder_organization
+?funder_organization <https://schema.org/parentOrganization> ?parentorganization_organization
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/funder> ?funder_organization
+?funder_organization <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_service
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_offercatalog
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_datacatalog
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/parentOrganization> ?parentorganization_organization
+?parentorganization_organization <https://schema.org/address> ?address_postaladdress
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+?hasoffercatalog_service <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+?hasoffercatalog_service <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+?hasoffercatalog_offercatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+?hasoffercatalog_offercatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+?hasoffercatalog_datacatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+?hasoffercatalog_datacatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/funder> ?funder_organization
+?funder_organization <https://schema.org/parentOrganization> ?parentorganization_organization
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/funder> ?funder_organization
+?funder_organization <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/provider> ?provider_service
+?provider_service <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+?hasoffercatalog_datacatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_offercatalog
+
+?dataset <https://schema.org/provider> ?provider_researchproject
+?provider_researchproject <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_datacatalog
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/parentOrganization> ?parentorganization_organization
+?parentorganization_organization <https://schema.org/address> ?address_postaladdress
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+?hasoffercatalog_service <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_service
+?hasoffercatalog_service <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+?hasoffercatalog_offercatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_offercatalog
+?hasoffercatalog_offercatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+?hasoffercatalog_datacatalog <https://schema.org/potentialAction> ?potentialaction_searchaction
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/hasOfferCatalog> ?hasoffercatalog_datacatalog
+?hasoffercatalog_datacatalog <https://schema.org/audience> ?audience_audience
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/funder> ?funder_organization
+?funder_organization <https://schema.org/parentOrganization> ?parentorganization_organization
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/funder> ?funder_organization
+?funder_organization <https://schema.org/identifier> ?identifier_propertyvalue
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_service
+
+?dataset <https://schema.org/provider> ?provider_organization
+?provider_organization <https://schema.org/availableChannel> ?availablechannel_servicechannel
+?availablechannel_servicechannel <https://schema.org/providesService> ?providesservice_offercatalog
+
