@@ -20,7 +20,7 @@ lmor = dspy.LM(
     api_base="https://openrouter.ai/api/v1",
     api_key=OPENROUTER_API_KEY,
     cache=False,
-    temperature=0.5
+    temperature=0.5,
 )
 
 dspy.configure(lm=lmor)
@@ -28,10 +28,15 @@ dspy.configure(lm=lmor)
 # Load MCP server for LanceMcpPredict tool
 api = load("http://homelab.lan:8898/mcp")
 
+
 class GfuDocsSkill(dspy.Signature):
     """Types from the graph."""
+
     query: str = dspy.InputField(desc="The search query for GFU docs")
-    answer: str = dspy.OutputField(desc="The final answer from Grok based on the search context")
+    answer: str = dspy.OutputField(
+        desc="The final answer from Grok based on the search context"
+    )
+
 
 class GfuDocsModule(dspy.Module):
     def __init__(self):
@@ -41,6 +46,7 @@ class GfuDocsModule(dspy.Module):
     def forward(self, query: str):
         result = self.predict(query=query)
         return result
+
 
 # Example usage
 if __name__ == "__main__":

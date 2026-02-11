@@ -2,16 +2,16 @@ import atexit
 import multiprocessing as mp
 import time
 import threading
-from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
+from concurrent.futures import ProcessPoolExecutor
 import requests
 import pyarrow as pa
 import pyarrow.parquet as pq
 from datetime import datetime
-import os
 from pathlib import Path
 from queue import Empty
 
 session: requests.Session
+
 
 class StreamingParquetWriter:
     """
@@ -43,25 +43,29 @@ class StreamingParquetWriter:
         if not self.current_batch:
             return
 
-        filename = f"parquet_output/{self.base_filename}_{self.file_counter:06d}.parquet"
+        filename = (
+            f"parquet_output/{self.base_filename}_{self.file_counter:06d}.parquet"
+        )
 
         # Prepare data for PyArrow
         data = {
-            'request_id': [r.get('request_id', 0) for r in self.current_batch],
-            'url': [r.get('url', '') for r in self.current_batch],
-            'status_code': [r.get('status_code', 0) for r in self.current_batch],
-            'content': [r.get('content', b'') for r in self.current_batch],
-            'content_length': [r.get('content_length', 0) for r in self.current_batch],
-            'content_type': [r.get('content_type', 'unknown') for r in self.current_batch],
-            'download_time': [r.get('download_time', 0.0) for r in self.current_batch],
-            'timestamp': [r.get('timestamp', '') for r in self.current_batch],
-            'process_name': [r.get('process_name', '') for r in self.current_batch],
-            'error': [r.get('error', '') for r in self.current_batch]
+            "request_id": [r.get("request_id", 0) for r in self.current_batch],
+            "url": [r.get("url", "") for r in self.current_batch],
+            "status_code": [r.get("status_code", 0) for r in self.current_batch],
+            "content": [r.get("content", b"") for r in self.current_batch],
+            "content_length": [r.get("content_length", 0) for r in self.current_batch],
+            "content_type": [
+                r.get("content_type", "unknown") for r in self.current_batch
+            ],
+            "download_time": [r.get("download_time", 0.0) for r in self.current_batch],
+            "timestamp": [r.get("timestamp", "") for r in self.current_batch],
+            "process_name": [r.get("process_name", "") for r in self.current_batch],
+            "error": [r.get("error", "") for r in self.current_batch],
         }
 
         # Create and write PyArrow table
         table = pa.table(data)
-        pq.write_table(table, filename, compression='snappy')
+        pq.write_table(table, filename, compression="snappy")
 
         batch_size = len(self.current_batch)
         self.total_written += batch_size
@@ -79,7 +83,9 @@ class StreamingParquetWriter:
             if self.current_batch:
                 self._write_batch()
 
-        print(f"Finalized: {self.total_written:,} total records in {self.file_counter} files")
+        print(
+            f"Finalized: {self.total_written:,} total records in {self.file_counter} files"
+        )
 
         # Optionally combine files into a single dataset
         self._create_dataset_metadata()
@@ -92,12 +98,14 @@ class StreamingParquetWriter:
             f.write(f"Dataset created: {datetime.now()}\n")
             f.write(f"Total files: {len(files)}\n")
             f.write(f"Total records: {self.total_written:,}\n")
-            f.write(f"Files:\n")
+            f.write("Files:\n")
             for file in sorted(files):
                 f.write(f"  {file.name}\n")
 
+
 # Global writer instance
 writer = None
+
 
 def main():
     """Main function optimized for millions of sites"""
@@ -125,6 +133,7 @@ def main():
     print(f"\nCompleted {len(sites):,} sites in {duration:.2f} seconds")
     print(f"Average: {len(sites)/duration:.1f} sites/second")
 
+
 def download_all_sites_streaming(sites):
     """
     Stream results directly to disk to avoid memory issues
@@ -137,9 +146,7 @@ def download_all_sites_streaming(sites):
 
     # Start background writer thread
     writer_thread = threading.Thread(
-        target=background_writer,
-        args=(result_queue,),
-        daemon=True
+        target=background_writer, args=(result_queue,), daemon=True
     )
     writer_thread.start()
 
@@ -147,8 +154,7 @@ def download_all_sites_streaming(sites):
 
     try:
         with ProcessPoolExecutor(
-            max_workers=mp.cpu_count(),
-            initializer=init_process
+            max_workers=mp.cpu_count(), initializer=init_process
         ) as executor:
 
             # Submit all jobs
@@ -164,12 +170,15 @@ def download_all_sites_streaming(sites):
                 completed += 1
 
                 if completed % 1000 == 0:
-                    print(f"Progress: {completed:,}/{len(sites):,} ({completed/len(sites)*100:.1f}%)")
+                    print(
+                        f"Progress: {completed:,}/{len(sites):,} ({completed/len(sites)*100:.1f}%)"
+                    )
 
     finally:
         # Signal writer thread to stop
         result_queue.put(None)  # Poison pill
         writer_thread.join(timeout=30)
+
 
 def background_writer(result_queue):
     """
@@ -192,6 +201,7 @@ def background_writer(result_queue):
             print(f"Writer thread error: {e}")
             break
 
+
 def download_site_streaming(url, request_id, result_queue):
     """
     Download a site and put result in queue for background writing
@@ -203,16 +213,16 @@ def download_site_streaming(url, request_id, result_queue):
             download_time = time.perf_counter() - start_time
 
             result = {
-                'request_id': request_id,
-                'url': url,
-                'status_code': response.status_code,
-                'content': response.content,
-                'content_length': len(response.content),
-                'content_type': response.headers.get('content-type', 'unknown'),
-                'download_time': download_time,
-                'timestamp': datetime.now().isoformat(),
-                'process_name': mp.current_process().name,
-                'error': ''
+                "request_id": request_id,
+                "url": url,
+                "status_code": response.status_code,
+                "content": response.content,
+                "content_length": len(response.content),
+                "content_type": response.headers.get("content-type", "unknown"),
+                "download_time": download_time,
+                "timestamp": datetime.now().isoformat(),
+                "process_name": mp.current_process().name,
+                "error": "",
             }
 
             # Put in queue for background writer
@@ -224,18 +234,19 @@ def download_site_streaming(url, request_id, result_queue):
 
     except Exception as e:
         error_result = {
-            'request_id': request_id,
-            'url': url,
-            'status_code': 0,
-            'content': b'',
-            'content_length': 0,
-            'content_type': 'error',
-            'download_time': 0.0,
-            'timestamp': datetime.now().isoformat(),
-            'process_name': mp.current_process().name,
-            'error': str(e)
+            "request_id": request_id,
+            "url": url,
+            "status_code": 0,
+            "content": b"",
+            "content_length": 0,
+            "content_type": "error",
+            "download_time": 0.0,
+            "timestamp": datetime.now().isoformat(),
+            "process_name": mp.current_process().name,
+            "error": str(e),
         }
         result_queue.put(error_result)
+
 
 def init_process():
     """Initialize each worker process"""
@@ -243,20 +254,17 @@ def init_process():
     session = requests.Session()
 
     # Optimize session for high-volume scraping
-    session.headers.update({
-        'User-Agent': 'High-Volume-Scraper/1.0'
-    })
+    session.headers.update({"User-Agent": "High-Volume-Scraper/1.0"})
 
     # Connection pooling for efficiency
     adapter = requests.adapters.HTTPAdapter(
-        pool_connections=20,
-        pool_maxsize=50,
-        max_retries=2
+        pool_connections=20, pool_maxsize=50, max_retries=2
     )
-    session.mount('http://', adapter)
-    session.mount('https://', adapter)
+    session.mount("http://", adapter)
+    session.mount("https://", adapter)
 
     atexit.register(session.close)
+
 
 def read_streaming_results():
     """
@@ -285,8 +293,8 @@ def read_streaming_results():
         print(f"Loaded {len(df):,} total records")
 
         # Show summary stats
-        successful = (df['status_code'] == 200).sum()
-        total_bytes = df['content_length'].sum()
+        successful = (df["status_code"] == 200).sum()
+        total_bytes = df["content_length"].sum()
 
         print(f"Successful downloads: {successful:,}")
         print(f"Total bytes: {total_bytes:,} ({total_bytes/(1024**2):.1f} MB)")
@@ -297,10 +305,11 @@ def read_streaming_results():
         print(f"Error reading results: {e}")
         return None
 
+
 if __name__ == "__main__":
     main()
 
     # Read results back
-    print("\n" + "="*60)
+    print("\n" + "=" * 60)
     print("Reading streaming results:")
     read_streaming_results()

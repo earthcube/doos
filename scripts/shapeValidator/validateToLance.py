@@ -1,29 +1,29 @@
 import sys
-import os
 import lancedb
 from defs.getGraphs import query_sparql_endpoint
 from defs.getShape import read_shapefile
 from defs.getConstruct import construct_graph
-from defs.shaclValidator import validate_with_shacl, validate_with_shacl_simple
+from defs.shaclValidator import validate_with_shacl
 from lancedb.pydantic import Vector, LanceModel
-from pyoxigraph import RdfFormat
 from tqdm import tqdm
 from sentence_transformers import SentenceTransformer
 
-DEFAULT_TABLE_NAME = 'shaclresults'
+DEFAULT_TABLE_NAME = "shaclresults"
 
-MODEL_NAME = 'all-MiniLM-L6-v2'
+MODEL_NAME = "all-MiniLM-L6-v2"
 model = SentenceTransformer(MODEL_NAME)
 VECTOR_DIM = model.get_sentence_embedding_dimension()
 
+
 # Severity, Source Shape, Focus Node, ResultPath, Message
 class WikipediaSchema(LanceModel):
-    emb: Vector(VECTOR_DIM) # This stores vector embedding
-    identifier: int # This is an id for the chunk
-    chunk_index: int # This is the chunk number of the context
-    content: str # The content of the chunk
-    url: str # The link to the article
-    title: str # The title of the article
+    emb: Vector(VECTOR_DIM)  # This stores vector embedding
+    identifier: int  # This is an id for the chunk
+    chunk_index: int  # This is the chunk number of the context
+    content: str  # The content of the chunk
+    url: str  # The link to the article
+    title: str  # The title of the article
+
 
 def get_or_create_table(table_name: str = None):
     """Get an existing table or create a new one if it doesn't exist."""
@@ -35,9 +35,11 @@ def get_or_create_table(table_name: str = None):
     except Exception:
         return db.create_table(table_name, schema=WikipediaSchema)
 
+
 def get_db_connection():
     uri = "store/val-lancedb"
     return lancedb.connect(uri)
+
 
 def main():
     """
@@ -45,7 +47,7 @@ def main():
     """
 
     db = get_db_connection()
-    model = SentenceTransformer('all-MiniLM-L6-v2')
+    model = SentenceTransformer("all-MiniLM-L6-v2")
 
     # table = db.create_table("my_embeddings", data=[
     #     {"id": id_value,

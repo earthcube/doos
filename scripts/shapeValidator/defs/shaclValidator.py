@@ -1,11 +1,4 @@
-from pyshacl import __version__, validate
-from pyshacl.errors import (
-    ConstraintLoadError,
-    ReportableRuntimeError,
-    RuleLoadError,
-    ShapeLoadError,
-    ValidationFailure,
-)
+from pyshacl import validate
 
 
 def validate_with_shacl(rdf_graph_text, shacl_shape_text):
@@ -30,7 +23,9 @@ def validate_with_shacl(rdf_graph_text, shacl_shape_text):
             rdf_graph_text,
             data_graph_format="ttl",
             shacl_graph_format="ttl",
-            shacl_graph=shacl_shape_text, inference='rdfs',  serialize_report_graph = False
+            shacl_graph=shacl_shape_text,
+            inference="rdfs",
+            serialize_report_graph=False,
         )
 
         # print("--------------------------------------------")
@@ -70,7 +65,9 @@ def validate_with_shacl_simple(rdf_graph_text, shacl_shape_text):
             rdf_graph_text,
             data_graph_format="ttl",
             shacl_graph_format="ttl",
-            shacl_graph=shacl_shape_text, inference='rdfs',  serialize_report_graph = True
+            shacl_graph=shacl_shape_text,
+            inference="rdfs",
+            serialize_report_graph=True,
         )
 
         # print("--------------------------------------------")

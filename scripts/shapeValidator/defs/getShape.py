@@ -16,7 +16,7 @@ def read_shapefile(shapefile):
     try:
         # Check if the shapefile argument is a URL
         parsed = urlparse(shapefile)
-        if parsed.scheme in ('http', 'https'):
+        if parsed.scheme in ("http", "https"):
             # It's a URL, fetch it
             response = requests.get(shapefile)
             response.raise_for_status()
@@ -26,7 +26,7 @@ def read_shapefile(shapefile):
             if not os.path.exists(shapefile):
                 raise FileNotFoundError(f"Local file not found: {shapefile}")
 
-            with open(shapefile, 'r', encoding='utf-8') as file:
+            with open(shapefile, "r", encoding="utf-8") as file:
                 return file.read()
 
     except requests.exceptions.RequestException as e:

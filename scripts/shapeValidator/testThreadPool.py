@@ -4,10 +4,10 @@ from defs.getGraphs import query_sparql_endpoint
 from defs.getShape import read_shapefile
 from defs.getConstruct import construct_graph
 from defs.shaclValidator import validate_with_shacl
-from pyoxigraph import RdfFormat
 from tqdm import tqdm
-from concurrent.futures import ThreadPoolExecutor, as_completed # Import these
+from concurrent.futures import ThreadPoolExecutor, as_completed  # Import these
 import polars as pl
+
 
 def process_uri(uri, sf):
     """
@@ -16,6 +16,7 @@ def process_uri(uri, sf):
     r = construct_graph(uri)
     shr = validate_with_shacl(r, sf)
     return shr
+
 
 def main():
     """
@@ -42,20 +43,26 @@ def main():
         print(f"\nFound {len(uris)} unique URIs:")
         # Determine an appropriate max_workers. A good starting point might be 2x or 4x the number of CPU cores
         # or adjust based on how many concurrent network requests your SPARQL endpoint can handle.
-        max_workers = os.cpu_count() * 1 if os.cpu_count() else 4 # Example: 2x CPU cores, min 4
+        max_workers = (
+            os.cpu_count() * 1 if os.cpu_count() else 4
+        )  # Example: 2x CPU cores, min 4
 
         print(f"Max workers set to: {max_workers}")
 
         results_list = []
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             # Submit all tasks and get future objects
-            future_to_uri = {executor.submit(process_uri, uri, sf): uri for uri in sorted(uris)}
+            future_to_uri = {
+                executor.submit(process_uri, uri, sf): uri for uri in sorted(uris)
+            }
 
             # Use tqdm to show progress as tasks complete
-            for future in tqdm(as_completed(future_to_uri), total=len(uris), desc="Processing URIs"):
-                shr = future.result() # Get the result of the completed task
+            for future in tqdm(
+                as_completed(future_to_uri), total=len(uris), desc="Processing URIs"
+            ):
+                shr = future.result()  # Get the result of the completed task
                 if shr:
-                    for line in shr.strip().split('\n'):
+                    for line in shr.strip().split("\n"):
                         if not line:
                             continue
                         parts = line.split(None, 2)
@@ -63,11 +70,17 @@ def main():
                             subject = parts[0]
                             predicate = parts[1]
                             obj_part = parts[2]
-                            if obj_part.endswith(' .'):
+                            if obj_part.endswith(" ."):
                                 obj = obj_part[:-2].strip()
                             else:
                                 obj = obj_part
-                            results_list.append({'subject': subject, 'predicate': predicate, 'object': obj})
+                            results_list.append(
+                                {
+                                    "subject": subject,
+                                    "predicate": predicate,
+                                    "object": obj,
+                                }
+                            )
 
         if results_list:
             df = pl.DataFrame(results_list)
@@ -82,6 +95,7 @@ def main():
 
     # output = "results.nq"
     # store.dump(output, RdfFormat.N_QUADS)
+
 
 if __name__ == "__main__":
     main()

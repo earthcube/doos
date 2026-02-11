@@ -11,4 +11,5 @@ WHERE
     FILTER regex(str(?g), "^urn:gleaner.io:eco")
 }
 ORDER BY ?name
+LIMIT 100
 

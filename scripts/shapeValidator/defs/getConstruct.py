@@ -1,8 +1,7 @@
-import requests
-import json
-from SPARQLWrapper import SPARQLWrapper, JSON, TSV, CSV, RDF, TURTLE
+from SPARQLWrapper import SPARQLWrapper, TURTLE
 
 sparql = SPARQLWrapper("http://ghost.lan:7007/sparql")
+
 
 def construct_graph(url):
     """
@@ -16,7 +15,7 @@ def construct_graph(url):
     """
     headers = {
         "Accept": "application/qlever-results+json",
-        "Content-type": "application/sparql-query"
+        "Content-type": "application/sparql-query",
     }
 
     sparql_query = f"""
@@ -45,6 +44,7 @@ WHERE {{
     except KeyError as e:
         print(f"Unexpected response structure: {e}")
         return []
+
 
 # Example usage:
 # uris = query_sparql_endpoint("http://ghost.lan:7007")

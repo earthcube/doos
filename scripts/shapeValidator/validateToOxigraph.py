@@ -1,5 +1,4 @@
 import sys
-import os
 import pyoxigraph
 from pyoxigraph import RdfFormat
 from tqdm import tqdm
@@ -8,6 +7,7 @@ from defs.getGraphs import query_sparql_endpoint
 from defs.getShape import read_shapefile
 from defs.getConstruct import construct_graph
 from defs.shaclValidator import validate_with_shacl
+
 
 def main():
     """

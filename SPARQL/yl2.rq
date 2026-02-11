@@ -1,6 +1,6 @@
 PREFIX schema: <https://schema.org/>
 
-SELECT DISTINCT ?g ?subj ?vm ?name ?minValue ?maxValue ?propertyId ?unitCode ?unitText
+SELECT DISTINCT ?name ?propertyId ?unitCode ?unitText
 WHERE {
   GRAPH ?g {
     ?subj schema:variableMeasured ?vm .

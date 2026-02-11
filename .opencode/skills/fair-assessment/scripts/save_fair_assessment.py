@@ -13,7 +13,7 @@ from typing import Dict, Any
 
 def validate_assessment_data(data: Dict[str, Any]) -> bool:
     """Validate that required fields are present in the assessment data."""
-    required_keys = ['participant_info', 'responses', 'assessment']
+    required_keys = ["participant_info", "responses", "assessment"]
 
     for key in required_keys:
         if key not in data:
@@ -21,15 +21,20 @@ def validate_assessment_data(data: Dict[str, Any]) -> bool:
             return False
 
     # Validate participant_info
-    participant_required = ['role', 'career_stage', 'research_area', 'fair_familiarity']
+    participant_required = ["role", "career_stage", "research_area", "fair_familiarity"]
     for key in participant_required:
-        if key not in data['participant_info']:
+        if key not in data["participant_info"]:
             print(f"Warning: Missing participant info '{key}'", file=sys.stderr)
 
     # Validate assessment
-    assessment_required = ['maturity_level', 'strengths', 'recommendations', 'observations']
+    assessment_required = [
+        "maturity_level",
+        "strengths",
+        "recommendations",
+        "observations",
+    ]
     for key in assessment_required:
-        if key not in data['assessment']:
+        if key not in data["assessment"]:
             print(f"Warning: Missing assessment '{key}'", file=sys.stderr)
 
     return True
@@ -49,24 +54,32 @@ def generate_text_report(data: Dict[str, Any]) -> str:
     # Participant Information
     report_lines.append("PARTICIPANT INFORMATION")
     report_lines.append("-" * 80)
-    participant = data.get('participant_info', {})
+    participant = data.get("participant_info", {})
     report_lines.append(f"Role: {participant.get('role', 'Not provided')}")
-    report_lines.append(f"Career Stage: {participant.get('career_stage', 'Not provided')}")
-    report_lines.append(f"Research Area: {participant.get('research_area', 'Not provided')}")
-    report_lines.append(f"FAIR Familiarity: {participant.get('fair_familiarity', 'Not provided')}")
+    report_lines.append(
+        f"Career Stage: {participant.get('career_stage', 'Not provided')}"
+    )
+    report_lines.append(
+        f"Research Area: {participant.get('research_area', 'Not provided')}"
+    )
+    report_lines.append(
+        f"FAIR Familiarity: {participant.get('fair_familiarity', 'Not provided')}"
+    )
     report_lines.append("")
 
     # Assessment Summary
-    assessment = data.get('assessment', {})
+    assessment = data.get("assessment", {})
     report_lines.append("OVERALL ASSESSMENT")
     report_lines.append("-" * 80)
-    report_lines.append(f"FAIR Maturity Level: {assessment.get('maturity_level', 'Not assessed')}")
+    report_lines.append(
+        f"FAIR Maturity Level: {assessment.get('maturity_level', 'Not assessed')}"
+    )
     report_lines.append("")
 
     # Strengths
     report_lines.append("KEY STRENGTHS")
     report_lines.append("-" * 80)
-    strengths = assessment.get('strengths', [])
+    strengths = assessment.get("strengths", [])
     if strengths:
         for i, strength in enumerate(strengths, 1):
             report_lines.append(f"{i}. {strength}")
@@ -77,7 +90,7 @@ def generate_text_report(data: Dict[str, Any]) -> str:
     # Recommendations
     report_lines.append("PRIORITY RECOMMENDATIONS")
     report_lines.append("-" * 80)
-    recommendations = assessment.get('recommendations', [])
+    recommendations = assessment.get("recommendations", [])
     if recommendations:
         for i, rec in enumerate(recommendations, 1):
             report_lines.append(f"{i}. {rec}")
@@ -88,9 +101,15 @@ def generate_text_report(data: Dict[str, Any]) -> str:
     # Detailed Observations
     report_lines.append("DETAILED OBSERVATIONS BY FAIR PRINCIPLE")
     report_lines.append("-" * 80)
-    observations = assessment.get('observations', {})
+    observations = assessment.get("observations", {})
 
-    for principle in ['findability', 'accessibility', 'interoperability', 'reusability', 'implementation']:
+    for principle in [
+        "findability",
+        "accessibility",
+        "interoperability",
+        "reusability",
+        "implementation",
+    ]:
         if principle in observations:
             report_lines.append(f"\n{principle.upper()}")
             report_lines.append(observations[principle])
@@ -102,7 +121,7 @@ def generate_text_report(data: Dict[str, Any]) -> str:
     report_lines.append("=" * 80)
     report_lines.append("")
 
-    responses = data.get('responses', {})
+    responses = data.get("responses", {})
     for section_name, questions in responses.items():
         report_lines.append(f"\n{section_name.upper()}")
         report_lines.append("-" * 80)
@@ -140,7 +159,7 @@ def save_assessment(data: Dict[str, Any], output_dir: str = ".") -> tuple[str, s
     json_filename = f"fair_assessment_{timestamp}.json"
     json_path = output_path / json_filename
 
-    with open(json_path, 'w', encoding='utf-8') as f:
+    with open(json_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
     # Save text report
@@ -148,7 +167,7 @@ def save_assessment(data: Dict[str, Any], output_dir: str = ".") -> tuple[str, s
     text_path = output_path / text_filename
 
     report = generate_text_report(data)
-    with open(text_path, 'w', encoding='utf-8') as f:
+    with open(text_path, "w", encoding="utf-8") as f:
         f.write(report)
 
     return str(json_path), str(text_path)
@@ -157,7 +176,9 @@ def save_assessment(data: Dict[str, Any], output_dir: str = ".") -> tuple[str, s
 def main():
     """Main function to handle command-line execution."""
     if len(sys.argv) < 2:
-        print("Usage: save_fair_assessment.py <json_data> [output_dir]", file=sys.stderr)
+        print(
+            "Usage: save_fair_assessment.py <json_data> [output_dir]", file=sys.stderr
+        )
         print("\nExpects JSON data as first argument.", file=sys.stderr)
         sys.exit(1)
 
@@ -185,7 +206,7 @@ def main():
             "status": "success",
             "json_file": json_path,
             "text_file": text_path,
-            "message": "Assessment saved successfully"
+            "message": "Assessment saved successfully",
         }
         print(json.dumps(result, indent=2))
 
