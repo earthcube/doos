@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "dataset_id": "https://www.bco-dmo.org/dataset/514188",
+    "dataset_name": "Sediment trap flux data from two traps deployed from R/V MIRAI at the F1 mooring site offshore from the Fukushima Nuclear Power Plant (FNPP), in the western North Pacific from 2011-2012 (Fukushima Sediment Radionuclides project)",
+    "dataset_url": "https://www.bco-dmo.org/dataset/514188",
+    "analysis_date": "2026-02-05T21:44:14.784087+00:00"
+  },
+  "distribution": {
+    "file_url": "https://datadocs.bco-dmo.org/file/P66GwOAToq26rv/F1_sed_trap.csv",
+    "file_format": "text/csv",
+    "file_size_bytes": 1678
+  },
+  "depth_analysis": {
+    "trap_depth": {
+      "min": 500,
+      "max": 1000,
+      "mean": 808.8235294117648,
+      "median": 1000.0,
+      "mode": 1000,
+      "std_dev": 246.63510902819087
+    }
+  },
+  "notes": []
+}
