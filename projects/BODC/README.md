@@ -1,9 +1,6 @@
 # BODC
 
-
 ## Notes
-
-
 
 ## References
 
