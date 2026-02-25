@@ -9,23 +9,13 @@ PREFIX schema: <https://schema.org/>
 PREFIX schemaold: <http://schema.org/>
 PREFIX bds: <http://www.bigdata.com/rdf/search#>
 
-SELECT DISTINCT ?s  ?wat ?orgname ?domain ?type ?score ?name ?url ?lit ?description ?headline
+SELECT DISTINCT *
 WHERE
 {
-   ?lit bds:search "data" .
+   ?lit bds:search "ocean" .
    ?lit bds:matchAllTerms "false" .
    ?lit bds:relevance ?score .
-#   ?lit bds:minRelevance "0.30" .
-   graph ?g {
-    ?s ?p ?lit .
-    FILTER isIRI(?s)
-    OPTIONAL { ?s schema:name ?name .   }
-    OPTIONAL { ?s schema:headline ?headline .   }
-    OPTIONAL { ?s schema:url ?url .   }
-    OPTIONAL { ?s schema:description ?description .    }
-  }
 }
-ORDER BY DESC(?score)  ?name
-LIMIT 1000
+
 
 

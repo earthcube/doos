@@ -18,23 +18,24 @@ OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
 NRP_API_KEY = os.environ['NRP_API_KEY']
 
 # Using OpenRouter
-lm = dspy.LM(
-    model="openrouter/openai/gpt-5",
-    # model = "openai/gpt-3.5-turbo-instruct",  # Specify a model available on OpenRouter; adjust as needed
-    api_base="https://openrouter.ai/api/v1",
-    api_key=OPENROUTER_API_KEY,
-    cache=False,
-    temperature=1.0
-)
-
-# # Using NRP
 # lm = dspy.LM(
-#     model="custom_openai/kimi",
-#     api_base="https://ellm.nrp-nautilus.io/v1",
-#     api_key=NRP_API_KEY,
+#     model="openrouter/openai/gpt-5",
+#     # model = "openai/gpt-3.5-turbo-instruct",  # Specify a model available on OpenRouter; adjust as needed
+#     api_base="https://openrouter.ai/api/v1",
+#     api_key=OPENROUTER_API_KEY,
 #     cache=False,
 #     temperature=1.0
 # )
+
+# # Using NRP
+lm = dspy.LM(
+    # model="custom_openai/kimi",
+    model="custom_openai/minimax-m2",
+    api_base="https://ellm.nrp-nautilus.io/v1",
+    api_key=NRP_API_KEY,
+    cache=False,
+    temperature=1.0
+)
 
 dspy.configure(lm=lm)
 
