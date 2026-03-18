@@ -1,9 +1,24 @@
 import dspy
 import requests
 from urllib.parse import quote_plus
+import os
 
 # 1. Configure your LLM (use any OpenAI-compatible endpoint)
-lm = dspy.LM("openai/gpt-4o", max_tokens=2000)   # or grok, claude, local, etc.
+
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
+NRP_API_KEY = os.environ['NRP_API_KEY']
+
+# Using NRP
+lm = dspy.LM(
+    # model="custom_openai/kimi",
+    model="custom_openai/glm-4.7",
+    api_base="https://ellm.nrp-nautilus.io/v1",
+    api_key=NRP_API_KEY,
+    cache=False,
+    temperature=1.0
+)
+
+
 dspy.configure(lm=lm)
 
 # 2. BCO-DMO Tools (using their excellent ERDDAP server – the primary programmatic interface)
