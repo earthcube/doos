@@ -24,7 +24,7 @@ lm = dspy.LM(
     api_base="https://openrouter.ai/api/v1",
     api_key=OPENROUTER_API_KEY,
     cache=False,
-    temperature=1.0
+    temperature=0
 )
 
 # # Using NRP
@@ -37,7 +37,7 @@ lm = dspy.LM(
 #     temperature=1.0
 # )
 
-dspy.configure(lm=lm)
+dspy.configure(lm=lm, adapter=dspy.JSONAdapter())
 
 # doc_dump = load_pdfs_from_directory("/home/fils/src/Projects/coffeenotes/secret/reports")
 with open('990510_v1_gp17-oce_d13c_dic.csv', 'r') as file:

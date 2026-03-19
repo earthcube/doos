@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-03-18T15:07:02.127881",
+  "source_file": "990510_v1_gp17-oce_d13c_dic.csv",
+  "depth_columns": [
+    {
+      "column_name": "Station_Depth",
+      "minvalue": 93.0,
+      "maxvalue": 5635.0,
+      "units": "m"
+    },
+    {
+      "column_name": "Sample_Pressure",
+      "minvalue": 3.9,
+      "maxvalue": 5737.2,
+      "units": "dbar"
+    }
+  ]
+}

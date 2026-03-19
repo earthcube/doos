@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-
 from langchain_experimental.agents import create_pandas_dataframe_agent
 from langchain_openai import OpenAI  # Or use ChatOpenAI for better performance
 import pandas as pd
@@ -12,7 +11,7 @@ if not csv_path.exists():
 
 df = pd.read_csv(csv_path)
 
-# Get API key from environment variable
+# Get the API key from the environment variable
 api_key = os.environ.get("OPENROUTER_API_KEY")
 if not api_key:
     raise ValueError("OPENROUTER_API_KEY environment variable is not set")
@@ -40,7 +39,7 @@ Format the output as a dictionary where keys are column names and values are ano
 If no depth-related columns are found, return an empty dict.
 """
 
-# Run the agent with the query (using invoke instead of deprecated run)
+# Run the agent with the query (using "invoke" instead of deprecated run)
 result = agent.invoke({"input": query})
 
 # Print the result

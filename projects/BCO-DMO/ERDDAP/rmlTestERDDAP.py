@@ -8,20 +8,36 @@ import os
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
 NRP_API_KEY = os.environ['NRP_API_KEY']
 
-# Using NRP
+
 lm = dspy.LM(
-    # model="custom_openai/kimi",
-    model="custom_openai/glm-4.7",
-    api_base="https://ellm.nrp-nautilus.io/v1",
-    api_key=NRP_API_KEY,
+    # model="openrouter/x-ai/grok-code-fast-1",
+    #model="openrouter/x-ai/grok-4.1-fast",
+    model="openrouter/openai/gpt-5",
+    api_base="https://openrouter.ai/api/v1",
+    api_key=OPENROUTER_API_KEY,
     cache=False,
-    temperature=1.0
+    temperature=1.0  # 1.0
 )
+
+# # Using NRP: https://nrp.ai/documentation/userdocs/ai/llm-managed/
+# lm = dspy.LM(
+#     # model="custom_openai/kimi",
+#     model="custom_openai/glm-4.7",
+#     api_base="https://ellm.nrp-nautilus.io/v1",
+#     extra_body={
+#         "chat_template_kwargs": {
+#             "enable_thinking": False
+#         }
+#     },
+#     api_key=NRP_API_KEY,
+#     cache=False,
+#     temperature=1.0
+# )
 
 
 dspy.configure(lm=lm)
 
-# 2. BCO-DMO Tools (using their excellent ERDDAP server – the primary programmatic interface)
+# 2. BCO-DMO Tools (using their ERDDAP server as main interface)
 def search_bcodmo_datasets(query: str, max_results: int = 8) -> str:
     """
     Search BCO-DMO for oceanographic datasets using ERDDAP.
