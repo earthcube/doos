@@ -19,3 +19,5 @@ wheels/
 /.idea/modules.xml
 /.idea/rdfandsparql.xml
 /.idea/vcs.xml
+/projects/OBIS/store/
+/projects/OBIS/jsonld/
