@@ -1,0 +1,287 @@
+{
+  "@context": "https://schema.org",
+  "@id": "https://www.bco-dmo.org/doi/dataset/10.26008/1912/bco-dmo.990510.1",
+  "@type": "Dataset",
+  "name": "13C/12C (del13C) of dissolved inorganic carbon (DIC) from samples collected on the GP17-OCE cruise on R/V Roger Revelle (RR2214) in the South Pacific and Southern Oceans from December 2022 to January 2023",
+  "url": "https://www.bco-dmo.org/doi/dataset/10.26008/1912/bco-dmo.990510.1",
+  "identifier": {
+    "@type": "PropertyValue",
+    "@id": "https://doi.org/10.26008/1912/bco-dmo.990510.1",
+    "propertyID": "https://registry.identifiers.org/registry/doi",
+    "value": "doi:10.26008/1912/bco-dmo.990510.1",
+    "url": "https://doi.org/10.26008/1912/bco-dmo.990510.1"
+  },
+  "isAccessibleForFree": true,
+  "abstract": "This dataset includes measurements of the 13C/12C (del13C) of dissolved inorganic carbon (DIC) in the South Pacific on samples collected during the US GEOTRACES GP17-OCE section (Papeete, Tahiti to Punta Arenas, Chile) on the R/V Roger Revelle from December 2022 to January 2023. The data will be useful to understand the relative contributions of ocean circulation, mixing, and biological pump to determining the observed distribution of dissolved biogeochemical species. These data are the responsibility of Paul Quay at the University of Washington. ",
+  "description": "",
+  "datePublished": "2025-12-30",
+  "version": "1",
+  "creator": [
+    {
+      "@type": "Person",
+      "urn:spore:ordinal": 0,
+      "name": "Paul Quay",
+      "url": "",
+      "identifier": {
+        "@type": "PropertyValue",
+        "@id": "http://orcid.org/0000-0001-5147-0289",
+        "urn:spore:ordinal": 0,
+        "propertyID": "https://registry.identifiers.org/registry/orcid",
+        "value": "orcid:0000-0001-5147-0289",
+        "url": "http://orcid.org/0000-0001-5147-0289"
+      }
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://www.bco-dmo.org/doi/dataset/file-download/10.26008/1912/bco-dmo.990510.1/f/992896/990510_v1_gp17-oce_d13c_dic.csv",
+      "contentSize": "78436",
+      "creativeWorkStatus": "In Review",
+      "spdx:checksum": {
+        "@type": "spdx:Checksum",
+        "spdx:checksumValue": "1ae24bb2f9bd956287c73de2e0209c39",
+        "spdx:algorithm": "spdx:checksumAlgorithm_md5"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/xml",
+      "contentUrl": "https://www.bco-dmo.org/doi/dataset/file-download/10.26008/1912/bco-dmo.990510.1/package/NOAA_ISO19115-2.xml",
+      "contentSize": "78035",
+      "creativeWorkStatus": "In Review",
+      "spdx:checksum": {
+        "@type": "spdx:Checksum",
+        "spdx:checksumValue": "9d950190912bc11544cbdfdc704bbeb6",
+        "spdx:algorithm": "spdx:checksumAlgorithm_md5"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/pdf",
+      "contentUrl": "https://www.bco-dmo.org/doi/dataset/file-download/10.26008/1912/bco-dmo.990510.1/package/Dataset_description.pdf",
+      "contentSize": "77151",
+      "creativeWorkStatus": "In Review",
+      "spdx:checksum": {
+        "@type": "spdx:Checksum",
+        "spdx:checksumValue": "067fb1f3a374237e55bf7087684e62e0",
+        "spdx:algorithm": "spdx:checksumAlgorithm_md5"
+      }
+    }
+  ],
+  "alternateName": "GP17-OCE d13C DIC",
+  "sameAs": "https://doi.org/10.26008/1912/bco-dmo.990510.1",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.bco-dmo.org/",
+    "name": "Biological and Chemical Oceanography Data Management Office (BCO-DMO)",
+    "url": "https://www.bco-dmo.org/"
+  },
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://www.bco-dmo.org/",
+    "name": "Biological and Chemical Oceanography Data Management Office (BCO-DMO)",
+    "url": "https://www.bco-dmo.org/"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "@id": "https://www.bco-dmo.org/search/dataset"
+  },
+  "keywords": [
+    "13C",
+    "carbon cycling",
+    "GEOTRACES"
+  ],
+  "temporalCoverage": "2022-12-04/2023-01-24",
+  "spatialCoverage": {
+    "@type": "Place",
+    "description": "South Pacific",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "-67.00024 -152.00026 -19.99984 -75.09732",
+      "polygon": "-19.99984,-152.00026 -19.99984,-75.09732 -67.00024,-75.09732 -67.00024,-152.00026 -19.99984,-152.00026",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+          "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+          "name": "Spatial Reference System",
+          "value": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        },
+        {
+          "@type": "PropertyValue",
+          "additionalType": "http://www.wikidata.org/entity/Q4018860",
+          "propertyID": "WKT",
+          "name": "Well-Known Text",
+          "value": "POLYGON ((-152.00026 -19.99984, -75.09732 -19.99984, -75.09732 -67.00024, -152.00026 -67.00024, -152.00026 -19.99984))"
+        }
+      ]
+    }
+  },
+  "measurementTechnique": [
+    "Isotope-ratio Mass Spectrometer",
+    "Niskin bottle"
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Station_ID",
+      "description": "<p>Station number</p>",
+      "unitText": "unitless",
+      "alternateName": "station",
+      "disambiguatingDescription": "<p>Station identifier; a unique number or alphanumeric string designating a general geographic location at which one or more sampling activities may occur.</p>"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Start_Date_UTC",
+      "description": "<p>Station start date</p>",
+      "unitText": "unitless",
+      "alternateName": "date",
+      "disambiguatingDescription": "<p>date; generally reported in GMT as YYYYMMDD (year; month; day); also as MMDD (month; day); EqPac dates are local Hawaii time. ISO_Date format is YYYY-MM-DD (<a href=\"http://www.iso.org/iso/home/standards/iso8601.htm\" target=\"_blank\">http://www.iso.org/iso/home/standards/iso8601.htm</a>)</p>",
+      "propertyID": "http://vocab.nerc.ac.uk/collection/P01/current/ADATAA01/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Start_Time_UTC",
+      "description": "<p>Start time of the specific cast</p>",
+      "unitText": "unitless",
+      "alternateName": "time",
+      "disambiguatingDescription": "<p>Time GMT defined as HHMM; time of day; generally reported in GMT as HHMM (hours and minutes) but may also be HH.H (decimal hours) or HHMMSS (hours; minutes and seconds); in EqPac time is reported as Hawaii local time</p>",
+      "propertyID": "http://vocab.nerc.ac.uk/collection/P01/current/AHMSAA01/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Start_ISO_DateTime_UTC",
+      "description": "<p>Start date and time (UTC) in ISO8601 format. Time represents the time at which the specific Niskin bottle was collected on that cast.</p>",
+      "unitText": "unitless",
+      "alternateName": "ISO_DateTime_UTC",
+      "disambiguatingDescription": "<p>Date/Time (UTC) ISO formatted<br />\nThis standard is based on ISO 8601:2004(E) and takes on any of the following forms:<br />\n2009-08-30T09:05:00[.xx] (local time)<br />\n2009-08-30T14:05:00[.xx]Z (UTC time)<br />\n2009-08-30T14:05:00[.xx]-05:00<br />\nThe dashes and the colons can be dropped.<br />\nThe T can also be dropped \"by mutual agreement\", but one needs the trailing Z if the time is UTC.</p>\n<p>Sample ISO_datetime_utc:<br />\n2009-08-30T14:05:00[.xx]Z (UTC time)</p>\n<p>Format: YYYY-mm-ddTHH:MM:SS[.xx]Z (UTC time)</p>",
+      "propertyID": "http://vocab.nerc.ac.uk/collection/P01/current/DTUT8601/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Start_Latitude",
+      "description": "<p>Station latitude start</p>",
+      "unitText": "degrees North",
+      "alternateName": "lat",
+      "disambiguatingDescription": "<p>latitude, in decimal degrees, North is positive, negative denotes South; Reported in some datasets as degrees, minutes</p>",
+      "propertyID": "http://vocab.nerc.ac.uk/collection/P09/current/LATX/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Start_Longitude",
+      "description": "<p>Station longitude start</p>",
+      "unitText": "degrees East",
+      "alternateName": "lon",
+      "disambiguatingDescription": "<p>longitude, in decimal degrees, East is positive, negative denotes West; Reported in some datsets as degrees, minutes</p>",
+      "propertyID": "http://vocab.nerc.ac.uk/collection/P09/current/LONX/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Event_ID",
+      "description": "<p>Event number</p>",
+      "unitText": "unitless",
+      "alternateName": "event",
+      "disambiguatingDescription": "<p>Event or operation identifier; event or operation number; often derived from date/time (MMDDHHmm) of sampling and when combined with year (YYYY) is a unique sampling identifier/data processing key. Date/time is not necessarily in GMT.</p>",
+      "propertyID": "http://vocab.nerc.ac.uk/collection/P01/current/EVNTID01/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sample_ID",
+      "description": "<p>GEOTRACES sample number</p>",
+      "unitText": "unitless",
+      "alternateName": "sample",
+      "disambiguatingDescription": "<p>unique sample identification or number; any combination of alpha numeric characters; precise definition is file dependent</p>",
+      "propertyID": "http://vocab.nerc.ac.uk/collection/P02/current/ACYC/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Station_Depth",
+      "description": "<p>Maximum cast depth</p>",
+      "unitText": "meters (m)",
+      "alternateName": "depth_w",
+      "disambiguatingDescription": "<p>water depth, in meters</p>"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sample_Pressure",
+      "description": "<p>Pressure at Niskin Sample Collection</p>",
+      "unitText": "millibars (mbars)",
+      "alternateName": "press",
+      "disambiguatingDescription": "<p>water pressure at measurement; depth reported as pressure; positive number increasing with water depth</p>",
+      "propertyID": "http://vocab.nerc.ac.uk/collection/P01/current/PRESPR01/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DIC_13_12_D_Delta_Bottle",
+      "description": "<p>del13C of Dissolved Inorganic Carbon. This parameter has been registered in the GEOTRACES DOoR system as DIC_13_12_D_DELTA_BOTTLE::ujmclx.</p>",
+      "unitText": "per mil (vs PDB)",
+      "alternateName": "d13C_DIC",
+      "disambiguatingDescription": "<p>Stable carbon isotope ratio of dissolved inorganic carbon (13C/12C ratio in DIC).</p>",
+      "propertyID": "http://vocab.nerc.ac.uk/collection/P01/current/D13CMIBX/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SD1_DIC_13_12_D_Delta_Bottle",
+      "description": "<p>One standard deviation of del13C measurement. This parameter has been registered in the GEOTRACES DOoR system as 1SD::DIC_13_12_D_DELTA_BOTTLE::ujmclx.</p>",
+      "unitText": "per mil",
+      "alternateName": "d13C_DIC",
+      "disambiguatingDescription": "<p>Stable carbon isotope ratio of dissolved inorganic carbon (13C/12C ratio in DIC).</p>",
+      "propertyID": "http://vocab.nerc.ac.uk/collection/P01/current/D13CMIBX/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Flag_DIC_13_12_D_Delta_Bottle",
+      "description": "<p>Quality Control Flag for del13C measurement (2=good; 3= questionable; 4=bad; 6=duplicate). This parameter has been registered in the GEOTRACES DOoR system as Flag::DIC_13_12_D_DELTA_BOTTLE::ujmclx.</p>",
+      "unitText": "unitless",
+      "alternateName": "q_flag",
+      "disambiguatingDescription": "<p>quality flag; based on a PI established code; identifies a problem/quality issue with sample(s) from a given water bottle or single observation</p>"
+    }
+  ],
+  "producer": [
+    {
+      "@type": "ResearchProject",
+      "name": "US GEOTRACES GP17 Section: South Pacific and Southern Ocean (GP17-OCE)",
+      "alternateName": "GP17-OCE",
+      "description": "The U.S. GEOTRACES GP17-OCE expedition departed Papeete, Tahiti (French Polynesia) on December 1st, 2022 and arrived in Punta Arenas, Chile on January 25th, 2023. The cruise took place in the South Pacific and Southern Oceans aboard the R/V Roger Revelle (cruise ID RR2214) with a team of 34 scientists lead by Ben Twining (Chief Scientist), Jessica Fitzsimmons and Greg Cutter (Co-Chief Scientists). GP17 was planned as a two-leg expedition, with its first leg (GP17-OCE) as a southward extension of the 2018 GP15 Alaska-Tahiti expedition and a second leg (GP17-ANT; December 2023-January 2024) into coastal and shelf waters of Antarctica's Amundsen Sea.\nThe South Pacific and Southern Oceans sampled by GP17-OCE play critical roles in global water mass circulation and associated global transfer of heat, carbon, and nutrients. Specific oceanographic regions of interest for GP17-OCE included: the most oligotrophic gyre in the global ocean, the Antarctic Circumpolar Current (ACC) frontal region, the previously unexplored Pacific- Antarctic Ridge, the Pacific Deep Water (PDW) flow along the continental slope of South America, and the continental margin inputs potentially emanating from South America.\nFurther information is available on the US GEOTRACES website and in the cruise report (PDF).\nNSF Project Title: Collaborative Research: Management and Implementation of US GEOTRACES GP17 Section: South Pacific and Southern Ocean (GP17-OCE)\nNSF Award Abstract:\nThis award will support the management and implementation of a research expedition from Tahiti to Chile that will enable sampling for a broad suite of trace elements and isotopes (TEI) across oceanographic regions of importance to global nutrient and carbon cycling as part of the U.S. GEOTRACES program. GEOTRACES is a global effort in the field of Chemical Oceanography, the goal of which is to understand the distributions of trace elements and their isotopes in the ocean. Determining the distributions of these elements and isotopes will increase understanding of processes that shape their distributions, such as ocean currents and material fluxes, and also the processes that depend on these elements, such as the growth of phytoplankton and the support of ocean ecosystems. The proposed cruise will cross the South Pacific Gyre, the Antarctic Circumpolar Current, iron-limited Antarctic waters, and the Chilean margin. In combination with a proposed companion GEOTRACES expedition on a research icebreaker (GP17-ANT) that will be joined by two overlapping stations, the team of investigators will create an ocean section from the ocean's most nutrient-poor waters to its highly-productive Antarctic polar region - a region that plays an outsized role in modulating the global carbon cycle. The expedition will support and provide management infrastructure for additional participating science projects focused on measuring specific external fluxes and internal cycling of TEIs along this section.\nThe South Pacific Gyre and Pacific sector of the Southern Ocean play critical roles in global water mass circulation and associated global transfer of heat, carbon, and nutrients, but they are chronically understudied for TEIs due to their remote locale. These are regions of strong, dynamic fronts where sub-surface water masses upwell and subduct, and biological and chemical processes in these zones determine nutrient stoichiometries and tracer concentrations in waters exported to lower latitudes. The Pacific sector represents an end member of extremely low external TEI surface fluxes and thus an important region to constrain inputs from the rapidly-changing Antarctic continent. Compared to other ocean basins, TEI cycling in these regions is thought to be dominated by internal cycling processes such as biological uptake, regeneration, and scavenging, and these are poorly represented in global ocean models. The cruise will enable funded investigators to address research questions such as: 1) what are relative rates of external TEI fluxes to this region, including dust, sediment, hydrothermal, and cryospheric fluxes? 2) What are the (micro) nutrient regimes that support productivity, and what impacts do biomass accumulation, export, and regeneration have on TEI cycling and stoichiometries of exported material? 3) What are TEI and nutrient stoichiometries of subducting water masses, and how do scavenging and regeneration impact these during transport northward? This management project has several objectives: 1) plan and coordinate a 55-day research cruise in 2021-2022; 2) use both conventional and trace-metal 'clean' sampling systems to obtain TEI samples, as well as facilitate sampling for atmospheric aerosols and large volume particles and radionuclides; 3) acquire hydrographic data and samples for salinity, dissolved oxygen, algal pigments, and macro-nutrients; and deliver these data to relevant repositories; 4) ensure that proper QA/QC protocols, as well as GEOTRACES intercalibration protocols, are followed and reported; 5) prepare the final cruise report to be posted with data; 6) coordinate between all funded cruise investigators, as well as with leaders of proposed GP17-ANT cruise; and 7) conduct broader impact efforts that will engage the public in oceanographic research using immersive technology. The motivations for and at-sea challenges of this work will be communicated to the general public through creation of immersive 360/Virtual Reality experiences, via a collaboration with the Texas A&M University Visualization LIVE Lab. Through Virtual Reality, users will experience firsthand what life and TEI data collection at sea entail. Virtual reality/digital games and 360° experiences will be distributed through GEOTRACES outreach websites, through PI engagement with local schools, libraries, STEM summer camps, and adult service organizations, and through a collaboration with the National Academy of Sciences."
+    },
+    {
+      "@type": "ResearchProject",
+      "name": "US GEOTRACES OCE: Measuring the distribution of stable carbon isotopes and estimating organic matter export rates",
+      "alternateName": "GP17-OCE 13C-DIC",
+      "description": "NSF Award Abstract:\nThe goal of this project is to measure the concentration of the rare isotope of carbon (13C) present in the carbon dioxide (CO2) molecules dissolved in seawater of the South Pacific Ocean. 13C atoms make up only 1% of the carbon atoms on earth whereas atoms with the common carbon isotope (12C) make up 99% of the carbon atoms. Variations in the concentration of 13C atoms are represented relative to the concentration of 12C atoms and expressed as the 13C/12C ratio. The utility of measuring spatial variations in the 13C/12C of CO2 in the ocean results from two observations. First, during photosynthesis the 13C/12C of the plant (phytoplankton in the ocean) is distinctly different from the 13C/12C of CO2 consumed during photosynthesis. Second, the 13C/12C of CO2 molecules produced during the combustion of fossil fuels (coal, oil, natural gas) is measurably different from the 13C/12C of CO2 in the atmosphere and ocean. As a result, measuring the spatial variations of 13C/12C of CO2 in the ocean can be used to estimate variations in the rate of photosynthesis and the rate at which CO2 produced by fossil fuel combustion is being adsorbed by the ocean. Estimating variations in these two rates are goals of this project.\nThe 13C/12C of CO2 in the ocean depends in large part on the rates of photosynthesis and respiration, which results in spatial covariations in the 13C/12C of CO2, concentrations of primary nutrients (nitrate and phosphate) and trace elements that are used by phytoplankton (e.g., Cadmium). In this project, the planned measurements of the 13C/12C of CO2, nutrients and trace elements during the GEOTRACES GP17 cruise will be used to determine how the north-south variations in biological productivity (photosynthesis and respiration), elemental composition of sinking particles and water mass mixing control the regional variations in the 13C/12C of CO2, nutrients and bioactive trace element distributions in the South Pacific Ocean. An improved understanding of the biological, chemical and physical processes that control spatial variations of 13C/12C of CO2, bioactive trace elements and nutrient distributions in the modern ocean will improve our ability to use 13C/12C and trace elements measurements on CaCO3 preserved in the sedimentary record to reconstruct past changes in the ocean circulation and CO2 cycling in the paleo ocean. The project will involve undergraduate students in the research activities and carry out public outreach through University of Washington, Program on Climate Change (PCC).\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria."
+    }
+  ],
+  "funding": [
+    {
+      "@type": "MonetaryGrant",
+      "name": "OCE-2048523",
+      "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2048523",
+      "funder": {
+        "@type": "FundingAgency",
+        "name": "NSF Division of Ocean Sciences",
+        "alternateName": "NSF OCE"
+      }
+    }
+  ],
+  "subjectOf": {
+    "@type": "DataDownload",
+    "name": "ISO 19115-2 (NOAA Profile)",
+    "contentUrl": "https://www.bco-dmo.org/doi/dataset/file-download/10.26008/1912/bco-dmo.990510.1/package/NOAA_ISO19115-2.xml",
+    "encodingFormat": [
+      "http://www.isotc211.org/2005/gmd-noaa",
+      "application/xml"
+    ],
+    "creativeWorkStatus": "In Review",
+    "encodesCreativeWork": {
+      "@type": "CreativeWork",
+      "name": "https://www.bco-dmo.org/doi/dataset/10.26008/1912/bco-dmo.990510.1"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "https://www.bco-dmo.org/doi/dataset/10.26008/1912/bco-dmo.990510.1"
+    }
+  }
+}
