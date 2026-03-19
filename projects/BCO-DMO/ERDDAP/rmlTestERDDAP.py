@@ -41,7 +41,8 @@ dspy.configure(lm=lm)
 def search_bcodmo_datasets(query: str, max_results: int = 8) -> str:
     """
     Search BCO-DMO for oceanographic datasets using ERDDAP.
-    Returns formatted list of dataset IDs, titles, short summaries, and direct links.
+    Returns a formatted list of dataset IDs, titles, short summaries,
+    and direct links.
     Use this first for any marine/bio/chem data query.
     """
     try:
