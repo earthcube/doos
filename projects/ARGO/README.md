@@ -2,11 +2,9 @@
 
 ## About
 
-## TODO
+This CLI tool processes ARGO ocean profiling data from GeoParquet format. It provides three main commands: info to inspect dataset metadata including record count, available columns, and sample data; tocsv to export data to CSV format with geometry converted to Well-Known Text; and rml to convert GeoParquet records to RDF using template-based JSON-LD transformations. 
 
-Integrate the RML approach in /home/fils/src/Projects/CODATA/INSPIRE/gaiaCatalog/mappings
-
-
+The RML mapping command reads a JSON-LD template, iterates through ARGO profile features to populate fields like title, description, depth measurements, and spatial geometries, then outputs N-Triples with skolemized blank nodes to enable integration with semantic web applications and ontologies.
 
 ## geopan.py
 

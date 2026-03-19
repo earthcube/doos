@@ -1,19 +1,19 @@
-<https://rdflib.github.io/.well-known/genid/rdflib/N54c95162a8424e46a7bd454996d5d7e9> <https://schema.org/variableMeasured> <https://rdflib.github.io/.well-known/genid/rdflib/Nc567702c840442ca8ca5208ad52891fc> .
-<https://rdflib.github.io/.well-known/genid/rdflib/Nc567702c840442ca8ca5208ad52891fc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
-<https://rdflib.github.io/.well-known/genid/rdflib/Nc567702c840442ca8ca5208ad52891fc> <https://schema.org/unitText> "m" .
-<https://rdflib.github.io/.well-known/genid/rdflib/Nca0a5f49f3934ad48d9c8b5739cd1151> <http://www.opengis.net/ont/geosparql#asWKT> "POINT (82.961 12.546)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
-<https://rdflib.github.io/.well-known/genid/rdflib/Nc567702c840442ca8ca5208ad52891fc> <https://schema.org/unitCode> "http://dbpedia.org/resource/Metre" .
-<https://rdflib.github.io/.well-known/genid/rdflib/Nc567702c840442ca8ca5208ad52891fc> <https://schema.org/unitCode> "https://qudt.org/vocab/unit/M" .
-<https://rdflib.github.io/.well-known/genid/rdflib/Nca0a5f49f3934ad48d9c8b5739cd1151> <http://www.opengis.net/ont/geosparql#crs> <http://www.opengis.net/def/crs/OGC/1.3/CRS84> .
-<https://rdflib.github.io/.well-known/genid/rdflib/Nc567702c840442ca8ca5208ad52891fc> <https://schema.org/description> "Depth (spatial coordinate) relative to water surface in the water body. Definition: The distance of a sensor or sampling point below the sea surface" .
-<https://rdflib.github.io/.well-known/genid/rdflib/N54c95162a8424e46a7bd454996d5d7e9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Dataset> .
-<https://rdflib.github.io/.well-known/genid/rdflib/N54c95162a8424e46a7bd454996d5d7e9> <https://schema.org/description> "Argo float vertical profile" .
-<https://rdflib.github.io/.well-known/genid/rdflib/N54c95162a8424e46a7bd454996d5d7e9> <https://schema.org/name> "Profile2901629_090A" .
-<https://rdflib.github.io/.well-known/genid/rdflib/N54c95162a8424e46a7bd454996d5d7e9> <https://schema.org/title> "Profile2901629_090A" .
-<https://rdflib.github.io/.well-known/genid/rdflib/Nc567702c840442ca8ca5208ad52891fc> <https://schema.org/measurementTechnique> "description of technique used" .
-<https://rdflib.github.io/.well-known/genid/rdflib/Nca0a5f49f3934ad48d9c8b5739cd1151> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
-<https://rdflib.github.io/.well-known/genid/rdflib/Nc567702c840442ca8ca5208ad52891fc> <https://schema.org/unitCode> "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/" .
-<https://rdflib.github.io/.well-known/genid/rdflib/Nc567702c840442ca8ca5208ad52891fc> <https://schema.org/name> "depth" .
-<https://rdflib.github.io/.well-known/genid/rdflib/Nc567702c840442ca8ca5208ad52891fc> <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/" .
-<https://rdflib.github.io/.well-known/genid/rdflib/N54c95162a8424e46a7bd454996d5d7e9> <http://www.opengis.net/ont/geosparql#hasGeometry> <https://rdflib.github.io/.well-known/genid/rdflib/Nca0a5f49f3934ad48d9c8b5739cd1151> .
-<https://rdflib.github.io/.well-known/genid/rdflib/Nc567702c840442ca8ca5208ad52891fc> <https://schema.org/maxValue> "-1942.613553760284"^^<http://www.w3.org/2001/XMLSchema#double> .
+<https://rdflib.github.io/.well-known/genid/rdflib/N96144cb6b57542da95a579705635001d> <https://schema.org/description> "Depth (spatial coordinate) relative to water surface in the water body. Definition: The distance of a sensor or sampling point below the sea surface" .
+<https://rdflib.github.io/.well-known/genid/rdflib/N1e667b16a8bd4921ae6b5ba302741131> <https://schema.org/title> "Profile2901629_090A" .
+<https://rdflib.github.io/.well-known/genid/rdflib/N1e667b16a8bd4921ae6b5ba302741131> <https://schema.org/name> "Profile2901629_090A" .
+<https://rdflib.github.io/.well-known/genid/rdflib/N87ed2bf65d08478bafad92608f6756c8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<https://rdflib.github.io/.well-known/genid/rdflib/N96144cb6b57542da95a579705635001d> <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/" .
+<https://rdflib.github.io/.well-known/genid/rdflib/N96144cb6b57542da95a579705635001d> <https://schema.org/measurementTechnique> "description of technique used" .
+<https://rdflib.github.io/.well-known/genid/rdflib/N96144cb6b57542da95a579705635001d> <https://schema.org/unitCode> "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/" .
+<https://rdflib.github.io/.well-known/genid/rdflib/N1e667b16a8bd4921ae6b5ba302741131> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Dataset> .
+<https://rdflib.github.io/.well-known/genid/rdflib/N87ed2bf65d08478bafad92608f6756c8> <http://www.opengis.net/ont/geosparql#crs> <http://www.opengis.net/def/crs/OGC/1.3/CRS84> .
+<https://rdflib.github.io/.well-known/genid/rdflib/N96144cb6b57542da95a579705635001d> <https://schema.org/unitCode> "https://qudt.org/vocab/unit/M" .
+<https://rdflib.github.io/.well-known/genid/rdflib/N1e667b16a8bd4921ae6b5ba302741131> <https://schema.org/description> "Argo float vertical profile" .
+<https://rdflib.github.io/.well-known/genid/rdflib/N96144cb6b57542da95a579705635001d> <https://schema.org/unitCode> "http://dbpedia.org/resource/Metre" .
+<https://rdflib.github.io/.well-known/genid/rdflib/N1e667b16a8bd4921ae6b5ba302741131> <https://schema.org/variableMeasured> <https://rdflib.github.io/.well-known/genid/rdflib/N96144cb6b57542da95a579705635001d> .
+<https://rdflib.github.io/.well-known/genid/rdflib/N96144cb6b57542da95a579705635001d> <https://schema.org/name> "depth" .
+<https://rdflib.github.io/.well-known/genid/rdflib/N96144cb6b57542da95a579705635001d> <https://schema.org/unitText> "m" .
+<https://rdflib.github.io/.well-known/genid/rdflib/N1e667b16a8bd4921ae6b5ba302741131> <http://www.opengis.net/ont/geosparql#hasGeometry> <https://rdflib.github.io/.well-known/genid/rdflib/N87ed2bf65d08478bafad92608f6756c8> .
+<https://rdflib.github.io/.well-known/genid/rdflib/N96144cb6b57542da95a579705635001d> <https://schema.org/maxValue> "-1942.613553760284"^^<http://www.w3.org/2001/XMLSchema#double> .
+<https://rdflib.github.io/.well-known/genid/rdflib/N87ed2bf65d08478bafad92608f6756c8> <http://www.opengis.net/ont/geosparql#asWKT> "POINT (82.961 12.546)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+<https://rdflib.github.io/.well-known/genid/rdflib/N96144cb6b57542da95a579705635001d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
