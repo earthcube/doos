@@ -1,9 +1,0 @@
-[project]
-name = "obis-data"
-version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "visidata>=3.3",
-]
