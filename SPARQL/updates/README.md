@@ -27,6 +27,3 @@ curl -X "POST" \
 ## References
 
 * https://docs.qlever.dev/rebuild-index/ 
-
-
-Temp-token:  doos_7643543846_6dMISzlPrD7i  
