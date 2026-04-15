@@ -1,33 +1,95 @@
-# ARGO GeoParquet2RDF 
+# ARGO GeoParquet2RDF
+
+This tool transforms ARGO ocean profiling float data from GeoParquet format into semantic web-ready RDF representations. ARGO floats are autonomous instruments that drift through the world's oceans collecting vertical profiles of temperature, salinity, and other oceanographic variables. The data arrives as GeoParquet files containing profile metadata, depth measurements, and spatial geometries. This CLI enables researchers to inspect the dataset structure, export records to CSV for traditional analysis workflows, or convert profiles to RDF N-Triples using JSON-LD templates that map fields to Schema.org and GeoSPARQL vocabularies. The resulting linked data can then be integrated with other semantic web resources, enabling federated queries across distributed ocean observation datasets.
 
 ## About
 
-This CLI tool processes ARGO ocean profiling data from GeoParquet format. It provides three main commands: info to inspect dataset metadata including record count, available columns, and sample data; tocsv to export data to CSV format with geometry converted to Well-Known Text; and rml to convert GeoParquet records to RDF using template-based JSON-LD transformations. 
+A CLI tool for processing ARGO ocean profiling data from GeoParquet format. It provides utilities to inspect parquet files, export to CSV, and convert records to RDF using JSON-LD templates.
 
-The RML mapping command reads a JSON-LD template, iterates through ARGO profile features to populate fields like title, description, depth measurements, and spatial geometries, then outputs N-Triples with skolemized blank nodes to enable integration with semantic web applications and ontologies.
+## Installation
 
-## geopan.py
+Requires Python >= 3.11. Using `uv`:
 
-This Python script uses the `geopandas` library to read a GeoParquet file named `argo_profiles_features_nmdis.parquet`.
+```bash
+uv sync
+```
 
-### Functionality
+Or with pip:
 
-1.  **Reads Data**: It loads the specified GeoParquet file into a GeoDataFrame.
-2.  **Prints Metadata**:
-    *   It prints the total number of rows (records) in the GeoDataFrame.
-    *   It prints a list of all column names available in the dataset.
-3.  **Subsets and Displays Data**:
-    *   It attempts to select a predefined list of columns: `['title', 'depth_max_in_meters', 'description', 'geometry']`.
-    *   If all specified columns exist, it prints the first 10 rows of this subset.
-    *   If any of the specified columns are missing, it prints an error message listing the missing columns.
+```bash
+pip install geopandas morph-kgc pyarrow pyld
+```
 
-### To Run the Script
+## Usage
 
-1.  **Install dependencies**:
-    ```bash
-    pip install geopandas
-    ```
-2.  **Execute the script**:
-    ```bash
-    python geopan.py
-    ```
+```bash
+python geopan.py <command> [options]
+```
+
+### Commands
+
+#### `info` - Inspect parquet file metadata
+
+Displays record count, column names, and sample data from the parquet file.
+
+```bash
+python geopan.py info -parquet argo_profiles_features_nmdis.parquet
+```
+
+**Output includes:**
+- Total number of records
+- List of all columns
+- First 10 rows of selected columns (id, title, depth_max_in_meters, description, geometry, mission, themes)
+
+#### `tocsv` - Convert parquet to CSV
+
+Exports the GeoParquet file to CSV format with geometry converted to WKT (Well-Known Text).
+
+```bash
+python geopan.py tocsv -parquet argo_profiles_features_nmdis.parquet
+```
+
+**Output:** Creates `output.csv` in the current directory.
+
+#### `rml` - Convert to RDF using JSON-LD template
+
+Converts parquet records to RDF N-Triples format using a JSON-LD template.
+
+```bash
+python geopan.py rml -parquet argo_profiles_features_nmdis.parquet -mapping ./template/argo1.json
+```
+
+The `-mapping` argument specifies the JSON-LD template file used for RDF conversion.
+
+**Output:** Creates N-Triples files named `{id}.nt` in `data/output/` directory. Blank nodes are skolemized for semantic web compatibility.
+
+## File Structure
+
+```
+ARGO/
+├── geopan.py                              # Main CLI tool
+├── argo_profiles_features_nmdis.parquet   # Sample ARGO data
+├── template/
+│   └── argo1.json                         # JSON-LD template for RDF conversion
+├── RML/
+│   ├── test.ttl                           # RML mapping files
+│   └── argo.ttl
+└── data/
+    └── output/                            # Generated N-Triples files
+```
+
+## JSON-LD Template
+
+The RML command uses a JSON-LD template (`template/argo1.json`) that maps ARGO profile fields to Schema.org and GeoSPARQL vocabularies:
+
+- `name`, `title`, `description` - Basic metadata
+- `variableMeasured[0].maxValue` - Maximum depth in meters
+- `geosparql:hasGeometry` - Spatial geometry as WKT
+
+## Dependencies
+
+- `geopandas` - Geospatial data handling
+- `morph-kgc` - RML mapping engine (available but not currently wired up)
+- `pyarrow` - Parquet file support
+- `pyld` - JSON-LD processing
+- `rdflib` - RDF serialization

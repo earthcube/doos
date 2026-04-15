@@ -7,6 +7,8 @@ import json
 import threading
 from playwright.sync_api import sync_playwright
 
+# Need to leverage https://github.com/sinaptik-ai/pandas-ai
+
 # This is a hack for now, thinking of replacing with loading the JSON-LD into oxigraph and doing a simple
 # SPARQL query, since that will not be too heavy and will more accurate I think.
 def get_csv_urls(json_ld: dict) -> list[str]:

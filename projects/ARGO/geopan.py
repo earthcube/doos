@@ -77,9 +77,8 @@ def rml_mapping(parquet_file, template):
         output_dir = "data/output"
         os.makedirs(output_dir, exist_ok=True)
 
-        # Read JSON-LD template from a file
-        template_file = "./template/argo1.json"  # You can change this path as needed
-        with open(template_file, "r", encoding="utf-8") as f:
+        # Read JSON-LD template from the provided file
+        with open(template, "r", encoding="utf-8") as f:
             json_ld_template = json.load(f)
 
         for index, row in df.iterrows():
@@ -177,7 +176,7 @@ if __name__ == "__main__":
     rml_parser = subparsers.add_parser("rml", help="Run RML mapping")
     rml_parser.add_argument("-parquet", required=True, help="Path to the parquet file")
     rml_parser.add_argument(
-        "-mapping", required=True, help="Path to the mapping template file"
+        "-mapping", required=True, help="Path to the JSON-LD template file"
     )
 
     args = parser.parse_args()
