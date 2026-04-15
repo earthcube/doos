@@ -1,0 +1,349 @@
+{
+  "help": "https://catalogue.cioos.ca/api/3/action/help_show?name=package_show",
+  "success": true,
+  "result": {
+    "author": null,
+    "author_email": null,
+    "bbox-east-long": "-66.44527",
+    "bbox-north-lat": "45.85845",
+    "bbox-south-lat": "44.705421",
+    "bbox-west-long": "-67.788",
+    "citation": {
+      "fr": "https://doi.org/10.25976/4y34-rn27",
+      "en": "https://doi.org/10.25976/4y34-rn27"
+    },
+    "creator_user_id": "10bda6d8-e947-4703-a0f6-201f4b25ad07",
+    "datacentre": [],
+    "ecv": [],
+    "eov": ["other"],
+    "frequency-of-update": "monthly",
+    "harvest_document_content": "\u003Cgmi:MI_Metadata\n        xmlns=\"http://www.isotc211.org/2005/gmi\"\n        xmlns:srv=\"http://www.isotc211.org/2005/srv\"\n        xmlns:gmx=\"http://www.isotc211.org/2005/gmx\"\n        xmlns:gsr=\"http://www.isotc211.org/2005/gsr\"\n        xmlns:gss=\"http://www.isotc211.org/2005/gss\"\n        xmlns:xs=\"http://www.w3.org/2001/XMLSchema\"\n        xmlns:gts=\"http://www.isotc211.org/2005/gts\"\n        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n        xmlns:gml=\"http://www.opengis.net/gml/3.2\"\n        xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n        xmlns:gco=\"http://www.isotc211.org/2005/gco\"\n        xmlns:gmd=\"http://www.isotc211.org/2005/gmd\"\n        xmlns:gmi=\"http://www.isotc211.org/2005/gmi\"\n        xsi:schemaLocation=\"http://www.isotc211.org/2005/gmi https://www.ngdc.noaa.gov/metadata/published/xsd/schema.xsd\"\u003E\n    \u003Cgmd:fileIdentifier\u003E\n        \u003Cgco:CharacterString\u003E10.25976/4y34-rn27\u003C/gco:CharacterString\u003E\n    \u003C/gmd:fileIdentifier\u003E\n    \u003Cgmd:language\u003E\n        \u003Cgmd:LanguageCode\n                codeList=\"http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#LanguageCode\"\n                codeListValue=\"eng\"\u003Een-CA\n        \u003C/gmd:LanguageCode\u003E\n    \u003C/gmd:language\u003E\n    \u003Cgmd:characterSet\u003E\n        \u003Cgmd:MD_CharacterSetCode\n                codeList=\"http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode\"\n                codeListValue=\"UTF8\"\u003EUTF8\n        \u003C/gmd:MD_CharacterSetCode\u003E\n    \u003C/gmd:characterSet\u003E\n    \u003Cgmd:hierarchyLevel\u003E\n        \u003Cgmd:MD_ScopeCode\n                codeList=\"http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode\"\n                codeListValue=\"dataset\"\u003Edataset\n        \u003C/gmd:MD_ScopeCode\u003E\n    \u003C/gmd:hierarchyLevel\u003E\n\n    \u003Cgmd:contact\u003E\n        \u003Cgmd:CI_ResponsibleParty\u003E\n            \u003Cgmd:contactInfo\u003E\n                \u003Cgmd:CI_Contact\u003E\n                    \u003Cgmd:address\u003E\n                        \u003Cgmd:CI_Address\u003E\n                            \u003Cgmd:electronicMailAddress\u003E\n                                \u003Cgco:CharacterString\u003Ealexa.meyer@qonaskamkuk.com\u003C/gco:CharacterString\u003E\n                            \u003C/gmd:electronicMailAddress\u003E\n                        \u003C/gmd:CI_Address\u003E\n                    \u003C/gmd:address\u003E\n                \u003C/gmd:CI_Contact\u003E\n            \u003C/gmd:contactInfo\u003E\n            \u003Cgmd:role\u003E\n                \u003Cgmd:CI_RoleCode\n                        codeList=\"https://schemas.isotc211.org/19115/-3/cit/1.0/codelists.xml#CI_RoleCode\"\n                        codeListValue=\"pointOfContact\"\u003EpointOfContact\n                \u003C/gmd:CI_RoleCode\u003E\n            \u003C/gmd:role\u003E\n        \u003C/gmd:CI_ResponsibleParty\u003E\n    \u003C/gmd:contact\u003E\n\n    \u003Cgmd:dateStamp\u003E\n        \u003Cgco:DateTime\u003E2026-03-05T19:37:02.100Z\u003C/gco:DateTime\u003E\n    \u003C/gmd:dateStamp\u003E\n    \u003Cgmd:metadataStandardName\u003E\n        \u003Cgco:CharacterString\u003EISO 19115-2 Geographic Information - Metadata Part 2 Extensions for Imagery and Gridded\n            Data\n        \u003C/gco:CharacterString\u003E\n    \u003C/gmd:metadataStandardName\u003E\n    \u003Cgmd:metadataStandardVersion\u003E\n        \u003Cgco:CharacterString\u003EISO 19115-2:2019(E)\u003C/gco:CharacterString\u003E\n    \u003C/gmd:metadataStandardVersion\u003E\n\n    \u003Cgmd:spatialRepresentationInfo\u003E\n        \u003Cgmd:MD_GridSpatialRepresentation\u003E\n            \u003Cgmd:numberOfDimensions\u003E\n                \u003Cgco:Integer\u003E4\u003C/gco:Integer\u003E\n            \u003C/gmd:numberOfDimensions\u003E\n            \u003Cgmd:axisDimensionProperties\u003E\n                \u003Cgmd:MD_Dimension\u003E\n                    \u003Cgmd:dimensionName\u003E\n                        \u003Cgmd:MD_DimensionNameTypeCode\n                                codeList=\"http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_DimensionNameTypeCode\"\n                                codeListValue=\"column\"\u003Ecolumn\n                        \u003C/gmd:MD_DimensionNameTypeCode\u003E\n                    \u003C/gmd:dimensionName\u003E\n                    \u003Cgmd:dimensionSize gco:nilReason=\"unknown\"/\u003E\n                \u003C/gmd:MD_Dimension\u003E\n            \u003C/gmd:axisDimensionProperties\u003E\n            \u003Cgmd:axisDimensionProperties\u003E\n                \u003Cgmd:MD_Dimension\u003E\n                    \u003Cgmd:dimensionName\u003E\n                        \u003Cgmd:MD_DimensionNameTypeCode\n                                codeList=\"http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_DimensionNameTypeCode\"\n                                codeListValue=\"row\"\u003Erow\n                        \u003C/gmd:MD_DimensionNameTypeCode\u003E\n                    \u003C/gmd:dimensionName\u003E\n                    \u003Cgmd:dimensionSize gco:nilReason=\"unknown\"/\u003E\n                \u003C/gmd:MD_Dimension\u003E\n            \u003C/gmd:axisDimensionProperties\u003E\n            \u003Cgmd:axisDimensionProperties\u003E\n                \u003Cgmd:MD_Dimension\u003E\n                    \u003Cgmd:dimensionName\u003E\n                        \u003Cgmd:MD_DimensionNameTypeCode\n                                codeList=\"http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_DimensionNameTypeCode\"\n                                codeListValue=\"vertical\"\u003Evertical\n                        \u003C/gmd:MD_DimensionNameTypeCode\u003E\n                    \u003C/gmd:dimensionName\u003E\n                    \u003Cgmd:dimensionSize gco:nilReason=\"unknown\"/\u003E\n                \u003C/gmd:MD_Dimension\u003E\n            \u003C/gmd:axisDimensionProperties\u003E\n            \u003Cgmd:axisDimensionProperties\u003E\n                \u003Cgmd:MD_Dimension\u003E\n                    \u003Cgmd:dimensionName\u003E\n                        \u003Cgmd:MD_DimensionNameTypeCode\n                                codeList=\"http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_DimensionNameTypeCode\"\n                                codeListValue=\"temporal\"\u003Etemporal\n                        \u003C/gmd:MD_DimensionNameTypeCode\u003E\n                    \u003C/gmd:dimensionName\u003E\n                    \u003Cgmd:dimensionSize gco:nilReason=\"unknown\"/\u003E\n                \u003C/gmd:MD_Dimension\u003E\n            \u003C/gmd:axisDimensionProperties\u003E\n            \u003Cgmd:cellGeometry\u003E\n                \u003Cgmd:MD_CellGeometryCode codeList=\"\" codeListValue=\"\" codeSpace=\"\"/\u003E\n            \u003C/gmd:cellGeometry\u003E\n            \u003Cgmd:transformationParameterAvailability gco:nilReason=\"unknown\"/\u003E\n        \u003C/gmd:MD_GridSpatialRepresentation\u003E\n    \u003C/gmd:spatialRepresentationInfo\u003E\n\n    \u003Cgmd:identificationInfo\u003E\n        \u003Cgmd:MD_DataIdentification id=\"DataIdentification\"\u003E\n            \u003Cgmd:citation\u003E\n                \u003Cgmd:CI_Citation\u003E\n                    \u003Cgmd:title\u003E\n                        \u003Cgco:CharacterString\u003EPeskotomuhkati Nation Coastal Restoration\u003C/gco:CharacterString\u003E\n                    \u003C/gmd:title\u003E\n                    \u003Cgmd:date\u003E\n                        \u003Cgmd:CI_Date\u003E\n                            \u003Cgmd:date\u003E\n                                \u003Cgco:DateTime\u003E2020-03-26T18:40:41.754Z\u003C/gco:DateTime\u003E\n                            \u003C/gmd:date\u003E\n                            \u003Cgmd:dateType\u003E\n                                \u003Cgmd:CI_DateTypeCode\n                                        codeList=\"https://schemas.isotc211.org/19115/-3/cit/1.0/codelists.xml#CI_DateTypeCode\"\n                                        codeListValue=\"publication\"\u003Epublication\n                                \u003C/gmd:CI_DateTypeCode\u003E\n                            \u003C/gmd:dateType\u003E\n                        \u003C/gmd:CI_Date\u003E\n                    \u003C/gmd:date\u003E\n                    \u003Cgmd:date\u003E\n                        \u003Cgmd:CI_Date\u003E\n                            \u003Cgmd:date\u003E\n                                \u003Cgco:DateTime\u003E2026-03-05T19:37:02.100Z\u003C/gco:DateTime\u003E\n                            \u003C/gmd:date\u003E\n                            \u003Cgmd:dateType\u003E\n                                \u003Cgmd:CI_DateTypeCode\n                                        codeList=\"https://schemas.isotc211.org/19115/-3/cit/1.0/codelists.xml#CI_DateTypeCode\"\n                                        codeListValue=\"revision\"\u003Erevision\n                                \u003C/gmd:CI_DateTypeCode\u003E\n                            \u003C/gmd:dateType\u003E\n                        \u003C/gmd:CI_Date\u003E\n                    \u003C/gmd:date\u003E\n                    \n                    \u003Cgmd:identifier\u003E\n                        \u003Cgmd:MD_Identifier\u003E\n                            \u003Cgmd:authority\u003E\n                                \u003Cgmd:CI_Citation\u003E\n                                    \u003Cgmd:title\u003E\n                                        \u003Cgco:CharacterString\u003EPassamaquoddy Recognition Group Inc. 2026. \"Peskotomuhkati Nation Coastal Restoration\" (dataset). 24.16.0. DataStream. https://doi.org/10.25976/4y34-rn27.\u003C/gco:CharacterString\u003E\n                                    \u003C/gmd:title\u003E\n                                    \u003Cgmd:date gco:nilReason=\"inapplicable\"/\u003E\n                                \u003C/gmd:CI_Citation\u003E\n                            \u003C/gmd:authority\u003E\n                            \u003Cgmd:code\u003E\n                              \u003Cgco:CharacterString\u003Ehttps://doi.org/10.25976/4y34-rn27\u003C/gco:CharacterString\u003E\n                            \u003C/gmd:code\u003E\n                        \u003C/gmd:MD_Identifier\u003E\n                    \u003C/gmd:identifier\u003E\n                    \u003Cgmd:citedResponsibleParty\u003E\n                        \u003Cgmd:CI_ResponsibleParty\u003E\n                            \u003Cgmd:organisationName\u003E\n                                \u003Cgco:CharacterString\u003EDataStream\u003C/gco:CharacterString\u003E\n                            \u003C/gmd:organisationName\u003E\n                            \u003Cgmd:role\u003E\n                                \u003Cgmd:CI_RoleCode\n                                        codeList=\"https://schemas.isotc211.org/19115/-3/cit/1.0/codelists.xml#CI_RoleCode\"\n                                        codeListValue=\"publisher\"\u003Epublisher\n                                \u003C/gmd:CI_RoleCode\u003E\n                            \u003C/gmd:role\u003E\n                        \u003C/gmd:CI_ResponsibleParty\u003E\n                    \u003C/gmd:citedResponsibleParty\u003E\n                    \n                    \u003Cgmd:citedResponsibleParty\u003E\n                        \u003Cgmd:CI_ResponsibleParty\u003E\n                            \u003Cgmd:organisationName\u003E\n                                \u003Cgco:CharacterString\u003EPassamaquoddy Recognition Group Inc\u003C/gco:CharacterString\u003E\n                            \u003C/gmd:organisationName\u003E\n                            \u003Cgmd:role\u003E\n                                \u003Cgmd:CI_RoleCode\n                                        codeList=\"https://schemas.isotc211.org/19115/-3/cit/1.0/codelists.xml#CI_RoleCode\"\n                                        codeListValue=\"author\"\u003Eauthor\n                                \u003C/gmd:CI_RoleCode\u003E\n                            \u003C/gmd:role\u003E\n                        \u003C/gmd:CI_ResponsibleParty\u003E\n                    \u003C/gmd:citedResponsibleParty\u003E\n                    \n                    \u003Cgmd:citedResponsibleParty\u003E\n                        \u003Cgmd:CI_ResponsibleParty\u003E\n                            \u003Cgmd:organisationName\u003E\n                                \u003Cgco:CharacterString\u003EPassamaquoddy Recognition Group Inc\u003C/gco:CharacterString\u003E\n                            \u003C/gmd:organisationName\u003E\n                            \u003Cgmd:role\u003E\n                                \u003Cgmd:CI_RoleCode\n                                        codeList=\"https://schemas.isotc211.org/19115/-3/cit/1.0/codelists.xml#CI_RoleCode\"\n                                        codeListValue=\"contributor\"\u003Econtributor\n                                \u003C/gmd:CI_RoleCode\u003E\n                            \u003C/gmd:role\u003E\n                        \u003C/gmd:CI_ResponsibleParty\u003E\n                    \u003C/gmd:citedResponsibleParty\u003E\n                \u003C/gmd:CI_Citation\u003E\n            \u003C/gmd:citation\u003E\n            \u003Cgmd:abstract\u003E\n                \u003Cgco:CharacterString\u003EThe Passamaquoddy Recognition Group Inc. Coastal Restoration Plan collects water quality for long-term monitoring of watershed health in the St. Croix (Skutik) and West Fundy Composite watersheds. PRGI uses this data primarily for addressing barriers to sea-run fish, their associated habitats, and watershed planning.\u003C/gco:CharacterString\u003E\n            \u003C/gmd:abstract\u003E\n            \u003Cgmd:credit gco:nilReason=\"missing\"/\u003E\n\n            \u003Cgmd:status\u003E\n                \u003Cgmd:MD_ProgressCode\n                codeList=\"https://schemas.isotc211.org/19115/-3/mcc/1.0/codelists.xml#MD_ProgressCode\"\n                codeListValue=\"onGoing\"\u003EonGoing\u003C/gmd:MD_ProgressCode\u003E\n            \u003C/gmd:status\u003E\n            \u003Cgmd:resourceMaintenance\u003E\n                \u003Cgmd:MD_MaintenanceInformation\u003E\n                    \u003Cgmd:maintenanceAndUpdateFrequency\u003E\n                        \u003Cgmd:MD_MaintenanceFrequencyCode\n                            codeList=\"https://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode\"\n                            codeListValue=\"monthly\"\u003Emonthly\u003C/gmd:MD_MaintenanceFrequencyCode\u003E\n                    \u003C/gmd:maintenanceAndUpdateFrequency\u003E\n                \u003C/gmd:MD_MaintenanceInformation\u003E\n            \u003C/gmd:resourceMaintenance\u003E\n\n            \n            \u003Cgmd:descriptiveKeywords\u003E\n                \u003Cgmd:MD_Keywords\u003E\n                    \n                    \u003Cgmd:keyword\u003E\n                        \u003Cgco:CharacterString\u003EPassamaquoddy\u003C/gco:CharacterString\u003E\n                    \u003C/gmd:keyword\u003E\n                    \n                    \u003Cgmd:keyword\u003E\n                        \u003Cgco:CharacterString\u003EPeskotomuhkati\u003C/gco:CharacterString\u003E\n                    \u003C/gmd:keyword\u003E\n                    \n                    \u003Cgmd:keyword\u003E\n                        \u003Cgco:CharacterString\u003ESt. Croix\u003C/gco:CharacterString\u003E\n                    \u003C/gmd:keyword\u003E\n                    \n                    \u003Cgmd:keyword\u003E\n                        \u003Cgco:CharacterString\u003ESouthwest New Brunswick\u003C/gco:CharacterString\u003E\n                    \u003C/gmd:keyword\u003E\n                    \n                    \u003Cgmd:keyword\u003E\n                        \u003Cgco:CharacterString\u003EDiadromous Fish\u003C/gco:CharacterString\u003E\n                    \u003C/gmd:keyword\u003E\n                    \n                    \u003Cgmd:keyword\u003E\n                        \u003Cgco:CharacterString\u003EWater Quality\u003C/gco:CharacterString\u003E\n                    \u003C/gmd:keyword\u003E\n                    \n                \u003C/gmd:MD_Keywords\u003E\n            \u003C/gmd:descriptiveKeywords\u003E\n            \n\n            \n            \u003Cgmd:resourceConstraints\u003E\n                \u003Cgmd:MD_LegalConstraints\u003E\n                    \n                    \u003Cgmd:useLimitation\u003E\n                        \u003Cgco:CharacterString\u003Ehttps://opendatacommons.org/licenses/by/1-0/\u003C/gco:CharacterString\u003E\n                    \u003C/gmd:useLimitation\u003E\n                    \n                    \n                    \u003Cgmd:useLimitation\u003E\n                        \u003Cgco:CharacterString\u003EPlease include DOI in citations\u003C/gco:CharacterString\u003E\n                    \u003C/gmd:useLimitation\u003E\n                    \n                \u003C/gmd:MD_LegalConstraints\u003E\n            \u003C/gmd:resourceConstraints\u003E\n            \n\n            \u003Cgmd:language\u003E\n                \u003Cgco:CharacterString\u003Eeng\u003C/gco:CharacterString\u003E\n            \u003C/gmd:language\u003E\n\n            \n            \u003Cgmd:topicCategory\u003E\n                \u003Cgmd:MD_TopicCategoryCode\u003EinlandWaters\u003C/gmd:MD_TopicCategoryCode\u003E\n            \u003C/gmd:topicCategory\u003E\n            \n            \u003Cgmd:topicCategory\u003E\n                \u003Cgmd:MD_TopicCategoryCode\u003EclimatologyMeteorologyAtmosphere\u003C/gmd:MD_TopicCategoryCode\u003E\n            \u003C/gmd:topicCategory\u003E\n            \n            \u003Cgmd:topicCategory\u003E\n                \u003Cgmd:MD_TopicCategoryCode\u003Eoceans\u003C/gmd:MD_TopicCategoryCode\u003E\n            \u003C/gmd:topicCategory\u003E\n            \n\n            \u003Cgmd:extent\u003E\n                \u003Cgmd:EX_Extent\u003E\n                  \u003Cgmd:geographicElement\u003E\n                    \u003Cgmd:EX_GeographicBoundingBox\u003E\n                      \u003Cgmd:extentTypeCode\u003E\n                        \u003Cgco:Boolean\u003E1\u003C/gco:Boolean\u003E\n                      \u003C/gmd:extentTypeCode\u003E\n                      \u003Cgmd:westBoundLongitude\u003E\n                        \u003Cgco:Decimal\u003E-67.788\u003C/gco:Decimal\u003E\n                      \u003C/gmd:westBoundLongitude\u003E\n                      \u003Cgmd:eastBoundLongitude\u003E\n                        \u003Cgco:Decimal\u003E-66.44527\u003C/gco:Decimal\u003E\n                      \u003C/gmd:eastBoundLongitude\u003E\n                      \u003Cgmd:southBoundLatitude\u003E\n                        \u003Cgco:Decimal\u003E44.705421\u003C/gco:Decimal\u003E\n                      \u003C/gmd:southBoundLatitude\u003E\n                      \u003Cgmd:northBoundLatitude\u003E\n                        \u003Cgco:Decimal\u003E45.85845\u003C/gco:Decimal\u003E\n                      \u003C/gmd:northBoundLatitude\u003E\n                    \u003C/gmd:EX_GeographicBoundingBox\u003E\n                  \u003C/gmd:geographicElement\u003E\n                  \u003Cgmd:temporalElement\u003E\n                    \u003Cgmd:EX_TemporalExtent\u003E\n                      \u003Cgmd:extent\u003E\n                        \u003Cgml:TimePeriod gml:id=\"TimePeriod\"\u003E\n                          \u003Cgml:description\u003Eseconds\u003C/gml:description\u003E\n                          \u003Cgml:beginPosition\u003E2019-09-25T00:00:00+00:00\u003C/gml:beginPosition\u003E\n                          \u003Cgml:endPosition\u003E2026-03-04T12:12:32+00:00\u003C/gml:endPosition\u003E\n                        \u003C/gml:TimePeriod\u003E\n                      \u003C/gmd:extent\u003E\n                    \u003C/gmd:EX_TemporalExtent\u003E\n                  \u003C/gmd:temporalElement\u003E\n                  \u003Cgmd:verticalElement\u003E\n                    \u003Cgmd:EX_VerticalExtent\u003E\n                      \u003Cgmd:minimumValue gco:nilReason=\"missing\" /\u003E\n                      \u003Cgmd:maximumValue gco:nilReason=\"missing\" /\u003E\n                      \u003Cgmd:verticalCRS gco:nilReason=\"missing\" /\u003E\n                    \u003C/gmd:EX_VerticalExtent\u003E\n                  \u003C/gmd:verticalElement\u003E\n                \u003C/gmd:EX_Extent\u003E\n              \u003C/gmd:extent\u003E\n\n\n        \u003C/gmd:MD_DataIdentification\u003E\n    \u003C/gmd:identificationInfo\u003E\n    \u003Cgmd:metadataMaintenance\u003E\n        \u003Cgmd:MD_MaintenanceInformation\u003E\n            \u003Cgmd:maintenanceAndUpdateFrequency gco:nilReason=\"unknown\"/\u003E\n            \u003Cgmd:maintenanceNote\u003E\n                \u003Cgco:CharacterString\u003EThis record was created from dataset metadata by DataStream\n                \u003C/gco:CharacterString\u003E\n            \u003C/gmd:maintenanceNote\u003E\n        \u003C/gmd:MD_MaintenanceInformation\u003E\n    \u003C/gmd:metadataMaintenance\u003E\n\u003C/gmi:MI_Metadata\u003E",
+    "id": "ba362aa3-a0dd-4947-9fb0-a0787353f53f",
+    "isopen": true,
+    "keywords": {
+      "en": [
+        "Passamaquoddy",
+        "Peskotomuhkati",
+        "St. Croix",
+        "Southwest New Brunswick",
+        "Diadromous Fish",
+        "Water Quality"
+      ],
+      "fr": [
+        "Passamaquoddy",
+        "Peskotomuhkati",
+        "Sainte-Croix",
+        "Sud-ouest du Nouveau-Brunswick",
+        "Poisson diadrome",
+        "Qualité de l'eau"
+      ]
+    },
+    "keywords_translation_method": {
+      "en": "",
+      "fr": "Keyword text translated using the Amazon translate service / texte traduit à l'aide du service Amazon translate"
+    },
+    "license_id": "ODC-By",
+    "license_title": "Open Data Commons Attribution License 1.0",
+    "license_url": "https://opendatacommons.org/licenses/by/1-0/",
+    "maintainer": null,
+    "maintainer_email": null,
+    "metadata-language": "en",
+    "metadata_created": "2026-03-14T10:47:23.043069",
+    "metadata_modified": "2026-03-14T10:47:23.043076",
+    "name": "10-25976-4y34-rn27",
+    "notes": "The Passamaquoddy Recognition Group Inc. Coastal Restoration Plan collects water quality for long-term monitoring of watershed health in the St. Croix (Skutik) and West Fundy Composite watersheds. PRGI uses this data primarily for addressing barriers to sea-run fish, their associated habitats, and watershed planning.",
+    "notes_translated": {
+      "en": "The Passamaquoddy Recognition Group Inc. Coastal Restoration Plan collects water quality for long-term monitoring of watershed health in the St. Croix (Skutik) and West Fundy Composite watersheds. PRGI uses this data primarily for addressing barriers to sea-run fish, their associated habitats, and watershed planning.",
+      "fr": "Le plan de restauration côtière de Passamaquoddy Recognition Group Inc. collecte la qualité de l'eau pour la surveillance à long terme de la santé des bassins hydrographiques des bassins hydrographiques de Sainte-Croix (Skutik) et de West Fundy Composite. Le PRGI utilise ces données principalement pour surmonter les obstacles auxquels se heurtent les poissons d'élevage en mer, leurs habitats associés et la planification des bassins versants."
+    },
+    "notes_translation_method": {
+      "en": "",
+      "fr": "Description text translated using the Amazon translate service / texte traduit à l'aide du service Amazon translate"
+    },
+    "num_resources": 1,
+    "num_tags": 0,
+    "organization": {
+      "id": "7bdfec7c-1d0d-4b2f-8586-2969c0c00fa7",
+      "name": "datastream",
+      "title": "DataStream",
+      "type": "organization",
+      "description": "",
+      "image_url": "",
+      "created": "2026-01-06T04:01:23.648687",
+      "is_organization": true,
+      "approval_status": "approved",
+      "state": "active",
+      "description_translated": {
+        "en": "DataStream is an open access platform for sharing water and sediment quality data.",
+        "fr": "DataStream est une plateforme en libre accès pour partager des données sur la qualité de l'eau et des sédiments."
+      },
+      "display_name": "DataStream",
+      "external_home_url": "https://datastream.org",
+      "image_display_url": "",
+      "image_url_translated": {
+        "en": "https://datastream.org/img/logo/datastream-main.svg",
+        "fr": "https://datastream.org/img/logo/datastream-main.svg"
+      },
+      "num_followers": 0,
+      "title_translated": {
+        "en": "DataStream",
+        "fr": "DataStream"
+      },
+      "organization-uri": [
+        {
+          "authority": "",
+          "code": "",
+          "code-space": "",
+          "version": ""
+        }
+      ]
+    },
+    "owner_org": "7bdfec7c-1d0d-4b2f-8586-2969c0c00fa7",
+    "private": false,
+    "progress": "onGoing",
+    "projects": [],
+    "resource-type": "dataset",
+    "spatial": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-67.788, 44.705421],
+          [-66.44527, 44.705421],
+          [-66.44527, 45.85845],
+          [-67.788, 45.85845],
+          [-67.788, 44.705421]
+        ]
+      ]
+    },
+    "state": "active",
+    "title": "Peskotomuhkati Nation Coastal Restoration",
+    "title_translated": {
+      "en": "Peskotomuhkati Nation Coastal Restoration",
+      "fr": "Restauration des côtes de la nation Peskotomuhkati"
+    },
+    "title_translation_method": {
+      "en": "",
+      "fr": "Title text translated using the Amazon translate service / texte traduit à l'aide du service Amazon translate"
+    },
+    "type": "dataset",
+    "url": null,
+    "xml_location_url": "https://datastream.org/en-ca/dataset/dedc1985-b4eb-426a-96bd-d170b42771c9/iso19115.xml",
+    "cited-responsible-party": [
+      {
+        "individual-name": "",
+        "organisation-name": "DataStream",
+        "role": "publisher"
+      },
+      {
+        "individual-name": "",
+        "organisation-name": "Passamaquoddy Recognition Group Inc",
+        "role": ["author", "contributor"]
+      }
+    ],
+    "dataset-reference-date": [
+      {
+        "type": "publication",
+        "value": "2020-03-26"
+      },
+      {
+        "type": "revision",
+        "value": "2026-03-05"
+      }
+    ],
+    "extras": [
+      {
+        "key": "access_constraints",
+        "value": ""
+      },
+      {
+        "key": "contact-email",
+        "value": "alexa.meyer@qonaskamkuk.com"
+      },
+      {
+        "key": "encoding",
+        "value": "utf8"
+      },
+      {
+        "key": "guid",
+        "value": "10.25976/4y34-rn27"
+      },
+      {
+        "key": "h_job_id",
+        "value": "23ec9d81-2049-4974-b6bf-0f2362179e09"
+      },
+      {
+        "key": "h_object_id",
+        "value": "bf5ded1a-f41e-46b7-9278-566931c8fa64"
+      },
+      {
+        "key": "h_source_id",
+        "value": "81f54489-aa27-4d09-ba8a-0ad3cc19fcbb"
+      },
+      {
+        "key": "h_source_title",
+        "value": "DataStream"
+      },
+      {
+        "key": "h_source_url",
+        "value": "https://datastream.org/sitemap/doi.xml"
+      },
+      {
+        "key": "harvest_source_organization",
+        "value": "{\"id\": \"7bdfec7c-1d0d-4b2f-8586-2969c0c00fa7\", \"name\": \"datastream\", \"title\": \"DataStream\", \"type\": \"organization\", \"description\": \"\", \"image_url\": \"\", \"created\": \"2026-01-06T04:01:23.648687\", \"is_organization\": true, \"approval_status\": \"approved\", \"state\": \"active\", \"description_translated\": {\"en\": \"DataStream is an open access platform for sharing water and sediment quality data.\", \"fr\": \"DataStream est une plateforme en libre acc\\u00e8s pour partager des donn\\u00e9es sur la qualit\\u00e9 de l'eau et des s\\u00e9diments.\"}, \"display_name\": \"DataStream\", \"external_home_url\": \"https://datastream.org\", \"image_display_url\": \"\", \"image_url_translated\": {\"en\": \"https://datastream.org/img/logo/datastream-main.svg\", \"fr\": \"https://datastream.org/img/logo/datastream-main.svg\"}, \"num_followers\": 0, \"title_translated\": {\"en\": \"DataStream\", \"fr\": \"DataStream\"}, \"organization-uri\": [{\"authority\": \"\", \"code\": \"\", \"code-space\": \"\", \"version\": \"\"}]}"
+      },
+      {
+        "key": "harvest_source_quality_level",
+        "value": "external"
+      },
+      {
+        "key": "licence",
+        "value": "https://opendatacommons.org/licenses/by/1-0/"
+      },
+      {
+        "key": "metadata-date",
+        "value": "2026-03-05T19:37:02.100Z"
+      },
+      {
+        "key": "responsible-party",
+        "value": "[{\"name\": \"\", \"roles\": [\"pointOfContact\"]}]"
+      },
+      {
+        "key": "spatial_harvester",
+        "value": "true"
+      },
+      {
+        "key": "uri",
+        "value": "https://catalogue.cioos.ca/dataset/10-25976-4y34-rn27"
+      },
+      {
+        "key": "use-constraints",
+        "value": "https://opendatacommons.org/licenses/by/1-0/"
+      },
+      {
+        "key": "xml_modified_date",
+        "value": "2025-02-26T13:20:22.896"
+      },
+      {
+        "key": "harvest_object_id",
+        "value": "bf5ded1a-f41e-46b7-9278-566931c8fa64"
+      },
+      {
+        "key": "harvest_source_id",
+        "value": "81f54489-aa27-4d09-ba8a-0ad3cc19fcbb"
+      },
+      {
+        "key": "harvest_source_title",
+        "value": "DataStream"
+      }
+    ],
+    "groups": [
+      {
+        "approval_status": "approved",
+        "created": "2026-01-06T04:25:12.704575",
+        "description": "",
+        "description_translated": {},
+        "display_name": "Passamaquoddy Recognition Group Inc",
+        "id": "7e0ef7b4-6a67-41f0-bdfb-802540970453",
+        "image_display_url": "",
+        "image_url": "",
+        "image_url_translated": {},
+        "is_organization": false,
+        "name": "resorg_passamaquoddy-recognition-group-inc",
+        "num_followers": 0,
+        "state": "active",
+        "title": "Passamaquoddy Recognition Group Inc",
+        "title_translated": {
+          "en": "Passamaquoddy Recognition Group Inc",
+          "fr": "Passamaquoddy Recognition Group Inc"
+        },
+        "type": "resorg"
+      }
+    ],
+    "included_in_data_catalogue": [
+      {
+        "description": "DataStream is an open access platform for water quality data",
+        "name": "DataStream",
+        "url": "https://datastream.org"
+      },
+      {
+        "description": "",
+        "name": "CIOOS/SIOOC",
+        "url": "https://catalogue.cioos.ca"
+      }
+    ],
+    "lineage": [
+      {
+        "additional-documentation": [],
+        "processing-step": [],
+        "scope": "dataset",
+        "source": [],
+        "statment": {
+          "en": ""
+        }
+      }
+    ],
+    "metadata-point-of-contact": [
+      {
+        "contact-info_email": "alexa.meyer@qonaskamkuk.com",
+        "contact-info_online-resource": "",
+        "individual-name": "",
+        "organisation-name": "",
+        "role": "pointOfContact"
+      }
+    ],
+    "metadata-reference-date": [
+      {
+        "type": "Creation",
+        "value": "2026-03-05"
+      },
+      {
+        "type": "Revision",
+        "value": "2026-03-05"
+      }
+    ],
+    "resources": [
+      {
+        "cache_last_updated": null,
+        "cache_url": null,
+        "created": "2026-03-14T10:47:23.044328",
+        "description": "",
+        "description_translated": {},
+        "format": "HTML",
+        "hash": "",
+        "id": "85f0f799-4611-4419-ba57-e27420656d9a",
+        "last_modified": null,
+        "metadata_modified": "2026-03-14T10:47:23.039639",
+        "mimetype": null,
+        "mimetype_inner": null,
+        "name": "Access DataStream",
+        "name_translated": {
+          "en": "Access DataStream"
+        },
+        "package_id": "ba362aa3-a0dd-4947-9fb0-a0787353f53f",
+        "position": 0,
+        "resource_locator_function": "",
+        "resource_locator_protocol": "",
+        "resource_type": null,
+        "size": null,
+        "state": "active",
+        "url": "https://doi.org/10.25976/4y34-rn27",
+        "url_type": null,
+        "datastore_active": false
+      }
+    ],
+    "temporal-extent": [
+      {
+        "begin": "2019-09-25",
+        "end": "2026-03-04"
+      }
+    ],
+    "unique-resource-identifier-full": [
+      {
+        "code": "https://doi.org/10.25976/4y34-rn27"
+      }
+    ],
+    "tags": [],
+    "relationships_as_subject": [],
+    "relationships_as_object": []
+  }
+}

@@ -1,12 +1,12 @@
 # AODN
 
-This toolkit transforms Australian Ocean Data Network (AODN) metadata records into web-friendly, machine-readable formats. It provides a two-step XSLT pipeline that first converts ISO 19115 metadata to ISO 19139 XML, then transforms that output into JSON-LD using schema.org vocabulary. The resulting JSON-LD can be embedded in web pages for discovery by search engines and data aggregators, enabling FAIR (Findable, Accessible, Interoperable, Reusable) data practices.
+This toolkit transforms Australian Ocean Data Network (AODN) metadata records into web-friendly, machine-readable formats. It provides a two-step XSLT pipeline that first converts ISO 19115-3 metadata to ISO 19139 XML, then transforms that output into JSON-LD using schema.org vocabulary. The resulting JSON-LD can be embedded in web pages for discovery by search engines and data aggregators, enabling FAIR (Findable, Accessible, Interoperable, Reusable) data practices.
 
 ## About
 
 This directory contains tools for transforming AODN (Australian Ocean Data Network) metadata records through a two-step pipeline:
 
-1. **ISO 19115 → ISO 19139**: Convert proprietary/legacy metadata to standard ISO 19139 XML
+1. **ISO 19115-3 → ISO 19139**: Convert ISO 19115-3:2014 XML metadata to standard ISO 19139 XML
 2. **ISO 19139 → JSON-LD**: Transform ISO 19139 to schema.org vocabulary as JSON-LD
 
 ## Dependencies
@@ -41,9 +41,9 @@ Transforms XML using XSLT 1.0 stylesheets via lxml. Prints output to stdout.
 
 ## Workflow
 
-The typical workflow transforms metadata from ISO 19115 → ISO 19139 → JSON-LD (schema.org):
+The typical workflow transforms metadata from ISO 19115-3 → ISO 19139 → JSON-LD (schema.org):
 
-### Step 1: Convert ISO 19115 to ISO 19139
+### Step 1: Convert ISO 19115-3 to ISO 19139
 
 ```bash
 python convert_script.py \

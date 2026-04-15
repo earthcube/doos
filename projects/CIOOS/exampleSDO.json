@@ -1,0 +1,65 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "@id": "https://catalogue.cioos.ca/dataset/peskotomuhkati-nation-coastal-restoration",
+  "identifier": [
+    "10-25976-4y34-rn27",
+    "peskotomuhkati-nation-coastal-restoration",
+    "https://doi.org/10.25976/4y34-rn27"
+  ],
+  "name": "Peskotomuhkati Nation Coastal Restoration – water quality monitoring",
+  "description": "Long-term water quality monitoring for coastal restoration.",
+  "license": "odc-by",
+  "url": "https://catalogue.cioos.ca/dataset/peskotomuhkati-nation-coastal-restoration",
+  "isAccessibleForFree": true,
+  "publisher": {
+    "@type": "Organization",
+    "name": "DataStream"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "Access data",
+      "contentUrl": "https://doi.org/10.25976/4y34-rn27",
+      "encodingFormat": null
+    }
+  ],
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoShape",
+      "polygon": "-67.788 44.705 -66.445 44.705 -66.445 45.858 -67.788 45.858 -67.788 44.705"
+    }
+  },
+  "temporalCoverage": "2019-09-25/2026-03-04",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "EOV: other"
+    }
+  ],
+  "keywords": ["ECV: water quality"],
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Passamaquoddy Recognition Group Inc."
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "frequency-of-update",
+      "value": "monthly"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "progress",
+      "value": "onGoing"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "included_in_data_catalogue",
+      "value": "CIOOS National"
+    }
+  ]
+}
