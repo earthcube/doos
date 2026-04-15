@@ -19,7 +19,6 @@ def print_info(parquet_file):
 
     # Select some columns to test with
     selected_cols = [
-        "themes",
         "id",
         "title",
         "depth_max_in_meters",
@@ -172,11 +171,18 @@ if __name__ == "__main__":
         "-parquet", required=True, help="Path to the parquet file"
     )
 
-    # 'rml' subcommand
-    rml_parser = subparsers.add_parser("rml", help="Run RML mapping")
+    # 'tordf' subcommand (JSON-LD based conversion)
+    tordf_parser = subparsers.add_parser("tordf", help="Convert to RDF using JSON-LD template")
+    tordf_parser.add_argument("-parquet", required=True, help="Path to the parquet file")
+    tordf_parser.add_argument(
+        "-mapping", required=True, help="Path to the JSON-LD template file"
+    )
+
+    # 'rml' subcommand (morph-kgc RML mapping)
+    rml_parser = subparsers.add_parser("rml", help="Run RML mapping using morph-kgc")
     rml_parser.add_argument("-parquet", required=True, help="Path to the parquet file")
     rml_parser.add_argument(
-        "-mapping", required=True, help="Path to the JSON-LD template file"
+        "-mapping", required=True, help="Path to the RML mapping file (TTL)"
     )
 
     args = parser.parse_args()
@@ -185,7 +191,13 @@ if __name__ == "__main__":
         print_info(getattr(args, "parquet"))
     elif args.command == "tocsv":
         tocsv(getattr(args, "parquet"))
-    elif args.command == "rml":
+    elif args.command == "tordf":
         result = rml_mapping(getattr(args, "parquet"), getattr(args, "mapping"))
         print("RDF output:")
         print(result)
+    elif args.command == "rml":
+        result = rml_mapping_parquet(getattr(args, "parquet"), getattr(args, "mapping"))
+        if result:
+            print(result)
+        else:
+            print("No output generated. Check that required columns exist in the parquet file.")

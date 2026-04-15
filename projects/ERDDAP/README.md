@@ -19,6 +19,14 @@ Draft Agenda
     - relation to WMO/WIS2 parallel effort
 
 
+## Notes
+
+* https://github.com/iodepo/odis-in/tree/master/shapeGraphs
+* https://github.com/ERDDAP/erddap/discussions/284
+* https://osmc.noaa.gov/erddap/info/anibos_movement_data/index.html
+
+
+
 
 ## About
 

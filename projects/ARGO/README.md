@@ -51,17 +51,29 @@ python geopan.py tocsv -parquet argo_profiles_features_nmdis.parquet
 
 **Output:** Creates `output.csv` in the current directory.
 
-#### `rml` - Convert to RDF using JSON-LD template
+#### `tordf` - Convert to RDF using JSON-LD template
 
 Converts parquet records to RDF N-Triples format using a JSON-LD template.
 
 ```bash
-python geopan.py rml -parquet argo_profiles_features_nmdis.parquet -mapping ./template/argo1.json
+python geopan.py tordf -parquet argo_profiles_features_nmdis.parquet -mapping ./template/argo1.json
 ```
 
 The `-mapping` argument specifies the JSON-LD template file used for RDF conversion.
 
 **Output:** Creates N-Triples files named `{id}.nt` in `data/output/` directory. Blank nodes are skolemized for semantic web compatibility.
+
+#### `rml` - Convert to RDF using RML mapping
+
+Converts parquet records to RDF N-Triples format using morph-kgc with an RML (RDF Mapping Language) mapping file.
+
+```bash
+python geopan.py rml -parquet argo_profiles_features_nmdis.parquet -mapping ./RML/test.ttl
+```
+
+The `-mapping` argument specifies the RML mapping file (Turtle format) used for RDF conversion.
+
+**Output:** Prints N-Triples to stdout. Requires that the RML mapping file references columns that exist in the parquet file.
 
 ## File Structure
 
@@ -80,7 +92,7 @@ ARGO/
 
 ## JSON-LD Template
 
-The RML command uses a JSON-LD template (`template/argo1.json`) that maps ARGO profile fields to Schema.org and GeoSPARQL vocabularies:
+The `tordf` command uses a JSON-LD template (`template/argo1.json`) that maps ARGO profile fields to Schema.org and GeoSPARQL vocabularies:
 
 - `name`, `title`, `description` - Basic metadata
 - `variableMeasured[0].maxValue` - Maximum depth in meters
@@ -89,7 +101,7 @@ The RML command uses a JSON-LD template (`template/argo1.json`) that maps ARGO p
 ## Dependencies
 
 - `geopandas` - Geospatial data handling
-- `morph-kgc` - RML mapping engine (available but not currently wired up)
+- `morph-kgc` - RML mapping engine (used by `rml` command)
 - `pyarrow` - Parquet file support
 - `pyld` - JSON-LD processing
 - `rdflib` - RDF serialization

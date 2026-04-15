@@ -2,9 +2,12 @@
 
 ## Notes
 
-- [ ]  Need to review the email for further details on the CKAN CKAN (Comprehensive Knowledge Archive Network) record mapping
+- [ ]  Need to review the emails for further details on the CKAN CKAN (Comprehensive Knowledge Archive Network) record mapping to schema.org type dataset in JSON-LD
 
 Notes:
+
+A key goal is depth mapping.  Need to review how the gmd:verticleElement is used in the CKAN record and compare it to the approach for encding depth in schema.org at https://book.oceaninfohub.org/thematics/depth/index.html.  
+
 1. Vertical Extent (Metadata Structure)
 In the harvest_document_content (the ISO 19115 XML section), there is an explicit placeholder for vertical data:
 
