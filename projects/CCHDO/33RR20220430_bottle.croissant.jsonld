@@ -1,0 +1,1794 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "sc": "http://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "dct": "http://purl.org/dc/terms/",
+    "dataType": {
+      "@id": "http://mlcommons.org/croissant/dataType",
+      "@type": "@vocab"
+    },
+    "field": "http://mlcommons.org/croissant/field",
+    "fileObject": "http://mlcommons.org/croissant/fileObject",
+    "recordSet": "http://mlcommons.org/croissant/recordSet",
+    "source": "http://mlcommons.org/croissant/source",
+    "extract": "http://mlcommons.org/croissant/extract",
+    "column": "http://mlcommons.org/croissant/column",
+    "isArray": "http://mlcommons.org/croissant/isArray",
+    "arrayShape": "http://mlcommons.org/croissant/arrayShape",
+    "conformsTo": "http://purl.org/dc/terms/conformsTo"
+  },
+  "@id": "urn:cchdo:dataset:33RR20220430_bottle",
+  "@type": "Dataset",
+  "recordSet": {
+    "@id": "urn:cchdo:dataset:33RR20220430_bottle/recordset",
+    "@type": "cr:RecordSet",
+    "field": [
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:silicate_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:silicate_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:silicate_extract",
+            "column": "SILCAT"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "moles_of_silicate_per_unit_mass_in_sea_water",
+        "name": "silicate"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:pressure_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:pressure_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:pressure_qc_extract",
+            "column": "pressure_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "pressure_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_oxygen_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_oxygen_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_oxygen_extract",
+            "column": "CTDOXY"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "moles_of_oxygen_per_unit_mass_in_sea_water",
+        "name": "ctd_oxygen"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:dissolved_organic_carbon_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:dissolved_organic_carbon_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:dissolved_organic_carbon_extract",
+            "column": "DOC"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "dissolved_organic_carbon"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_chemical_oxygen_demand_l_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_chemical_oxygen_demand_l_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_chemical_oxygen_demand_l_qc_extract",
+            "column": "particulate_chemical_oxygen_demand_l_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "particulate_chemical_oxygen_demand_l_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_fluor_raw_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_fluor_raw_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_fluor_raw_extract",
+            "column": "CTDFLUOR"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "ctd_fluor_raw"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:nitrite_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:nitrite_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:nitrite_extract",
+            "column": "NITRIT"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "moles_of_nitrite_per_unit_mass_in_sea_water",
+        "name": "nitrite"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_11_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_11_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_11_qc_extract",
+            "column": "cfc_11_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "cfc_11_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:total_carbon_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:total_carbon_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:total_carbon_qc_extract",
+            "column": "total_carbon_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "total_carbon_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:pressure_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:pressure_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:pressure_extract",
+            "column": "CTDPRS"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "sea_water_pressure",
+        "name": "pressure"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:profile_type_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 1)",
+        "dataType": "Text",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:profile_type_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:profile_type_extract",
+            "column": "profile_type"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "profile_type"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_transmissometer_raw_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_transmissometer_raw_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_transmissometer_raw_extract",
+            "column": "CTDXMISS"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "ctd_transmissometer_raw"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:nitrous_oxide_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:nitrous_oxide_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:nitrous_oxide_qc_extract",
+            "column": "nitrous_oxide_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "nitrous_oxide_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:nitrate_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:nitrate_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:nitrate_extract",
+            "column": "NITRAT"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "moles_of_nitrate_per_unit_mass_in_sea_water",
+        "name": "nitrate"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:latitude_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:latitude_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:latitude_extract",
+            "column": "LATITUDE"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "latitude",
+        "name": "latitude"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_time_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_time_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_time_extract",
+            "column": "['BTL_DATE', 'BTL_TIME']"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "time",
+        "name": "bottle_time"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_salinity_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_salinity_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_salinity_extract",
+            "column": "SALNTY"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "sea_water_practical_salinity",
+        "name": "bottle_salinity"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:oxygen_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:oxygen_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:oxygen_qc_extract",
+            "column": "oxygen_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "oxygen_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_14_dic_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_14_dic_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_14_dic_extract",
+            "column": "DELC14"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "del_carbon_14_dic"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:total_alkalinity_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:total_alkalinity_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:total_alkalinity_qc_extract",
+            "column": "total_alkalinity_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "total_alkalinity_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:sulfur_hexifluoride_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:sulfur_hexifluoride_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:sulfur_hexifluoride_qc_extract",
+            "column": "sulfur_hexifluoride_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "sulfur_hexifluoride_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_salinity_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_salinity_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_salinity_extract",
+            "column": "CTDSAL"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "sea_water_practical_salinity",
+        "name": "ctd_salinity"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:hplc_placeholder_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:hplc_placeholder_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:hplc_placeholder_qc_extract",
+            "column": "hplc_placeholder_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "hplc_placeholder_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:expocode_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 12)",
+        "dataType": "Text",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:expocode_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:expocode_extract",
+            "column": "EXPOCODE"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "expocode"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ref_temperature_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ref_temperature_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ref_temperature_extract",
+            "column": "REFTMP"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "sea_water_temperature",
+        "name": "ref_temperature"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_longitude_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_longitude_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_longitude_extract",
+            "column": "BTL_LON"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "longitude",
+        "name": "bottle_longitude"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:nitrate_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:nitrate_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:nitrate_qc_extract",
+            "column": "nitrate_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "nitrate_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:hplc_placeholder_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36, 1)",
+        "dataType": "Text",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:hplc_placeholder_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:hplc_placeholder_extract",
+            "column": "HPLC"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "hplc_placeholder"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:flow_cytometry_placeholder_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36, 1)",
+        "dataType": "Text",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:flow_cytometry_placeholder_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:flow_cytometry_placeholder_extract",
+            "column": "FCM"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "flow_cytometry_placeholder"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:btm_depth_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:btm_depth_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:btm_depth_extract",
+            "column": "DEPTH"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "sea_floor_depth_below_sea_surface",
+        "name": "btm_depth"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_temperature_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_temperature_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_temperature_extract",
+            "column": "CTDTMP"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "sea_water_temperature",
+        "name": "ctd_temperature"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:station_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 3)",
+        "dataType": "Text",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:station_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:station_extract",
+            "column": "STNNBR"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "station"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:total_carbon_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:total_carbon_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:total_carbon_extract",
+            "column": "TCARBN"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "moles_of_dissolved_inorganic_carbon_per_unit_mass_in_sea_water",
+        "name": "total_carbon"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:total_dissolved_nitrogen_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:total_dissolved_nitrogen_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:total_dissolved_nitrogen_qc_extract",
+            "column": "total_dissolved_nitrogen_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "total_dissolved_nitrogen_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_11_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_11_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_11_extract",
+            "column": "CFC-11"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "moles_of_cfc11_per_unit_mass_in_sea_water",
+        "name": "cfc_11"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:longitude_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:longitude_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:longitude_extract",
+            "column": "LONGITUDE"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "longitude",
+        "name": "longitude"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:oxygen_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:oxygen_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:oxygen_extract",
+            "column": "OXYGEN"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "moles_of_oxygen_per_unit_mass_in_sea_water",
+        "name": "oxygen"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_carbon_l_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_carbon_l_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_carbon_l_extract",
+            "column": "POC"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "particulate_organic_carbon_l"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_transmissometer_raw_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_transmissometer_raw_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_transmissometer_raw_qc_extract",
+            "column": "ctd_transmissometer_raw_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "ctd_transmissometer_raw_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_13_dic_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_13_dic_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_13_dic_qc_extract",
+            "column": "del_carbon_13_dic_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "del_carbon_13_dic_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:flow_cytometry_placeholder_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:flow_cytometry_placeholder_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:flow_cytometry_placeholder_qc_extract",
+            "column": "flow_cytometry_placeholder_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "flow_cytometry_placeholder_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_nitrogen_l_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_nitrogen_l_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_nitrogen_l_qc_extract",
+            "column": "particulate_organic_nitrogen_l_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "particulate_organic_nitrogen_l_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:cast_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:cast_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:cast_extract",
+            "column": "CASTNO"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "cast"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:section_id_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 3)",
+        "dataType": "Text",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:section_id_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:section_id_extract",
+            "column": "SECT_ID"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "section_id"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ph_temperature_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ph_temperature_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ph_temperature_extract",
+            "column": "PH_TMP"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "temperature_of_analysis_of_sea_water",
+        "name": "ph_temperature"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_temperature_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_temperature_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_temperature_qc_extract",
+            "column": "ctd_temperature_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "ctd_temperature_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_14_dic_error_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_14_dic_error_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_14_dic_error_extract",
+            "column": "C14ERR"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "del_carbon_14_dic_error"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:nitrite_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:nitrite_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:nitrite_qc_extract",
+            "column": "nitrite_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "nitrite_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:geometry_container_field",
+        "@type": "cr:Field",
+        "arrayShape": "()",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": false
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:geometry_container_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:geometry_container_extract",
+            "column": "geometry_container"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "geometry_container"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:total_alkalinity_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:total_alkalinity_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:total_alkalinity_extract",
+            "column": "ALKALI"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "total_alkalinity"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_13_dic_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_13_dic_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_13_dic_extract",
+            "column": "DELC13"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "del_carbon_13_dic"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_12_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_12_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_12_qc_extract",
+            "column": "cfc_12_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "cfc_12_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_fluor_raw_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_fluor_raw_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_fluor_raw_qc_extract",
+            "column": "ctd_fluor_raw_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "ctd_fluor_raw_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:dna_placeholder_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:dna_placeholder_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:dna_placeholder_qc_extract",
+            "column": "dna_placeholder_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "dna_placeholder_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_number_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36, 2)",
+        "dataType": "Text",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_number_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_number_extract",
+            "column": "BTLNBR"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "bottle_number"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_latitude_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_latitude_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_latitude_extract",
+            "column": "BTL_LAT"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "latitude",
+        "name": "bottle_latitude"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:dissolved_organic_carbon_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:dissolved_organic_carbon_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:dissolved_organic_carbon_qc_extract",
+            "column": "dissolved_organic_carbon_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "dissolved_organic_carbon_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_nitrogen_l_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_nitrogen_l_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_nitrogen_l_extract",
+            "column": "PON"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "particulate_organic_nitrogen_l"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:silicate_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:silicate_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:silicate_qc_extract",
+            "column": "silicate_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "silicate_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_carbon_l_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_carbon_l_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_carbon_l_qc_extract",
+            "column": "particulate_organic_carbon_l_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "particulate_organic_carbon_l_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ph_total_h_scale_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ph_total_h_scale_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ph_total_h_scale_extract",
+            "column": "PH_TOT"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "sea_water_ph_reported_on_total_scale",
+        "name": "ph_total_h_scale"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:nitrous_oxide_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:nitrous_oxide_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:nitrous_oxide_extract",
+            "column": "N2O"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "nitrous_oxide"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:time_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:time_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:time_extract",
+            "column": "['DATE', 'TIME']"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "time",
+        "name": "time"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_salinity_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_salinity_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_salinity_qc_extract",
+            "column": "bottle_salinity_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "bottle_salinity_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ref_temperature_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ref_temperature_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ref_temperature_qc_extract",
+            "column": "ref_temperature_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "ref_temperature_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_14_dic_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_14_dic_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_14_dic_qc_extract",
+            "column": "del_carbon_14_dic_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "del_carbon_14_dic_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:sulfur_hexifluoride_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:sulfur_hexifluoride_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:sulfur_hexifluoride_extract",
+            "column": "SF6"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "sulfur_hexifluoride"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:sample_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36, 2)",
+        "dataType": "Text",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:sample_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:sample_extract",
+            "column": "SAMPNO"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "sample"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_phosphorus_l_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_phosphorus_l_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_phosphorus_l_qc_extract",
+            "column": "particulate_organic_phosphorus_l_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "particulate_organic_phosphorus_l_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_salinity_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_salinity_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_salinity_qc_extract",
+            "column": "ctd_salinity_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "ctd_salinity_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_phosphorus_l_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_phosphorus_l_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_phosphorus_l_extract",
+            "column": "POP"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "particulate_organic_phosphorus_l"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_12_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_12_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_12_extract",
+            "column": "CFC-12"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "cfc_12"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_oxygen_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_oxygen_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_oxygen_qc_extract",
+            "column": "ctd_oxygen_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "ctd_oxygen_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ph_temperature_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ph_temperature_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ph_temperature_qc_extract",
+            "column": "ph_temperature_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "ph_temperature_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:phosphate_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:phosphate_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:phosphate_qc_extract",
+            "column": "phosphate_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "phosphate_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:dna_placeholder_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36, 1)",
+        "dataType": "Text",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:dna_placeholder_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:dna_placeholder_extract",
+            "column": "DNA"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "dna_placeholder"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_number_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_number_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_number_qc_extract",
+            "column": "bottle_number_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "bottle_number_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:total_dissolved_nitrogen_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:total_dissolved_nitrogen_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:total_dissolved_nitrogen_extract",
+            "column": "TDN"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "total_dissolved_nitrogen"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:ph_total_h_scale_qc_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Integer",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:ph_total_h_scale_qc_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:ph_total_h_scale_qc_extract",
+            "column": "ph_total_h_scale_qc"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "status_flag",
+        "name": "ph_total_h_scale_qc"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_chemical_oxygen_demand_l_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_chemical_oxygen_demand_l_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_chemical_oxygen_demand_l_extract",
+            "column": "PCOD"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "name": "particulate_chemical_oxygen_demand_l"
+      },
+      {
+        "@id": "urn:cchdo:var:33RR20220430_bottle:phosphate_field",
+        "@type": "cr:Field",
+        "arrayShape": "(149, 36)",
+        "dataType": "Float",
+        "isArray": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": true
+        },
+        "source": {
+          "@id": "urn:cchdo:var:33RR20220430_bottle:phosphate_source",
+          "extract": {
+            "@id": "urn:cchdo:var:33RR20220430_bottle:phosphate_extract",
+            "column": "PHSPHT"
+          },
+          "fileObject": {
+            "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject"
+          }
+        },
+        "description": "moles_of_phosphate_per_unit_mass_in_sea_water",
+        "name": "phosphate"
+      }
+    ],
+    "name": "variables"
+  },
+  "conformsTo": "http://mlcommons.org/croissant/1.1",
+  "distribution": {
+    "@id": "urn:cchdo:dataset:33RR20220430_bottle/fileobject",
+    "@type": "cr:FileObject",
+    "encodingFormat": "application/netcdf",
+    "name": "33RR20220430_bottle.nc"
+  },
+  "name": "33RR20220430_bottle.nc"
+}

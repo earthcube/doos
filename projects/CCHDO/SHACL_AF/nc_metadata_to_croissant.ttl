@@ -1,0 +1,93 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix sc:    <http://schema.org/> .
+@prefix cr:    <http://mlcommons.org/croissant/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix cchdo: <https://cchdo.ucsd.edu/vocab#> .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Rule 1: Dataset-level mapping
+#   Focus nodes: cchdo:NCDataset instances
+#   Generates:   sc:Dataset + cr:FileObject (in sc:distribution)
+#                + cr:RecordSet header (in cr:recordSet)
+# ─────────────────────────────────────────────────────────────────────────────
+cchdo:CroissantDatasetShape
+    a sh:NodeShape ;
+    sh:order 1 ;
+    sh:targetClass cchdo:NCDataset ;
+    sh:rule [
+        a sh:SPARQLRule ;
+        sh:construct """
+            PREFIX sc:    <http://schema.org/>
+            PREFIX cr:    <http://mlcommons.org/croissant/>
+            PREFIX dct:   <http://purl.org/dc/terms/>
+            PREFIX cchdo: <https://cchdo.ucsd.edu/vocab#>
+            CONSTRUCT {
+                $this a sc:Dataset .
+                $this sc:name ?srcFile .
+                $this dct:conformsTo "http://mlcommons.org/croissant/1.1" .
+                $this sc:distribution ?foNode .
+                $this cr:recordSet ?rsNode .
+
+                ?foNode a cr:FileObject .
+                ?foNode sc:name ?srcFile .
+                ?foNode sc:encodingFormat "application/netcdf" .
+
+                ?rsNode a cr:RecordSet .
+                ?rsNode sc:name "variables" .
+            }
+            WHERE {
+                $this cchdo:sourceFile ?srcFile .
+                BIND(IRI(CONCAT(STR($this), "/fileobject")) AS ?foNode)
+                BIND(IRI(CONCAT(STR($this), "/recordset")) AS ?rsNode)
+            }
+        """ ;
+    ] .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Rule 2: Per-variable mapping
+#   Focus nodes: cchdo:NCVariable instances
+#   Generates:   cr:Field with dataType, isArray, arrayShape, and a
+#                source/extract chain pointing back to the FileObject
+# ─────────────────────────────────────────────────────────────────────────────
+cchdo:CroissantVariableShape
+    a sh:NodeShape ;
+    sh:order 2 ;
+    sh:targetClass cchdo:NCVariable ;
+    sh:rule [
+        a sh:SPARQLRule ;
+        sh:construct """
+            PREFIX sc:    <http://schema.org/>
+            PREFIX cr:    <http://mlcommons.org/croissant/>
+            PREFIX cchdo: <https://cchdo.ucsd.edu/vocab#>
+            CONSTRUCT {
+                ?fieldNode a cr:Field .
+                ?fieldNode sc:name ?vname .
+                ?fieldNode sc:description ?stdName .
+                ?fieldNode cr:dataType ?dataTypeIRI .
+                ?fieldNode cr:isArray ?isArr .
+                ?fieldNode cr:arrayShape ?arrShape .
+                ?fieldNode cr:source ?sourceNode .
+                ?sourceNode cr:fileObject ?foNode .
+                ?sourceNode cr:extract ?extractNode .
+                ?extractNode cr:column ?colName .
+                ?rsNode cr:field ?fieldNode .
+            }
+            WHERE {
+                $this cchdo:varName       ?vname .
+                $this cchdo:varSchemaType ?dataTypeIRI .
+                $this cchdo:varIsArray    ?isArr .
+                $this cchdo:varArrayShape ?arrShape .
+                ?ds cchdo:hasVariable $this .
+                OPTIONAL { $this cchdo:varStdName ?stdName }
+                OPTIONAL { $this cchdo:varWhpName ?whpColName }
+                BIND(COALESCE(?whpColName, ?vname) AS ?colName)
+                BIND(IRI(CONCAT(STR(?ds), "/recordset"))  AS ?rsNode)
+                BIND(IRI(CONCAT(STR(?ds), "/fileobject")) AS ?foNode)
+                BIND(IRI(CONCAT(STR($this), "_field"))    AS ?fieldNode)
+                BIND(IRI(CONCAT(STR($this), "_source"))   AS ?sourceNode)
+                BIND(IRI(CONCAT(STR($this), "_extract"))  AS ?extractNode)
+            }
+        """ ;
+    ] .
