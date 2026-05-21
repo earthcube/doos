@@ -1,0 +1,496 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "urn:cchdo:dataset:33RR20220430_bottle",
+  "@type": "Dataset",
+  "name": "33RR20220430_bottle.nc",
+  "variableMeasured": [
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_11_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "cfc_11"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_nitrogen_l_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "particulate_organic_nitrogen_l"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_oxygen_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "ctd_oxygen"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ref_temperature_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "ref_temperature"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_transmissometer_raw_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "ctd_transmissometer_raw_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:station_pv",
+      "@type": "PropertyValue",
+      "additionalType": "|S1",
+      "name": "station"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_longitude_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "bottle_longitude"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:dissolved_organic_carbon_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "dissolved_organic_carbon"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:hplc_placeholder_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "hplc_placeholder_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_fluor_raw_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "ctd_fluor_raw"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ph_temperature_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "ph_temperature"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:latitude_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "latitude"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:pressure_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "pressure_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_temperature_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "ctd_temperature_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_carbon_l_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "particulate_organic_carbon_l"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:time_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "time"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_chemical_oxygen_demand_l_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "particulate_chemical_oxygen_demand_l"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ref_temperature_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "ref_temperature_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:nitrate_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "nitrate_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:dna_placeholder_pv",
+      "@type": "PropertyValue",
+      "additionalType": "|S1",
+      "name": "dna_placeholder"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:total_dissolved_nitrogen_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "total_dissolved_nitrogen"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_number_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "bottle_number_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_14_dic_error_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "del_carbon_14_dic_error"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_latitude_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "bottle_latitude"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_salinity_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "bottle_salinity"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:total_carbon_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "total_carbon"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_oxygen_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "ctd_oxygen_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:nitrite_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "nitrite"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:dna_placeholder_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "dna_placeholder_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ph_temperature_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "ph_temperature_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:oxygen_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "oxygen"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:expocode_pv",
+      "@type": "PropertyValue",
+      "additionalType": "|S1",
+      "name": "expocode"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:geometry_container_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "geometry_container"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:silicate_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "silicate_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_transmissometer_raw_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "ctd_transmissometer_raw"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_14_dic_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "del_carbon_14_dic_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:sulfur_hexifluoride_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "sulfur_hexifluoride_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ph_total_h_scale_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "ph_total_h_scale"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:profile_type_pv",
+      "@type": "PropertyValue",
+      "additionalType": "|S1",
+      "name": "profile_type"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_11_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "cfc_11_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_14_dic_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "del_carbon_14_dic"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:flow_cytometry_placeholder_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "flow_cytometry_placeholder_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:silicate_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "silicate"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:phosphate_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "phosphate"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:flow_cytometry_placeholder_pv",
+      "@type": "PropertyValue",
+      "additionalType": "|S1",
+      "name": "flow_cytometry_placeholder"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:btm_depth_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "btm_depth"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:longitude_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "longitude"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_salinity_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "bottle_salinity_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_carbon_l_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "particulate_organic_carbon_l_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_temperature_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "ctd_temperature"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_chemical_oxygen_demand_l_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "particulate_chemical_oxygen_demand_l_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:total_dissolved_nitrogen_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "total_dissolved_nitrogen_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:nitrous_oxide_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "nitrous_oxide_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:total_alkalinity_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "total_alkalinity"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:total_alkalinity_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "total_alkalinity_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ph_total_h_scale_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "ph_total_h_scale_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_phosphorus_l_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "particulate_organic_phosphorus_l"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:dissolved_organic_carbon_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "dissolved_organic_carbon_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_nitrogen_l_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "particulate_organic_nitrogen_l_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_fluor_raw_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "ctd_fluor_raw_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_number_pv",
+      "@type": "PropertyValue",
+      "additionalType": "|S1",
+      "name": "bottle_number"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:nitrate_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "nitrate"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:sulfur_hexifluoride_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "sulfur_hexifluoride"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_salinity_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "ctd_salinity"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:bottle_time_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "bottle_time"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_13_dic_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "del_carbon_13_dic_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:ctd_salinity_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "ctd_salinity_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:section_id_pv",
+      "@type": "PropertyValue",
+      "additionalType": "|S1",
+      "name": "section_id"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_12_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "cfc_12"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:sample_pv",
+      "@type": "PropertyValue",
+      "additionalType": "|S1",
+      "name": "sample"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:oxygen_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "oxygen_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:cfc_12_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "cfc_12_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:cast_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int32",
+      "name": "cast"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:pressure_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "pressure"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:nitrite_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "nitrite_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:nitrous_oxide_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "nitrous_oxide"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:total_carbon_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "total_carbon_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:particulate_organic_phosphorus_l_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "particulate_organic_phosphorus_l_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:del_carbon_13_dic_pv",
+      "@type": "PropertyValue",
+      "additionalType": "float64",
+      "name": "del_carbon_13_dic"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:phosphate_qc_pv",
+      "@type": "PropertyValue",
+      "additionalType": "int8",
+      "name": "phosphate_qc"
+    },
+    {
+      "@id": "urn:cchdo:var:33RR20220430_bottle:hplc_placeholder_pv",
+      "@type": "PropertyValue",
+      "additionalType": "|S1",
+      "name": "hplc_placeholder"
+    }
+  ]
+}

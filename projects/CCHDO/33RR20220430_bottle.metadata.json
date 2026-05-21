@@ -1,0 +1,1613 @@
+{
+  "source_file": "33RR20220430_bottle.nc",
+  "global_attributes": {
+    "Conventions": "CF-1.8 CCHDO-1.0",
+    "cchdo_software_version": "hydro 1.0.2.8",
+    "cchdo_parameters_version": "params 2024.4.0",
+    "comments": "BOTTLE,STAMP",
+    "featureType": "profile"
+  },
+  "dimensions": {
+    "N_PROF": 149,
+    "string12": 12,
+    "string3": 3,
+    "N_LEVELS": 36,
+    "string2": 2,
+    "string1": 1
+  },
+  "variables": {
+    "expocode": {
+      "dimensions": [
+        "N_PROF",
+        "string12"
+      ],
+      "shape": [
+        149,
+        12
+      ],
+      "dtype": "|S1",
+      "attributes": {
+        "whp_name": "EXPOCODE",
+        "geometry": "geometry_container",
+        "_Encoding": "utf-8"
+      }
+    },
+    "section_id": {
+      "dimensions": [
+        "N_PROF",
+        "string3"
+      ],
+      "shape": [
+        149,
+        3
+      ],
+      "dtype": "|S1",
+      "attributes": {
+        "whp_name": "SECT_ID",
+        "geometry": "geometry_container",
+        "coordinates": "cast expocode latitude longitude station time",
+        "_Encoding": "utf-8"
+      }
+    },
+    "station": {
+      "dimensions": [
+        "N_PROF",
+        "string3"
+      ],
+      "shape": [
+        149,
+        3
+      ],
+      "dtype": "|S1",
+      "attributes": {
+        "whp_name": "STNNBR",
+        "geometry": "geometry_container",
+        "_Encoding": "utf-8"
+      }
+    },
+    "cast": {
+      "dimensions": [
+        "N_PROF"
+      ],
+      "shape": [
+        149
+      ],
+      "dtype": "int32",
+      "attributes": {
+        "whp_name": "CASTNO",
+        "geometry": "geometry_container"
+      }
+    },
+    "sample": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS",
+        "string2"
+      ],
+      "shape": [
+        149,
+        36,
+        2
+      ],
+      "dtype": "|S1",
+      "attributes": {
+        "whp_name": "SAMPNO",
+        "_Encoding": "utf-8"
+      }
+    },
+    "bottle_number": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS",
+        "string2"
+      ],
+      "shape": [
+        149,
+        36,
+        2
+      ],
+      "dtype": "|S1",
+      "attributes": {
+        "whp_name": "BTLNBR",
+        "ancillary_variables": "bottle_number_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time",
+        "_Encoding": "utf-8"
+      }
+    },
+    "bottle_number_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned bottle_information_unavailable no_problems_noted leaking did_not_trip_correctly not_reported significant_discrepancy_in_measured_values_between_gerard_and_niskin_bottles unknown_problem pair_did_not_trip_correctly_note_that_the_niskin_bottle_can_trip_at_an_unplanned_depth_while_the_gerard_trips_correctly_and_vice_versa samples_not_drawn_from_this_bottle",
+        "conventions": "WOCESAMPLE - WOCE Quality Codes for the sampling device itself",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "time": {
+      "dimensions": [
+        "N_PROF"
+      ],
+      "shape": [
+        149
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "standard_name": "time",
+        "whp_name": "['DATE', 'TIME']",
+        "resolution": "0.0006944444444444444",
+        "axis": "T",
+        "geometry": "geometry_container",
+        "units": "days since 1950-01-01T00:00:00+00:00",
+        "calendar": "gregorian"
+      }
+    },
+    "latitude": {
+      "dimensions": [
+        "N_PROF"
+      ],
+      "shape": [
+        149
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "whp_name": "LATITUDE",
+        "standard_name": "latitude",
+        "units": "degree_north",
+        "C_format": "%9.4f",
+        "C_format_source": "database",
+        "axis": "Y"
+      }
+    },
+    "longitude": {
+      "dimensions": [
+        "N_PROF"
+      ],
+      "shape": [
+        149
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "whp_name": "LONGITUDE",
+        "standard_name": "longitude",
+        "units": "degree_east",
+        "C_format": "%9.4f",
+        "C_format_source": "database",
+        "axis": "X"
+      }
+    },
+    "btm_depth": {
+      "dimensions": [
+        "N_PROF"
+      ],
+      "shape": [
+        149
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "DEPTH",
+        "whp_unit": "METERS",
+        "standard_name": "sea_floor_depth_below_sea_surface",
+        "units": "meters",
+        "C_format": "%9.0f",
+        "C_format_source": "database",
+        "coordinates": "cast expocode latitude longitude station time"
+      }
+    },
+    "pressure": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "CTDPRS",
+        "whp_unit": "DBAR",
+        "standard_name": "sea_water_pressure",
+        "units": "dbar",
+        "C_format": "%9.1f",
+        "C_format_source": "database",
+        "ancillary_variables": "pressure_qc",
+        "axis": "Z",
+        "positive": "down"
+      }
+    },
+    "pressure_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 9]",
+        "flag_meanings": "no_flag_assigned not_calibrated acceptable_measurement questionable_measurement bad_measurement not_reported interpolated_over_a_pressure_interval_larger_than_2_dbar despiked not_sampled",
+        "conventions": "WOCECTD - WOCE Quality Codes for CTD instrument measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ctd_temperature": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "CTDTMP",
+        "whp_unit": "ITS-90",
+        "standard_name": "sea_water_temperature",
+        "units": "degC",
+        "reference_scale": "ITS-90",
+        "C_format": "%9.4f",
+        "C_format_source": "database",
+        "ancillary_variables": "ctd_temperature_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ctd_temperature_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 9]",
+        "flag_meanings": "no_flag_assigned not_calibrated acceptable_measurement questionable_measurement bad_measurement not_reported interpolated_over_a_pressure_interval_larger_than_2_dbar despiked not_sampled",
+        "conventions": "WOCECTD - WOCE Quality Codes for CTD instrument measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ctd_salinity": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "CTDSAL",
+        "whp_unit": "PSS-78",
+        "standard_name": "sea_water_practical_salinity",
+        "units": "1",
+        "reference_scale": "PSS-78",
+        "C_format": "%9.4f",
+        "C_format_source": "database",
+        "ancillary_variables": "ctd_salinity_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ctd_salinity_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 9]",
+        "flag_meanings": "no_flag_assigned not_calibrated acceptable_measurement questionable_measurement bad_measurement not_reported interpolated_over_a_pressure_interval_larger_than_2_dbar despiked not_sampled",
+        "conventions": "WOCECTD - WOCE Quality Codes for CTD instrument measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "bottle_salinity": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "SALNTY",
+        "whp_unit": "PSS-78",
+        "standard_name": "sea_water_practical_salinity",
+        "units": "1",
+        "reference_scale": "PSS-78",
+        "C_format": "%9.4f",
+        "C_format_source": "database",
+        "ancillary_variables": "bottle_salinity_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "bottle_salinity_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ctd_oxygen": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "CTDOXY",
+        "whp_unit": "UMOL/KG",
+        "standard_name": "moles_of_oxygen_per_unit_mass_in_sea_water",
+        "units": "umol/kg",
+        "C_format": "%9.1f",
+        "C_format_source": "database",
+        "ancillary_variables": "ctd_oxygen_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ctd_oxygen_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 9]",
+        "flag_meanings": "no_flag_assigned not_calibrated acceptable_measurement questionable_measurement bad_measurement not_reported interpolated_over_a_pressure_interval_larger_than_2_dbar despiked not_sampled",
+        "conventions": "WOCECTD - WOCE Quality Codes for CTD instrument measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "oxygen": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "OXYGEN",
+        "whp_unit": "UMOL/KG",
+        "standard_name": "moles_of_oxygen_per_unit_mass_in_sea_water",
+        "units": "umol/kg",
+        "C_format": "%9.1f",
+        "C_format_source": "database",
+        "ancillary_variables": "oxygen_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "oxygen_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "silicate": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "SILCAT",
+        "whp_unit": "UMOL/KG",
+        "standard_name": "moles_of_silicate_per_unit_mass_in_sea_water",
+        "units": "umol/kg",
+        "C_format": "%9.2f",
+        "C_format_source": "database",
+        "ancillary_variables": "silicate_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "silicate_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "nitrate": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "NITRAT",
+        "whp_unit": "UMOL/KG",
+        "standard_name": "moles_of_nitrate_per_unit_mass_in_sea_water",
+        "units": "umol/kg",
+        "C_format": "%9.2f",
+        "C_format_source": "database",
+        "ancillary_variables": "nitrate_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "nitrate_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "nitrite": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "NITRIT",
+        "whp_unit": "UMOL/KG",
+        "standard_name": "moles_of_nitrite_per_unit_mass_in_sea_water",
+        "units": "umol/kg",
+        "C_format": "%9.2f",
+        "C_format_source": "database",
+        "ancillary_variables": "nitrite_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "nitrite_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "phosphate": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "PHSPHT",
+        "whp_unit": "UMOL/KG",
+        "standard_name": "moles_of_phosphate_per_unit_mass_in_sea_water",
+        "units": "umol/kg",
+        "C_format": "%9.2f",
+        "C_format_source": "database",
+        "ancillary_variables": "phosphate_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "phosphate_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "cfc_11": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "CFC-11",
+        "whp_unit": "PMOL/KG",
+        "standard_name": "moles_of_cfc11_per_unit_mass_in_sea_water",
+        "units": "pmol/kg",
+        "C_format": "%9.3f",
+        "C_format_source": "database",
+        "ancillary_variables": "cfc_11_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "cfc_11_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "cfc_12": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "CFC-12",
+        "whp_unit": "PMOL/KG",
+        "units": "pmol/kg",
+        "C_format": "%9.3f",
+        "C_format_source": "database",
+        "ancillary_variables": "cfc_12_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "cfc_12_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "sulfur_hexifluoride": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "SF6",
+        "whp_unit": "FMOL/KG",
+        "units": "fmol/kg",
+        "C_format": "%9.4f",
+        "C_format_source": "database",
+        "ancillary_variables": "sulfur_hexifluoride_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "sulfur_hexifluoride_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "total_carbon": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "TCARBN",
+        "whp_unit": "UMOL/KG",
+        "standard_name": "moles_of_dissolved_inorganic_carbon_per_unit_mass_in_sea_water",
+        "units": "umol/kg",
+        "C_format": "%9.1f",
+        "C_format_source": "database",
+        "ancillary_variables": "total_carbon_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "total_carbon_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "total_alkalinity": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "ALKALI",
+        "whp_unit": "UMOL/KG",
+        "units": "umol/kg",
+        "C_format": "%9.1f",
+        "C_format_source": "database",
+        "ancillary_variables": "total_alkalinity_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "total_alkalinity_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ph_total_h_scale": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "PH_TOT",
+        "standard_name": "sea_water_ph_reported_on_total_scale",
+        "units": "1",
+        "C_format": "%9.4f",
+        "C_format_source": "database",
+        "ancillary_variables": "ph_total_h_scale_qc ph_temperature",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ph_total_h_scale_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ph_temperature": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "PH_TMP",
+        "whp_unit": "DEG C",
+        "standard_name": "temperature_of_analysis_of_sea_water",
+        "units": "degC",
+        "reference_scale": "unknown",
+        "C_format": "%9.2f",
+        "C_format_source": "database",
+        "ancillary_variables": "ph_temperature_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ph_temperature_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "dissolved_organic_carbon": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "DOC",
+        "whp_unit": "UMOL/KG",
+        "units": "umol/kg",
+        "C_format": "%.2f",
+        "C_format_source": "input_file",
+        "ancillary_variables": "dissolved_organic_carbon_qc",
+        "date_modified": "2024-07-30T18:23:42+00:00",
+        "date_metadata_modified": "2024-07-30T18:23:42+00:00",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "dissolved_organic_carbon_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "date_modified": "2024-07-30T18:23:42+00:00",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ref_temperature": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "REFTMP",
+        "whp_unit": "ITS-90",
+        "standard_name": "sea_water_temperature",
+        "units": "degC",
+        "reference_scale": "ITS-90",
+        "C_format": "%9.4f",
+        "C_format_source": "database",
+        "ancillary_variables": "ref_temperature_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ref_temperature_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "del_carbon_13_dic": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "DELC13",
+        "whp_unit": "/MILLE",
+        "units": "1e-3",
+        "C_format": "%9.1f",
+        "C_format_source": "database",
+        "ancillary_variables": "del_carbon_13_dic_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "del_carbon_13_dic_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "del_carbon_14_dic": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "DELC14",
+        "whp_unit": "/MILLE",
+        "units": "1e-3",
+        "C_format": "%9.1f",
+        "C_format_source": "database",
+        "ancillary_variables": "del_carbon_14_dic_error del_carbon_14_dic_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "del_carbon_14_dic_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "del_carbon_14_dic_error": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "C14ERR",
+        "whp_unit": "/MILLE",
+        "units": "1e-3",
+        "C_format": "%9.1f",
+        "C_format_source": "database",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "particulate_organic_carbon_l": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "POC",
+        "whp_unit": "UG/L",
+        "units": "ug/l",
+        "C_format": "%9.1f",
+        "C_format_source": "database",
+        "ancillary_variables": "particulate_organic_carbon_l_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "particulate_organic_carbon_l_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "particulate_organic_nitrogen_l": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "PON",
+        "whp_unit": "UG/L",
+        "units": "ug/l",
+        "C_format": "%9.1f",
+        "C_format_source": "database",
+        "ancillary_variables": "particulate_organic_nitrogen_l_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "particulate_organic_nitrogen_l_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "particulate_organic_phosphorus_l": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "POP",
+        "whp_unit": "UG/L",
+        "units": "ug/l",
+        "C_format": "%9.1f",
+        "C_format_source": "database",
+        "ancillary_variables": "particulate_organic_phosphorus_l_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "particulate_organic_phosphorus_l_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "particulate_chemical_oxygen_demand_l": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "PCOD",
+        "whp_unit": "UG/L",
+        "units": "ug/l",
+        "C_format": "%9.1f",
+        "C_format_source": "database",
+        "ancillary_variables": "particulate_chemical_oxygen_demand_l_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "particulate_chemical_oxygen_demand_l_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "total_dissolved_nitrogen": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "TDN",
+        "whp_unit": "UMOL/KG",
+        "units": "umol/kg",
+        "C_format": "%.2f",
+        "C_format_source": "input_file",
+        "ancillary_variables": "total_dissolved_nitrogen_qc",
+        "date_modified": "2024-07-30T18:23:42+00:00",
+        "date_metadata_modified": "2024-07-30T18:23:42+00:00",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "total_dissolved_nitrogen_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "date_modified": "2024-07-30T18:23:42+00:00",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ctd_fluor_raw": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "CTDFLUOR",
+        "whp_unit": "VOLTS",
+        "units": "volts",
+        "C_format": "%9.4f",
+        "C_format_source": "database",
+        "ancillary_variables": "ctd_fluor_raw_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ctd_fluor_raw_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 9]",
+        "flag_meanings": "no_flag_assigned not_calibrated acceptable_measurement questionable_measurement bad_measurement not_reported interpolated_over_a_pressure_interval_larger_than_2_dbar despiked not_sampled",
+        "conventions": "WOCECTD - WOCE Quality Codes for CTD instrument measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ctd_transmissometer_raw": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "CTDXMISS",
+        "whp_unit": "VOLTS",
+        "units": "volts",
+        "C_format": "%9.4f",
+        "C_format_source": "database",
+        "ancillary_variables": "ctd_transmissometer_raw_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "ctd_transmissometer_raw_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 9]",
+        "flag_meanings": "no_flag_assigned not_calibrated acceptable_measurement questionable_measurement bad_measurement not_reported interpolated_over_a_pressure_interval_larger_than_2_dbar despiked not_sampled",
+        "conventions": "WOCECTD - WOCE Quality Codes for CTD instrument measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "nitrous_oxide": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "N2O",
+        "whp_unit": "NMOL/KG",
+        "units": "nmol/kg",
+        "C_format": "%9.1f",
+        "C_format_source": "database",
+        "ancillary_variables": "nitrous_oxide_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "nitrous_oxide_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "bottle_time": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "standard_name": "time",
+        "whp_name": "['BTL_DATE', 'BTL_TIME']",
+        "resolution": "0.0006944444444444444",
+        "coordinates": "cast expocode latitude longitude pressure sample station time",
+        "units": "days since 1950-01-01T00:00:00+00:00",
+        "calendar": "gregorian"
+      }
+    },
+    "bottle_latitude": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "BTL_LAT",
+        "standard_name": "latitude",
+        "units": "degree_north",
+        "C_format": "%9.4f",
+        "C_format_source": "database",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "bottle_longitude": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "whp_name": "BTL_LON",
+        "standard_name": "longitude",
+        "units": "degree_east",
+        "C_format": "%9.4f",
+        "C_format_source": "database",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "hplc_placeholder": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS",
+        "string1"
+      ],
+      "shape": [
+        149,
+        36,
+        1
+      ],
+      "dtype": "|S1",
+      "attributes": {
+        "whp_name": "HPLC",
+        "ancillary_variables": "hplc_placeholder_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time",
+        "_Encoding": "utf-8"
+      }
+    },
+    "hplc_placeholder_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "dna_placeholder": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS",
+        "string1"
+      ],
+      "shape": [
+        149,
+        36,
+        1
+      ],
+      "dtype": "|S1",
+      "attributes": {
+        "whp_name": "DNA",
+        "ancillary_variables": "dna_placeholder_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time",
+        "_Encoding": "utf-8"
+      }
+    },
+    "dna_placeholder_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "flow_cytometry_placeholder": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS",
+        "string1"
+      ],
+      "shape": [
+        149,
+        36,
+        1
+      ],
+      "dtype": "|S1",
+      "attributes": {
+        "whp_name": "FCM",
+        "ancillary_variables": "flow_cytometry_placeholder_qc",
+        "coordinates": "cast expocode latitude longitude pressure sample station time",
+        "_Encoding": "utf-8"
+      }
+    },
+    "flow_cytometry_placeholder_qc": {
+      "dimensions": [
+        "N_PROF",
+        "N_LEVELS"
+      ],
+      "shape": [
+        149,
+        36
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "_FillValue": "9",
+        "standard_name": "status_flag",
+        "flag_values": "[0 1 2 3 4 5 6 7 8 9]",
+        "flag_meanings": "no_flag_assigned sample_for_this_measurement_was_drawn_from_water_bottle_but_analysis_not_received acceptable_measurement questionable_measurement bad_measurement not_reported mean_of_replicate_measurements manual_chromatographic_peak_measurement irregular_digital_chromatographic_peak_integration sample_not_drawn_for_this_measurement_from_this_bottle",
+        "conventions": "WOCEBOTTLE - WOCE Quality Codes for water sample (bottle) measurements",
+        "coordinates": "cast expocode latitude longitude pressure sample station time"
+      }
+    },
+    "profile_type": {
+      "dimensions": [
+        "N_PROF",
+        "string1"
+      ],
+      "shape": [
+        149,
+        1
+      ],
+      "dtype": "|S1",
+      "attributes": {
+        "coordinates": "cast expocode latitude longitude station time",
+        "_Encoding": "utf-8"
+      }
+    },
+    "geometry_container": {
+      "dimensions": [],
+      "shape": [],
+      "dtype": "float64",
+      "attributes": {
+        "_FillValue": "nan",
+        "geometry_type": "point",
+        "node_coordinates": "longitude latitude"
+      }
+    }
+  }
+}

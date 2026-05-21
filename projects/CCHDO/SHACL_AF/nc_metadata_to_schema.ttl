@@ -1,0 +1,55 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix cchdo:  <https://cchdo.ucsd.edu/vocab#> .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Rule 1: Dataset-level mapping
+#   Focus nodes: cchdo:NCDataset instances
+#   Generates:   schema:Dataset type + schema:name from source_file
+# ─────────────────────────────────────────────────────────────────────────────
+cchdo:DatasetShape
+    a sh:NodeShape ;
+    sh:order 1 ;
+    sh:targetClass cchdo:NCDataset ;
+    sh:rule [
+        a sh:SPARQLRule ;
+        sh:construct """
+            CONSTRUCT {
+                $this a schema:Dataset .
+                $this schema:name ?srcFile .
+            }
+            WHERE {
+                $this cchdo:sourceFile ?srcFile .
+            }
+        """ ;
+    ] .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Rule 2: Per-variable mapping
+#   Focus nodes: cchdo:NCVariable instances
+#   Generates:   schema:PropertyValue with name + additionalType,
+#                linked to parent dataset via schema:variableMeasured
+# ─────────────────────────────────────────────────────────────────────────────
+cchdo:VariableShape
+    a sh:NodeShape ;
+    sh:order 2 ;
+    sh:targetClass cchdo:NCVariable ;
+    sh:rule [
+        a sh:SPARQLRule ;
+        sh:construct """
+            CONSTRUCT {
+                ?pvNode a schema:PropertyValue .
+                ?pvNode schema:name ?vname .
+                ?pvNode schema:additionalType ?vdtype .
+                ?ds schema:variableMeasured ?pvNode .
+            }
+            WHERE {
+                $this cchdo:varName  ?vname .
+                $this cchdo:varDtype ?vdtype .
+                ?ds   cchdo:hasVariable $this .
+                BIND(IRI(CONCAT(STR($this), "_pv")) AS ?pvNode)
+            }
+        """ ;
+    ] .
