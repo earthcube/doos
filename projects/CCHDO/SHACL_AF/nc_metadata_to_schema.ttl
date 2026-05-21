@@ -43,12 +43,22 @@ cchdo:VariableShape
                 ?pvNode a schema:PropertyValue .
                 ?pvNode schema:name ?vname .
                 ?pvNode schema:additionalType ?vdtype .
+                ?pvNode schema:unitText ?units .
+                ?pvNode schema:propertyID ?whpName .
+                ?pvNode schema:description ?stdName .
+                ?pvNode schema:measurementTechnique ?conventions .
+                ?pvNode schema:valueReference ?refScale .
                 ?ds schema:variableMeasured ?pvNode .
             }
             WHERE {
                 $this cchdo:varName  ?vname .
                 $this cchdo:varDtype ?vdtype .
                 ?ds   cchdo:hasVariable $this .
+                OPTIONAL { $this cchdo:varUnits       ?units }
+                OPTIONAL { $this cchdo:varWhpName     ?whpName }
+                OPTIONAL { $this cchdo:varStdName     ?stdName }
+                OPTIONAL { $this cchdo:varConventions ?conventions }
+                OPTIONAL { $this cchdo:varRefScale    ?refScale }
                 BIND(IRI(CONCAT(STR($this), "_pv")) AS ?pvNode)
             }
         """ ;

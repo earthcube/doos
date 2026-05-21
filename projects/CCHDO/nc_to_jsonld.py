@@ -42,6 +42,18 @@ def build_intermediate_graph(meta: dict) -> Graph:
         g.add((var_uri, CCHDO.varName,     Literal(var_name)))
         g.add((var_uri, CCHDO.varDtype,    Literal(var_info["dtype"])))
 
+        attrs = var_info.get("attributes", {})
+        if units := attrs.get("units"):
+            g.add((var_uri, CCHDO.varUnits,       Literal(units)))
+        if whp := attrs.get("whp_name"):
+            g.add((var_uri, CCHDO.varWhpName,     Literal(whp)))
+        if std := attrs.get("standard_name"):
+            g.add((var_uri, CCHDO.varStdName,     Literal(std)))
+        if conv := attrs.get("conventions"):
+            g.add((var_uri, CCHDO.varConventions, Literal(conv)))
+        if ref := attrs.get("reference_scale"):
+            g.add((var_uri, CCHDO.varRefScale,    Literal(ref)))
+
     return g
 
 
