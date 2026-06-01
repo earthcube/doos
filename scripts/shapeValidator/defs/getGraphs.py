@@ -1,3 +1,5 @@
+from typing import cast
+
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 # Default endpoint for backward compatibility with existing callers.
@@ -33,7 +35,7 @@ def query_sparql_endpoint(url, endpoint=None, limit: int = 0):
         )
     else:
         sparql_query = (
-            "SELECT * WHERE { graph ?g { ?s a <https://schema.org/Dataset> } }"
+            "SELECT DISTINCT ?g WHERE { graph ?g { ?s a <https://schema.org/Dataset> } }"
         )
 
     try:
@@ -42,7 +44,7 @@ def query_sparql_endpoint(url, endpoint=None, limit: int = 0):
         client = SPARQLWrapper(endpoint)
         client.setQuery(sparql_query)
         client.setReturnFormat(JSON)
-        results = client.query().convert()
+        results = cast(dict, client.query().convert())
         graphs = [result["g"]["value"] for result in results["results"]["bindings"]]
         return graphs
 
