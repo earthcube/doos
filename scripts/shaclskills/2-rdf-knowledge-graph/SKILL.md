@@ -1,6 +1,6 @@
 ---
 name: rdf-knowledge-graph
-description: Stage 2 of the SHACL-for-AI-outputs flow. Convert structured LLM output into an RDF / knowledge-graph representation so it can be validated against SHACL shapes. Use when you have structured AI output that needs to become triples.
+description: Stage 2 of the SHACL-for-AI-outputs flow. Deterministically convert the Stage 1 metadata record (url, name, description, keywords) into a schema:Dataset RDF graph (Turtle) using the canonical https://schema.org/ vocabulary, with a stable minted IRI. Use to turn structured AI output into triples ready for SHACL validation.
 metadata:
   stage: 2
   flow: shacl-for-ai-outputs
@@ -8,28 +8,46 @@ metadata:
 
 # Stage 2 — RDF / Knowledge Graph
 
-Convert the LLM output to an RDF representation.
+Convert `01_extracted.json` into a `schema:Dataset` RDF graph.
 
-## Goal
+## What it does
 
-Turn the structured information from Stage 1 into RDF triples (a knowledge
-graph) so that SHACL constraints can be applied. This step gives the data
-explicit semantics: nodes, edges, and typed relationships.
+`assets/lift.py` is a **pure, deterministic** mapping — no LLM. It builds a
+JSON-LD document from `assets/jsonld_context.json` (`@vocab:
+https://schema.org/`) and lifts it to triples with rdflib, so every type and
+property lands in the canonical `https://schema.org/` namespace that the Stage 3
+shape targets. The same input always yields the same graph.
 
-## Inputs
+Mapping (minimal set → schema.org): `name → schema:name`,
+`description → schema:description`, `url → schema:url` (as an IRI), each
+`keywords[]` item → `schema:keywords`. Only non-null/non-empty values produce
+triples.
 
-- Structured LLM output ([[llm-output]]).
+## Run it
 
-## Outputs
+```bash
+python assets/lift.py 01_extracted.json --out-dir <run-dir> [--iri-base BASE]
+```
+```python
+from lift import run_lift
+run_lift("01_extracted.json", out_dir="runs/<id>")
+```
 
-- An RDF graph (e.g. Turtle, N-Triples, JSON-LD) representing the data.
+## Inputs / Outputs
+
+- **Input:** `01_extracted.json` (Stage 1).
+- **Output:** `02_graph.ttl` (Turtle).
+
+## Key behavior
+
+- **IRI policy (PLAN.md §4.2):** the Dataset IRI is `<BASE>/<slug>` where `BASE`
+  defaults to `https://doos.earthcube.org/id/dataset` (override with
+  `$DOOS_IRI_BASE` or `--iri-base`) and `slug` = first 16 hex of
+  `sha256(normalized_url)` — stable and collision-resistant.
+- Blank nodes are skolemized here (authority `http://gleaner.io`, matching Stage
+  3) so validation reports are stable across runs.
+- Examples in `assets/examples/`.
 
 ## Next stage
 
-[[shacl-validation]] — validate the graph against SHACL shapes.
-
-## To expand later
-
-- Mapping rules from JSON/JSON-LD to RDF.
-- Vocabulary / ontology selection (schema.org, domain ontologies).
-- Handling blank nodes, IRIs, and datatypes.
+[[shacl-validation]] — validate `02_graph.ttl` against the Dataset SHACL shape.

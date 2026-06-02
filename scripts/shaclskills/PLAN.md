@@ -52,12 +52,12 @@ These resolve the prior open blockers. The rest of the doc reflects them.
 
 | Stage | Dir | SKILL.md | assets/ | Build mode |
 |------|-----|----------|---------|-----------|
-| 1 | `1-llm-output/` | stub | empty | **LLM + code** (URL → reuse JSON-LD / extract structured metadata) |
-| 2 | `2-rdf-knowledge-graph/` | stub | empty | **code only** (JSON → schema.org RDF, deterministic) |
-| 3 | `3-shacl-validation/` | stub (TODO) | **built**: `validate.py` + `googleRecommended.ttl` | **code only** (pySHACL + shape) |
-| 4 | `4-violation-report/` | stub | empty | **code + LLM** (report graph → fix-oriented report) |
-| 5 | `5-repair/` | stub | empty | **code + LLM** (rule fixes + LLM reword, loop) |
-| 6 | `6-trusted-output/` | stub | empty | **code + LLM** (RAiD-style provenance record) |
+| 1 | `1-llm-output/` | **done** | **built**: `extract.py` + `schema.json` + `extract_prompt.md` | **LLM + code** (URL → reuse JSON-LD / extract structured metadata) |
+| 2 | `2-rdf-knowledge-graph/` | **done** | **built**: `lift.py` + `jsonld_context.json` + examples | **code only** (JSON → schema.org RDF, deterministic) |
+| 3 | `3-shacl-validation/` | **done** | **built**: `validate.py` + `googleRecommended.ttl` | **code only** (pySHACL + shape) |
+| 4 | `4-violation-report/` | **done** | **built**: `parse_report.py` + `violation_schema.json` | **code + LLM** (results → fix-oriented report) |
+| 5 | `5-repair/` | **done** | **built**: `repair.py` + `reprompt_template.md` | **code + LLM** (rule fixes + LLM reword, loop) |
+| 6 | `6-trusted-output/` | **done** | **built**: `render_record.py` + `raid_template.json` + `narrative_prompt.md` | **code + LLM** (RAiD-style provenance record) |
 
 ## 2. Existing tooling to reuse
 
@@ -119,10 +119,20 @@ Conventions:
 
 ## 4. Per-stage directives
 
-### Stage 1 — `1-llm-output/`  (LLM + code)
+### Stage 1 — `1-llm-output/`  (LLM + code) — **BUILT 2026-06-02**
 **Directive:** Given a dataset **URL**, produce a consistent set of dataset
 metadata fields. **Reuse-embedded-else-extract:** fetch the page; if it carries
 embedded structured metadata, reuse it; otherwise extract with the LLM.
+
+> STATUS: `assets/extract.py` (+ `assets/schema.json`, `assets/extract_prompt.md`)
+> implemented and tested (CLI + importable `run_extract(url, out_dir, use_llm)`;
+> `file://` URLs work for fixtures). Fetch (UA/timeout/size-cap) + JSON-LD
+> detection are deterministic; LLM is fallback only (gated on
+> `llm_available()`). Emits `01_extracted.json` (validates against
+> `schema.json`) with `source ∈ {embedded-jsonld, llm-extracted, none}`.
+> Verified: embedded `@graph` Dataset picked correctly → full 1→2→3 CONFORMS;
+> comma-separated keywords split; no-data+no-LLM → honest `source=none` with
+> keys preserved.
 
 - **Fetch + detect (code):** HTTP GET the URL (set a UA, cap response size,
   respect timeouts; on non-HTML/binary, record content-type and skip parsing).
@@ -150,12 +160,20 @@ embedded structured metadata, reuse it; otherwise extract with the LLM.
 - **SKILL.md additions:** the fetch/inspect approach, the fixed field contract,
   malformed/partial-response handling.
 
-### Stage 2 — `2-rdf-knowledge-graph/`  (code only, deterministic)
+### Stage 2 — `2-rdf-knowledge-graph/`  (code only, deterministic) — **BUILT 2026-06-02**
 **Directive:** Convert `01_extracted.json` to RDF using **schema.org**
 vocabulary, typed as `schema:Dataset`. Pure deterministic mapping — **no LLM**
 (per §0a.1); same input always yields the same graph. Use the canonical
 namespace **`https://schema.org/`** (per §0a.4) for every type and property.
 Primary reference: https://schema.org/Dataset.
+
+> STATUS: `assets/lift.py` (+ `assets/jsonld_context.json`, `assets/examples/`)
+> implemented and tested (CLI + importable `run_lift(input_path, out_dir,
+> iri_base)`). Builds a JSON-LD doc from the context (`@vocab =
+> https://schema.org/`) and lifts via rdflib; `url` emitted as an IRI. Verified:
+> 2→3 segment end-to-end (good input → Stage 3 CONFORMS/0 violations; missing
+> `description` → 1 violation/exit 1); output is byte-identical on repeat
+> (deterministic).
 
 - **Input:** `01_extracted.json`  → **Output:** `02_graph.ttl` (Turtle).
 - **Mapping (minimal set → schema.org):**
@@ -217,9 +235,19 @@ with **pySHACL** against the shape **`assets/googleRecommended.ttl`**.
 - **SKILL.md additions (TODO):** engine = pySHACL, shape location, conformance =
   zero-violations semantics, exit codes, link to rudof/parquet variants for scale.
 
-### Stage 4 — `4-violation-report/`  (code + LLM)
+### Stage 4 — `4-violation-report/`  (code + LLM) — **BUILT 2026-06-02**
 **Directive:** Turn `03_report.ttl` into a report that **explains each issue and
 proposes a potential fix**, structured so Stage 5 can act on it programmatically.
+
+> STATUS: `assets/parse_report.py` (+ `assets/violation_schema.json`)
+> implemented and tested (CLI + importable `run_report(results_path, out_dir,
+> use_llm)`). Deterministic `fixType`/`autoFixable` from a constraint table;
+> LLM enriches `issue`/`suggestedFix` prose via `orchestration/llm.py`, with a
+> deterministic template fallback when no `OPENROUTER_API_KEY` (so it always
+> runs). Emits `04_report.json` (validates against `violation_schema.json`) +
+> `04_report.md` grouped by severity. Verified on the 2→3→4 segment: violation
+> case → 1 violation/13 warnings, conforming case → 0 violations.
+> **Output key is `findings` (includes warnings), not `violations`.**
 
 - **Input:** `03_results.json` (the normalized rows Stage 3 already produced —
   each has `severity`, `focus_node`, `result_path`, `source_constraint`,
@@ -244,17 +272,31 @@ proposes a potential fix**, structured so Stage 5 can act on it programmatically
 - **Assets to create:** `assets/parse_report.py`, `assets/report_template.md`,
   `assets/violation_schema.json`.
 
-### Stage 5 — `5-repair/`  (LLM + code; loops)
-**Directive:** Use `04_report.json` (+ `03_report.ttl`) to **repair the RDF from
-Stage 2**, then hand back to Stage 3 for re-validation. The driver loops
-3→4→5 until Stage 3/4 report nothing to fix, then proceeds to Stage 6.
+### Stage 5 — `5-repair/`  (LLM + code; loops) — **BUILT 2026-06-02**
+**Directive:** Use `04_report.json` to **repair the RDF**, then hand back to
+Stage 3 for re-validation. The driver loops 3→4→5 until Stage 3/4 report nothing
+fixable, then proceeds to Stage 6.
 
-- **Input:** latest graph TTL + `04_report.json`  → **Output:** `05_graph.ttl`.
-- **Repair policy:**
-  - `autoFixable` + `fixType ∈ {add, coerce, remove}` → rule-based edit in code.
-  - `reword` (e.g. description too short) → LLM regenerates the literal, seeded
-    by the original extracted metadata + the violation message.
-  - `manual` → leave unfixed, flag in `run.log` for human-in-the-loop.
+> STATUS: `assets/repair.py` (+ `assets/reprompt_template.md`) implemented and
+> tested (CLI + importable `run_repair(graph_path, report_path, out_dir,
+> extracted_path, use_llm)`). Single stateless pass; reads latest graph +
+> `04_report.json` (+ `01_extracted.json` for source values), writes
+> `05_graph.ttl`, appends an audit trail to `run.log`. Verified: full 3→4→5→3
+> loop closes (missing description added from source → re-validate CONFORMS);
+> `remove-extra` keeps 1 of N; no-source/no-LLM findings left unfixed (not
+> fabricated).
+
+- **Input:** latest graph TTL + `04_report.json` (+ `01_extracted.json`)  →
+  **Output:** `05_graph.ttl`.
+- **Repair policy (as built — never fabricate facts):**
+  - `add` → add the value **from `01_extracted.json`** when present (rule-based).
+    For summarizable text (`description`) with no source value, the LLM may
+    *generate* it from the record's own fields. Factual fields with no source
+    value (creator/license/identifier/…) are **left unfixed, never invented**.
+  - `coerce` → transform the node in place (Literal ⇄ IRI for nodeKind).
+  - `remove` → drop extra values, keep one (MaxCount).
+  - `reword` → LLM rewrites the existing literal to satisfy the constraint.
+  - `manual` / LLM-needed-but-no-key → leave unfixed, logged to `run.log`.
 - **Loop control (owned by the driver, see §7):** max N iterations
   (recommend **3**). Stop and proceed to Stage 6 when **any** holds:
   (a) `03_conforms.json.conforms == true`;
@@ -268,11 +310,21 @@ Stage 2**, then hand back to Stage 3 for re-validation. The driver loops
   orchestration), `assets/reprompt_template.md`, audit entries appended to
   `run.log`.
 
-### Stage 6 — `6-trusted-output/`  (LLM + code)
+### Stage 6 — `6-trusted-output/`  (LLM + code) — **BUILT 2026-06-02**
 **Directive:** The RDF is generated + validated. Produce a **short write-up of
 what happened** to get here, as a **RAiD-style structured record**.
 Reference: https://metadata.raid.org/en/v1.6/. RAiD is an imperfect fit — map
 what's reasonable, leave the rest, the user will revisit.
+
+> STATUS: `assets/render_record.py` (+ `assets/raid_template.json`,
+> `assets/narrative_prompt.md`) implemented and tested (CLI + importable
+> `run_record(run_dir, run_id, out_dir, start, end, use_llm)`). Reads the whole
+> run dir (robust to missing files), emits `06_raid.json` + `06_record.md`.
+> RAiD block names are used with PLACEHOLDER vocab IRIs (not fabricated); the
+> authoritative facts live under an `x_pipeline` extension. Narrative is LLM-
+> written when a key is set, deterministic otherwise. Verified on happy path
+> (conforms) and repair path (parses `run.log` for passes/fixes). **Revisit the
+> RAiD mapping later (user).**
 
 - **Input:** the run dir (graphs, reports, `run.log`) → **Output:**
   `06_raid.json` (RAiD-shaped record) + a short Markdown narrative.
@@ -309,21 +361,32 @@ and marked every field required.
 5. Stage 1 extractor (feeds the chain) + Stage 6 RAiD record.
 6. LangGraph driver (§7) + an end-to-end golden run; update `README.md`.
 
-## 7. Orchestration — LangGraph driver
+## 7. Orchestration — LangGraph driver — **BUILT 2026-06-02**
+
+> STATUS: `orchestration/` (`state.py`, `nodes.py`, `graph.py`, `run.py`,
+> `llm.py`, `__init__.py`) implemented and tested. Nodes import each stage
+> module by file path and call its `run_*` function. Entry point:
+> `uv run python -m orchestration.run <url> [--max-iterations N] [--run-id ID]
+> [--no-llm]`. Creates `runs/<run-id>/`, writes `00_input.json`, runs 1→6 with
+> the conditional 3→4→5 loop and all four §4.5 stop conditions. `runs/` is
+> gitignored. Deps `langgraph`/`pyshacl`/`rdflib` declared direct.
+> **Verified end-to-end (no LLM):** happy path → `1→2→3→4→6` CONFORMS; short
+> description → `3→4→5→3→4→6`, one repair pass then no-progress stop, exit 1
+> with a RAiD caveat record.
 
 Build a LangGraph app that sequences the six skills and implements the repair
 loop. This is a deliverable of this plan.
 
 - **Location:** `orchestration/` (new dir) — `graph.py`, `state.py`, `nodes.py`,
   `llm.py`, `run.py`.
-- **Dependencies to add (via `uv`):** `langgraph`, `langchain-openai` (for the
-  OpenRouter client), and declare the transitive RDF deps directly — `pyshacl`,
-  `rdflib`. (`langchain-experimental` and `pyld` are already in `pyproject.toml`;
-  `pyshacl`/`rdflib` are currently only transitive via the validator.)
-- **LLM helper (`llm.py`):** constructs
-  `ChatOpenAI(base_url="https://openrouter.ai/api/v1",
-  api_key=os.environ["OPENROUTER_API_KEY"], model=os.environ.get("OPENROUTER_MODEL", ...))`
-  (per §0a.2). Stages 1/4/5/6 import this; provider/model is env-driven.
+- **Dependencies:** `langchain-openai` **added** (direct dep, 2026-06-02).
+  Still to add when building the driver: `langgraph`; and declare the transitive
+  RDF deps directly — `pyshacl`, `rdflib`.
+- **LLM helper (`llm.py`): BUILT** — `orchestration/llm.py` constructs
+  `ChatOpenAI(base_url="https://openrouter.ai/api/v1", api_key=$OPENROUTER_API_KEY,
+  model=$OPENROUTER_MODEL)` and exposes `llm_available()` + `complete()`. Stages
+  1/4/5/6 import it and gate on `llm_available()` so they degrade gracefully
+  with no key. Stage 4 already uses it.
 - **State (`state.py`):** a `TypedDict` carrying `run_id`, `run_dir`, `url`,
   paths to each artifact (`extracted`, `graph`, `report`, `results_json`,
   `report_json`, `raid`), `conforms: bool`, `iteration: int`,
@@ -359,6 +422,39 @@ loop stop conditions, deterministic `autoFixable`, run-id scheme,
 - [x] `googleRecommended.ttl` (§5) — drafted, parses, validates correctly.
       *Remaining (optional): confirm the required/recommended split fits DOOS.*
 - [x] Stage 3 `validate.py` (§4.3) — built & verified.
+- [x] Stage 2 `lift.py` + `jsonld_context.json` (§4.2) — built & verified;
+      2→3 segment runs end-to-end and is deterministic.
+- [x] Stage 4 `parse_report.py` + `violation_schema.json` (§4.4) + shared
+      `orchestration/llm.py` — built & verified; 2→3→4 segment runs.
+      `langchain-openai` declared as a direct dep.
+- [x] Stage 5 `repair.py` + `reprompt_template.md` (§4.5) — built & verified;
+      the 3→4→5→3 loop closes deterministically (add-from-source, remove-extra),
+      with honest no-fabrication behavior.
+- [x] Stage 1 `extract.py` + `schema.json` + `extract_prompt.md` (§4.1) — built
+      & verified; reuse-embedded-else-extract; full 1→2→3 chain CONFORMS.
+- [x] Stage 6 `render_record.py` + `raid_template.json` + `narrative_prompt.md`
+      (§4.6) — built & verified on happy + repair paths. RAiD mapping is
+      best-effort (PLACEHOLDER vocab IRIs); user to revisit.
+- [x] **LangGraph driver (§7)** — built & verified end-to-end (`orchestration/`).
+      `uv run python -m orchestration.run <url>` runs the whole pipeline.
+
+**The bundle is functionally complete.** Remaining work is polish / config, not
+core build:
+- [x] Fill in the six `SKILL.md` files — done; each documents its as-built
+      assets (what it does, run CLI + import, I/O contract, key behavior, next
+      stage).
+- [ ] Set `OPENROUTER_API_KEY` + choose `OPENROUTER_MODEL` to activate LLM steps
+      (Stage 1 fallback, Stage 4/5/6 prose, Stage 5 reword). Then the repair loop
+      can close short/missing descriptions to conformance, not just stop on them.
+- [ ] Pick the golden test URLs (§6) and confirm the `googleRecommended.ttl`
+      required/recommended split fits DOOS.
+- [ ] Revisit the RAiD mapping (§4.6).
+- [x] `README.md` — written: overview, flow table, layout, setup, quickstart,
+      single-stage usage, run-dir contract, shape, design principles, roadmap.
+- [x] **pytest suite** (`tests/` + `pytest.ini`) — 30 tests over the
+      deterministic behaviors of all 6 stages + the driver; LLM forced off.
+      `uv run pytest -c scripts/shaclskills/pytest.ini scripts/shaclskills/tests`.
+      `pytest` added as a dev dep.
 
 **Still open — deferrable, do NOT block stages 2–5:**
 
@@ -366,9 +462,10 @@ loop stop conditions, deterministic `autoFixable`, run-id scheme,
       will revisit.
 - [ ] **Golden test URLs** — pick 2 real dataset URLs (one *with* embedded
       schema.org JSON-LD, one *without*) to verify the chain end-to-end (§6).
-- [ ] **`OPENROUTER_MODEL` default** + version-pin `langgraph`/`langchain-openai`
-      in `pyproject.toml` (§7) — needed before the first LLM-stage run, not before
-      Stage 2.
+- [ ] **`OPENROUTER_MODEL` choice** (default in `llm.py` is a placeholder:
+      `anthropic/claude-3.5-sonnet`) + set `OPENROUTER_API_KEY` — needed to
+      activate LLM prose enrichment in Stages 4/5/6 (they run deterministically
+      without it). `langgraph` still to add when the driver is built.
 
 **Verdict:** no remaining blockers for Stages 2→5. The build can proceed down
 the §6 order starting with Stage 2.
