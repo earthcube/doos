@@ -1,0 +1,63 @@
+_:1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationReport> .
+_:1 <http://www.w3.org/ns/shacl#result> _:2 .
+_:1 <http://www.w3.org/ns/shacl#result> _:3 .
+_:1 <http://www.w3.org/ns/shacl#result> _:4 .
+_:1 <http://www.w3.org/ns/shacl#result> _:5 .
+_:1 <http://www.w3.org/ns/shacl#result> _:6 .
+_:1 <http://www.w3.org/ns/shacl#result> _:7 .
+_:1 <http://www.w3.org/ns/shacl#result> _:8 .
+_:1 <http://www.w3.org/ns/shacl#conforms> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:2 <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recLongitude> .
+_:2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+_:2 <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Violation> .
+_:2 <http://www.w3.org/ns/shacl#resultMessage> "QualifiedValueShape: only 0 nodes conform to shape https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recLongitude, which is less than minCount: 1. Focus node: <http://portal.medin.org.uk/portal/json-ld/0013333ee2f2eff69da22af8119e6130.jsonld>" .
+_:2 <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/0013333ee2f2eff69da22af8119e6130.jsonld> .
+_:2 <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#QualifiedMinCountConstraintComponent> .
+_:2 <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/variableMeasured> .
+_:3 <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#coreContacts> .
+_:3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+_:3 <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Warning> .
+_:3 <http://www.w3.org/ns/shacl#resultMessage> "MinCount(1) not satisfied" .
+_:3 <http://www.w3.org/ns/shacl#resultMessage> "Contact information should be provided"@en .
+_:3 <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/0013333ee2f2eff69da22af8119e6130.jsonld> .
+_:3 <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#MinCountConstraintComponent> .
+_:3 <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/contacts> .
+_:4 <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recLatitude> .
+_:4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+_:4 <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Violation> .
+_:4 <http://www.w3.org/ns/shacl#resultMessage> "QualifiedValueShape: only 0 nodes conform to shape https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recLatitude, which is less than minCount: 1. Focus node: <http://portal.medin.org.uk/portal/json-ld/0013333ee2f2eff69da22af8119e6130.jsonld>" .
+_:4 <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/0013333ee2f2eff69da22af8119e6130.jsonld> .
+_:4 <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#QualifiedMinCountConstraintComponent> .
+_:4 <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/variableMeasured> .
+_:5 <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recMesMethod> .
+_:5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+_:5 <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Warning> .
+_:5 <http://www.w3.org/ns/shacl#resultMessage> "MinCount(1) not satisfied" .
+_:5 <http://www.w3.org/ns/shacl#resultMessage> "measurement method check"@en .
+_:5 <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/0013333ee2f2eff69da22af8119e6130.jsonld> .
+_:5 <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#MinCountConstraintComponent> .
+_:5 <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/measurementMethod> .
+_:6 <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recMesType> .
+_:6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+_:6 <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Warning> .
+_:6 <http://www.w3.org/ns/shacl#resultMessage> "MinCount(1) not satisfied" .
+_:6 <http://www.w3.org/ns/shacl#resultMessage> "variable measured check"@en .
+_:6 <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/0013333ee2f2eff69da22af8119e6130.jsonld> .
+_:6 <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#MinCountConstraintComponent> .
+_:6 <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/variableMeasured> .
+_:7 <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#coreCitation> .
+_:7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+_:7 <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Warning> .
+_:7 <http://www.w3.org/ns/shacl#resultMessage> "MinCount(1) not satisfied" .
+_:7 <http://www.w3.org/ns/shacl#resultMessage> "Citation information should be provided"@en .
+_:7 <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/0013333ee2f2eff69da22af8119e6130.jsonld> .
+_:7 <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#MinCountConstraintComponent> .
+_:7 <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/citation> .
+_:8 <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#coreLicense> .
+_:8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+_:8 <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Violation> .
+_:8 <http://www.w3.org/ns/shacl#resultMessage> "MinCount(1) not satisfied" .
+_:8 <http://www.w3.org/ns/shacl#resultMessage> "License information should be provided"@en .
+_:8 <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/0013333ee2f2eff69da22af8119e6130.jsonld> .
+_:8 <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#MinCountConstraintComponent> .
+_:8 <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/license> .

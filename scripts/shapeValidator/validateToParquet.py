@@ -27,7 +27,7 @@ import traceback
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
-from queue import Empty
+from queue import Empty, Queue as _Queue
 from typing import Any
 
 import pyarrow as pa
@@ -41,6 +41,10 @@ from defs.getConstruct import (
     set_persistent_sparql_client,
 )
 from defs.shaclValidator import validate_with_shacl_results
+
+# Sentinel used to signal shutdown to the background writer thread.
+# Must be a value that survives pickling across Manager().Queue().
+_SHUTDOWN = "__SHUTDOWN_SENTINEL__"
 
 # Stable output schema for SHACL validation result rows.
 # All fields are explicitly nullable to be tolerant of missing data from
@@ -61,16 +65,6 @@ _SHACL_RESULT_SCHEMA = pa.schema(
         pa.field("has_results", pa.bool_(), nullable=True),
     ]
 )
-
-# --------------------------------------------------------------------------- #
-# Streaming writer (lightweight copy of the improved pattern for self-containment)
-# --------------------------------------------------------------------------- #
-
-# Sentinel used to signal shutdown to the background writer thread.
-# Must be a value that survives pickling across Manager().Queue() (used for
-# safe cross-process communication with ProcessPoolExecutor + "spawn").
-# We use a distinctive string + value equality so identity is not required.
-_SHUTDOWN = "__SHUTDOWN_SENTINEL__"
 
 # --------------------------------------------------------------------------- #
 # Per-worker globals (populated by initializer in spawn'ed processes)
@@ -196,8 +190,8 @@ class StreamingParquetWriter:
             ),
             "value": str(row.get("value")) if row.get("value") is not None else None,
             "validation_duration_ms": (
-                float(row.get("validation_duration_ms"))
-                if row.get("validation_duration_ms") is not None
+                float(_v)
+                if (_v := row.get("validation_duration_ms")) is not None
                 else None
             ),
             "has_results": (
@@ -318,7 +312,7 @@ class StreamingParquetWriter:
 # --------------------------------------------------------------------------- #
 
 
-def _validate_one(graph_uri: str, result_queue: mp.Queue) -> None:
+def _validate_one(graph_uri: str, result_queue: _Queue[Any]) -> None:
     """Fetch graph, run SHACL, emit structured result rows (as a batch) to the queue.
 
     Uses per-worker globals populated by the initializer for endpoint and shapes.
@@ -471,7 +465,7 @@ def main():
     # processes through inheritance"). Manager().Queue() returns a proxy
     # that is designed to be passed across the spawn boundary.
     with ctx.Manager() as manager:
-        result_queue: mp.Queue = manager.Queue(maxsize=20000)
+        result_queue: _Queue[Any] = manager.Queue(maxsize=20000)
 
         # Start background writer thread
         writer_thread = threading.Thread(
@@ -512,7 +506,7 @@ def main():
         print(f"Results written to: {args.output_dir}/")
 
 
-def _writer_loop(queue: mp.Queue, writer: StreamingParquetWriter) -> None:
+def _writer_loop(queue: _Queue[Any], writer: StreamingParquetWriter) -> None:
     while True:
         try:
             item = queue.get(timeout=1)

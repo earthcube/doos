@@ -1,0 +1,7 @@
+SHACL validation results
+Created: 2026-06-01T13:27:23.904628
+Total files: 2
+Total rows: 1,948
+
+  shacl_results_000000.parquet
+  shacl_results_000001.parquet

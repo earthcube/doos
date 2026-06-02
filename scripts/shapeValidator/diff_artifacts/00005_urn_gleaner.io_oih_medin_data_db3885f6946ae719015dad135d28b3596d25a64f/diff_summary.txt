@@ -1,0 +1,26 @@
+Graph: urn:gleaner.io:oih:medin:data:db3885f6946ae719015dad135d28b3596d25a64f
+
+Counts:
+  PySHACL : 6
+  pyrudof : 7
+  Common  : 0
+  Only PySHACL : 6
+  Only pyrudof : 7
+
+
+=== Only in PySHACL ===
+  ('http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld', 'https://schema.org/citation', 'Citation information should be provided', 'http://www.w3.org/ns/shacl#Warning')
+  ('http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld', 'https://schema.org/contacts', 'Contact information should be provided', 'http://www.w3.org/ns/shacl#Warning')
+  ('http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld', 'https://schema.org/license', 'License information should be provided', 'http://www.w3.org/ns/shacl#Violation')
+  ('http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld', 'https://schema.org/measurementMethod', 'measurement method check', 'http://www.w3.org/ns/shacl#Warning')
+  ('http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld', 'https://schema.org/variableMeasured', "At least one PropertyValue in variableMeasured must have the name 'latitude'.", 'http://www.w3.org/ns/shacl#Violation')
+  ('http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld', 'https://schema.org/variableMeasured', 'variable measured check', 'http://www.w3.org/ns/shacl#Warning')
+
+=== Only in pyrudof ===
+  ('http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld', 'https://schema.org/citation', 'MinCount(1) not satisfied', 'http://www.w3.org/ns/shacl#Warning')
+  ('http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld', 'https://schema.org/contacts', 'MinCount(1) not satisfied', 'http://www.w3.org/ns/shacl#Warning')
+  ('http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld', 'https://schema.org/license', 'MinCount(1) not satisfied', 'http://www.w3.org/ns/shacl#Violation')
+  ('http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld', 'https://schema.org/measurementMethod', 'MinCount(1) not satisfied', 'http://www.w3.org/ns/shacl#Warning')
+  ('http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld', 'https://schema.org/variableMeasured', 'MinCount(1) not satisfied', 'http://www.w3.org/ns/shacl#Warning')
+  ('http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld', 'https://schema.org/variableMeasured', 'QualifiedValueShape: only 0 nodes conform to shape https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recLatitude, which is less than minCount: 1. Focus node: <http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld>', 'http://www.w3.org/ns/shacl#Violation')
+  ('http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld', 'https://schema.org/variableMeasured', 'QualifiedValueShape: only 0 nodes conform to shape https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recLongitude, which is less than minCount: 1. Focus node: <http://portal.medin.org.uk/portal/json-ld/00103359-D7DA-493C-BC28-C97EE3CA317F.jsonld>', 'http://www.w3.org/ns/shacl#Violation')

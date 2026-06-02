@@ -1,0 +1,58 @@
+<http://gleaner.io/.well-known/genid/rdflib/N5565376f8bb14a0eae868871f3ea3d06> <http://www.w3.org/ns/shacl#result> <http://gleaner.io/.well-known/genid/rdflib/Nd4bc9344f9a74464be1d532e737e93c5> .
+<http://gleaner.io/.well-known/genid/rdflib/Nd813bc7f322f4381b594094a51a57340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+<http://gleaner.io/.well-known/genid/rdflib/N5565376f8bb14a0eae868871f3ea3d06> <http://www.w3.org/ns/shacl#result> <http://gleaner.io/.well-known/genid/rdflib/Nd813bc7f322f4381b594094a51a57340> .
+<http://gleaner.io/.well-known/genid/rdflib/Nd4bc9344f9a74464be1d532e737e93c5> <http://www.w3.org/ns/shacl#resultMessage> "variable measured check"@en .
+<http://gleaner.io/.well-known/genid/rdflib/Nd813bc7f322f4381b594094a51a57340> <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#coreContacts> .
+<http://gleaner.io/.well-known/genid/rdflib/Nd4bc9344f9a74464be1d532e737e93c5> <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/00040230-d455-4fea-8747-6179d77ab103.jsonld> .
+<http://gleaner.io/.well-known/genid/rdflib/N9d368fcc84db4fb7bcb761d7b026712f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+<http://gleaner.io/.well-known/genid/rdflib/Nef69284690b64af783f123af4b028c06> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+<http://gleaner.io/.well-known/genid/rdflib/N9d368fcc84db4fb7bcb761d7b026712f> <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recMesMethod> .
+<http://gleaner.io/.well-known/genid/rdflib/Nd4bc9344f9a74464be1d532e737e93c5> <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/variableMeasured> .
+<http://gleaner.io/.well-known/genid/rdflib/Nd4bc9344f9a74464be1d532e737e93c5> <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Warning> .
+<http://gleaner.io/.well-known/genid/rdflib/N02483e8368014e4aa2566c6b1fc078ca> <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#coreLicense> .
+<http://gleaner.io/.well-known/genid/rdflib/Na0b2f61eeeab4a3ba9225253f0193c4d> <http://www.w3.org/ns/shacl#resultMessage> "Citation information should be provided"@en .
+<http://gleaner.io/.well-known/genid/rdflib/N9d368fcc84db4fb7bcb761d7b026712f> <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#MinCountConstraintComponent> .
+<http://gleaner.io/.well-known/genid/rdflib/Nef69284690b64af783f123af4b028c06> <http://www.w3.org/ns/shacl#resultMessage> "At least one PropertyValue in variableMeasured must have the name 'latitude'." .
+<http://gleaner.io/.well-known/genid/rdflib/N02483e8368014e4aa2566c6b1fc078ca> <http://www.w3.org/ns/shacl#resultMessage> "License information should be provided"@en .
+<http://gleaner.io/.well-known/genid/rdflib/N02483e8368014e4aa2566c6b1fc078ca> <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Violation> .
+<http://gleaner.io/.well-known/genid/rdflib/Nd813bc7f322f4381b594094a51a57340> <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#MinCountConstraintComponent> .
+<http://gleaner.io/.well-known/genid/rdflib/N6cfdbf7130374f1cb0ef6272d30ac35e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+<http://gleaner.io/.well-known/genid/rdflib/N02483e8368014e4aa2566c6b1fc078ca> <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/00040230-d455-4fea-8747-6179d77ab103.jsonld> .
+<http://gleaner.io/.well-known/genid/rdflib/N02483e8368014e4aa2566c6b1fc078ca> <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/license> .
+<http://gleaner.io/.well-known/genid/rdflib/Na0b2f61eeeab4a3ba9225253f0193c4d> <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/00040230-d455-4fea-8747-6179d77ab103.jsonld> .
+<http://gleaner.io/.well-known/genid/rdflib/Na0b2f61eeeab4a3ba9225253f0193c4d> <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#coreCitation> .
+<http://gleaner.io/.well-known/genid/rdflib/N5565376f8bb14a0eae868871f3ea3d06> <http://www.w3.org/ns/shacl#result> <http://gleaner.io/.well-known/genid/rdflib/Na0b2f61eeeab4a3ba9225253f0193c4d> .
+<http://gleaner.io/.well-known/genid/rdflib/N5565376f8bb14a0eae868871f3ea3d06> <http://www.w3.org/ns/shacl#result> <http://gleaner.io/.well-known/genid/rdflib/N02483e8368014e4aa2566c6b1fc078ca> .
+<http://gleaner.io/.well-known/genid/rdflib/Na0b2f61eeeab4a3ba9225253f0193c4d> <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Warning> .
+<http://gleaner.io/.well-known/genid/rdflib/Nd813bc7f322f4381b594094a51a57340> <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/contacts> .
+<http://gleaner.io/.well-known/genid/rdflib/N6cfdbf7130374f1cb0ef6272d30ac35e> <http://www.w3.org/ns/shacl#resultMessage> "At least one PropertyValue in variableMeasured must have the name 'latitude'." .
+<http://gleaner.io/.well-known/genid/rdflib/N9d368fcc84db4fb7bcb761d7b026712f> <http://www.w3.org/ns/shacl#resultMessage> "measurement method check"@en .
+<http://gleaner.io/.well-known/genid/rdflib/N5565376f8bb14a0eae868871f3ea3d06> <http://www.w3.org/ns/shacl#result> <http://gleaner.io/.well-known/genid/rdflib/N9d368fcc84db4fb7bcb761d7b026712f> .
+<http://gleaner.io/.well-known/genid/rdflib/Nef69284690b64af783f123af4b028c06> <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Violation> .
+<http://gleaner.io/.well-known/genid/rdflib/Nd813bc7f322f4381b594094a51a57340> <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/00040230-d455-4fea-8747-6179d77ab103.jsonld> .
+<http://gleaner.io/.well-known/genid/rdflib/Nef69284690b64af783f123af4b028c06> <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/00040230-d455-4fea-8747-6179d77ab103.jsonld> .
+<http://gleaner.io/.well-known/genid/rdflib/Na0b2f61eeeab4a3ba9225253f0193c4d> <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/citation> .
+<http://gleaner.io/.well-known/genid/rdflib/N6cfdbf7130374f1cb0ef6272d30ac35e> <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Violation> .
+<http://gleaner.io/.well-known/genid/rdflib/N9d368fcc84db4fb7bcb761d7b026712f> <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/00040230-d455-4fea-8747-6179d77ab103.jsonld> .
+<http://gleaner.io/.well-known/genid/rdflib/N5565376f8bb14a0eae868871f3ea3d06> <http://www.w3.org/ns/shacl#result> <http://gleaner.io/.well-known/genid/rdflib/N6cfdbf7130374f1cb0ef6272d30ac35e> .
+<http://gleaner.io/.well-known/genid/rdflib/Nef69284690b64af783f123af4b028c06> <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/variableMeasured> .
+<http://gleaner.io/.well-known/genid/rdflib/Nd813bc7f322f4381b594094a51a57340> <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Warning> .
+<http://gleaner.io/.well-known/genid/rdflib/N5565376f8bb14a0eae868871f3ea3d06> <http://www.w3.org/ns/shacl#conforms> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://gleaner.io/.well-known/genid/rdflib/Nd813bc7f322f4381b594094a51a57340> <http://www.w3.org/ns/shacl#resultMessage> "Contact information should be provided"@en .
+<http://gleaner.io/.well-known/genid/rdflib/Nd4bc9344f9a74464be1d532e737e93c5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+<http://gleaner.io/.well-known/genid/rdflib/N5565376f8bb14a0eae868871f3ea3d06> <http://www.w3.org/ns/shacl#result> <http://gleaner.io/.well-known/genid/rdflib/Nef69284690b64af783f123af4b028c06> .
+<http://gleaner.io/.well-known/genid/rdflib/N6cfdbf7130374f1cb0ef6272d30ac35e> <http://www.w3.org/ns/shacl#focusNode> <http://portal.medin.org.uk/portal/json-ld/00040230-d455-4fea-8747-6179d77ab103.jsonld> .
+<http://gleaner.io/.well-known/genid/rdflib/Nef69284690b64af783f123af4b028c06> <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#QualifiedMinCountConstraintComponent> .
+<http://gleaner.io/.well-known/genid/rdflib/N02483e8368014e4aa2566c6b1fc078ca> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+<http://gleaner.io/.well-known/genid/rdflib/Na0b2f61eeeab4a3ba9225253f0193c4d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationResult> .
+<http://gleaner.io/.well-known/genid/rdflib/Nd4bc9344f9a74464be1d532e737e93c5> <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#MinCountConstraintComponent> .
+<http://gleaner.io/.well-known/genid/rdflib/N9d368fcc84db4fb7bcb761d7b026712f> <http://www.w3.org/ns/shacl#resultSeverity> <http://www.w3.org/ns/shacl#Warning> .
+<http://gleaner.io/.well-known/genid/rdflib/N6cfdbf7130374f1cb0ef6272d30ac35e> <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/variableMeasured> .
+<http://gleaner.io/.well-known/genid/rdflib/Nd4bc9344f9a74464be1d532e737e93c5> <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recMesType> .
+<http://gleaner.io/.well-known/genid/rdflib/N6cfdbf7130374f1cb0ef6272d30ac35e> <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#QualifiedMinCountConstraintComponent> .
+<http://gleaner.io/.well-known/genid/rdflib/N02483e8368014e4aa2566c6b1fc078ca> <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#MinCountConstraintComponent> .
+<http://gleaner.io/.well-known/genid/rdflib/N6cfdbf7130374f1cb0ef6272d30ac35e> <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recLongitude> .
+<http://gleaner.io/.well-known/genid/rdflib/Nef69284690b64af783f123af4b028c06> <http://www.w3.org/ns/shacl#sourceShape> <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recLatitude> .
+<http://gleaner.io/.well-known/genid/rdflib/N9d368fcc84db4fb7bcb761d7b026712f> <http://www.w3.org/ns/shacl#resultPath> <https://schema.org/measurementMethod> .
+<http://gleaner.io/.well-known/genid/rdflib/Na0b2f61eeeab4a3ba9225253f0193c4d> <http://www.w3.org/ns/shacl#sourceConstraintComponent> <http://www.w3.org/ns/shacl#MinCountConstraintComponent> .
+<http://gleaner.io/.well-known/genid/rdflib/N5565376f8bb14a0eae868871f3ea3d06> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationReport> .

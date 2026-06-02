@@ -5,7 +5,7 @@ RDF/SHACL/schema.org for ocean data depth profiles, GeoParquet to RDF, validator
 
 Key dirs:
 - `projects/`: Subprojects (AODC XML, BCO-DMO, OBIS, geoparquet2RDF, ERDDAP, ARGO, CCHDO)
-- `scripts/shapeValidator/`: SHACL validation tools (validateToOxigraph.py, testIOBound.py, testThreadPool.py)
+- `scripts/shapeValidator/`: SHACL validation tools (validateToOxigraph.py, validateToParquet.py)
 - `SHACL/`: Shapes files (.ttl)
 - `SPARQL/`: Queries/scripts (.py, .rq)
 - `docs/`: Notes (sources.md, vision.md)
@@ -31,8 +31,11 @@ mypy .                              # Typecheck
 
 **Tests:** No pytest. Manual scripts only:
 ```bash
-python scripts/shapeValidator/testIOBound.py <url> <shapefile>
-python scripts/shapeValidator/testThreadPool.py <url> <shapefile>
+# Single-threaded (safe baseline)
+python scripts/shapeValidator/validateToOxigraph.py <endpoint> <shapefile> --output results.nq
+
+# Recommended for large runs (parallel, streams to Parquet)
+python scripts/shapeValidator/validateToParquet.py <endpoint> <shapefile> --workers 8 --output-dir shacl_results
 ```
 
 **Add pytest (optional):**

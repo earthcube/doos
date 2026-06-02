@@ -1,0 +1,65 @@
+[
+  {
+    "focus_node": "http://portal.medin.org.uk/portal/json-ld/002d3ed5-7c78-414b-9f3e-1fda6c26283c.jsonld",
+    "result_path": "https://schema.org/contacts",
+    "result_message": "Contact information should be provided",
+    "result_severity": "http://www.w3.org/ns/shacl#Warning",
+    "source_shape": "https://oceans.collaborium.io/voc/validation/1.0.1/shacl#coreContacts",
+    "source_constraint": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+    "value": ""
+  },
+  {
+    "focus_node": "http://portal.medin.org.uk/portal/json-ld/002d3ed5-7c78-414b-9f3e-1fda6c26283c.jsonld",
+    "result_path": "https://schema.org/license",
+    "result_message": "License information should be provided",
+    "result_severity": "http://www.w3.org/ns/shacl#Violation",
+    "source_shape": "https://oceans.collaborium.io/voc/validation/1.0.1/shacl#coreLicense",
+    "source_constraint": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+    "value": ""
+  },
+  {
+    "focus_node": "http://portal.medin.org.uk/portal/json-ld/002d3ed5-7c78-414b-9f3e-1fda6c26283c.jsonld",
+    "result_path": "https://schema.org/citation",
+    "result_message": "Citation information should be provided",
+    "result_severity": "http://www.w3.org/ns/shacl#Warning",
+    "source_shape": "https://oceans.collaborium.io/voc/validation/1.0.1/shacl#coreCitation",
+    "source_constraint": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+    "value": ""
+  },
+  {
+    "focus_node": "http://portal.medin.org.uk/portal/json-ld/002d3ed5-7c78-414b-9f3e-1fda6c26283c.jsonld",
+    "result_path": "https://schema.org/variableMeasured",
+    "result_message": "variable measured check",
+    "result_severity": "http://www.w3.org/ns/shacl#Warning",
+    "source_shape": "https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recMesType",
+    "source_constraint": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+    "value": ""
+  },
+  {
+    "focus_node": "http://portal.medin.org.uk/portal/json-ld/002d3ed5-7c78-414b-9f3e-1fda6c26283c.jsonld",
+    "result_path": "https://schema.org/measurementMethod",
+    "result_message": "measurement method check",
+    "result_severity": "http://www.w3.org/ns/shacl#Warning",
+    "source_shape": "https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recMesMethod",
+    "source_constraint": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+    "value": ""
+  },
+  {
+    "focus_node": "http://portal.medin.org.uk/portal/json-ld/002d3ed5-7c78-414b-9f3e-1fda6c26283c.jsonld",
+    "result_path": "https://schema.org/variableMeasured",
+    "result_message": "At least one PropertyValue in variableMeasured must have the name 'latitude'.",
+    "result_severity": "http://www.w3.org/ns/shacl#Violation",
+    "source_shape": "https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recLatitude",
+    "source_constraint": "http://www.w3.org/ns/shacl#QualifiedMinCountConstraintComponent",
+    "value": ""
+  },
+  {
+    "focus_node": "http://portal.medin.org.uk/portal/json-ld/002d3ed5-7c78-414b-9f3e-1fda6c26283c.jsonld",
+    "result_path": "https://schema.org/variableMeasured",
+    "result_message": "At least one PropertyValue in variableMeasured must have the name 'latitude'.",
+    "result_severity": "http://www.w3.org/ns/shacl#Violation",
+    "source_shape": "https://oceans.collaborium.io/voc/validation/1.0.1/shacl#recLongitude",
+    "source_constraint": "http://www.w3.org/ns/shacl#QualifiedMinCountConstraintComponent",
+    "value": ""
+  }
+]
