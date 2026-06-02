@@ -13,7 +13,7 @@ Build mode (PLAN.md §4.4): the control-flow fields — ``fixType`` and
 ``constraintComponent → fixType`` table, because the repair loop gates on them.
 The LLM only enriches the human-facing prose (``issue`` / ``suggestedFix``);
 it never decides control flow. When no LLM is configured (no
-``OPENROUTER_API_KEY``), the prose falls back to deterministic templates, so this
+``LLM_API_KEY``), the prose falls back to deterministic templates, so this
 stage always runs.
 
 Field names from ``03_results.json`` are carried through verbatim (snake_case)

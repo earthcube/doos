@@ -28,7 +28,7 @@ values) and writes a repaired `05_graph.ttl`, appending an audit trail to
 - `reword` → LLM rewrites the existing literal to satisfy the constraint.
 - `manual` / LLM-needed-but-no-key → left unfixed, logged.
 
-LLM-backed repairs (`generate`, `reword`) need `OPENROUTER_API_KEY`; without it
+LLM-backed repairs (`generate`, `reword`) need `LLM_API_KEY`; without it
 those findings are skipped and the loop's no-progress / max-iteration exit takes
 over.
 

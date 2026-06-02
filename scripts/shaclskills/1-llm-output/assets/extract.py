@@ -12,7 +12,7 @@ Strategy = **reuse-embedded-else-extract** (PLAN.md §0a.3):
   2. If the page carries embedded ``schema.org`` JSON-LD with ``@type`` Dataset
      (or DataCatalog), parse and reuse it — deterministic, no LLM.
   3. Otherwise fall back to LLM extraction from the page's visible text (via
-     ``orchestration/llm.py``). With no ``OPENROUTER_API_KEY`` this step is
+     ``orchestration/llm.py``). With no ``LLM_API_KEY`` this step is
      skipped and the fields stay null/[] with ``source="none"``.
 
 Usage (CLI):
@@ -222,12 +222,24 @@ def extract_from_html(html: str, url: str, use_llm: bool = True) -> dict:
 
 def run_extract(url: str, out_dir: str | Path = ".", use_llm: bool = True) -> dict:
     """Fetch ``url``, extract metadata, write ``01_extracted.json``; return it
-    (augmented with ``extracted_json`` path and ``http_status``)."""
+    (augmented with ``extracted_json`` path, ``http_status`` and any ``error``).
+
+    A network failure (timeout, reset, DNS, 4xx/5xx) degrades to an empty
+    ``source="none"`` record with the error captured, rather than crashing the
+    pipeline — downstream validation then reports the missing fields.
+    """
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    status, _content_type, body = fetch_url(url)
-    extracted = extract_from_html(body, url, use_llm=use_llm)
+    status: int | None = None
+    error: str | None = None
+    try:
+        status, _content_type, body = fetch_url(url)
+        extracted = extract_from_html(body, url, use_llm=use_llm)
+    except Exception as e:  # noqa: BLE001 — any fetch failure must not crash the run
+        error = f"{type(e).__name__}: {e}"
+        extracted = {"url": url, "name": None, "description": None,
+                     "keywords": [], "source": "none"}
 
     extracted_json = out_dir / "01_extracted.json"
     extracted_json.write_text(json.dumps(extracted, indent=2), encoding="utf-8")
@@ -235,6 +247,8 @@ def run_extract(url: str, out_dir: str | Path = ".", use_llm: bool = True) -> di
     result = dict(extracted)
     result["extracted_json"] = str(extracted_json)
     result["http_status"] = status
+    if error:
+        result["error"] = error
     return result
 
 

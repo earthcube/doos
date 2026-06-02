@@ -16,6 +16,7 @@ class PipelineState(TypedDict, total=False):
     url: str
     max_iterations: int
     use_llm: bool
+    progress: bool             # print live stage checkpoints to stderr
 
     # --- artifact paths (set by stage nodes) ---
     extracted_json: str        # 01_extracted.json   (Stage 1)

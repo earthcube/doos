@@ -14,4 +14,4 @@ the assembled facts as JSON and must summarize **only** those facts.
 ---
 
 `render_record.py` carries an inline copy of this prompt. Without an
-`OPENROUTER_API_KEY` it falls back to a deterministic template narrative.
+`LLM_API_KEY` it falls back to a deterministic template narrative.

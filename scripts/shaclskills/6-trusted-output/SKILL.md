@@ -46,7 +46,7 @@ Real RAiD **block names** are used (`identifier`, `title`, `date`, `description`
 `unregistered-local-identifier`. The **authoritative pipeline facts** live under
 an `x_pipeline` extension (source URL, extraction source, fields, shape,
 triples, repair passes, fixes, final conformance). The narrative is LLM-written
-when `OPENROUTER_API_KEY` is set, deterministic template otherwise. Template:
+when `LLM_API_KEY` is set, deterministic template otherwise. Template:
 `assets/raid_template.json`; prompt: `assets/narrative_prompt.md`.
 
 > The RAiD mapping is intentionally provisional — revisit when a registration

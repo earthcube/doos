@@ -22,7 +22,7 @@ lifted to RDF.
    the fixed field set.
 3. **LLM fallback:** if no usable embedded metadata, send the page's visible
    text to the LLM (`orchestration/llm.py`) to fill the **same** fields. Gated
-   on `llm_available()` — skipped when no `OPENROUTER_API_KEY`.
+   on `llm_available()` — skipped when no `LLM_API_KEY`.
 
 The output always carries the same keys (the minimal contract, PLAN.md §4.1) so
 every downstream stage is deterministic.

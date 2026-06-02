@@ -3,7 +3,7 @@
 Stage modules live in sibling dirs whose names start with digits / contain
 hyphens, so they are loaded by file path (same trick as orchestration/nodes.py).
 All tests run with the LLM disabled so behavior is deterministic regardless of
-whether OPENROUTER_API_KEY is set in the environment.
+whether an LLM API key is set in the environment.
 """
 
 from __future__ import annotations
@@ -31,6 +31,7 @@ def _load(rel_path: str, name: str):
 @pytest.fixture(autouse=True)
 def _no_llm(monkeypatch):
     """Force the LLM off for every test (deterministic)."""
+    monkeypatch.delenv("LLM_API_KEY", raising=False)
     monkeypatch.delenv("OPENROUTER_API_KEY", raising=False)
 
 

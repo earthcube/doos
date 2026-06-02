@@ -58,14 +58,83 @@ Dependencies are managed by `uv` from the repo root (`pyproject.toml`):
 `langgraph`, `langchain-openai`, `pyshacl`, `rdflib`, `pyld`. No install step is
 needed beyond `uv` resolving them on first run.
 
-Optional LLM steps use **OpenRouter** (OpenAI-compatible) via LangChain. Without
-a key, the pipeline still runs fully — LLM steps degrade to deterministic
-behavior. To enable them:
+Optional LLM steps use **any OpenAI-compatible chat API** via LangChain
+(`langchain_openai.ChatOpenAI`). Without a key, the pipeline still runs fully —
+LLM steps degrade to deterministic behavior. Three env vars select the provider:
 
 ```bash
-export OPENROUTER_API_KEY=sk-or-...
-export OPENROUTER_MODEL=anthropic/claude-3.5-sonnet   # any OpenRouter model slug
+export LLM_API_KEY=sk-...                              # required to enable LLM steps
+export LLM_BASE_URL=https://openrouter.ai/api/v1       # any OpenAI-compatible endpoint
+export LLM_MODEL=anthropic/claude-3.5-sonnet           # provider-specific model slug
 ```
+
+`LLM_BASE_URL` defaults to OpenRouter (`https://openrouter.ai/api/v1`), so for
+OpenRouter you only need to set `LLM_API_KEY` (and optionally `LLM_MODEL`). Point
+`LLM_BASE_URL` at any other OpenAI-compatible service to switch providers —
+no code change:
+
+| Provider | `LLM_BASE_URL` | Example `LLM_MODEL` |
+|----------|----------------|---------------------|
+| OpenRouter (default) | `https://openrouter.ai/api/v1` | `anthropic/claude-3.5-sonnet` |
+| OpenAI | `https://api.openai.com/v1` | `gpt-4o` |
+| Together | `https://api.together.xyz/v1` | `meta-llama/Llama-3.3-70B-Instruct-Turbo` |
+| Groq | `https://api.groq.com/openai/v1` | `llama-3.3-70b-versatile` |
+| Local (Ollama) | `http://localhost:11434/v1` | `llama3.1` |
+| Local (vLLM / LM Studio) | `http://localhost:8000/v1` | *(served model name)* |
+
+> **Backward compatibility:** the legacy `OPENROUTER_API_KEY`,
+> `OPENROUTER_BASE_URL`, and `OPENROUTER_MODEL` variables are still honoured as
+> fallbacks, so existing setups keep working. The generic `LLM_*` vars take
+> precedence when both are set.
+>
+> Azure OpenAI is the one exception that needs more than a base URL (it uses
+> deployment names + `api_version`); it would require a small branch in
+> `orchestration/llm.py` to use `AzureChatOpenAI`.
+
+Optional tuning knobs (sensible defaults; override only if needed):
+
+```bash
+export LLM_TIMEOUT=120          # per-request seconds before a call is abandoned
+export LLM_MAX_RETRIES=1        # retry cap on transient errors
+export LLM_MAX_TOKENS=2048      # cap response length (unset = provider default)
+export LLM_DISABLE_THINKING=1   # turn OFF a reasoning model's <think> phase
+```
+
+> **Reasoning models (qwen3, deepseek-r1, …): set `LLM_DISABLE_THINKING=1`.**
+> With thinking on, these models spend the whole request reasoning before
+> answering — e.g. qwen3 took ~40 s for a one-word reply vs ~1.5 s with thinking
+> off — which makes each stage look like it has hung. Every LLM call is bounded
+> by `LLM_TIMEOUT` regardless, so a slow model fails over to deterministic
+> behavior instead of hanging forever; disabling thinking makes it actually
+> usable. (Uses the vLLM/SGLang `chat_template_kwargs.enable_thinking=false`
+> convention; harmless on providers that ignore it.) Inline `<think>…</think>`
+> traces are stripped from responses automatically.
+
+### Checking the LLM connection
+
+`llm_available()` only checks that a key string is *set* — it does not prove the
+LLM is reachable. To actually verify the key, base URL, model, and network, the
+driver runs a one-shot **connectivity probe** before the pipeline whenever LLM
+steps are enabled. If the LLM is configured but unreachable (bad key, wrong
+`LLM_BASE_URL`, mistyped `LLM_MODEL`, network down), the run reports it and
+**continues deterministically** rather than silently degrading:
+
+```
+LLM: configured but UNREACHABLE — APIConnectionError: ...; continuing deterministically
+```
+
+Probe the connection on its own (no pipeline) with `--check-llm`:
+
+```bash
+uv run python -m orchestration.run --check-llm
+# LLM: connected
+#   anthropic/claude-3.5-sonnet @ https://openrouter.ai/api/v1
+```
+
+It exits `0` when connected, `1` when not. Skip the in-pipeline probe with
+`--no-probe`. Programmatically, `orchestration.llm.check_llm()` returns
+`(ok, detail)`, and `run_pipeline(...)` records the outcome in
+`final["llm_status"]` (also the first line of the trace).
 
 ## Quickstart
 
@@ -75,12 +144,19 @@ Run the whole pipeline on a dataset URL (from this directory):
 uv run python -m orchestration.run "https://your.dataset/landing-page"
 ```
 
-Add `--no-llm` to force deterministic-only, `--max-iterations N` to bound the
-repair loop (default 3), `--run-id ID` to name the run. `file://` URLs work for
-local fixtures. Example output:
+Add `--no-llm` to force deterministic-only, `--no-probe` to skip the LLM
+connectivity check, `--max-iterations N` to bound the repair loop (default 3),
+`--run-id ID` to name the run. `file://` URLs work for local fixtures.
+
+**Live progress.** As each stage is entered, a timestamped checkpoint prints to
+stderr (`→ stage 3/6 shacl-validation: run pySHACL …`) so a slow stage — most
+often the Stage 1 URL fetch — is visible instead of looking like a hang. The
+elapsed-time prefix makes the slow stage obvious. Silence it with `--quiet`.
+Example output:
 
 ```
 === pipeline trace ===
+  LLM: connected (anthropic/claude-3.5-sonnet @ https://openrouter.ai/api/v1)
   stage1: source=embedded-jsonld
   stage2: 7 triples
   stage3: conforms=True violations=0
@@ -159,12 +235,15 @@ anywhere):
 uv run pytest -c scripts/shaclskills/pytest.ini scripts/shaclskills/tests
 ```
 
-30 tests cover: Stage 1 JSON-LD reuse / normalization / honest no-data; Stage 2
-mapping, IRI policy, determinism; Stage 3 conformance-by-severity and the
-`http`/`https` namespace guard; Stage 4 `fixType`/`autoFixable` mapping, sorting,
-and schema validity; Stage 5 add-from-source loop closure, `remove-extra`, and
-no-fabrication; and the driver end-to-end (happy path conforms; short
-description → one repair pass then no-progress stop).
+45 tests cover: Stage 1 JSON-LD reuse / normalization / honest no-data /
+fetch-failure degradation; Stage 2 mapping, IRI policy, determinism; Stage 3
+conformance-by-severity and the `http`/`https` namespace guard; Stage 4
+`fixType`/`autoFixable` mapping, sorting, and schema validity; Stage 5
+add-from-source loop closure, `remove-extra`, and no-fabrication; the LLM health
+probe / driver preflight and the bounded client (timeout, retry cap,
+`<think>`-stripping, `LLM_DISABLE_THINKING`) — all without real network calls;
+and the driver end-to-end (happy path conforms; short description → one repair
+pass then no-progress stop).
 
 ## Design principles
 
@@ -176,12 +255,15 @@ description → one repair pass then no-progress stop).
   fields with no source value (creator, license, …) are left unfixed, not
   invented.
 - **Graceful without a key.** Every stage runs deterministically when no
-  `OPENROUTER_API_KEY` is set; the loop then *stops* on unfixable findings
+  `LLM_API_KEY` is set; the loop then *stops* on unfixable findings
   rather than closing them.
+- **Provider-agnostic LLM.** All LLM access is isolated in
+  `orchestration/llm.py` behind `complete()` / `llm_available()` and uses the
+  OpenAI-compatible client, so the provider is chosen by env var (see Setup).
 
 ## Status & roadmap
 
 All six stages, the driver, and the skill docs are built and verified. See
 `PLAN.md` for the full spec and the remaining polish items: choosing
-`OPENROUTER_MODEL`, picking golden test URLs, confirming the required/recommended
+`LLM_MODEL`, picking golden test URLs, confirming the required/recommended
 shape split for DOOS, and revisiting the (provisional, best-effort) RAiD mapping.

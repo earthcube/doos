@@ -35,11 +35,13 @@ These resolve the prior open blockers. The rest of the doc reflects them.
    `SKILL.md` documents the stage and lets it run standalone in Claude Code. The
    LangGraph driver imports and calls these modules — it does not invoke skills
    agentically.
-2. **LLM access = OpenRouter via LangChain.** LLM stages call
-   `langchain_openai.ChatOpenAI(base_url="https://openrouter.ai/api/v1",
-   api_key=$OPENROUTER_API_KEY, model=$MODEL)` (OpenRouter is OpenAI-compatible).
-   Provider/model is config/env-driven and swappable. One shared helper
-   (`orchestration/llm.py`) constructs the client; stages import it.
+2. **LLM access = any OpenAI-compatible API via LangChain.** LLM stages call
+   `langchain_openai.ChatOpenAI(base_url=$LLM_BASE_URL, api_key=$LLM_API_KEY,
+   model=$LLM_MODEL)`. Provider/model is fully env-driven and swappable —
+   OpenRouter (the default `LLM_BASE_URL`), native OpenAI, a hosted provider, or
+   a local server, with no code change. Legacy `OPENROUTER_*` vars are honoured
+   as fallbacks. One shared helper (`orchestration/llm.py`) constructs the
+   client; stages import it.
 3. **Stage 1 input = reuse-embedded-else-extract.** Fetch the URL; if it carries
    embedded `schema.org` JSON-LD (or other structured metadata), parse and reuse
    it; otherwise fall back to LLM extraction from page text.
@@ -243,7 +245,7 @@ proposes a potential fix**, structured so Stage 5 can act on it programmatically
 > implemented and tested (CLI + importable `run_report(results_path, out_dir,
 > use_llm)`). Deterministic `fixType`/`autoFixable` from a constraint table;
 > LLM enriches `issue`/`suggestedFix` prose via `orchestration/llm.py`, with a
-> deterministic template fallback when no `OPENROUTER_API_KEY` (so it always
+> deterministic template fallback when no `LLM_API_KEY` (so it always
 > runs). Emits `04_report.json` (validates against `violation_schema.json`) +
 > `04_report.md` grouped by severity. Verified on the 2→3→4 segment: violation
 > case → 1 violation/13 warnings, conforming case → 0 violations.
@@ -367,7 +369,8 @@ and marked every field required.
 > `llm.py`, `__init__.py`) implemented and tested. Nodes import each stage
 > module by file path and call its `run_*` function. Entry point:
 > `uv run python -m orchestration.run <url> [--max-iterations N] [--run-id ID]
-> [--no-llm]`. Creates `runs/<run-id>/`, writes `00_input.json`, runs 1→6 with
+> [--no-llm] [--no-probe]` (plus `--check-llm` to probe the LLM and exit).
+> Creates `runs/<run-id>/`, writes `00_input.json`, runs 1→6 with
 > the conditional 3→4→5 loop and all four §4.5 stop conditions. `runs/` is
 > gitignored. Deps `langgraph`/`pyshacl`/`rdflib` declared direct.
 > **Verified end-to-end (no LLM):** happy path → `1→2→3→4→6` CONFORMS; short
@@ -383,10 +386,16 @@ loop. This is a deliverable of this plan.
   Still to add when building the driver: `langgraph`; and declare the transitive
   RDF deps directly — `pyshacl`, `rdflib`.
 - **LLM helper (`llm.py`): BUILT** — `orchestration/llm.py` constructs
-  `ChatOpenAI(base_url="https://openrouter.ai/api/v1", api_key=$OPENROUTER_API_KEY,
-  model=$OPENROUTER_MODEL)` and exposes `llm_available()` + `complete()`. Stages
-  1/4/5/6 import it and gate on `llm_available()` so they degrade gracefully
-  with no key. Stage 4 already uses it.
+  `ChatOpenAI(base_url=$LLM_BASE_URL, api_key=$LLM_API_KEY, model=$LLM_MODEL)`
+  (provider-agnostic OpenAI-compatible; `LLM_BASE_URL` defaults to OpenRouter;
+  legacy `OPENROUTER_*` vars honoured as fallbacks) and exposes
+  `llm_available()` + `complete()`. Stages 1/4/5/6 import it and gate on
+  `llm_available()` so they degrade gracefully with no key. Stage 4 already uses it.
+  Also exposes `check_llm()` (one-shot connectivity probe) + `describe_config()`;
+  the driver runs the probe as a **preflight** (skip with `--no-probe`, or use
+  `--check-llm` to probe and exit) so a configured-but-unreachable LLM is
+  reported (`final["llm_status"]`) and the run continues deterministically
+  instead of silently degrading.
 - **State (`state.py`):** a `TypedDict` carrying `run_id`, `run_dir`, `url`,
   paths to each artifact (`extracted`, `graph`, `report`, `results_json`,
   `report_json`, `raid`), `conforms: bool`, `iteration: int`,
@@ -443,9 +452,10 @@ core build:
 - [x] Fill in the six `SKILL.md` files — done; each documents its as-built
       assets (what it does, run CLI + import, I/O contract, key behavior, next
       stage).
-- [ ] Set `OPENROUTER_API_KEY` + choose `OPENROUTER_MODEL` to activate LLM steps
-      (Stage 1 fallback, Stage 4/5/6 prose, Stage 5 reword). Then the repair loop
-      can close short/missing descriptions to conformance, not just stop on them.
+- [ ] Set `LLM_API_KEY` (+ optionally `LLM_BASE_URL` / `LLM_MODEL`) to activate
+      LLM steps (Stage 1 fallback, Stage 4/5/6 prose, Stage 5 reword). Then the
+      repair loop can close short/missing descriptions to conformance, not just
+      stop on them.
 - [ ] Pick the golden test URLs (§6) and confirm the `googleRecommended.ttl`
       required/recommended split fits DOOS.
 - [ ] Revisit the RAiD mapping (§4.6).
@@ -462,10 +472,10 @@ core build:
       will revisit.
 - [ ] **Golden test URLs** — pick 2 real dataset URLs (one *with* embedded
       schema.org JSON-LD, one *without*) to verify the chain end-to-end (§6).
-- [ ] **`OPENROUTER_MODEL` choice** (default in `llm.py` is a placeholder:
-      `anthropic/claude-3.5-sonnet`) + set `OPENROUTER_API_KEY` — needed to
-      activate LLM prose enrichment in Stages 4/5/6 (they run deterministically
-      without it). `langgraph` still to add when the driver is built.
+- [ ] **`LLM_MODEL` choice** (default in `llm.py` is a placeholder:
+      `anthropic/claude-3.5-sonnet`) + set `LLM_API_KEY` (and `LLM_BASE_URL` if
+      not using OpenRouter) — needed to activate LLM prose enrichment in Stages
+      4/5/6 (they run deterministically without it).
 
 **Verdict:** no remaining blockers for Stages 2→5. The build can proceed down
 the §6 order starting with Stage 2.

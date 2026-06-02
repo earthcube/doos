@@ -20,7 +20,7 @@ Turn validation results into an actionable, fix-oriented report.
   else `manual`); `autoFixable = fixType != "manual"`. These gate the repair
   loop, so the LLM never decides them.
 - **Prose is LLM-enriched, optional.** One batched call writes the human-facing
-  `issue` / `suggestedFix`. With no `OPENROUTER_API_KEY` it falls back to
+  `issue` / `suggestedFix`. With no `LLM_API_KEY` it falls back to
   deterministic templates, so the stage always runs.
 
 ## Run it

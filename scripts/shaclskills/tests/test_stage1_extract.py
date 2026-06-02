@@ -52,3 +52,15 @@ def test_run_extract_via_file_url_and_schema(extract, validate, tmp_path):
     r = extract.run_extract(f"file://{page}", out_dir=tmp_path, use_llm=False)
     assert r["source"] == "embedded-jsonld"
     assert (tmp_path / "01_extracted.json").exists()
+
+
+def test_fetch_failure_degrades_not_crashes(extract, tmp_path):
+    # A nonexistent file:// target makes urlopen raise; run_extract must NOT
+    # propagate it (that would crash the pipeline) — it degrades to source=none
+    # and records the error, still writing 01_extracted.json.
+    missing = tmp_path / "does_not_exist.html"
+    r = extract.run_extract(f"file://{missing}", out_dir=tmp_path, use_llm=False)
+    assert r["source"] == "none"
+    assert r["name"] is None and r["keywords"] == []
+    assert "error" in r and r["error"]
+    assert (tmp_path / "01_extracted.json").exists()

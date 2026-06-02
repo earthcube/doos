@@ -22,7 +22,7 @@ Repair policy (deliberately conservative — never fabricate facts):
                          constraint (e.g. MinLength), preserving meaning.
   * ``manual`` / not autoFixable → untouched, logged.
 
-LLM-backed repairs (`generate`, `reword`) require ``OPENROUTER_API_KEY`` via
+LLM-backed repairs (`generate`, `reword`) require ``LLM_API_KEY`` via
 ``orchestration/llm.py``; without it those findings are skipped (left for the
 loop's no-progress / max-iteration exit). Rule-based repairs always run.
 
