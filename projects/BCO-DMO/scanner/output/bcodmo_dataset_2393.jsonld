@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/2393",
+  "@type": "Dataset",
+  "name": "[cp_depths] - Acoustic backscatter depth data in meters (one of three related datasets) from the AL9801 cruise on the R/V Albatross IV in the Gulf of Maine and Georges Bank in 1998 (GB project (U.S. GLOBEC Georges Bank)",
+  "description": "Acoustic backscatter depth data in meters (one of three related datasets) from the AL9801 cruise on the R/V Albatross IV in the Gulf of Maine and Georges Bank in 1998 (GLOBEC-Georges Bank project).\n\ncdm_data_type = Other\nVARIABLES:\ndepth (m)\n",
+  "identifier": "bcodmo_dataset_2393",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "depth",
+      "alternateName": "depth",
+      "propertyID": "http://lod.bco-dmo.org/id/parameter/808",
+      "description": "Depth",
+      "minValue": 0.5,
+      "maxValue": 200.0,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/2393"
+}

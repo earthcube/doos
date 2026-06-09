@@ -1,0 +1,41 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/772745",
+  "@type": "Dataset",
+  "name": "[Depth ranges for global mesophotic reefs] - Depth ranges of occurrence for major functional groups of invertebrates, fish, and algae on global shallow and mesophotic reefs, 1973\u20132017 (Collaborative Research: Sponge Growth is Nitrogen Limited over the Shallow to Mesophotic Depth Gradient)",
+  "description": "Depth ranges of occurrence for major functional groups of invertebrates, fish, and algae on global shallow and mesophotic reefs. Studies were found in published literature from 1973 to 2017.\n\ncdm_data_type = Other\nVARIABLES:\nPublication_Short_title (unitless)\nSpecies (unitless)\nMinDepth (Min Depth, meters)\ndepth (Max Depth, m)\nTaxon (unitless)\nLocation (unitless)\nAnalysis (unitless)\n",
+  "identifier": "bcodmo_dataset_772745",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "MinDepth",
+      "alternateName": "depth_min",
+      "propertyID": "http://lod.bco-dmo.org/id/parameter/1689",
+      "description": "Min Depth",
+      "minValue": 0.0,
+      "maxValue": 29.6,
+      "unitText": "meters",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "MaxDepth",
+      "alternateName": "depth_max",
+      "propertyID": "http://lod.bco-dmo.org/id/parameter/1690",
+      "description": "Max Depth",
+      "minValue": 0.0,
+      "maxValue": 1220.0,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/772745"
+}
