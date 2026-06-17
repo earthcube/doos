@@ -1,0 +1,1778 @@
+{
+  "source": "/home/fils/src/Projects/earthcube/doos/projects/BODC/bodc_release.nq",
+  "shacl_results": "/home/fils/src/Projects/earthcube/doos/projects/BODC/output/shacl_results.json",
+  "output": "/home/fils/src/Projects/earthcube/doos/projects/BODC/output/bodc_validated.nq",
+  "series_count": 442,
+  "graph_count": 442,
+  "quad_count": 53911,
+  "series_graphs": [
+    {
+      "series_id": "1058137",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:83d2642e3af0943c255199cfd624e7c3d07e060d"
+    },
+    {
+      "series_id": "1346834",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:446bbc7a4c24958b0b3a7cfa495ca4922da9ba2f"
+    },
+    {
+      "series_id": "1346846",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:338e3677809a57dd07bd7115d0ef5f99e526c5fc"
+    },
+    {
+      "series_id": "1346858",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:19da46757c7b87ab625f4759612ff5173d5a7b21"
+    },
+    {
+      "series_id": "1346871",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:a6eee1234e8624fe73282637cbb27972da65fbef"
+    },
+    {
+      "series_id": "1346883",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:59aa824c5f9bddf353384cf97a926552b8cf9d90"
+    },
+    {
+      "series_id": "1346895",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2ecf50354fc6f714fecbb12493d1af394724313b"
+    },
+    {
+      "series_id": "1346902",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:51b71690650437b22312871b3ba8cdd794fa81b8"
+    },
+    {
+      "series_id": "1346914",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:02804b97a3c6e8b4007865d334bfd5a5164f6038"
+    },
+    {
+      "series_id": "1346926",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5205d4fabe9f4be1945c80aa758d08254aabba4d"
+    },
+    {
+      "series_id": "1346938",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:270d8dc8b55fd47215c40d2911c3edfa644e3386"
+    },
+    {
+      "series_id": "1346951",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:65eb29d6c5c2fa0af3c84e18139810dc79ad5a52"
+    },
+    {
+      "series_id": "1346963",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0089f5038f4fbcae89334b9c3f664dac94608efd"
+    },
+    {
+      "series_id": "1346975",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:53093a49b22fa5abe2fc37968af6278dd479076b"
+    },
+    {
+      "series_id": "1346987",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:04fbaff3d10d57a5943f03ca3824a3915154f4b1"
+    },
+    {
+      "series_id": "1346999",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4feb10ef96a0501500dd7158f1e71f93e50da4dd"
+    },
+    {
+      "series_id": "1347002",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2575ff8afc4ad525360c895b3a63dc1e846c0d37"
+    },
+    {
+      "series_id": "1347014",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5b29db612a14c6e99a5f2dcb5d7bb82722a595a2"
+    },
+    {
+      "series_id": "1347026",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:58999581dd9722f648e811321dfa19b4b7468e0f"
+    },
+    {
+      "series_id": "1347038",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:227d3f3bda440b799310ed6a64c17071eec2dbdc"
+    },
+    {
+      "series_id": "1347051",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2185f2770ec4bfda7d05b8037888188f286c0a52"
+    },
+    {
+      "series_id": "1347063",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:024cc5efca09b67900c235d110c14c3d64e44b7a"
+    },
+    {
+      "series_id": "1347075",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1cfe76c8f708f0af02d7f841c6f885acd45f40b5"
+    },
+    {
+      "series_id": "1347087",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:895f2ce22d611b2db85629e6fcf546c9b6156770"
+    },
+    {
+      "series_id": "1347099",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:94e7f8a6896273d917c0a8dadd7ff6f71a64e172"
+    },
+    {
+      "series_id": "1347106",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1839ddccb8abf72534bf5be6e92730da09128dbd"
+    },
+    {
+      "series_id": "1347118",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:a479202dd86cf839dc86606b484ee5739de984e6"
+    },
+    {
+      "series_id": "1347131",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:45a151eec9a20bb508aff1f531eb9b1b69f54b1b"
+    },
+    {
+      "series_id": "1347143",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:06ec9175d14f1e226586def54f0d64c43e7e9caa"
+    },
+    {
+      "series_id": "1347155",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:16536341528a4be3a71985057afdcb221d031c2b"
+    },
+    {
+      "series_id": "1347167",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:6a5795bde00722ec5fa18919dd7d5ab626c0946a"
+    },
+    {
+      "series_id": "1347179",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:22ed143f840160715b197824073b60a1a38d3442"
+    },
+    {
+      "series_id": "1347180",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:be0db8cc0afbc73b95c438b33cf946f4f98b2c5a"
+    },
+    {
+      "series_id": "1347192",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:422fc55cac86892d11357f325c95798470303dab"
+    },
+    {
+      "series_id": "1347211",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:94043316c9557226153edc445d89f77c66b8693b"
+    },
+    {
+      "series_id": "1347223",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:18d0b43d7e21050295465891dfa1f67c81113d6c"
+    },
+    {
+      "series_id": "1347235",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:23657882724476ec9de0d02ca92d595c56cc5588"
+    },
+    {
+      "series_id": "1347247",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:01ac23e5bdeadd686c46f86c7bdee55f29791ef0"
+    },
+    {
+      "series_id": "1347259",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:77bb82cfca1fe9bde2082f9dafb15bc236241c08"
+    },
+    {
+      "series_id": "1347260",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0c4750e759c29c1b989174c48aad987f32101cd9"
+    },
+    {
+      "series_id": "1347272",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1b108ee119831f5e6b825bb03f9cb2e99318d4a6"
+    },
+    {
+      "series_id": "1347284",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:67c6648888ad654b4363f7de29435653f845d318"
+    },
+    {
+      "series_id": "1347296",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:029fa0236fea998c71b2bd6458811289e8133b44"
+    },
+    {
+      "series_id": "1347303",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1bcd282a0e071011a50b0c84e05d95a7fc682a71"
+    },
+    {
+      "series_id": "1347315",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2f5caab55d75cda4b5ff384d0e06135ecaa32947"
+    },
+    {
+      "series_id": "1347327",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1d06bcee4c806edcf34e6d55a1eccda01e6b5d2f"
+    },
+    {
+      "series_id": "1347339",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4568dae84b181178530b2bd1436b9171e7407f2c"
+    },
+    {
+      "series_id": "1347340",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1478b85b6345e69653ff28896678e2636af18a04"
+    },
+    {
+      "series_id": "1347352",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:11e97fa77e37168bd1dcca0003d82eae9034c2d7"
+    },
+    {
+      "series_id": "1347364",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5f1370a89a2dbdfc2674073799e66fbd91b8fbe9"
+    },
+    {
+      "series_id": "1347376",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2f48de57cbab78177295e76ac9280e49cc271cb3"
+    },
+    {
+      "series_id": "1347388",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5a0b61c55dcf55839f86e53457cebe94beb9dbfe"
+    },
+    {
+      "series_id": "1347407",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:13654ddeee37dc586648730006e4f24052487a4a"
+    },
+    {
+      "series_id": "1347419",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:822c548dbf36da111fd7509cc0000e28d5c3029b"
+    },
+    {
+      "series_id": "1350728",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1a529ee228cb3847a10d37c56bcfd3de63288100"
+    },
+    {
+      "series_id": "1350741",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:050ec65a005c747de649704a4cdcd6d4d680495a"
+    },
+    {
+      "series_id": "1350753",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2ba75c99cc0354e8e841eabedb20a0c3f1cfbff3"
+    },
+    {
+      "series_id": "1350765",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0e68b1a403039eb36a670f98cb56e590cae23f1d"
+    },
+    {
+      "series_id": "1350777",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1605b64b56b63384a380de40f0463ea67c89f516"
+    },
+    {
+      "series_id": "1848176",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:7ab1ac13553e7fbec7c180cf47e34be12f9c4eec"
+    },
+    {
+      "series_id": "1848188",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:76c0f00a679d1a7b3e97ee3706804e892fbc64a4"
+    },
+    {
+      "series_id": "1868602",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:07eff13733af1e21d048fb5e443b84cf5fc22751"
+    },
+    {
+      "series_id": "1874226",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:39a8466312d7b6f3983a2c6172d953095c1f4a70"
+    },
+    {
+      "series_id": "1874238",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3d41a9daa71f7877abf8c0ed53c0e38bcafa8690"
+    },
+    {
+      "series_id": "1874251",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:326c96948f5063e7eb3234f68b8dc1ccd65a784a"
+    },
+    {
+      "series_id": "1874263",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4a6c23b3424c656d9a2b5208365589df83a3b977"
+    },
+    {
+      "series_id": "1874275",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0e5690a9c65459a75f41fdf6f1d043e6655d4744"
+    },
+    {
+      "series_id": "1874287",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:24d428cacb08e5eb87fc8e3293e8d736e14d5078"
+    },
+    {
+      "series_id": "1874299",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5fd9f90f038e9cf44803423acac4e03dda5dba18"
+    },
+    {
+      "series_id": "1874306",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:266a4d3725a7459b0a7c5300dbb3f979dfed7e16"
+    },
+    {
+      "series_id": "1874318",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0a2e9113bf7c163adcd0538c4332a2af96d35fdb"
+    },
+    {
+      "series_id": "1874331",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:323e8aa132a526563cd910fd6f86b403499419f9"
+    },
+    {
+      "series_id": "1874343",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:39bc7c22fcac550b04bd4d047d0f2386376d1940"
+    },
+    {
+      "series_id": "1874355",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:a5ddfd438377afe71a50a067067829c1cbae39ce"
+    },
+    {
+      "series_id": "1874367",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:9eb06fb5d855076a11d7bcfe81bfe9131d635edb"
+    },
+    {
+      "series_id": "1874379",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:a52401fb01ff5d76a59fa411883f278c3502b792"
+    },
+    {
+      "series_id": "1874380",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:608b1b7ee627864eb4dfc35c5e5545bbd705d8eb"
+    },
+    {
+      "series_id": "1874392",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:003f7d11d796c5fdceb33afcafa796b2fd663309"
+    },
+    {
+      "series_id": "1874411",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:938690bc26f29adea558ea48ab9dbb4c57b69c3d"
+    },
+    {
+      "series_id": "1876626",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2dc1101a3a74924130ad4d7e1bddb26b4d992c1e"
+    },
+    {
+      "series_id": "1876638",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1a064666b07415b0e72a60e7e0f7d70f654f4e8c"
+    },
+    {
+      "series_id": "1876651",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:6284f72c43a5d9f3eb6eb4dbb85de93bf8dcec78"
+    },
+    {
+      "series_id": "1876663",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2c819af9354bf48627761589c65c0606dbf95fb8"
+    },
+    {
+      "series_id": "1876675",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:628cec99aa92023895497c3bc6b75b800669aa7b"
+    },
+    {
+      "series_id": "1876687",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1d94d7f2e6938714da201f7d5f4db5d146e8671d"
+    },
+    {
+      "series_id": "1876699",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:24d410f8f941432544efeefd191fe1cd008f1138"
+    },
+    {
+      "series_id": "1879544",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4c841d2f39a3c3c129ca3785e4c6dd17e9b5d937"
+    },
+    {
+      "series_id": "1879556",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:9e68d9d4528939de1e12e18cbd16182e29379684"
+    },
+    {
+      "series_id": "1879568",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:9957d80f3a95e96bc54400ee9679c0aa46e2b68a"
+    },
+    {
+      "series_id": "1879581",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:35cc6a5d93e190128d27dd43d6c6f9f7dc462c27"
+    },
+    {
+      "series_id": "1879593",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:7c5f48840b108e612afa3500aa8b06d4ab13072a"
+    },
+    {
+      "series_id": "1879600",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:78dbae527b99f23a07649b5fc4f3b404d8b442f1"
+    },
+    {
+      "series_id": "1879612",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3149116c1b0afdd431b1b323a97abea656b8c429"
+    },
+    {
+      "series_id": "1879624",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1b36bdd8c556da0e5a23b3348ef41953999f3f5d"
+    },
+    {
+      "series_id": "1879636",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:29a078e5634c072fcf2e097091f0241eec179ed1"
+    },
+    {
+      "series_id": "1879648",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2c0c00415d2a2be4930e481d8ebc8ad6d6cb42fb"
+    },
+    {
+      "series_id": "1879661",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:b87803bc9367c9f1372404cb91fa0756b91c53df"
+    },
+    {
+      "series_id": "1880601",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:36182206cbda118e7903cc6f9c66161dfe6b7f57"
+    },
+    {
+      "series_id": "1880613",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:28c57ce2309636d212c0329e9615ecf16de7df43"
+    },
+    {
+      "series_id": "1880625",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:81e6b78f987262bc888b16b003416263bc317fa3"
+    },
+    {
+      "series_id": "1880637",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0aaaa295327510a53b81f27cef7635bc3aa9a74d"
+    },
+    {
+      "series_id": "1880649",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:48ae6159c0a85af104b8823eab74e536daee1008"
+    },
+    {
+      "series_id": "1880650",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4f24efab1befb0862f1f3b83eb3fd60851ff6876"
+    },
+    {
+      "series_id": "1880662",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3537b4b293ad37cdcd75dd465673997736c8623e"
+    },
+    {
+      "series_id": "1880674",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:02c12689618f65a8c610daed7a5e373b92fd5c29"
+    },
+    {
+      "series_id": "1880686",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:6cee4dc4a232bcd7b0fe38799434672e57170e91"
+    },
+    {
+      "series_id": "1880698",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0335fea43c64c656cfd4d49ac5a8ce72d7b01c8e"
+    },
+    {
+      "series_id": "1880705",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1dca72663251b36e504d631a70201cc1f41a7bd6"
+    },
+    {
+      "series_id": "1880717",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1a6e0d83dafddce23a021ec196eb9513fcad2fa5"
+    },
+    {
+      "series_id": "1880729",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3bc6b56f351f6ef79b3c662477af2f42a3204637"
+    },
+    {
+      "series_id": "1880730",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:063617e00f2583f7537a7dfd5ca75387b671cc55"
+    },
+    {
+      "series_id": "1880742",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1a2198157d9fe5822916dfb3692407b41b048ff6"
+    },
+    {
+      "series_id": "1880754",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1236b2068d0a06ed3c9e79ce48b1bae60fcc1b2f"
+    },
+    {
+      "series_id": "1880766",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:a89c3047991af9f902c06e5315846b794c89788a"
+    },
+    {
+      "series_id": "1880778",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:17c834fee4159db2044dd9ce0467fa5acd531dfe"
+    },
+    {
+      "series_id": "1880791",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:69b0a7fb51160621c47f0588526b1c72c454da2a"
+    },
+    {
+      "series_id": "1880809",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1efd03e47a99c852eabfa26308c987a517a5921a"
+    },
+    {
+      "series_id": "1880810",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:02259be3d525ac7dbe747c74190729eb89347d3b"
+    },
+    {
+      "series_id": "1880822",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:70ff09b6080ccfc8c11c9934018313bc66515ae5"
+    },
+    {
+      "series_id": "1880834",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:157effd0755765c46e9677bc6c202e89fb438cb0"
+    },
+    {
+      "series_id": "1916833",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4938cf16bc4ddf6d553d44bd44e70ead59f84ae3"
+    },
+    {
+      "series_id": "1916845",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:8676ade32cf2e7048974415ded4b5e125ed38560"
+    },
+    {
+      "series_id": "1916857",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:734b583a993261bde1fd5025065d5afea6bd33a9"
+    },
+    {
+      "series_id": "1916869",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1961bbb83b5c8d1a5454d6fdcd4ef1ea7f2de9d7"
+    },
+    {
+      "series_id": "1916870",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:303e74060298e0fc7f60e945da42e8d1af0d2f58"
+    },
+    {
+      "series_id": "1916882",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:24817c088a116cd10174a892e8c814ffe55a455a"
+    },
+    {
+      "series_id": "1916894",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:06d566a6adce017fb72f95a32da42abfec14812a"
+    },
+    {
+      "series_id": "1916901",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:49c5fa1e4ef37eebb309eff3febd9bd5da5e064e"
+    },
+    {
+      "series_id": "1916913",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:11ba9d2787de797a5f8bbcfc25c531fd42df2587"
+    },
+    {
+      "series_id": "1916925",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5ce7d7905340209c1ea1cafff48747d88ad6a044"
+    },
+    {
+      "series_id": "1927702",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:198418e1b4eb43b493bc0b8dbe46e71feb645797"
+    },
+    {
+      "series_id": "1927714",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:41b307ad64f5684243b601d265c6f5d35772975b"
+    },
+    {
+      "series_id": "1927726",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0945ed91e620f42ed1b60b38f9b97cdb2ee51e0a"
+    },
+    {
+      "series_id": "1927738",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:10394372cc17e6b60cc62741e4a3cb7ae6fc69bf"
+    },
+    {
+      "series_id": "1927751",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:36dbbd1ea09cd0c4be1052316ba648a1df8f0693"
+    },
+    {
+      "series_id": "1927763",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:15532c7d311707b067a3d52674ca89abe229ba0c"
+    },
+    {
+      "series_id": "1927775",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:9ef06f60f50e1f42cfa96d115df9626254f71ecf"
+    },
+    {
+      "series_id": "1927787",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0207352c847bd294d74658629de5311ab41a6480"
+    },
+    {
+      "series_id": "1927799",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:24be7df6916215b661ff638cd7d039441999ef9d"
+    },
+    {
+      "series_id": "1927806",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:177817be8ff2b82d7fb4a4fc49e0f7a05393d48d"
+    },
+    {
+      "series_id": "1927818",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2396c5a188caaf13cc5296124aec4c367debf2c4"
+    },
+    {
+      "series_id": "1927831",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:077588f29875735478faf7b95d60cf716dfaf9a3"
+    },
+    {
+      "series_id": "1927843",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0375db90d8ef4591d6b017cc2a6f9158db0be3e1"
+    },
+    {
+      "series_id": "1927855",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:9c2219696f084cb3481ea06e9274c7ac2eedade9"
+    },
+    {
+      "series_id": "1927867",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1a8983c0e7ca420fdfc93bb58e65ef37b7dbff20"
+    },
+    {
+      "series_id": "1927879",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3f1bf9047b36d269a9233cfeb08b3e2d91d6e371"
+    },
+    {
+      "series_id": "1927880",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4309c27685bfb5a5b77c869ae901de017b24bfa1"
+    },
+    {
+      "series_id": "1927892",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:7ba20a3cea98f777bd5567bf4bfe75cb7b967ce7"
+    },
+    {
+      "series_id": "1927911",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:626f96e6023903c5f304a2b0ee376daf25251121"
+    },
+    {
+      "series_id": "1927923",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:261f1b71847d82bb198f7b988eb725ad7596117e"
+    },
+    {
+      "series_id": "1927935",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:17df7af7fcf56ab693afe26e19da531cb2c1834e"
+    },
+    {
+      "series_id": "1927947",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:70d094397708f839654e3f1748f4a0593efcbee1"
+    },
+    {
+      "series_id": "1927959",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:8ab144a3e97ef7af84680435315aacd0fcd971ed"
+    },
+    {
+      "series_id": "1927960",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2556752ba1c77d3ac819b479f74001a452248f8d"
+    },
+    {
+      "series_id": "1927972",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0a8338a535d4133f20df649d2d699e9b63778199"
+    },
+    {
+      "series_id": "1927984",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:69ec473271d0cf8ce401a65bbb970bbc6ff6458c"
+    },
+    {
+      "series_id": "1927996",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:399181f74557d7c1715ff639fb6227b6791fb2b8"
+    },
+    {
+      "series_id": "1928011",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2d680709fd968554afa99869f28f2e0a01e69255"
+    },
+    {
+      "series_id": "1928023",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:14dd2c57b0416c1bae0a20b06914ea4617aef280"
+    },
+    {
+      "series_id": "1928035",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:50b7be44f2128ac95bda896dd01270d168da31cb"
+    },
+    {
+      "series_id": "1928047",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:037f59b101b4d83db8670e0aac9c370d548b3db6"
+    },
+    {
+      "series_id": "1928059",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1eb6a60c5ecde7dbbe4bda56d8cde00046ebefa1"
+    },
+    {
+      "series_id": "1928060",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:163505c8a9fdbf9e08bb0b57d8a3d481415cfebe"
+    },
+    {
+      "series_id": "1928072",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:789bff55c0ea56afafb63d3fd829ae9c4f5fd659"
+    },
+    {
+      "series_id": "1928084",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:6ed57128f3906125e269f28415c4d237ef7fc158"
+    },
+    {
+      "series_id": "1928096",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5c2389a38d41fea23832c5f84e940901ba56afea"
+    },
+    {
+      "series_id": "1928103",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:08ca09e8c9952c328bca231ea84ffd8b03c25ee7"
+    },
+    {
+      "series_id": "1928115",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1567ba869a223de98beb91a4ca3d1c6390e0fd22"
+    },
+    {
+      "series_id": "1928127",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:ad5a138cc99034e9e9f38f5bcfef396008efa384"
+    },
+    {
+      "series_id": "1928139",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3e744653023ca7384841977eecda573f8ff354f5"
+    },
+    {
+      "series_id": "1928140",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:149022fd4448cf609c93972316a4ba9aa3e5b71e"
+    },
+    {
+      "series_id": "1928152",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:19208c76301b53d1a0102c6b31cfdac337faa70c"
+    },
+    {
+      "series_id": "1928164",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:b4c9a5da663d94ed00051f478218033bc4c5ea6c"
+    },
+    {
+      "series_id": "1928176",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:ad585e9ebb532393a1317f3f3d89505a3b51d558"
+    },
+    {
+      "series_id": "1928987",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:96e4ccf12b35aae2c92e484a1c831ed318339c75"
+    },
+    {
+      "series_id": "1928999",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:000269c1db8f23d1b231bb6617fdb30981a9ffaa"
+    },
+    {
+      "series_id": "1929002",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:47507cff55538d3de3f33fa34da2fcf985273382"
+    },
+    {
+      "series_id": "1929014",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:57fac73b25bb18e1c01cadbca5d4d8c246b14ec9"
+    },
+    {
+      "series_id": "1929026",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:44e217d8a5321e62148da7961d1d21d8f16d8df5"
+    },
+    {
+      "series_id": "1929038",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1816d1c7b41c453e71a0f6498683785920741307"
+    },
+    {
+      "series_id": "1929051",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:62acc39ad149aa2afe9e7cd2ce2d0a75647abdbf"
+    },
+    {
+      "series_id": "1929063",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:a7544686aa5dee9788002451fed2c2332457b072"
+    },
+    {
+      "series_id": "1929075",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2b6138bd7024b61666f726ca9b6c21680f7c5590"
+    },
+    {
+      "series_id": "1929087",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:30f5a6f4657ab19f02457e790c8c4386e8d76b62"
+    },
+    {
+      "series_id": "1929099",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:677ce8f6702ce2660e282692f1c8c58c42c155e5"
+    },
+    {
+      "series_id": "1989607",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:6089c96b71b87647999417fc1c8a0cd8e7c5e7bf"
+    },
+    {
+      "series_id": "1989619",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0b50e2950bfcf51fc6353b04e365df44ad0b6dcb"
+    },
+    {
+      "series_id": "1989620",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1b71702f02981a6027aee52fc3ba4e626a966675"
+    },
+    {
+      "series_id": "1989632",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0017b0da950872eb00e6c5aea7a75e8caac12045"
+    },
+    {
+      "series_id": "1989644",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:436ab6537bc025b6c1d04cb429c8b312d1b30b75"
+    },
+    {
+      "series_id": "1989656",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:528626bd4a0766c47823be3ffe59e77ac0b3b8fc"
+    },
+    {
+      "series_id": "1989668",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:8cc0ac1ab6829f016b00e49d8ecb60b886a987ac"
+    },
+    {
+      "series_id": "1989681",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3a97c42559b3a3b6417e33a7c09bebb7540497ee"
+    },
+    {
+      "series_id": "1989693",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:54a957df4b7fb64f2a40ccef89a8e082301c6b76"
+    },
+    {
+      "series_id": "1989700",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:16866d75e5a7a72ce6273843eb287d1747d83a9d"
+    },
+    {
+      "series_id": "1989712",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:32dc21a50086216efbe4cc6c7c8a4ceab236a06f"
+    },
+    {
+      "series_id": "2001625",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3f284ee698fa858d2f3a5d32f2d1a3d80f8b6f8f"
+    },
+    {
+      "series_id": "2001637",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:7b00bc77f4505ed150500ce0543c498b422b140a"
+    },
+    {
+      "series_id": "2001649",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:20dca755f65389db3a677c492360beb218997e22"
+    },
+    {
+      "series_id": "2001650",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:96aba96eb7f6116a6d4ec4c0260a7cf4cd9200f3"
+    },
+    {
+      "series_id": "2001662",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:e38eada26d51bf7c8bf2bceefe6a3f63ac991dbd"
+    },
+    {
+      "series_id": "2001674",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0d2bee5f3988b56b2b27650e052b540d59a9cd85"
+    },
+    {
+      "series_id": "2001686",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:8e86f0bad5c3f62f0c0741a2f6638fc3beaf989a"
+    },
+    {
+      "series_id": "2001698",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:295c2055735ff71b4d2110af9ac923301f45a20d"
+    },
+    {
+      "series_id": "2001705",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1debf1554526bdd198dae32530eba0e680abf3b3"
+    },
+    {
+      "series_id": "2001717",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2402b9c9dfbd99bde970ef3cf74782ad77002eaa"
+    },
+    {
+      "series_id": "2001729",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:e2c59232ab08fe2e16a4e257906022f17c9f1095"
+    },
+    {
+      "series_id": "2001730",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:116456b5d77b2b4da7d0b38caa2a98ccba007719"
+    },
+    {
+      "series_id": "2004101",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:d080330485bfcf829301c856e2731d19b988d84f"
+    },
+    {
+      "series_id": "2004113",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:9bfbcaa54073149dcc05252ab9c4ceb880ff31e6"
+    },
+    {
+      "series_id": "2004125",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5bfb0ce6a00234c57bca13b7cef91174c6052dab"
+    },
+    {
+      "series_id": "2004137",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2e4cf1714904b75743510f9f303b7b049ca671fb"
+    },
+    {
+      "series_id": "2004149",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:58e3374d2fe2985f1cf921088de43614a86d8443"
+    },
+    {
+      "series_id": "2004150",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2f9ab11c07e274b26d38e49ba5b98d6c3886b94c"
+    },
+    {
+      "series_id": "2004162",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5dc9093e3ba2a2a3cff64709bcb45aaebc63035d"
+    },
+    {
+      "series_id": "2004174",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:263d84b41f0b2b6a8a77ccfeb70f68f18fe44c9a"
+    },
+    {
+      "series_id": "2004186",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:7ebae02d1164933eabd75401150c88126ec0d914"
+    },
+    {
+      "series_id": "2004198",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3062909e80c87331a623b28c896461ff180ee847"
+    },
+    {
+      "series_id": "2004205",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3ea9f6dc37b3c1f88a1afd493a01de405e41f267"
+    },
+    {
+      "series_id": "2004217",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0b91d7a5a6cb4d1e743b96a828983102c1e372af"
+    },
+    {
+      "series_id": "2046158",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1366b86a263aa83da1ce5bb9d2ea401aac48b79d"
+    },
+    {
+      "series_id": "2046171",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:02dfd7a3286343e9e37f61e6be26400fa413a779"
+    },
+    {
+      "series_id": "2046183",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:45331c93953aa4771e2fc3c040ae259473774402"
+    },
+    {
+      "series_id": "2046195",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:733ef02c77c4d0ac44fd23dfc626076403c9fb58"
+    },
+    {
+      "series_id": "2046202",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:201df27a34c354f211f6c86fab36f76e53f6bed4"
+    },
+    {
+      "series_id": "2046214",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:187cf218b78d9fab493487a4ffffb260040d5b1f"
+    },
+    {
+      "series_id": "2046226",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1568157f394e8b8e847a7cd24f81a0e78013427a"
+    },
+    {
+      "series_id": "2046238",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:71ec35cb507345817d4de93554f283eb2f5e1f50"
+    },
+    {
+      "series_id": "2046251",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:bb2f15012aeb6b1a88470be5365e0aae85464dca"
+    },
+    {
+      "series_id": "2046263",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:600cd1535c418160b641d8b1c15dd8e93d038bb3"
+    },
+    {
+      "series_id": "2046275",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:7082a12c2c12227362ed431233e9ca9963c20d70"
+    },
+    {
+      "series_id": "2046287",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1eb7fa81b4d0b88220fb42a3ccf17d259ba676a4"
+    },
+    {
+      "series_id": "2046299",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:91112a7cb012fa6e19ccd23c0881abf142e08f53"
+    },
+    {
+      "series_id": "2046306",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:91a139726092324bbebd840be1a9684d5a7ff22c"
+    },
+    {
+      "series_id": "2046318",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:8e1be9a62027e655dd039437aff05aa49a414602"
+    },
+    {
+      "series_id": "2046331",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0db5f3d11e78129e0ddebe3b438a3e70baf890a7"
+    },
+    {
+      "series_id": "2046343",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:580e0a781c57b4e02c835212dd55baaffc6bf87a"
+    },
+    {
+      "series_id": "2046355",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:8d3c4c472bb14080c4796abbd4fe75f28bfe2c57"
+    },
+    {
+      "series_id": "2046367",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:065a6c9db2f4775f69915fd91fdf63a3bdc6c660"
+    },
+    {
+      "series_id": "2046379",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1d7441a567f80c806fc0bd1b863b56687dcd110c"
+    },
+    {
+      "series_id": "2046380",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:023af31728e3409854002f869f31ca8b1143b3b5"
+    },
+    {
+      "series_id": "2046392",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:55582051104276325f12f7a0ad8a3d6c3638d8a0"
+    },
+    {
+      "series_id": "2046411",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:542bb08eb787aa2302ea063cfced61f029572c5b"
+    },
+    {
+      "series_id": "2046423",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2bd2c577fd4d86659b81de7f98918839b38e045b"
+    },
+    {
+      "series_id": "2046435",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:19baf2b8ff6a08caeb402cd866241cc9fc09fb58"
+    },
+    {
+      "series_id": "2046447",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5522197afcd4c8fdddd2752b34d541dc979fc1b4"
+    },
+    {
+      "series_id": "2048706",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0f05c74d16c6f2f2322408e95b03a1413c9b34f0"
+    },
+    {
+      "series_id": "2048718",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2d2452dc5b94a91d6e009b18eb90eccc5a56f265"
+    },
+    {
+      "series_id": "2048731",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:7a7fbead21807b1f018e35985c9554cc58391616"
+    },
+    {
+      "series_id": "2048743",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0b5a589e320cee80e75af433d575d8b2fa536e30"
+    },
+    {
+      "series_id": "2048755",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:013156cbb63315b231af8c492e0caccd3e5518b0"
+    },
+    {
+      "series_id": "2048767",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0f3036371941be751bcfeba171450d4c35af40d4"
+    },
+    {
+      "series_id": "2048779",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:329d8f847ac6849b5d973def49cea1c40325c59e"
+    },
+    {
+      "series_id": "2048780",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:256673e228930c723fdd36eedac5513707cc77e6"
+    },
+    {
+      "series_id": "2048792",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:a1758d515220becb71f3fcba01611088f1828c3f"
+    },
+    {
+      "series_id": "2048811",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1a263966b78bf0509f24e3ecc5272a7eecf75c28"
+    },
+    {
+      "series_id": "2048823",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0c6b2566e0ed11470dfe3174da9c138b84710785"
+    },
+    {
+      "series_id": "2051726",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:028bd1527defe5c1628b5658101558c84a01a5cd"
+    },
+    {
+      "series_id": "2051738",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4cc9a47179a645beb40224ede9bdfa314bca1fc7"
+    },
+    {
+      "series_id": "2051751",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:19c9217eb7acf378f9b0a79a0407b8a50a5342af"
+    },
+    {
+      "series_id": "2051763",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2fae7a15c8f564295df3e742f4c6bdb39828a37e"
+    },
+    {
+      "series_id": "2051775",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2e8a918a957384a6864fefdcf27cdbdb7d15da19"
+    },
+    {
+      "series_id": "2051787",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:17f97abda77bad3d3e3367d7e045b5e8fed4b3e8"
+    },
+    {
+      "series_id": "2051799",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4b68410b3e4295ff50589b32598f1967cff66c9d"
+    },
+    {
+      "series_id": "2051806",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0d45609761e2eb30deab89a1d8c5189b57716020"
+    },
+    {
+      "series_id": "2051818",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0039c857a0decd99f5e1cefa220f181ca221084d"
+    },
+    {
+      "series_id": "2051831",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:05cef0477477cd2fc48f12b4599da3fca994819e"
+    },
+    {
+      "series_id": "2051843",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2569cf071596d5e2530c835e52845bf5f8b43d94"
+    },
+    {
+      "series_id": "2051855",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:158e3421ab8c766898ff2121d0ef5795032c8599"
+    },
+    {
+      "series_id": "2051867",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:010770e8bdb6a5cab7c850113c49cc0bdb1c393f"
+    },
+    {
+      "series_id": "2051879",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:01883a70ec96769e60dde736bb9521516f5753bc"
+    },
+    {
+      "series_id": "2051880",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:091ec1cdde04211538d27baf08179cd5bed25712"
+    },
+    {
+      "series_id": "2105768",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:19e82fd3ccb2f0761666890de64443ce95f90670"
+    },
+    {
+      "series_id": "2105781",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:53d74807168f142817b38aa44840f9bfd8f867b8"
+    },
+    {
+      "series_id": "2105793",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:7769ae68df87f078ca96dbd7df2120040b89fdb5"
+    },
+    {
+      "series_id": "2107566",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3dea65c74bcc30312a0ac4f85530d5a7d169f54e"
+    },
+    {
+      "series_id": "2107578",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:24e4c72755ef2906f4e8b950b69e8e268a405023"
+    },
+    {
+      "series_id": "2107591",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:a22272e6c1c91e5c6a31efb633e70a03ce45ce34"
+    },
+    {
+      "series_id": "2107609",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:290b206cc78aac9bf4f9cde41f4da14292f47e2f"
+    },
+    {
+      "series_id": "2107610",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0df28d4f3348de0ca45c3d7de183d2379e59a7ec"
+    },
+    {
+      "series_id": "2107622",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3110e11b97cb5efc06989b1fa2319f4f0489c829"
+    },
+    {
+      "series_id": "2107634",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:413e585555bd95312e34da1b6c4528e4a861e97b"
+    },
+    {
+      "series_id": "2107646",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:80494650763eefc3e9d181aec0a3aad0629b8326"
+    },
+    {
+      "series_id": "2107658",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:333363bb0466cd0774f849e27f53443cd4f6e6a5"
+    },
+    {
+      "series_id": "2107671",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:709188bb984cc7164458bbfc23b04c574bd10071"
+    },
+    {
+      "series_id": "2107683",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:34872955287c4c80057ef4ead7db543f2c30c46d"
+    },
+    {
+      "series_id": "2107695",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2317749c02fba8336fa76425fafae974b4873474"
+    },
+    {
+      "series_id": "2107702",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:9ad4648f9c9a72180590f943c0ad2269d9335273"
+    },
+    {
+      "series_id": "2107714",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:59c1678bda0f8cc09cf0e8f6193caa0af0833b9a"
+    },
+    {
+      "series_id": "2107726",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:004b538cb93e11b1a315db7ef959eb1d37d956c2"
+    },
+    {
+      "series_id": "2107738",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0d9d0f77661a4ad39b77c7598616cdbea2812ba0"
+    },
+    {
+      "series_id": "2107751",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:418bc29029e2fa5c8a1e0a8ad974d9862f4ac72d"
+    },
+    {
+      "series_id": "2107763",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4aade28dfc31d00abd3e4b70263c87e359292465"
+    },
+    {
+      "series_id": "2107775",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0b0334c4313f790b818680d11d32b63ae9c2923a"
+    },
+    {
+      "series_id": "2107787",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0562c965d282b58d9d5a99f9758df2fb24b7ca6f"
+    },
+    {
+      "series_id": "2107799",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2b8ddec3a1c6de9ed61225349b8b82b6fdb0f7db"
+    },
+    {
+      "series_id": "2107806",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:257dbbf104dc5d1b9f5559ded79dcd22d9d700cd"
+    },
+    {
+      "series_id": "2107818",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1ed6498f723404cbc905ca8487f43c79a95ddc64"
+    },
+    {
+      "series_id": "2107831",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:6d74f3db231b5053a26c16c696bf85fd9038e4cc"
+    },
+    {
+      "series_id": "2107843",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:02877f83ca3462447b98c7a9d093368ccc61d566"
+    },
+    {
+      "series_id": "2107855",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:8ecb2576210d28e6bd5293443e7ed45826c596ad"
+    },
+    {
+      "series_id": "2107867",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3770c6e0c2231409ce43c165db3ff4c81acb61b4"
+    },
+    {
+      "series_id": "2107879",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:68ce99ae4f3eddc189187a6b1e6ae87e065f9eed"
+    },
+    {
+      "series_id": "2110642",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3c916f6093e12093b344d7cdf47bce3a552ce6b2"
+    },
+    {
+      "series_id": "2110654",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3dc588d6d5ed06dd9d24e204efa102087836693d"
+    },
+    {
+      "series_id": "2110666",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4cce011652d57acc219ad6ac09a8cd4ea0c1b274"
+    },
+    {
+      "series_id": "2110678",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0e404a3878a123844d74f02991bfc858bbf54151"
+    },
+    {
+      "series_id": "2110691",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3786638f80f4cf79bb599255c603763f7af38c3a"
+    },
+    {
+      "series_id": "2110709",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:20488a0df63be8bb4fd6df42f67a397f721e44b1"
+    },
+    {
+      "series_id": "2110710",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:07042058e4f948b23758f279374a64d7e5ff0f14"
+    },
+    {
+      "series_id": "2111830",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1fcb3a7e6726be31393865466b6b324ee6b3d11d"
+    },
+    {
+      "series_id": "2111842",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:74f7738fd5b388dea657c117da1c5ec2a5f0d7d3"
+    },
+    {
+      "series_id": "2111854",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:04317748edf041cec4f1b719915f6aa5515cbf4e"
+    },
+    {
+      "series_id": "2111866",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:8b3c317b672d70ee6ae4f61b8957175f16b27d27"
+    },
+    {
+      "series_id": "2111878",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:248d4a98fb2eea3567b944d623bab65311d4613d"
+    },
+    {
+      "series_id": "2111891",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2bae08dcf8bfe207536b3aa570839f2f3f6b4f0b"
+    },
+    {
+      "series_id": "2115787",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:52a7e7e65bc7ae735140b21a0a1c77cd357f90ee"
+    },
+    {
+      "series_id": "2115799",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:7d609d43457a3a93ce61b87aa7791e0d1f7198a0"
+    },
+    {
+      "series_id": "2115806",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:48c6c8eb2d6379a4176f5ef5aa9fb693dc8f701d"
+    },
+    {
+      "series_id": "2115818",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:8eeb6d9645f24c972adfb51a9d0f705fae1a74b6"
+    },
+    {
+      "series_id": "2115831",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:06e23817b95fe9dda3623fbd1c41a2fd9e509ff8"
+    },
+    {
+      "series_id": "2115843",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0180b80760825a75e205ad559cfb2de79e009d82"
+    },
+    {
+      "series_id": "2115855",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:cefd55189a7e5491672c2236421b7d3954c60253"
+    },
+    {
+      "series_id": "2115867",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:8d14f7d42a5f92687d392f71edcbe7a58dd2c9a1"
+    },
+    {
+      "series_id": "2115879",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2222334c04ebe0b68be77fe0258a33c7d97ef3ff"
+    },
+    {
+      "series_id": "2115880",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1ee0ac9916cf0e04227d4956080550f8758ca9e3"
+    },
+    {
+      "series_id": "2115892",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3c81378feb74543e1403ed8d7d73fe26ca5daf4a"
+    },
+    {
+      "series_id": "2118945",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:28ac0c79adaad0a4089fe98f322ab691e94c451b"
+    },
+    {
+      "series_id": "2118957",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:236fd69aaff5b4c741d25c99e57f1947757bd1f6"
+    },
+    {
+      "series_id": "2118969",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:24a066b8d5d873f512eb88b0359c15d7e8b2230e"
+    },
+    {
+      "series_id": "2118970",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0f675071c682c3391b98c4bc3a5fba2db4de6256"
+    },
+    {
+      "series_id": "2118982",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:84216091c120b705e67e4d58d302dc38a9ca0ffe"
+    },
+    {
+      "series_id": "2118994",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1d4212faea80986de3dcea1c0321fd9995da2219"
+    },
+    {
+      "series_id": "2119008",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2c990f889d9a4befff85e91d9087b154ed6ea608"
+    },
+    {
+      "series_id": "2119021",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:41caa5cfc6fcb620fa846de9d050878a207419a7"
+    },
+    {
+      "series_id": "2119033",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1f41e66681fadcae8b9f76f13c63cc563728a8cb"
+    },
+    {
+      "series_id": "2119045",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3e5c277866a27c1f6fc40b952e42a1af52c3112f"
+    },
+    {
+      "series_id": "2138701",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5af4a899bc4ecadab2f4ef59f5a709ac046ffbc7"
+    },
+    {
+      "series_id": "2138713",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:35e5e5c713d46cca356abbef76ee59926566c385"
+    },
+    {
+      "series_id": "2138725",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:37dff5c4b42af82a5d88b3c75b61d983b0057b69"
+    },
+    {
+      "series_id": "2138737",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0d7c39184bda44d853854b3ae4c73c5712ae40e3"
+    },
+    {
+      "series_id": "2138749",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5e39f823be5be886edb36170d04c91e984f0a418"
+    },
+    {
+      "series_id": "2138750",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1694b72ace764b735dcb506afcbb1cdd5f3d5c48"
+    },
+    {
+      "series_id": "2138762",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:518e4939c2dd6d5fb2da2db7259c0cb70529b0b0"
+    },
+    {
+      "series_id": "2138774",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:38830da5153a44e353ad48dd14ce93bf5a078a8c"
+    },
+    {
+      "series_id": "2138786",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:58e24735801c9a949c985982e859859e5c6c0c88"
+    },
+    {
+      "series_id": "2138798",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2226a1ab46d746e990e2bc63a453236b2e191e40"
+    },
+    {
+      "series_id": "2148013",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4fde89bab1ed01c748dca4b910868db0f0dbefea"
+    },
+    {
+      "series_id": "2148025",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:184326e70a584bc983c9c6618c956a604c4b12bf"
+    },
+    {
+      "series_id": "2148037",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:07c26e118194cd37afe9a4be95569b763c4b8169"
+    },
+    {
+      "series_id": "2148049",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:66045a92e52e6f5db695796687240febec16173e"
+    },
+    {
+      "series_id": "2148050",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4ba12f66cd8f1da025a1625777cc1c953f45b3b7"
+    },
+    {
+      "series_id": "2148062",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1d03b5786f113b2384926ec090ae0df833a74011"
+    },
+    {
+      "series_id": "2148074",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1016759f615fc0997c650985a8719afa3dc63834"
+    },
+    {
+      "series_id": "2148086",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4bcb59e85e907cb20672a30d61215d08d327373f"
+    },
+    {
+      "series_id": "2148098",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:99f1e576dcebe0cc2a0aff31b50bafcbd3f1e1ab"
+    },
+    {
+      "series_id": "2148105",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:a4406a64fbbdbed37396c689bed70a54ad40e18c"
+    },
+    {
+      "series_id": "2148117",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0f283eae9d5748201af82007e3ff39b96c5c69f8"
+    },
+    {
+      "series_id": "2148129",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5868acdf741546619307455a52c475c95005791c"
+    },
+    {
+      "series_id": "2148130",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0f964dba8bcf7b4087d87c64a9a9a7190f07dfad"
+    },
+    {
+      "series_id": "2148142",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:135ae13a2cc402460df2875a8609944f7d8b3bda"
+    },
+    {
+      "series_id": "2148154",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:7d3a77709fca3db18d3c9f20672f40384107d4f4"
+    },
+    {
+      "series_id": "2148166",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1e190cd95147cc079c60d55119bcf11ae457413d"
+    },
+    {
+      "series_id": "2148178",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:41f1a92d7ef84d1f221167f3ec1b04d205a116c4"
+    },
+    {
+      "series_id": "2148191",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0cc7c0477a3c2ee3ca282b41ba361c2e9eb273cb"
+    },
+    {
+      "series_id": "2148209",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:647552b398eb61be2e11676803c9636651c7b639"
+    },
+    {
+      "series_id": "2148210",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:04c2b0a2e2fcfaf45e2b3f8fd4d79504911c6ee9"
+    },
+    {
+      "series_id": "2148222",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:277dce120afdb390a57f0a526cb28d3c72a64a64"
+    },
+    {
+      "series_id": "2148234",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:28f734e1bee96f3d8caf645d918da2e473a383e6"
+    },
+    {
+      "series_id": "2148246",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:275c0d53e0c58da36378da199efa95c75d641730"
+    },
+    {
+      "series_id": "2148258",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:b134711f36c04860472f56ebde6ce4da390fc736"
+    },
+    {
+      "series_id": "2148271",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5fc71211560c7fbfb641ad98eea10306854dcb42"
+    },
+    {
+      "series_id": "2148283",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:4402c7846900b9a65f1e453030766f7ea91b8195"
+    },
+    {
+      "series_id": "2148295",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:7d0ffac3f313686b25a0aa4f312447b810033b47"
+    },
+    {
+      "series_id": "2148302",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:09011ab1a5df67c1a641fe9fa655417dbd6f591b"
+    },
+    {
+      "series_id": "2148314",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:34a4b1f7c9ce400c818f8bb247524e22cf879b4c"
+    },
+    {
+      "series_id": "2148326",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:184fae58bd47872fd7b6deb5e7e2fc32a3c78a9a"
+    },
+    {
+      "series_id": "2148338",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2bedfc08504a3762159a1da93d87dc1d464aa020"
+    },
+    {
+      "series_id": "2148351",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:34143375dd3e20873288e75695e3ddef9727909e"
+    },
+    {
+      "series_id": "2148363",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5c4d344be2cbc2b54b832a75063c6b7654b0f3a6"
+    },
+    {
+      "series_id": "2148375",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:07335c6055c40717e0dfab3ed81c630c8c943b9f"
+    },
+    {
+      "series_id": "2148387",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:122ce0cc63c01549d4295deaa3ffb1c9ba602e4b"
+    },
+    {
+      "series_id": "2148399",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:33e326b942dc653c47662b5ed60f7a8ffa47abd3"
+    },
+    {
+      "series_id": "2148406",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:36145af7a12cf755dd4345f8555c5d0f2a59cc41"
+    },
+    {
+      "series_id": "2148418",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:57bc20cdd6da978f81771518a7abb188dee3583b"
+    },
+    {
+      "series_id": "2148431",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:02cad49d48250e91f86e2119e7c4becbc536aff9"
+    },
+    {
+      "series_id": "2148443",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:9af7fc4b90a9127e3745de52963bd190b6ab8920"
+    },
+    {
+      "series_id": "2148455",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5a5aae9605aa3d6dc03a2934dd224bb067dca8bd"
+    },
+    {
+      "series_id": "2148467",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:31e1c0d9f45dfad161c85856b0ae83cea5076b60"
+    },
+    {
+      "series_id": "2148479",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:18431aa4eef61a23de8b0a29ff085f903c93a0a0"
+    },
+    {
+      "series_id": "2148480",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0c9c25fbe91c0f31c052dbec35ce968996a3d50b"
+    },
+    {
+      "series_id": "2148492",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:225fad2410165feda461436bfd2c46172f3af072"
+    },
+    {
+      "series_id": "2148511",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:9ce6c07f5f2ac20b3e41fbe2f655a4722e616716"
+    },
+    {
+      "series_id": "2148535",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2111150a46a313a2faf9852bb4207129f58025a0"
+    },
+    {
+      "series_id": "2148547",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:364a234dda3ea86d9fcd95d1f3ea7d5931bcc949"
+    },
+    {
+      "series_id": "2148559",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:00b30cad380aecc9cd0daa330b0033a2418d9dd1"
+    },
+    {
+      "series_id": "2148560",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:03b36543e21e8a8753cbf02ed7c742084d99ef55"
+    },
+    {
+      "series_id": "2148572",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:50c65262d1a55388bb22f5e1e2d184ea8bcd6c50"
+    },
+    {
+      "series_id": "2148584",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:8a980aa20de4e068bc110617d6e1539b704c02cd"
+    },
+    {
+      "series_id": "2148596",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:29f500d492c940815b3626f5d4a65f0a1c61ce20"
+    },
+    {
+      "series_id": "2148603",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:6767cf042095b74d4b3e8beec41a89e2625c8277"
+    },
+    {
+      "series_id": "2148615",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:002ad9ec8394d8ccb41e28764d4aa801702864d5"
+    },
+    {
+      "series_id": "2148627",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:00c27de6281f9c7073936c540f007f7d9e84443b"
+    },
+    {
+      "series_id": "2148639",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1908ee16e792a7e775f84df547789a9d241dd78a"
+    },
+    {
+      "series_id": "2148640",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:96d1be61ca73580f02bea41a282d638d71a048ba"
+    },
+    {
+      "series_id": "2148652",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:03ff026ee85257fc7c915ae73055577fa00fcbf4"
+    },
+    {
+      "series_id": "2148664",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:51df62c54b88a6abece10ffa46c638c4f1e110f3"
+    },
+    {
+      "series_id": "2148676",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:8f55a9767b231dded419f00486cbe9463cfc1f5d"
+    },
+    {
+      "series_id": "2148688",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5c994d7afe919dcd9e0e93bf96471d4bdb82a423"
+    },
+    {
+      "series_id": "2148707",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:17a947949235f298526fcac8fae2a616fbb611ad"
+    },
+    {
+      "series_id": "2148719",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:36037a4482fc5128f7f71e04d7088d88767cc435"
+    },
+    {
+      "series_id": "2148720",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:47a16d7ab57aedb0df138be9e75f2aa9e8ead921"
+    },
+    {
+      "series_id": "2148732",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1e9cb12af2b6ebe755c0486b2e5de6854ff7de67"
+    },
+    {
+      "series_id": "2148744",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0a2ee79d91a7e27ac0b517c908c152e55aeb11fa"
+    },
+    {
+      "series_id": "2148756",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:51f7974004162fe501c7718c1ba8ade14b9550d1"
+    },
+    {
+      "series_id": "2148768",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:36c489baacdcaadf7b3baa6ad3872d5e6b2e9c24"
+    },
+    {
+      "series_id": "2148781",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:01b06f762c22ee8e32f730feb1322ef92385237e"
+    },
+    {
+      "series_id": "2148793",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2d85d672e5c40934817b543a1825d06c5cfad04b"
+    },
+    {
+      "series_id": "2148800",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:54351cee6d019d16b76629752f92e198c5c92d6f"
+    },
+    {
+      "series_id": "2148812",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:95d832f59b9e0f6b3490e967c4da026275e20277"
+    },
+    {
+      "series_id": "2148824",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1a8b7df4e31d336ba9a88a0771c5e5ce0166e7d9"
+    },
+    {
+      "series_id": "2148836",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:51e669401128f52800ab67a7676f843037e29a64"
+    },
+    {
+      "series_id": "2148848",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:5b9e641b321f99f6eb9492b43cf94dda46f836de"
+    },
+    {
+      "series_id": "2148861",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:380494f7185cbb1cc1e5dc021d436525ceecaf0a"
+    },
+    {
+      "series_id": "2148873",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:374063b3b33b13368bb0a2b3756424a5e8c5b39b"
+    },
+    {
+      "series_id": "2148885",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:085d4afdb6a96c8ac6b8f683c976730e1f30469e"
+    },
+    {
+      "series_id": "2148897",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3cb2c0411fcdd142eae463818fa7d8883d7709c0"
+    },
+    {
+      "series_id": "2148904",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:32fbde1ea286364c375e322cdc1892f7b545da1f"
+    },
+    {
+      "series_id": "2148916",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3ec6548c219a2a88ae682ccec31a51a96cbe0372"
+    },
+    {
+      "series_id": "2148928",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:128e6fd03c0fbe03bf1baa5566def8765c978647"
+    },
+    {
+      "series_id": "2148941",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:16fb69c1555240fec0b634424b4751382ea9705c"
+    },
+    {
+      "series_id": "2153470",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1b2074b890d8b140b719b72c0afbf90b8418efca"
+    },
+    {
+      "series_id": "2153482",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:1acec241253fc18e9153258a51e268b3e25bbbec"
+    },
+    {
+      "series_id": "2153494",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:3a5ce23ffffad6f04700d6304a2e8dab9572583b"
+    },
+    {
+      "series_id": "2153501",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:027757b2e6eebcf958ff46d25f0edc202c7eeaac"
+    },
+    {
+      "series_id": "2153513",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:739d9611037f1a32d5b0548dfffcfe7196ec0997"
+    },
+    {
+      "series_id": "2153525",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:2a92d76eb6c91b717d9e211f6c9267b24c101903"
+    },
+    {
+      "series_id": "2153537",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:14ae4113a5841fafaca2558677f48dd2935a77f8"
+    },
+    {
+      "series_id": "2153549",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:0ad4f356943b59ee9ef9c3cb952ec5a3bb4438d2"
+    },
+    {
+      "series_id": "2153550",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:93629ef37cedf8389c302b488c70b32502b9d86e"
+    },
+    {
+      "series_id": "2153562",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:769097aad836bd5c95fc6abbcf8036e643883a38"
+    },
+    {
+      "series_id": "2153574",
+      "graph_uri": "urn:gleaner.io:oih:bodc:data:8cf703b43adf0297fab6451b547972289f5ab71f"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+# Sources to load into the in-memory Oxigraph server (see build/Dockerfile).
+#
+# Each source declares:
+#   name    - label used for progress/logging
+#   path    - file OR directory, relative to the repo root (or absolute)
+#   format  - one of: nt, nq, ttl, trig, jsonld
+#   graph   - target named graph IRI. REQUIRED for triple formats
+#             (nt, ttl, jsonld). OMIT for quad formats (nq, trig), whose
+#             graph names are already embedded in the data.
+#
+# Quad formats (nq, trig) are loaded into the dataset preserving their
+# embedded graph names. Triple formats are loaded into the `graph` IRI.
+#
+# Output locations are taken from projects/README.md. BCO-DMO uses the
+# JSON-LD output under projects/BCO-DMO/scanner/output (the ./BCO-DMO/output
+# files listed in the README are depth-analysis reports, not RDF).
+
+endpoint: http://localhost:7878
+
+sources:
+  - name: argo
+    path: projects/ARGO/data/output      # directory of per-profile .nt files
+    format: nt
+    graph: urn:doos:argo
+
+  - name: obis
+    path: projects/OBIS/output.nq         # consolidated N-Quads (carries graph names)
+    format: nq
+
+  - name: aodn
+    path: projects/AODN/output/output.json
+    format: jsonld
+    graph: urn:doos:aodn
+
+  - name: bodc
+    path: projects/BODC/output/bodc_harvest.nq
+    format: nq
+
+  - name: bcodmo
+    path: projects/BCO-DMO/scanner/output  # directory of per-dataset .jsonld files
+    format: jsonld
+    graph: urn:doos:bcodmo

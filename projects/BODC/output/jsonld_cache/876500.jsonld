@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "Dataset",
+  "version": "1.0.0",
+  "provider": {
+    "@id": "https://edmo.seadatanet.org/report/43",
+    "@type": "Organization",
+    "legalName": "British Oceanographic Data Centre",
+    "name": "BODC",
+    "url": "https://www.bodc.ac.uk"
+  },
+  "publisher": {
+    "@id": "https://edmo.seadatanet.org/report/43"
+  },
+  "@id": "https://api.linked-systems.uk/api/schema-org/dataset/876500",
+  "identifier": 876500,
+  "datePublished": "2003-11-18T17:00:25Z",
+  "dateModified": "2015-12-03T19:14:25Z",
+  "name": "BODC Series 876500",
+  "description": "Dataset metadata for BODC Series Reference Number 876500",
+  "about": [
+    {
+      "@type": "Event",
+      "@id": "https://api.linked-systems.uk/api/schema-org/event/876500",
+      "url": "https://www.bodc.ac.uk/data/documents/series/876500/",
+      "name": "Collection Event related to BODC Series 876500"
+    }
+  ],
+  "url": "https://www.bodc.ac.uk/data/documents/series/876500/",
+  "isAccessibleForFree": true,
+  "temporalCoverage": "2003-11-18T17:00:25Z/2004-06-20T15:00:25Z",
+  "license": "https://www.bodc.ac.uk/data/documents/nodb/281368/",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "longitude": "-16.5267",
+      "latitude": "49.0417"
+    }
+  },
+  "creator": [
+    {
+      "@type": "Person",
+      "familyName": "Maureen",
+      "givenName": "Pagnani",
+      "url": "",
+      "affiliation": {
+        "@type": "Organization",
+        "@id": "https://edmo.seadatanet.org/report/2002",
+        "name": "Southampton Oceanography Centre",
+        "url": "https://edmo.seadatanet.org/report/2002",
+        "sameAs": "https://vocab.nerc.ac.uk/collection/C75/current/SOC/"
+      }
+    }
+  ],
+  "additionalProperty": {
+    "@type": "PropertyValue",
+    "name": "DepBelowSurf",
+    "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/",
+    "description": "The distance of a sensor or sampling point below the sea surface",
+    "value": 30,
+    "unitCode": "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
+    "unitText": "Metres"
+  }
+}

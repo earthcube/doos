@@ -1,0 +1,505 @@
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <https://schema.org/name> "Temperature of the water column" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/TEMP/" <urn:doos:bodc:harvest:16087> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/legalName> "British Oceanographic Data Centre" <urn:doos:bodc:harvest:16087> .
+<https://edmo.seadatanet.org/report/43> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Organization> <urn:doos:bodc:harvest:16087> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/name> "BODC" <urn:doos:bodc:harvest:16087> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/url> "https://www.bodc.ac.uk" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/name> "Horizontal velocity of the water column (currents)" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/RFVL/" <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/publisher> <https://edmo.seadatanet.org/report/43> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/variableMeasured> _:1f78f57e706020843bd6f81fc8181bfc <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/variableMeasured> _:24eaa47b3b657eef0978eb3cce2b2a3f <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/variableMeasured> _:b6d80e50d7bcd13732fd4e1634a80cad <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/variableMeasured> _:bc22e93c2a506a11bdaf7e529f94ec50 <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/variableMeasured> _:c10e1302c750296e5eaf86e3fb1fcc5c <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/variableMeasured> _:cb33b01afeca6698bcc778901d20c80e <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/D025/> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/D030/> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Dataset> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/identifier> "16087"^^<http://www.w3.org/2001/XMLSchema#integer> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/name> "BODC Series 16087" <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/about> <https://api.linked-systems.uk/api/schema-org/event/16087> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/license> "https://www.bodc.ac.uk/data/documents/nodb/281368/" <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/url> "https://www.bodc.ac.uk/data/documents/series/16087/" <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/spatialCoverage> _:936184fa9ea2f24bf9cbb7ee4cae74db <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/dateModified> "2024-08-01T01:02:27Z" <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/datePublished> "1979-01-01T00:00:00Z" <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/version> "1.0.0" <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/temporalCoverage> "1977-10-17T18:53:00Z/1977-11-25T15:53:00Z" <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/description> "Dataset metadata for BODC Series Reference Number 16087" <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/additionalProperty> _:e9bae7ee9c0aaa620dcc0901aec2ae7b <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/provider> <https://edmo.seadatanet.org/report/43> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/isAccessibleForFree> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/distribution> _:1cb64bf673fd654acad3eabd4479f6ab <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16087> <https://schema.org/distribution> _:b746426add0c73f0af6ca18fb81e4bc7 <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <https://schema.org/name> "Moored instrument depth" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/MPMN/" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <https://schema.org/name> "Water column temperature and salinity" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/D025/" <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/event/16087> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Event> <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/event/16087> <https://schema.org/name> "Collection Event related to BODC Series 16087" <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/event/16087> <https://schema.org/url> "https://www.bodc.ac.uk/data/documents/series/16087/" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/name> "Currents" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/D030/" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/name> "Date and time" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/AYMD/" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/name> "Administration and dimensions" <urn:doos:bodc:harvest:16087> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/Z005/" <urn:doos:bodc:harvest:16087> .
+_:1cb64bf673fd654acad3eabd4479f6ab <https://schema.org/contentUrl> "https://bodc.ac.uk/data/open_download/series/16087/odv/" <urn:doos:bodc:harvest:16087> .
+_:1cb64bf673fd654acad3eabd4479f6ab <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> <urn:doos:bodc:harvest:16087> .
+_:1cb64bf673fd654acad3eabd4479f6ab <https://schema.org/encodingFormat> "text/x-odv" <urn:doos:bodc:harvest:16087> .
+_:1f78f57e706020843bd6f81fc8181bfc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16087> .
+_:1f78f57e706020843bd6f81fc8181bfc <https://schema.org/name> "Temp" <urn:doos:bodc:harvest:16087> .
+_:1f78f57e706020843bd6f81fc8181bfc <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/TEMPPR01/" <urn:doos:bodc:harvest:16087> .
+_:1f78f57e706020843bd6f81fc8181bfc <https://schema.org/description> "Temperature of the water body" <urn:doos:bodc:harvest:16087> .
+_:24eaa47b3b657eef0978eb3cce2b2a3f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16087> .
+_:24eaa47b3b657eef0978eb3cce2b2a3f <https://schema.org/name> "CurrSpd_CM" <urn:doos:bodc:harvest:16087> .
+_:24eaa47b3b657eef0978eb3cce2b2a3f <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/LCSAEL01/" <urn:doos:bodc:harvest:16087> .
+_:24eaa47b3b657eef0978eb3cce2b2a3f <https://schema.org/description> "Speed of water current (Eulerian measurement) in the water body by in-situ current meter" <urn:doos:bodc:harvest:16087> .
+_:936184fa9ea2f24bf9cbb7ee4cae74db <https://schema.org/geo> _:982f6dcfa19a0ed22a50ab6daeb2b85a <urn:doos:bodc:harvest:16087> .
+_:936184fa9ea2f24bf9cbb7ee4cae74db <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Place> <urn:doos:bodc:harvest:16087> .
+_:982f6dcfa19a0ed22a50ab6daeb2b85a <https://schema.org/latitude> "53.7633" <urn:doos:bodc:harvest:16087> .
+_:982f6dcfa19a0ed22a50ab6daeb2b85a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/GeoCoordinates> <urn:doos:bodc:harvest:16087> .
+_:982f6dcfa19a0ed22a50ab6daeb2b85a <https://schema.org/longitude> "-4.1183" <urn:doos:bodc:harvest:16087> .
+_:b6d80e50d7bcd13732fd4e1634a80cad <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16087> .
+_:b6d80e50d7bcd13732fd4e1634a80cad <https://schema.org/name> "Date(Loch_Day)" <urn:doos:bodc:harvest:16087> .
+_:b6d80e50d7bcd13732fd4e1634a80cad <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/AADYAA01/" <urn:doos:bodc:harvest:16087> .
+_:b6d80e50d7bcd13732fd4e1634a80cad <https://schema.org/description> "Date (time from 00:00 01/01/1760 to 00:00 UT on day)" <urn:doos:bodc:harvest:16087> .
+_:b746426add0c73f0af6ca18fb81e4bc7 <https://schema.org/contentUrl> "https://bodc.ac.uk/data/open_download/series/16087/odvnc/" <urn:doos:bodc:harvest:16087> .
+_:b746426add0c73f0af6ca18fb81e4bc7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> <urn:doos:bodc:harvest:16087> .
+_:b746426add0c73f0af6ca18fb81e4bc7 <https://schema.org/encodingFormat> "application/netcdf" <urn:doos:bodc:harvest:16087> .
+_:bc22e93c2a506a11bdaf7e529f94ec50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16087> .
+_:bc22e93c2a506a11bdaf7e529f94ec50 <https://schema.org/name> "WColHt+AtPr_MW" <urn:doos:bodc:harvest:16087> .
+_:bc22e93c2a506a11bdaf7e529f94ec50 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/PPSAPR01/" <urn:doos:bodc:harvest:16087> .
+_:bc22e93c2a506a11bdaf7e529f94ec50 <https://schema.org/description> "Depth below surface of the water body by semi-fixed in-situ pressure sensor and conversion to depth using unspecified algorithm" <urn:doos:bodc:harvest:16087> .
+_:c10e1302c750296e5eaf86e3fb1fcc5c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16087> .
+_:c10e1302c750296e5eaf86e3fb1fcc5c <https://schema.org/name> "CurrDir" <urn:doos:bodc:harvest:16087> .
+_:c10e1302c750296e5eaf86e3fb1fcc5c <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/LCDAEL01/" <urn:doos:bodc:harvest:16087> .
+_:c10e1302c750296e5eaf86e3fb1fcc5c <https://schema.org/description> "Direction (towards) of water current (Eulerian measurement) in the water body by in-situ current meter and correction to true North" <urn:doos:bodc:harvest:16087> .
+_:cb33b01afeca6698bcc778901d20c80e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16087> .
+_:cb33b01afeca6698bcc778901d20c80e <https://schema.org/name> "ElapsedTimeSinceMidnightUTC" <urn:doos:bodc:harvest:16087> .
+_:cb33b01afeca6698bcc778901d20c80e <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/AAFDZZ01/" <urn:doos:bodc:harvest:16087> .
+_:cb33b01afeca6698bcc778901d20c80e <https://schema.org/description> "Time (time between 00:00 UT and timestamp)" <urn:doos:bodc:harvest:16087> .
+_:e9bae7ee9c0aaa620dcc0901aec2ae7b <https://schema.org/value> "26"^^<http://www.w3.org/2001/XMLSchema#integer> <urn:doos:bodc:harvest:16087> .
+_:e9bae7ee9c0aaa620dcc0901aec2ae7b <https://schema.org/unitText> "Metres" <urn:doos:bodc:harvest:16087> .
+_:e9bae7ee9c0aaa620dcc0901aec2ae7b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16087> .
+_:e9bae7ee9c0aaa620dcc0901aec2ae7b <https://schema.org/name> "DepBelowSurf" <urn:doos:bodc:harvest:16087> .
+_:e9bae7ee9c0aaa620dcc0901aec2ae7b <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/" <urn:doos:bodc:harvest:16087> .
+_:e9bae7ee9c0aaa620dcc0901aec2ae7b <https://schema.org/unitCode> "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/" <urn:doos:bodc:harvest:16087> .
+_:e9bae7ee9c0aaa620dcc0901aec2ae7b <https://schema.org/description> "The distance of a sensor or sampling point below the sea surface" <urn:doos:bodc:harvest:16087> .
+<https://api.linked-systems.uk/api/schema-org/event/16063> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Event> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/event/16063> <https://schema.org/name> "Collection Event related to BODC Series 16063" <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/event/16063> <https://schema.org/url> "https://www.bodc.ac.uk/data/documents/series/16063/" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <https://schema.org/name> "Temperature of the water column" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/TEMP/" <urn:doos:bodc:harvest:16063> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/legalName> "British Oceanographic Data Centre" <urn:doos:bodc:harvest:16063> .
+<https://edmo.seadatanet.org/report/43> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Organization> <urn:doos:bodc:harvest:16063> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/name> "BODC" <urn:doos:bodc:harvest:16063> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/url> "https://www.bodc.ac.uk" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/name> "Horizontal velocity of the water column (currents)" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/RFVL/" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <https://schema.org/name> "Moored instrument depth" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/MPMN/" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <https://schema.org/name> "Water column temperature and salinity" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/D025/" <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/publisher> <https://edmo.seadatanet.org/report/43> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/variableMeasured> _:503921d4707a4e471b3233c732dedfe4 <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/variableMeasured> _:766b150d915d1409c3ac5036d63bf056 <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/variableMeasured> _:7b1affe98339fc7a3729c94c9e97359a <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/variableMeasured> _:996193881fad36b8d3757f4683894c88 <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/variableMeasured> _:bd599a8f25742ab187daadbca8970c26 <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/variableMeasured> _:d671de75942163a0a4291c62d834f231 <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/D025/> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/D030/> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Dataset> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/identifier> "16063"^^<http://www.w3.org/2001/XMLSchema#integer> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/name> "BODC Series 16063" <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/about> <https://api.linked-systems.uk/api/schema-org/event/16063> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/license> "https://www.bodc.ac.uk/data/documents/nodb/281368/" <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/url> "https://www.bodc.ac.uk/data/documents/series/16063/" <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/spatialCoverage> _:d346b576e5b3bba20b78542ac0353ec2 <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/dateModified> "2024-08-01T01:02:27Z" <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/datePublished> "1979-01-01T00:00:00Z" <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/version> "1.0.0" <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/temporalCoverage> "1977-10-17T18:53:00Z/1977-11-25T15:53:00Z" <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/description> "Dataset metadata for BODC Series Reference Number 16063" <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/additionalProperty> _:85472fc32aa9d06dd89efe794ef33a05 <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/provider> <https://edmo.seadatanet.org/report/43> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/isAccessibleForFree> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/distribution> _:a354013b5981fd7b07bcef4002379f8 <urn:doos:bodc:harvest:16063> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16063> <https://schema.org/distribution> _:4c0dae1b90c2c9417109a7e7158bbcce <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/name> "Currents" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/D030/" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/name> "Date and time" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/AYMD/" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/name> "Administration and dimensions" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/Z005/" <urn:doos:bodc:harvest:16063> .
+_:a354013b5981fd7b07bcef4002379f8 <https://schema.org/contentUrl> "https://bodc.ac.uk/data/open_download/series/16063/odvnc/" <urn:doos:bodc:harvest:16063> .
+_:a354013b5981fd7b07bcef4002379f8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> <urn:doos:bodc:harvest:16063> .
+_:a354013b5981fd7b07bcef4002379f8 <https://schema.org/encodingFormat> "application/netcdf" <urn:doos:bodc:harvest:16063> .
+_:38c97878ac06bf66331f6623c7ed30ff <https://schema.org/latitude> "53.7633" <urn:doos:bodc:harvest:16063> .
+_:38c97878ac06bf66331f6623c7ed30ff <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/GeoCoordinates> <urn:doos:bodc:harvest:16063> .
+_:38c97878ac06bf66331f6623c7ed30ff <https://schema.org/longitude> "-4.1183" <urn:doos:bodc:harvest:16063> .
+_:4c0dae1b90c2c9417109a7e7158bbcce <https://schema.org/contentUrl> "https://bodc.ac.uk/data/open_download/series/16063/odv/" <urn:doos:bodc:harvest:16063> .
+_:4c0dae1b90c2c9417109a7e7158bbcce <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> <urn:doos:bodc:harvest:16063> .
+_:4c0dae1b90c2c9417109a7e7158bbcce <https://schema.org/encodingFormat> "text/x-odv" <urn:doos:bodc:harvest:16063> .
+_:503921d4707a4e471b3233c732dedfe4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16063> .
+_:503921d4707a4e471b3233c732dedfe4 <https://schema.org/name> "CurrDir" <urn:doos:bodc:harvest:16063> .
+_:503921d4707a4e471b3233c732dedfe4 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/LCDAEL01/" <urn:doos:bodc:harvest:16063> .
+_:503921d4707a4e471b3233c732dedfe4 <https://schema.org/description> "Direction (towards) of water current (Eulerian measurement) in the water body by in-situ current meter and correction to true North" <urn:doos:bodc:harvest:16063> .
+_:766b150d915d1409c3ac5036d63bf056 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16063> .
+_:766b150d915d1409c3ac5036d63bf056 <https://schema.org/name> "ElapsedTimeSinceMidnightUTC" <urn:doos:bodc:harvest:16063> .
+_:766b150d915d1409c3ac5036d63bf056 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/AAFDZZ01/" <urn:doos:bodc:harvest:16063> .
+_:766b150d915d1409c3ac5036d63bf056 <https://schema.org/description> "Time (time between 00:00 UT and timestamp)" <urn:doos:bodc:harvest:16063> .
+_:7b1affe98339fc7a3729c94c9e97359a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16063> .
+_:7b1affe98339fc7a3729c94c9e97359a <https://schema.org/name> "WColHt+AtPr_MW" <urn:doos:bodc:harvest:16063> .
+_:7b1affe98339fc7a3729c94c9e97359a <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/PPSAPR01/" <urn:doos:bodc:harvest:16063> .
+_:7b1affe98339fc7a3729c94c9e97359a <https://schema.org/description> "Depth below surface of the water body by semi-fixed in-situ pressure sensor and conversion to depth using unspecified algorithm" <urn:doos:bodc:harvest:16063> .
+_:85472fc32aa9d06dd89efe794ef33a05 <https://schema.org/value> "20"^^<http://www.w3.org/2001/XMLSchema#integer> <urn:doos:bodc:harvest:16063> .
+_:85472fc32aa9d06dd89efe794ef33a05 <https://schema.org/unitText> "Metres" <urn:doos:bodc:harvest:16063> .
+_:85472fc32aa9d06dd89efe794ef33a05 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16063> .
+_:85472fc32aa9d06dd89efe794ef33a05 <https://schema.org/name> "DepBelowSurf" <urn:doos:bodc:harvest:16063> .
+_:85472fc32aa9d06dd89efe794ef33a05 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/" <urn:doos:bodc:harvest:16063> .
+_:85472fc32aa9d06dd89efe794ef33a05 <https://schema.org/unitCode> "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/" <urn:doos:bodc:harvest:16063> .
+_:85472fc32aa9d06dd89efe794ef33a05 <https://schema.org/description> "The distance of a sensor or sampling point below the sea surface" <urn:doos:bodc:harvest:16063> .
+_:996193881fad36b8d3757f4683894c88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16063> .
+_:996193881fad36b8d3757f4683894c88 <https://schema.org/name> "Temp" <urn:doos:bodc:harvest:16063> .
+_:996193881fad36b8d3757f4683894c88 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/TEMPPR01/" <urn:doos:bodc:harvest:16063> .
+_:996193881fad36b8d3757f4683894c88 <https://schema.org/description> "Temperature of the water body" <urn:doos:bodc:harvest:16063> .
+_:bd599a8f25742ab187daadbca8970c26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16063> .
+_:bd599a8f25742ab187daadbca8970c26 <https://schema.org/name> "Date(Loch_Day)" <urn:doos:bodc:harvest:16063> .
+_:bd599a8f25742ab187daadbca8970c26 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/AADYAA01/" <urn:doos:bodc:harvest:16063> .
+_:bd599a8f25742ab187daadbca8970c26 <https://schema.org/description> "Date (time from 00:00 01/01/1760 to 00:00 UT on day)" <urn:doos:bodc:harvest:16063> .
+_:d346b576e5b3bba20b78542ac0353ec2 <https://schema.org/geo> _:38c97878ac06bf66331f6623c7ed30ff <urn:doos:bodc:harvest:16063> .
+_:d346b576e5b3bba20b78542ac0353ec2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Place> <urn:doos:bodc:harvest:16063> .
+_:d671de75942163a0a4291c62d834f231 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16063> .
+_:d671de75942163a0a4291c62d834f231 <https://schema.org/name> "CurrSpd_CM" <urn:doos:bodc:harvest:16063> .
+_:d671de75942163a0a4291c62d834f231 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/LCSAEL01/" <urn:doos:bodc:harvest:16063> .
+_:d671de75942163a0a4291c62d834f231 <https://schema.org/description> "Speed of water current (Eulerian measurement) in the water body by in-situ current meter" <urn:doos:bodc:harvest:16063> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <https://schema.org/name> "Temperature of the water column" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/TEMP/" <urn:doos:bodc:harvest:15582> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/legalName> "British Oceanographic Data Centre" <urn:doos:bodc:harvest:15582> .
+<https://edmo.seadatanet.org/report/43> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Organization> <urn:doos:bodc:harvest:15582> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/name> "BODC" <urn:doos:bodc:harvest:15582> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/url> "https://www.bodc.ac.uk" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/name> "Horizontal velocity of the water column (currents)" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/RFVL/" <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/publisher> <https://edmo.seadatanet.org/report/43> <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/variableMeasured> _:6c83161261b2a733cf22fe08e3bfdea6 <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/variableMeasured> _:a8294da7798832d18efc4f4bb232169f <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/variableMeasured> _:ae90295c8701c2699de687526f15f2fa <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/variableMeasured> _:b91bc0f5d4bc6047ce6605fd42aaa6d6 <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/variableMeasured> _:d361db881656f360e63886e6d603db0f <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/D025/> <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/D030/> <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Dataset> <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/identifier> "15582"^^<http://www.w3.org/2001/XMLSchema#integer> <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/name> "BODC Series 15582" <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/about> <https://api.linked-systems.uk/api/schema-org/event/15582> <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/license> "https://www.bodc.ac.uk/data/documents/nodb/281368/" <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/url> "https://www.bodc.ac.uk/data/documents/series/15582/" <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/spatialCoverage> _:3882fea42abf833bbd0f31e9c605d9a7 <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/dateModified> "2024-08-01T01:02:27Z" <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/datePublished> "1979-01-01T00:00:00Z" <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/version> "1.0.0" <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/temporalCoverage> "1977-03-19T11:50:00Z/1977-04-18T05:20:00Z" <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/description> "Dataset metadata for BODC Series Reference Number 15582" <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/additionalProperty> _:a845f05dab0fcc1aa99fbca3edf4a8ef <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/provider> <https://edmo.seadatanet.org/report/43> <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/isAccessibleForFree> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/distribution> _:19785b8bae987edd89f9a0c40e7fc1e0 <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15582> <https://schema.org/distribution> _:ff32c4ddf0c0a0e2fbe734e50f29cbbf <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/event/15582> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Event> <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/event/15582> <https://schema.org/name> "Collection Event related to BODC Series 15582" <urn:doos:bodc:harvest:15582> .
+<https://api.linked-systems.uk/api/schema-org/event/15582> <https://schema.org/url> "https://www.bodc.ac.uk/data/documents/series/15582/" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <https://schema.org/name> "Water column temperature and salinity" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/D025/" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/name> "Currents" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/D030/" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/name> "Date and time" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/AYMD/" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/name> "Administration and dimensions" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/Z005/" <urn:doos:bodc:harvest:15582> .
+_:19785b8bae987edd89f9a0c40e7fc1e0 <https://schema.org/contentUrl> "https://bodc.ac.uk/data/open_download/series/15582/odv/" <urn:doos:bodc:harvest:15582> .
+_:19785b8bae987edd89f9a0c40e7fc1e0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> <urn:doos:bodc:harvest:15582> .
+_:19785b8bae987edd89f9a0c40e7fc1e0 <https://schema.org/encodingFormat> "text/x-odv" <urn:doos:bodc:harvest:15582> .
+_:3882fea42abf833bbd0f31e9c605d9a7 <https://schema.org/geo> _:94e3350f0098165e3b01e0cfbdd74657 <urn:doos:bodc:harvest:15582> .
+_:3882fea42abf833bbd0f31e9c605d9a7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Place> <urn:doos:bodc:harvest:15582> .
+_:6c83161261b2a733cf22fe08e3bfdea6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:15582> .
+_:6c83161261b2a733cf22fe08e3bfdea6 <https://schema.org/name> "CurrSpd_CM" <urn:doos:bodc:harvest:15582> .
+_:6c83161261b2a733cf22fe08e3bfdea6 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/LCSAEL01/" <urn:doos:bodc:harvest:15582> .
+_:6c83161261b2a733cf22fe08e3bfdea6 <https://schema.org/description> "Speed of water current (Eulerian measurement) in the water body by in-situ current meter" <urn:doos:bodc:harvest:15582> .
+_:94e3350f0098165e3b01e0cfbdd74657 <https://schema.org/latitude> "53.7733" <urn:doos:bodc:harvest:15582> .
+_:94e3350f0098165e3b01e0cfbdd74657 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/GeoCoordinates> <urn:doos:bodc:harvest:15582> .
+_:94e3350f0098165e3b01e0cfbdd74657 <https://schema.org/longitude> "-4.1349" <urn:doos:bodc:harvest:15582> .
+_:a8294da7798832d18efc4f4bb232169f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:15582> .
+_:a8294da7798832d18efc4f4bb232169f <https://schema.org/name> "CurrDir" <urn:doos:bodc:harvest:15582> .
+_:a8294da7798832d18efc4f4bb232169f <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/LCDAEL01/" <urn:doos:bodc:harvest:15582> .
+_:a8294da7798832d18efc4f4bb232169f <https://schema.org/description> "Direction (towards) of water current (Eulerian measurement) in the water body by in-situ current meter and correction to true North" <urn:doos:bodc:harvest:15582> .
+_:a845f05dab0fcc1aa99fbca3edf4a8ef <https://schema.org/value> "41"^^<http://www.w3.org/2001/XMLSchema#integer> <urn:doos:bodc:harvest:15582> .
+_:a845f05dab0fcc1aa99fbca3edf4a8ef <https://schema.org/unitText> "Metres" <urn:doos:bodc:harvest:15582> .
+_:a845f05dab0fcc1aa99fbca3edf4a8ef <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:15582> .
+_:a845f05dab0fcc1aa99fbca3edf4a8ef <https://schema.org/name> "DepBelowSurf" <urn:doos:bodc:harvest:15582> .
+_:a845f05dab0fcc1aa99fbca3edf4a8ef <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/" <urn:doos:bodc:harvest:15582> .
+_:a845f05dab0fcc1aa99fbca3edf4a8ef <https://schema.org/unitCode> "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/" <urn:doos:bodc:harvest:15582> .
+_:a845f05dab0fcc1aa99fbca3edf4a8ef <https://schema.org/description> "The distance of a sensor or sampling point below the sea surface" <urn:doos:bodc:harvest:15582> .
+_:ae90295c8701c2699de687526f15f2fa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:15582> .
+_:ae90295c8701c2699de687526f15f2fa <https://schema.org/name> "Date(Loch_Day)" <urn:doos:bodc:harvest:15582> .
+_:ae90295c8701c2699de687526f15f2fa <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/AADYAA01/" <urn:doos:bodc:harvest:15582> .
+_:ae90295c8701c2699de687526f15f2fa <https://schema.org/description> "Date (time from 00:00 01/01/1760 to 00:00 UT on day)" <urn:doos:bodc:harvest:15582> .
+_:b91bc0f5d4bc6047ce6605fd42aaa6d6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:15582> .
+_:b91bc0f5d4bc6047ce6605fd42aaa6d6 <https://schema.org/name> "Temp" <urn:doos:bodc:harvest:15582> .
+_:b91bc0f5d4bc6047ce6605fd42aaa6d6 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/TEMPPR01/" <urn:doos:bodc:harvest:15582> .
+_:b91bc0f5d4bc6047ce6605fd42aaa6d6 <https://schema.org/description> "Temperature of the water body" <urn:doos:bodc:harvest:15582> .
+_:d361db881656f360e63886e6d603db0f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:15582> .
+_:d361db881656f360e63886e6d603db0f <https://schema.org/name> "ElapsedTimeSinceMidnightUTC" <urn:doos:bodc:harvest:15582> .
+_:d361db881656f360e63886e6d603db0f <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/AAFDZZ01/" <urn:doos:bodc:harvest:15582> .
+_:d361db881656f360e63886e6d603db0f <https://schema.org/description> "Time (time between 00:00 UT and timestamp)" <urn:doos:bodc:harvest:15582> .
+_:ff32c4ddf0c0a0e2fbe734e50f29cbbf <https://schema.org/contentUrl> "https://bodc.ac.uk/data/open_download/series/15582/odvnc/" <urn:doos:bodc:harvest:15582> .
+_:ff32c4ddf0c0a0e2fbe734e50f29cbbf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> <urn:doos:bodc:harvest:15582> .
+_:ff32c4ddf0c0a0e2fbe734e50f29cbbf <https://schema.org/encodingFormat> "application/netcdf" <urn:doos:bodc:harvest:15582> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <https://schema.org/name> "Temperature of the water column" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/TEMP/" <urn:doos:bodc:harvest:15601> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/legalName> "British Oceanographic Data Centre" <urn:doos:bodc:harvest:15601> .
+<https://edmo.seadatanet.org/report/43> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Organization> <urn:doos:bodc:harvest:15601> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/name> "BODC" <urn:doos:bodc:harvest:15601> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/url> "https://www.bodc.ac.uk" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/name> "Horizontal velocity of the water column (currents)" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/RFVL/" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <https://schema.org/name> "Water column temperature and salinity" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D025/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/D025/" <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/publisher> <https://edmo.seadatanet.org/report/43> <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/variableMeasured> _:22246036fe8023f09046609e7d99fc63 <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/variableMeasured> _:3640a209b88e8192db85db673e578489 <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/variableMeasured> _:42d5ef1808667495ab9ffa30ab174cf5 <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/variableMeasured> _:a1448c47eff3bacba566be98624ebba6 <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/variableMeasured> _:d998be42229ec6593fb4cf6a57716b5e <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/TEMP/> <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/D025/> <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/D030/> <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Dataset> <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/identifier> "15601"^^<http://www.w3.org/2001/XMLSchema#integer> <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/name> "BODC Series 15601" <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/about> <https://api.linked-systems.uk/api/schema-org/event/15601> <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/license> "https://www.bodc.ac.uk/data/documents/nodb/281368/" <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/url> "https://www.bodc.ac.uk/data/documents/series/15601/" <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/spatialCoverage> _:1eb50c25d49d2c13df0b480804596206 <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/dateModified> "2024-08-01T01:02:27Z" <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/datePublished> "1979-01-01T00:00:00Z" <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/version> "1.0.0" <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/temporalCoverage> "1977-03-16T19:20:00Z/1977-04-17T10:40:00Z" <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/description> "Dataset metadata for BODC Series Reference Number 15601" <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/additionalProperty> _:e00096acf5409e9f008bc636f25ad383 <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/provider> <https://edmo.seadatanet.org/report/43> <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/isAccessibleForFree> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/distribution> _:1e9acf0082ed8614860d185df541c00e <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/15601> <https://schema.org/distribution> _:9306186814844bda0e83e4c04f9a2004 <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/name> "Currents" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/D030/" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/name> "Date and time" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/AYMD/" <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/event/15601> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Event> <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/event/15601> <https://schema.org/name> "Collection Event related to BODC Series 15601" <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/event/15601> <https://schema.org/url> "https://www.bodc.ac.uk/data/documents/series/15601/" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/name> "Administration and dimensions" <urn:doos:bodc:harvest:15601> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/Z005/" <urn:doos:bodc:harvest:15601> .
+_:1e9acf0082ed8614860d185df541c00e <https://schema.org/contentUrl> "https://bodc.ac.uk/data/open_download/series/15601/odv/" <urn:doos:bodc:harvest:15601> .
+_:1e9acf0082ed8614860d185df541c00e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> <urn:doos:bodc:harvest:15601> .
+_:1e9acf0082ed8614860d185df541c00e <https://schema.org/encodingFormat> "text/x-odv" <urn:doos:bodc:harvest:15601> .
+_:1eb50c25d49d2c13df0b480804596206 <https://schema.org/geo> _:5e9ee3350688d96147a64ccb6f47301a <urn:doos:bodc:harvest:15601> .
+_:1eb50c25d49d2c13df0b480804596206 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Place> <urn:doos:bodc:harvest:15601> .
+_:22246036fe8023f09046609e7d99fc63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:15601> .
+_:22246036fe8023f09046609e7d99fc63 <https://schema.org/name> "CurrDir" <urn:doos:bodc:harvest:15601> .
+_:22246036fe8023f09046609e7d99fc63 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/LCDAEL01/" <urn:doos:bodc:harvest:15601> .
+_:22246036fe8023f09046609e7d99fc63 <https://schema.org/description> "Direction (towards) of water current (Eulerian measurement) in the water body by in-situ current meter and correction to true North" <urn:doos:bodc:harvest:15601> .
+_:3640a209b88e8192db85db673e578489 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:15601> .
+_:3640a209b88e8192db85db673e578489 <https://schema.org/name> "CurrSpd_CM" <urn:doos:bodc:harvest:15601> .
+_:3640a209b88e8192db85db673e578489 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/LCSAEL01/" <urn:doos:bodc:harvest:15601> .
+_:3640a209b88e8192db85db673e578489 <https://schema.org/description> "Speed of water current (Eulerian measurement) in the water body by in-situ current meter" <urn:doos:bodc:harvest:15601> .
+_:42d5ef1808667495ab9ffa30ab174cf5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:15601> .
+_:42d5ef1808667495ab9ffa30ab174cf5 <https://schema.org/name> "Temp" <urn:doos:bodc:harvest:15601> .
+_:42d5ef1808667495ab9ffa30ab174cf5 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/TEMPPR01/" <urn:doos:bodc:harvest:15601> .
+_:42d5ef1808667495ab9ffa30ab174cf5 <https://schema.org/description> "Temperature of the water body" <urn:doos:bodc:harvest:15601> .
+_:5e9ee3350688d96147a64ccb6f47301a <https://schema.org/latitude> "53.7733" <urn:doos:bodc:harvest:15601> .
+_:5e9ee3350688d96147a64ccb6f47301a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/GeoCoordinates> <urn:doos:bodc:harvest:15601> .
+_:5e9ee3350688d96147a64ccb6f47301a <https://schema.org/longitude> "-3.7049" <urn:doos:bodc:harvest:15601> .
+_:9306186814844bda0e83e4c04f9a2004 <https://schema.org/contentUrl> "https://bodc.ac.uk/data/open_download/series/15601/odvnc/" <urn:doos:bodc:harvest:15601> .
+_:9306186814844bda0e83e4c04f9a2004 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> <urn:doos:bodc:harvest:15601> .
+_:9306186814844bda0e83e4c04f9a2004 <https://schema.org/encodingFormat> "application/netcdf" <urn:doos:bodc:harvest:15601> .
+_:a1448c47eff3bacba566be98624ebba6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:15601> .
+_:a1448c47eff3bacba566be98624ebba6 <https://schema.org/name> "Date(Loch_Day)" <urn:doos:bodc:harvest:15601> .
+_:a1448c47eff3bacba566be98624ebba6 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/AADYAA01/" <urn:doos:bodc:harvest:15601> .
+_:a1448c47eff3bacba566be98624ebba6 <https://schema.org/description> "Date (time from 00:00 01/01/1760 to 00:00 UT on day)" <urn:doos:bodc:harvest:15601> .
+_:d998be42229ec6593fb4cf6a57716b5e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:15601> .
+_:d998be42229ec6593fb4cf6a57716b5e <https://schema.org/name> "ElapsedTimeSinceMidnightUTC" <urn:doos:bodc:harvest:15601> .
+_:d998be42229ec6593fb4cf6a57716b5e <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/AAFDZZ01/" <urn:doos:bodc:harvest:15601> .
+_:d998be42229ec6593fb4cf6a57716b5e <https://schema.org/description> "Time (time between 00:00 UT and timestamp)" <urn:doos:bodc:harvest:15601> .
+_:e00096acf5409e9f008bc636f25ad383 <https://schema.org/value> "36"^^<http://www.w3.org/2001/XMLSchema#integer> <urn:doos:bodc:harvest:15601> .
+_:e00096acf5409e9f008bc636f25ad383 <https://schema.org/unitText> "Metres" <urn:doos:bodc:harvest:15601> .
+_:e00096acf5409e9f008bc636f25ad383 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:15601> .
+_:e00096acf5409e9f008bc636f25ad383 <https://schema.org/name> "DepBelowSurf" <urn:doos:bodc:harvest:15601> .
+_:e00096acf5409e9f008bc636f25ad383 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/" <urn:doos:bodc:harvest:15601> .
+_:e00096acf5409e9f008bc636f25ad383 <https://schema.org/unitCode> "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/" <urn:doos:bodc:harvest:15601> .
+_:e00096acf5409e9f008bc636f25ad383 <https://schema.org/description> "The distance of a sensor or sampling point below the sea surface" <urn:doos:bodc:harvest:15601> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/publisher> <https://edmo.seadatanet.org/report/43> <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/variableMeasured> _:e0ed73c6d4e2a4c2e477fe66497951a <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/variableMeasured> _:52d071963704ce94fac288cb2a195397 <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/variableMeasured> _:8838459ffba68bc8dfcd3507d2786e07 <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/variableMeasured> _:8df809f62834453ac727fe0cfac11d96 <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/variableMeasured> _:e778fb9432a3b957c5b6f08b44709f26 <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/D030/> <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/keywords> <https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Dataset> <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/identifier> "16051"^^<http://www.w3.org/2001/XMLSchema#integer> <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/name> "BODC Series 16051" <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/about> <https://api.linked-systems.uk/api/schema-org/event/16051> <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/license> "https://www.bodc.ac.uk/data/documents/nodb/281368/" <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/url> "https://www.bodc.ac.uk/data/documents/series/16051/" <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/spatialCoverage> _:1fdfeb9ef4c5ccb5cfe14fc10d26f5c5 <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/dateModified> "2024-08-01T01:02:27Z" <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/datePublished> "1979-01-01T00:00:00Z" <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/version> "1.0.0" <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/temporalCoverage> "1977-10-17T18:53:00Z/1977-11-25T15:54:00Z" <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/description> "Dataset metadata for BODC Series Reference Number 16051" <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/additionalProperty> _:6e24736574f7ad8f07898868ed08897b <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/provider> <https://edmo.seadatanet.org/report/43> <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/isAccessibleForFree> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/distribution> _:9e83e4d52354e6990b9b5df95d13adf <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/dataset/16051> <https://schema.org/distribution> _:bc371520832ec9295f4bd6b9ded05eac <urn:doos:bodc:harvest:16051> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/legalName> "British Oceanographic Data Centre" <urn:doos:bodc:harvest:16051> .
+<https://edmo.seadatanet.org/report/43> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Organization> <urn:doos:bodc:harvest:16051> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/name> "BODC" <urn:doos:bodc:harvest:16051> .
+<https://edmo.seadatanet.org/report/43> <https://schema.org/url> "https://www.bodc.ac.uk" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/name> "Horizontal velocity of the water column (currents)" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P02/current/RFVL/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/RFVL/" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <https://schema.org/name> "Moored instrument depth" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P02/current/MPMN/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/MPMN/" <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/event/16051> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Event> <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/event/16051> <https://schema.org/name> "Collection Event related to BODC Series 16051" <urn:doos:bodc:harvest:16051> .
+<https://api.linked-systems.uk/api/schema-org/event/16051> <https://schema.org/url> "https://www.bodc.ac.uk/data/documents/series/16051/" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/name> "Currents" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P03/current/D030/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/D030/" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P02/current/" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/name> "Date and time" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P02/current/AYMD/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P02/current/AYMD/" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/inDefinedTermSet> "https://vocab.nerc.ac.uk/collection/P03/current/" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DefinedTerm> <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/name> "Administration and dimensions" <urn:doos:bodc:harvest:16051> .
+<https://vocab.nerc.ac.uk/collection/P03/current/Z005/> <https://schema.org/url> "https://vocab.nerc.ac.uk/collection/P03/current/Z005/" <urn:doos:bodc:harvest:16051> .
+_:9e83e4d52354e6990b9b5df95d13adf <https://schema.org/contentUrl> "https://bodc.ac.uk/data/open_download/series/16051/odvnc/" <urn:doos:bodc:harvest:16051> .
+_:9e83e4d52354e6990b9b5df95d13adf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> <urn:doos:bodc:harvest:16051> .
+_:9e83e4d52354e6990b9b5df95d13adf <https://schema.org/encodingFormat> "application/netcdf" <urn:doos:bodc:harvest:16051> .
+_:e0ed73c6d4e2a4c2e477fe66497951a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16051> .
+_:e0ed73c6d4e2a4c2e477fe66497951a <https://schema.org/name> "CurrSpd_CM" <urn:doos:bodc:harvest:16051> .
+_:e0ed73c6d4e2a4c2e477fe66497951a <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/LCSAEL01/" <urn:doos:bodc:harvest:16051> .
+_:e0ed73c6d4e2a4c2e477fe66497951a <https://schema.org/description> "Speed of water current (Eulerian measurement) in the water body by in-situ current meter" <urn:doos:bodc:harvest:16051> .
+_:1fdfeb9ef4c5ccb5cfe14fc10d26f5c5 <https://schema.org/geo> _:41eacdb07fce11a4776d50cb27f1dea5 <urn:doos:bodc:harvest:16051> .
+_:1fdfeb9ef4c5ccb5cfe14fc10d26f5c5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Place> <urn:doos:bodc:harvest:16051> .
+_:41eacdb07fce11a4776d50cb27f1dea5 <https://schema.org/latitude> "53.7633" <urn:doos:bodc:harvest:16051> .
+_:41eacdb07fce11a4776d50cb27f1dea5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/GeoCoordinates> <urn:doos:bodc:harvest:16051> .
+_:41eacdb07fce11a4776d50cb27f1dea5 <https://schema.org/longitude> "-4.1183" <urn:doos:bodc:harvest:16051> .
+_:52d071963704ce94fac288cb2a195397 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16051> .
+_:52d071963704ce94fac288cb2a195397 <https://schema.org/name> "ElapsedTimeSinceMidnightUTC" <urn:doos:bodc:harvest:16051> .
+_:52d071963704ce94fac288cb2a195397 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/AAFDZZ01/" <urn:doos:bodc:harvest:16051> .
+_:52d071963704ce94fac288cb2a195397 <https://schema.org/description> "Time (time between 00:00 UT and timestamp)" <urn:doos:bodc:harvest:16051> .
+_:6e24736574f7ad8f07898868ed08897b <https://schema.org/value> "34"^^<http://www.w3.org/2001/XMLSchema#integer> <urn:doos:bodc:harvest:16051> .
+_:6e24736574f7ad8f07898868ed08897b <https://schema.org/unitText> "Metres" <urn:doos:bodc:harvest:16051> .
+_:6e24736574f7ad8f07898868ed08897b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16051> .
+_:6e24736574f7ad8f07898868ed08897b <https://schema.org/name> "DepBelowSurf" <urn:doos:bodc:harvest:16051> .
+_:6e24736574f7ad8f07898868ed08897b <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/" <urn:doos:bodc:harvest:16051> .
+_:6e24736574f7ad8f07898868ed08897b <https://schema.org/unitCode> "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/" <urn:doos:bodc:harvest:16051> .
+_:6e24736574f7ad8f07898868ed08897b <https://schema.org/description> "The distance of a sensor or sampling point below the sea surface" <urn:doos:bodc:harvest:16051> .
+_:8838459ffba68bc8dfcd3507d2786e07 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16051> .
+_:8838459ffba68bc8dfcd3507d2786e07 <https://schema.org/name> "Date(Loch_Day)" <urn:doos:bodc:harvest:16051> .
+_:8838459ffba68bc8dfcd3507d2786e07 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/AADYAA01/" <urn:doos:bodc:harvest:16051> .
+_:8838459ffba68bc8dfcd3507d2786e07 <https://schema.org/description> "Date (time from 00:00 01/01/1760 to 00:00 UT on day)" <urn:doos:bodc:harvest:16051> .
+_:8df809f62834453ac727fe0cfac11d96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16051> .
+_:8df809f62834453ac727fe0cfac11d96 <https://schema.org/name> "CurrDir" <urn:doos:bodc:harvest:16051> .
+_:8df809f62834453ac727fe0cfac11d96 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/LCDAEL01/" <urn:doos:bodc:harvest:16051> .
+_:8df809f62834453ac727fe0cfac11d96 <https://schema.org/description> "Direction (towards) of water current (Eulerian measurement) in the water body by in-situ current meter and correction to true North" <urn:doos:bodc:harvest:16051> .
+_:bc371520832ec9295f4bd6b9ded05eac <https://schema.org/contentUrl> "https://bodc.ac.uk/data/open_download/series/16051/odv/" <urn:doos:bodc:harvest:16051> .
+_:bc371520832ec9295f4bd6b9ded05eac <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> <urn:doos:bodc:harvest:16051> .
+_:bc371520832ec9295f4bd6b9ded05eac <https://schema.org/encodingFormat> "text/x-odv" <urn:doos:bodc:harvest:16051> .
+_:e778fb9432a3b957c5b6f08b44709f26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> <urn:doos:bodc:harvest:16051> .
+_:e778fb9432a3b957c5b6f08b44709f26 <https://schema.org/name> "WColHt+AtPr_MW" <urn:doos:bodc:harvest:16051> .
+_:e778fb9432a3b957c5b6f08b44709f26 <https://schema.org/propertyID> "https://vocab.nerc.ac.uk/collection/P01/current/PPSAPR01/" <urn:doos:bodc:harvest:16051> .
+_:e778fb9432a3b957c5b6f08b44709f26 <https://schema.org/description> "Depth below surface of the water body by semi-fixed in-situ pressure sensor and conversion to depth using unspecified algorithm" <urn:doos:bodc:harvest:16051> .

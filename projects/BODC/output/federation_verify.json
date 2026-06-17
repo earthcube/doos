@@ -1,0 +1,84 @@
+{
+  "query_file": "/home/fils/src/Projects/earthcube/doos/SPARQL/varMes_bodc.rq",
+  "local": {
+    "file": "/home/fils/src/Projects/earthcube/doos/projects/BODC/output/bodc_validated.nq",
+    "available": true,
+    "result_count": 270,
+    "sample": [
+      {
+        "minValue": "\"15.7\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "maxValue": "\"4799.7\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "propertyId": "\"https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/\""
+      },
+      {
+        "minValue": "\"3.9\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "maxValue": "\"1000.6\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "propertyId": "\"https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/\""
+      },
+      {
+        "minValue": "\"5.8\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "maxValue": "\"201.8\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "propertyId": "\"https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/\""
+      },
+      {
+        "minValue": "\"7.3\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "maxValue": "\"1001.4\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "propertyId": "\"https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/\""
+      },
+      {
+        "minValue": "\"11.9\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "maxValue": "\"499.5\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "propertyId": "\"https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/\""
+      },
+      {
+        "minValue": "\"4.9\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "maxValue": "\"998.9\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "propertyId": "\"https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/\""
+      },
+      {
+        "minValue": "\"6.1\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "maxValue": "\"989.5\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "propertyId": "\"https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/\""
+      },
+      {
+        "minValue": "\"5.4\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "maxValue": "\"999.9\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "propertyId": "\"https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/\""
+      },
+      {
+        "minValue": "\"5.2\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "maxValue": "\"1000.3\"^^<http://www.w3.org/2001/XMLSchema#double>",
+        "propertyId": "\"https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/\""
+      },
+      {
+        "minValue": "\"6\"^^<http://www.w3.org/2001/XMLSchema#integer>",
+        "maxValue": "\"999\"^^<http://www.w3.org/2001/XMLSchema#integer>",
+        "propertyId": "\"https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/\""
+      }
+    ],
+    "error": null,
+    "passed": true
+  },
+  "remote": {
+    "endpoint": "https://qlever.geocodes-aws-dev.earthcube.org/graphspace/deepoceans",
+    "skipped": false,
+    "bodc_graph_count": 0,
+    "result_count": 0,
+    "sample": [],
+    "error": null,
+    "passed": false
+  },
+  "search_ui": {
+    "url": "https://qlever-test.geocodes-aws-dev.earthcube.org/",
+    "reachable": true,
+    "http_status": 200,
+    "note": "Search UI reachable; query 'bodc' manually to confirm records."
+  },
+  "load_instructions": {
+    "file": "/home/fils/src/Projects/earthcube/doos/projects/BODC/output/bodc_validated.nq",
+    "tool": "scripts/SPARQLupdate/insertUpdates.py",
+    "example": "python scripts/SPARQLupdate/insertUpdates.py --token <TOKEN> --endpoint <UPDATE_ENDPOINT> --file /home/fils/src/Projects/earthcube/doos/projects/BODC/output/bodc_validated.nq --format nquads",
+    "note": "BODC is not yet present on the federated endpoint. Load bodc_validated.nq, then re-run this script."
+  },
+  "passed": false
+}

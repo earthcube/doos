@@ -1,0 +1,163 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "Dataset",
+  "version": "1.0.0",
+  "provider": {
+    "@id": "https://edmo.seadatanet.org/report/43",
+    "@type": "Organization",
+    "legalName": "British Oceanographic Data Centre",
+    "name": "BODC",
+    "url": "https://www.bodc.ac.uk"
+  },
+  "publisher": {
+    "@id": "https://edmo.seadatanet.org/report/43"
+  },
+  "@id": "https://api.linked-systems.uk/api/schema-org/dataset/895651",
+  "identifier": 895651,
+  "datePublished": "2016-06-23T22:06:08Z",
+  "dateModified": "2025-01-12T01:02:10Z",
+  "name": "BODC Series 895651",
+  "description": "Dataset metadata for BODC Series Reference Number 895651",
+  "about": [
+    {
+      "@type": "Event",
+      "@id": "https://api.linked-systems.uk/api/schema-org/event/895651",
+      "url": "https://www.bodc.ac.uk/data/documents/series/895651/",
+      "name": "Collection Event related to BODC Series 895651"
+    }
+  ],
+  "keywords": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Reference numbers",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/ACYC/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/ACYC/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Moored instrument depth",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/MPMN/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/MPMN/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Nitrate concentration parameters in the water column",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/NTRA/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/NTRA/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Date and time",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/AYMD/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/AYMD/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Administration and dimensions",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/Z005/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/Z005/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Carbon, nitrogen and phosphorus",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/C005/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/C005/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Nutrients",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/C040/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/C040/"
+    }
+  ],
+  "url": "https://www.bodc.ac.uk/data/documents/series/895651/",
+  "isAccessibleForFree": true,
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://bodc.ac.uk/data/open_download/series/895651/odv/",
+      "encodingFormat": "text/x-odv"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://bodc.ac.uk/data/open_download/series/895651/odvnc/",
+      "encodingFormat": "application/netcdf"
+    }
+  ],
+  "temporalCoverage": "2003-11-19T09:14:19Z/2004-06-20T09:14:19Z",
+  "license": "https://www.bodc.ac.uk/data/documents/nodb/281368/",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "longitude": "-16.5267",
+      "latitude": "49.0417"
+    }
+  },
+  "creator": [
+    {
+      "@type": "Person",
+      "alternateName": "Richard",
+      "familyName": "Richard",
+      "givenName": "Lampitt",
+      "url": "",
+      "affiliation": {
+        "@type": "Organization",
+        "@id": "https://edmo.seadatanet.org/report/2002",
+        "name": "Southampton Oceanography Centre",
+        "url": "https://edmo.seadatanet.org/report/2002",
+        "sameAs": "https://vocab.nerc.ac.uk/collection/C75/current/ISW/"
+      }
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Record_No",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ACYCAA01/",
+      "description": "Sequence number"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ElapsedTimeSinceMidnightUTC",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/AAFDZZ01/",
+      "description": "Time (time between 00:00 UT and timestamp)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Date(Loch_Day)",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/AADYAA01/",
+      "description": "Date (time from 00:00 01/01/1760 to 00:00 UT on day)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "WColHt+AtPr_MW",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/PPSAPR01/",
+      "description": "Depth below surface of the water body by semi-fixed in-situ pressure sensor and conversion to depth using unspecified algorithm"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "NO3+NO2_Unfilt_Colin-Situ",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/NTRZNS01/",
+      "description": "Concentration of nitrate+nitrite {NO3+NO2} per unit volume of the water body [dissolved plus reactive particulate phase] by in-situ nutrient analysis system"
+    }
+  ],
+  "additionalProperty": {
+    "@type": "PropertyValue",
+    "name": "DepBelowSurf",
+    "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/",
+    "description": "The distance of a sensor or sampling point below the sea surface",
+    "value": 30,
+    "unitCode": "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
+    "unitText": "Metres"
+  }
+}

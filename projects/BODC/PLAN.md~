@@ -1,0 +1,29 @@
+
+
+Look into the release file
+
+find the URLs for datasets like:  https://api.linked-systems.uk/api/schema-org/dataset/1928999
+
+Pull down that JSON-LD  and look for a depth.  
+
+The depth might look like:
+
+
+"@type":"PropertyValue"
+,"name":"DepBelowSurf"
+,"propertyID":"https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/"
+,"description":"Depth (spatial coordinate) relative to water surface in the water body"
+,"minValue":8.8
+,"maxValue":4819.4
+}
+
+With DepBelowSurf
+
+It might also be something like
+
+
+* DEPHPRST 
+* https://vocab.nerc.ac.uk/collection/P01/current/DEPHPRST/
+* https://vocab.nerc.ac.uk/collection/P01/current/DBINAA01/
+
+

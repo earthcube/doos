@@ -1,0 +1,153 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "Dataset",
+  "version": "1.0.0",
+  "provider": {
+    "@id": "https://edmo.seadatanet.org/report/43",
+    "@type": "Organization",
+    "legalName": "British Oceanographic Data Centre",
+    "name": "BODC",
+    "url": "https://www.bodc.ac.uk"
+  },
+  "publisher": {
+    "@id": "https://edmo.seadatanet.org/report/43"
+  },
+  "@id": "https://api.linked-systems.uk/api/schema-org/dataset/16087",
+  "identifier": 16087,
+  "datePublished": "1979-01-01T00:00:00Z",
+  "dateModified": "2024-08-01T01:02:27Z",
+  "name": "BODC Series 16087",
+  "description": "Dataset metadata for BODC Series Reference Number 16087",
+  "about": [
+    {
+      "@type": "Event",
+      "@id": "https://api.linked-systems.uk/api/schema-org/event/16087",
+      "url": "https://www.bodc.ac.uk/data/documents/series/16087/",
+      "name": "Collection Event related to BODC Series 16087"
+    }
+  ],
+  "keywords": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Temperature of the water column",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/TEMP/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/TEMP/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Moored instrument depth",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/MPMN/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/MPMN/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Date and time",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/AYMD/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/AYMD/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Horizontal velocity of the water column (currents)",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/RFVL/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/RFVL/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Administration and dimensions",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/Z005/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/Z005/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Currents",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/D030/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/D030/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Water column temperature and salinity",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/D025/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/D025/"
+    }
+  ],
+  "url": "https://www.bodc.ac.uk/data/documents/series/16087/",
+  "isAccessibleForFree": true,
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://bodc.ac.uk/data/open_download/series/16087/odv/",
+      "encodingFormat": "text/x-odv"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://bodc.ac.uk/data/open_download/series/16087/odvnc/",
+      "encodingFormat": "application/netcdf"
+    }
+  ],
+  "temporalCoverage": "1977-10-17T18:53:00Z/1977-11-25T15:53:00Z",
+  "license": "https://www.bodc.ac.uk/data/documents/nodb/281368/",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "longitude": "-4.1183",
+      "latitude": "53.7633"
+    }
+  },
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Temp",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/TEMPPR01/",
+      "description": "Temperature of the water body"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ElapsedTimeSinceMidnightUTC",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/AAFDZZ01/",
+      "description": "Time (time between 00:00 UT and timestamp)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Date(Loch_Day)",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/AADYAA01/",
+      "description": "Date (time from 00:00 01/01/1760 to 00:00 UT on day)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CurrSpd_CM",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/LCSAEL01/",
+      "description": "Speed of water current (Eulerian measurement) in the water body by in-situ current meter"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "WColHt+AtPr_MW",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/PPSAPR01/",
+      "description": "Depth below surface of the water body by semi-fixed in-situ pressure sensor and conversion to depth using unspecified algorithm"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CurrDir",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/LCDAEL01/",
+      "description": "Direction (towards) of water current (Eulerian measurement) in the water body by in-situ current meter and correction to true North"
+    }
+  ],
+  "additionalProperty": {
+    "@type": "PropertyValue",
+    "name": "DepBelowSurf",
+    "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/",
+    "description": "The distance of a sensor or sampling point below the sea surface",
+    "value": 26,
+    "unitCode": "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
+    "unitText": "Metres"
+  }
+}

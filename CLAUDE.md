@@ -73,20 +73,23 @@ python path/to/script.py --help
    - **SHACL-AF SPARQL rules** (CCHDO): Python builds an intermediate `cchdo:` namespace RDF graph, then `pyshacl.shacl_rules()` fires `sh:SPARQLRule` CONSTRUCT rules to produce schema.org or MLCommons Croissant JSON-LD — see `projects/CCHDO/`
 3. **Validate** — run SHACL validation against `SHACL/` shapes
 4. **Export** — serialize to N-Triples/N-Quads/Turtle for SPARQL endpoints
-5. **Query** — federated SPARQL across providers; `text2query/text2SPARQL.py` is a DSPy program converting natural language → SPARQL against any OpenAI-compatible LLM provider
+5. **Query** — federated SPARQL across providers; `scripts/text2query/text2SPARQL.py` is a DSPy program converting natural language → SPARQL against any OpenAI-compatible LLM provider
 
 ### Key directories
 
 | Path | Purpose |
 |---|---|
 | `projects/` | Per-provider subprojects (ARGO, OBIS, BCO-DMO, CCHDO, ERDDAP, AODN, BODC, CIOOS) |
-| `mapping/SSSOM/` | SSSOM-driven flat-JSON → schema.org JSON-LD transform (currently untracked) |
+| `mapping/SSSOM/` | SSSOM-driven flat-JSON → schema.org JSON-LD transform (`kobo/` holds a GAIA Kobo metadata-form → schema.org mapping) |
+| `mapping/Croissant/` | MLCommons Croissant JSON-LD outputs |
 | `scripts/shapeValidator/` | SHACL validation suite — three engines (pyshacl, pyrudof, pyoxigraph) |
 | `scripts/shapeValidator/defs/` | Shared utilities: `getGraphs.py`, `shaclValidator.py`, `getConstruct.py`, `parquet_streaming.py` |
 | `SHACL/` | OIH depth profile shape files (`.ttl`) |
 | `SPARQL/` | Reusable SPARQL queries (`.rq`) and update scripts |
-| `text2query/` | DSPy natural language → SPARQL |
+| `scripts/text2query/` | DSPy natural language → SPARQL |
+| `scripts/SPARQLupdate/` | `insertUpdates.py` — apply SPARQL UPDATE inserts to a graph |
 | `.opencode/skills/` | AI skills: `fair-assessment`, `oih-graph` |
+| `skills/` | Standalone skills: `crateskill` (RO-Crate), `shaclskills` (SHACL workflow) |
 | `docs/` | Project notes — `sources.md` tracks provider status |
 
 ### Validation engines

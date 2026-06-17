@@ -1,0 +1,181 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "Dataset",
+  "version": "1.0.0",
+  "provider": {
+    "@id": "https://edmo.seadatanet.org/report/43",
+    "@type": "Organization",
+    "legalName": "British Oceanographic Data Centre",
+    "name": "BODC",
+    "url": "https://www.bodc.ac.uk"
+  },
+  "publisher": {
+    "@id": "https://edmo.seadatanet.org/report/43"
+  },
+  "@id": "https://api.linked-systems.uk/api/schema-org/dataset/888120",
+  "identifier": 888120,
+  "datePublished": "2009-08-13T10:18:29Z",
+  "dateModified": "2024-08-27T01:11:43Z",
+  "name": "BODC Series 888120",
+  "description": "Dataset metadata for BODC Series Reference Number 888120",
+  "about": [
+    {
+      "@type": "Event",
+      "@id": "https://api.linked-systems.uk/api/schema-org/event/888120",
+      "url": "https://www.bodc.ac.uk/data/documents/series/888120/",
+      "name": "Collection Event related to BODC Series 888120"
+    }
+  ],
+  "keywords": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Temperature of the water column",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/TEMP/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/TEMP/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Reference numbers",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/ACYC/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/ACYC/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Vertical spatial coordinates",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/AHGT/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/AHGT/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Density of the water column",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/SIGT/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/SIGT/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Salinity of the water column",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/PSAL/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/PSAL/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Administration and dimensions",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/Z005/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/Z005/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Water column temperature and salinity",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/D025/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/D025/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Other physical oceanographic measurements",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/D020/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/D020/"
+    }
+  ],
+  "url": "https://www.bodc.ac.uk/data/documents/series/888120/",
+  "isAccessibleForFree": true,
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://bodc.ac.uk/data/open_download/series/888120/odv/",
+      "encodingFormat": "text/x-odv"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://bodc.ac.uk/data/open_download/series/888120/odvnc/",
+      "encodingFormat": "application/netcdf"
+    }
+  ],
+  "temporalCoverage": "2007-06-21T18:24:18Z/2007-06-21T18:47:34Z",
+  "license": "https://www.bodc.ac.uk/data/documents/nodb/281368/",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "longitude": "-16.502",
+      "latitude": "48.999"
+    }
+  },
+  "creator": [
+    {
+      "@type": "Person",
+      "alternateName": "Martin",
+      "familyName": "Martin",
+      "givenName": "White",
+      "url": "http://www.nuigalway.ie/faculties_departments/earth_and_ocean_sciences/people/martinw.html",
+      "affiliation": {
+        "@type": "Organization",
+        "@id": "https://edmo.seadatanet.org/report/774",
+        "name": "National University of Ireland, Galway",
+        "url": "https://edmo.seadatanet.org/report/774",
+        "sameAs": "https://vocab.nerc.ac.uk/collection/C75/current/UCG/"
+      }
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Record_No",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ACYCAA01/",
+      "description": "Sequence number"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Temp",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/TEMPPR01/",
+      "description": "Temperature of the water body"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pres_Z",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/PRESPR01/",
+      "description": "Pressure (spatial coordinate) exerted by the water body by profiling pressure sensor and correction to read zero at sea level"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sigma-T",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/SIGTEQST/",
+      "description": "Sigma-T of the water body by computation from salinity and temperature using UNESCO algorithm"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "P_sal_CTD_uncalib",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/PSALCU01/",
+      "description": "Practical salinity of the water body by CTD and computation using UNESCO 1983 algorithm and no calibration against independent measurements"
+    }
+  ],
+  "additionalProperty": {
+    "@type": "PropertyValue",
+    "name": "DepBelowSurf",
+    "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/",
+    "description": "The distance of a sensor or sampling point below the sea surface",
+    "minValue": 5,
+    "maxValue": 304,
+    "unitCode": "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
+    "unitText": "Metres"
+  },
+  "funding": [
+    {
+      "@type": "Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "Natural Environment Research Council Swindon Office",
+        "url": "http://www.oceans2025.org/"
+      }
+    }
+  ]
+}

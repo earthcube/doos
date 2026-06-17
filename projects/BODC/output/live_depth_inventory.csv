@@ -1,0 +1,6 @@
+series_id,graph_uri,tier,has_dep_below_surf,has_instrument_depth_signal,depth_names,property_ids,min_value,max_value,tier1_count,tier2_count,dataset_uri,date_modified
+15582,urn:doos:bodc:harvest:15582,none,False,False,,,,,0,0,https://api.linked-systems.uk/api/schema-org/dataset/15582,2024-08-01T01:02:27Z
+15601,urn:doos:bodc:harvest:15601,none,False,False,,,,,0,0,https://api.linked-systems.uk/api/schema-org/dataset/15601,2024-08-01T01:02:27Z
+16051,urn:doos:bodc:harvest:16051,none,False,False,,,,,0,0,https://api.linked-systems.uk/api/schema-org/dataset/16051,2024-08-01T01:02:27Z
+16063,urn:doos:bodc:harvest:16063,none,False,False,,,,,0,0,https://api.linked-systems.uk/api/schema-org/dataset/16063,2024-08-01T01:02:27Z
+16087,urn:doos:bodc:harvest:16087,none,False,False,,,,,0,0,https://api.linked-systems.uk/api/schema-org/dataset/16087,2024-08-01T01:02:27Z

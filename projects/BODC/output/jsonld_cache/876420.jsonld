@@ -1,0 +1,175 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "Dataset",
+  "version": "1.0.0",
+  "provider": {
+    "@id": "https://edmo.seadatanet.org/report/43",
+    "@type": "Organization",
+    "legalName": "British Oceanographic Data Centre",
+    "name": "BODC",
+    "url": "https://www.bodc.ac.uk"
+  },
+  "publisher": {
+    "@id": "https://edmo.seadatanet.org/report/43"
+  },
+  "@id": "https://api.linked-systems.uk/api/schema-org/dataset/876420",
+  "identifier": 876420,
+  "datePublished": "2009-07-13T11:10:02Z",
+  "dateModified": "2026-06-13T01:53:08Z",
+  "name": "BODC Series 876420",
+  "description": "Dataset metadata for BODC Series Reference Number 876420",
+  "about": [
+    {
+      "@type": "Event",
+      "@id": "https://api.linked-systems.uk/api/schema-org/event/876420",
+      "url": "https://www.bodc.ac.uk/data/documents/series/876420/",
+      "name": "Collection Event related to BODC Series 876420"
+    }
+  ],
+  "keywords": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Temperature of the water column",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/TEMP/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/TEMP/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Reference numbers",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/ACYC/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/ACYC/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Moored instrument depth",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/MPMN/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/MPMN/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Partial pressure (pCO2) and fugacity (fCO2) of carbon dioxide in the water column",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/PCO2/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/PCO2/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Date and time",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/AYMD/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/AYMD/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Carbonate system",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/C010/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/C010/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Administration and dimensions",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/Z005/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/Z005/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Water column temperature and salinity",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/D025/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/D025/"
+    }
+  ],
+  "url": "https://www.bodc.ac.uk/data/documents/series/876420/",
+  "isAccessibleForFree": true,
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://bodc.ac.uk/data/open_download/series/876420/odv/",
+      "encodingFormat": "text/x-odv"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://bodc.ac.uk/data/open_download/series/876420/odvnc/",
+      "encodingFormat": "application/netcdf"
+    }
+  ],
+  "temporalCoverage": "2004-06-23T20:00:00Z/2005-03-18T16:00:00Z",
+  "license": "https://www.bodc.ac.uk/data/documents/nodb/200009/",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "longitude": "-16.5169",
+      "latitude": "49.0497"
+    }
+  },
+  "creator": [
+    {
+      "@type": "Person",
+      "familyName": "Arne",
+      "givenName": "K\u00f6rtzinger",
+      "url": "",
+      "affiliation": {
+        "@type": "Organization",
+        "@id": "https://edmo.seadatanet.org/report/992",
+        "name": "GEOMAR Helmholtz Centre for Ocean Research, Kiel (West Shore Campus)",
+        "url": "https://edmo.seadatanet.org/report/992",
+        "sameAs": "https://vocab.nerc.ac.uk/collection/C75/current/IFM/"
+      }
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Record_No",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ACYCAA01/",
+      "description": "Sequence number"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Temp",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/TEMPPR01/",
+      "description": "Temperature of the water body"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ElapsedTimeSinceMidnightUTC",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/AAFDZZ01/",
+      "description": "Time (time between 00:00 UT and timestamp)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Date(Loch_Day)",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/AADYAA01/",
+      "description": "Date (time from 00:00 01/01/1760 to 00:00 UT on day)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pres_MCat",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/PREXMCAT/",
+      "description": "Pressure (measured variable) exerted by the water body by semi-fixed moored SBE MicroCAT"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pCO2",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/PCO2SS01/",
+      "description": "Partial pressure of carbon dioxide {CO2 CAS 124-38-9} {pCO2} in the water body by spectrophotometric absorbance at two different wavelengths of CO2-equilibrated fixed alkalinity dye solution"
+    }
+  ],
+  "additionalProperty": {
+    "@type": "PropertyValue",
+    "name": "DepBelowSurf",
+    "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/",
+    "description": "The distance of a sensor or sampling point below the sea surface",
+    "value": 38,
+    "unitCode": "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
+    "unitText": "Metres"
+  }
+}

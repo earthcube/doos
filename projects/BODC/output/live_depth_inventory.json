@@ -1,0 +1,113 @@
+{
+  "source": "live_api",
+  "api_base": "https://api.linked-systems.uk/api/schema-org/dataset/",
+  "summary": {
+    "graphs": {
+      "total": 5,
+      "by_tier": {
+        "none": 5
+      },
+      "with_dep_below_surf": 0
+    },
+    "series": {
+      "unique_count": 5,
+      "by_tier": {
+        "none": 5,
+        "tier1": 0
+      },
+      "tier1_count": 0,
+      "tier1_pct": 0.0,
+      "tier2_only_count": 0,
+      "tier2_only_pct": 0.0,
+      "instrument_only_count": 0,
+      "none_count": 5
+    },
+    "discovery": {
+      "source": "sitemap",
+      "sitemap_url": "https://www.bodc.ac.uk/sitemap.xml",
+      "sitemap_parts": 11,
+      "series_count": 129895
+    },
+    "errors": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "records": [
+    {
+      "series_id": "15582",
+      "dataset_uri": "https://api.linked-systems.uk/api/schema-org/dataset/15582",
+      "tier": "none",
+      "depth_names": [],
+      "property_ids": [],
+      "min_value": null,
+      "max_value": null,
+      "has_dep_below_surf": false,
+      "has_instrument_depth_signal": false,
+      "tier1_count": 0,
+      "tier2_count": 0,
+      "date_modified": "2024-08-01T01:02:27Z",
+      "graph_uri": "urn:doos:bodc:harvest:15582"
+    },
+    {
+      "series_id": "15601",
+      "dataset_uri": "https://api.linked-systems.uk/api/schema-org/dataset/15601",
+      "tier": "none",
+      "depth_names": [],
+      "property_ids": [],
+      "min_value": null,
+      "max_value": null,
+      "has_dep_below_surf": false,
+      "has_instrument_depth_signal": false,
+      "tier1_count": 0,
+      "tier2_count": 0,
+      "date_modified": "2024-08-01T01:02:27Z",
+      "graph_uri": "urn:doos:bodc:harvest:15601"
+    },
+    {
+      "series_id": "16051",
+      "dataset_uri": "https://api.linked-systems.uk/api/schema-org/dataset/16051",
+      "tier": "none",
+      "depth_names": [],
+      "property_ids": [],
+      "min_value": null,
+      "max_value": null,
+      "has_dep_below_surf": false,
+      "has_instrument_depth_signal": false,
+      "tier1_count": 0,
+      "tier2_count": 0,
+      "date_modified": "2024-08-01T01:02:27Z",
+      "graph_uri": "urn:doos:bodc:harvest:16051"
+    },
+    {
+      "series_id": "16063",
+      "dataset_uri": "https://api.linked-systems.uk/api/schema-org/dataset/16063",
+      "tier": "none",
+      "depth_names": [],
+      "property_ids": [],
+      "min_value": null,
+      "max_value": null,
+      "has_dep_below_surf": false,
+      "has_instrument_depth_signal": false,
+      "tier1_count": 0,
+      "tier2_count": 0,
+      "date_modified": "2024-08-01T01:02:27Z",
+      "graph_uri": "urn:doos:bodc:harvest:16063"
+    },
+    {
+      "series_id": "16087",
+      "dataset_uri": "https://api.linked-systems.uk/api/schema-org/dataset/16087",
+      "tier": "none",
+      "depth_names": [],
+      "property_ids": [],
+      "min_value": null,
+      "max_value": null,
+      "has_dep_below_surf": false,
+      "has_instrument_depth_signal": false,
+      "tier1_count": 0,
+      "tier2_count": 0,
+      "date_modified": "2024-08-01T01:02:27Z",
+      "graph_uri": "urn:doos:bodc:harvest:16087"
+    }
+  ]
+}

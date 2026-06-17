@@ -1,0 +1,177 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "Dataset",
+  "version": "1.0.0",
+  "provider": {
+    "@id": "https://edmo.seadatanet.org/report/43",
+    "@type": "Organization",
+    "legalName": "British Oceanographic Data Centre",
+    "name": "BODC",
+    "url": "https://www.bodc.ac.uk"
+  },
+  "publisher": {
+    "@id": "https://edmo.seadatanet.org/report/43"
+  },
+  "@id": "https://api.linked-systems.uk/api/schema-org/dataset/945170",
+  "identifier": 945170,
+  "datePublished": "2016-05-16T22:21:10Z",
+  "dateModified": "2024-08-28T02:51:53Z",
+  "name": "BODC Series 945170",
+  "description": "Dataset metadata for BODC Series Reference Number 945170",
+  "about": [
+    {
+      "@type": "Event",
+      "@id": "https://api.linked-systems.uk/api/schema-org/event/945170",
+      "url": "https://www.bodc.ac.uk/data/documents/series/945170/",
+      "name": "Collection Event related to BODC Series 945170"
+    }
+  ],
+  "keywords": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Reference numbers",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/ACYC/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/ACYC/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Vertical spatial coordinates",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/AHGT/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/AHGT/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Horizontal spatial co-ordinates",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/ALAT/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/ALAT/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Date and time",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/AYMD/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/AYMD/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Horizontal velocity of the water column (currents)",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P02/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P02/current/RFVL/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P02/current/RFVL/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Administration and dimensions",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/Z005/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/Z005/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Currents",
+      "inDefinedTermSet": "https://vocab.nerc.ac.uk/collection/P03/current/",
+      "url": "https://vocab.nerc.ac.uk/collection/P03/current/D030/",
+      "@id": "https://vocab.nerc.ac.uk/collection/P03/current/D030/"
+    }
+  ],
+  "url": "https://www.bodc.ac.uk/data/documents/series/945170/",
+  "isAccessibleForFree": true,
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://bodc.ac.uk/data/open_download/series/945170/odv/",
+      "encodingFormat": "text/x-odv"
+    }
+  ],
+  "temporalCoverage": "2007-06-19T22:47:51Z/2007-06-25T09:44:47Z",
+  "license": "https://www.bodc.ac.uk/data/documents/nodb/281368/",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoShape"
+    }
+  },
+  "creator": [
+    {
+      "@type": "Person",
+      "alternateName": "Martin",
+      "familyName": "Martin",
+      "givenName": "White",
+      "url": "http://www.nuigalway.ie/faculties_departments/earth_and_ocean_sciences/people/martinw.html",
+      "affiliation": {
+        "@type": "Organization",
+        "@id": "https://edmo.seadatanet.org/report/774",
+        "name": "National University of Ireland, Galway",
+        "url": "https://edmo.seadatanet.org/report/774",
+        "sameAs": "https://vocab.nerc.ac.uk/collection/C75/current/UCG/"
+      }
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Record_No",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ACYCAA01/",
+      "description": "Sequence number"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BinDep",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/DBINAA01/",
+      "description": "Depth (spatial coordinate) of ADCP bin relative to water surface {bin depth} in the water body",
+      "minValue": 20,
+      "maxValue": 800
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ElapsedTimeSinceMidnightUTC",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/AAFDZZ01/",
+      "description": "Time (time between 00:00 UT and timestamp)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CurrVelE_ADCP",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/LCEWAS01/",
+      "description": "Eastward velocity of water current (Eulerian measurement) in the water body by shipborne acoustic doppler current profiler (ADCP)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Date(Loch_Day)",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/AADYAA01/",
+      "description": "Date (time from 00:00 01/01/1760 to 00:00 UT on day)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CurrVelN_ADCP",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/LCNSAS01/",
+      "description": "Northward velocity of water current (Eulerian measurement) in the water body by shipborne acoustic doppler current profiler (ADCP)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Lat_GPS",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ALATGP01/",
+      "description": "Latitude north relative to WGS84 by unspecified GPS system"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Lon_GPS",
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ALONGP01/",
+      "description": "Longitude east relative to WGS84 by unspecified GPS system"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "Natural Environment Research Council Swindon Office",
+        "url": "http://www.oceans2025.org/"
+      }
+    }
+  ]
+}

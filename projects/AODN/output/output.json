@@ -1,0 +1,171 @@
+{
+  "@context": {
+ "@vocab": "http://schema.org/", 
+"datacite": "http://purl.org/spar/datacite/",
+
+                "earthcollab": "https://library.ucar.edu/earthcollab/schema#",
+
+                "geolink": "http://schema.geolink.org/1.0/base/main#",
+
+                "vivo": "http://vivoweb.org/ontology/core#",
+
+                "dcat":"http://www.w3.org/ns/dcat#"
+
+                  },
+ "@id": "urn:528f280c-b151-45c4-9526-e0746510a617",
+  "@type": "Dataset",
+  "additionalType": [
+    "geolink:Dataset",
+    "vivo:Dataset"
+  ],
+  "name": "SAIMOS - Biological and Flow Cytometry data collected from CTD stations in South Australia, in April 2015",
+  "citation": "(2015-11-24T10:00:00), SAIMOS - Biological and Flow Cytometry data collected from CTD stations in South Australia, in April 2015, urn:528f280c-b151-45c4-9526-e0746510a617.",
+  "creator":
+[],
+  "datePublished": "2015-11-24T10:00:00",
+  "description": "Flow cytometry data was collected in April 2015, in waters off South Australia. The general purpose of the study is to be able to establish background knowledge on the ecosystem on the continental shelf of South Australia and the impact of upwelling/saline outflow events on microbial communities to ultimately develop a biogeochemical model of the region. Sampling was carried out during cruises conducted on board the RV Ngerin as part of the Southern Australian Integrated Marine System (SAIMOS). During each cruise, the physical, chemical and biological properties of the chlorophyll fluorescence maximum (DCM) layer were investigated. Flow cytometry data has been collected for picophytoplankton, bacteria and viruses. Six main stations have been sampled over the course of the study, five are located on the 100 m isobath, i.e. RS (35.508S, 136.278E), B2 (35.418S, 136.148E), B3 (35.258S, 136.048E), SAM2CP/B4 (35.168S, 135.418E) and SAM5CB/B5 (35.008S, 135.198E), and one from an offshore station (B1; 36.188S, 136.178E) located southwest of Kangaroo Island. Note that combining the distances between stations (1425 nautical miles), the average component of the current velocity at middepth along the shelf (0.01 m s21) and the average speed of the vessel (i.e. 9 knots) indicate that different water masses were sampled at each station. Additional samples have on occasion been collected from the National Reference Station (NRS) at Kangaroo Island (35.832S, 136.447E) and the SA Spencer Gulf Mouth Mooring (SAM8SG, 35.25S, 136.690E), where the saline outflow occurs.",
+  "distribution": [
+{
+      "@id": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls",
+    "@type": "DataDownload",
+    "additionalType": "dcat:distribution",
+      "dcat:accessURL": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls",
+      "url": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls",
+      "name": "Summary of biological and nutrient data collected from each station.",
+      "description": "Service Protocol: . ",
+      "fileFormat": [
+"Microsoft Excel v.2007", "fcs files"]}
+,
+{
+      "@id": "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_BioExcel_summary_May2014onwards.doc",
+    "@type": "DataDownload",
+    "additionalType": "dcat:distribution",
+      "dcat:accessURL": "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_BioExcel_summary_May2014onwards.doc",
+      "url": "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_BioExcel_summary_May2014onwards.doc",
+      "description": "Explanation of column headings in excel summary document.. Service Protocol: Explanation of column headings in excel summary document.. ",
+      "fileFormat": [
+"Microsoft Excel v.2007", "fcs files"]}
+,
+{
+      "@id": "http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/",
+    "@type": "DataDownload",
+    "additionalType": "dcat:distribution",
+      "dcat:accessURL": "http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/",
+      "url": "http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/",
+      "name": "Picophytoplankton Flow Cytometry data (fcs files)",
+      "description": "Service Protocol: . ",
+      "fileFormat": [
+"Microsoft Excel v.2007", "fcs files"]}
+,
+{
+      "@id": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls",
+    "@type": "DataDownload",
+    "additionalType": "dcat:distribution",
+      "dcat:accessURL": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls",
+      "url": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls",
+      "name": "Picophytoplankton processed data",
+      "description": "Service Protocol: . ",
+      "fileFormat": [
+"Microsoft Excel v.2007", "fcs files"]}
+,
+{
+      "@id": "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_pico_May2014onwards.doc",
+    "@type": "DataDownload",
+    "additionalType": "dcat:distribution",
+      "dcat:accessURL": "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_pico_May2014onwards.doc",
+      "url": "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_pico_May2014onwards.doc",
+      "description": "Explanation of Picophytoplankton file names (fcs files). Service Protocol: Explanation of Picophytoplankton file names (fcs files). ",
+      "fileFormat": [
+"Microsoft Excel v.2007", "fcs files"]}
+,
+{
+      "@id": "http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/",
+    "@type": "DataDownload",
+    "additionalType": "dcat:distribution",
+      "dcat:accessURL": "http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/",
+      "url": "http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/",
+      "name": "BacteriaVirus Flow Cytometry data (fcs files)",
+      "description": "Service Protocol: . ",
+      "fileFormat": [
+"Microsoft Excel v.2007", "fcs files"]}
+,
+{
+      "@id": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls",
+    "@type": "DataDownload",
+    "additionalType": "dcat:distribution",
+      "dcat:accessURL": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls",
+      "url": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls",
+      "name": "Bacteria/Virus Processed data",
+      "description": "Service Protocol: . ",
+      "fileFormat": [
+"Microsoft Excel v.2007", "fcs files"]}
+,
+{
+      "@id": "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_BacteriaViruses_May2014onwards.doc",
+    "@type": "DataDownload",
+    "additionalType": "dcat:distribution",
+      "dcat:accessURL": "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_BacteriaViruses_May2014onwards.doc",
+      "url": "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_BacteriaViruses_May2014onwards.doc",
+      "description": "Explanation of bacteria/virus file names (fcs files). Service Protocol: Explanation of bacteria/virus file names (fcs files). ",
+      "fileFormat": [
+"Microsoft Excel v.2007", "fcs files"]}
+,
+{
+      "@id": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx",
+    "@type": "DataDownload",
+    "additionalType": "dcat:distribution",
+      "dcat:accessURL": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx",
+      "url": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx",
+      "name": "Chlorophyll pigment processed data",
+      "description": "Service Protocol: . ",
+      "fileFormat": [
+"Microsoft Excel v.2007", "fcs files"]}
+,
+{
+      "@id": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx",
+    "@type": "DataDownload",
+    "additionalType": "dcat:distribution",
+      "dcat:accessURL": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx",
+      "url": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx",
+      "name": "Phytoplankton community composition and abundance data",
+      "description": "Service Protocol: . ",
+      "fileFormat": [
+"Microsoft Excel v.2007", "fcs files"]}
+,
+{
+      "@id": "http://en.bio-soft.net/other/WinMDI.html",
+    "@type": "DataDownload",
+    "additionalType": "dcat:distribution",
+      "dcat:accessURL": "http://en.bio-soft.net/other/WinMDI.html",
+      "url": "http://en.bio-soft.net/other/WinMDI.html",
+      "name": "Link to free Winmdi software for visualisation and analysis of fcs files",
+      "description": "Service Protocol: . ",
+      "fileFormat": [
+"Microsoft Excel v.2007", "fcs files"]}
+  ],
+  "identifier": 
+ [
+],
+  "includedInDataCatalog": {
+ 
+    "@type":"DataCatalog",
+  "name":"Name of catalog source for record being transformed",
+  "url": "not defined"
+},
+  "contributor": { "@type":"Role", "roleName":"credit", "description":""},
+  "keywords": ["Oceans | Ocean Winds | Surface Winds", "Oceans | Bathymetry | Water Depth", "Oceans | Ocean Temperature | Sea Surface Temperature", "Oceans | Ocean Chemistry | Chlorophyll", "Oceans | Ocean Chemistry | Suspended Solids", "Oceans | Ocean Chemistry | Inorganic Matter", "Oceans | Ocean Chemistry | Organic Matter", "Oceans | Ocean Chemistry | Nitrogen", "Oceans | Ocean Chemistry | Phosphate", "Oceans | Ocean Chemistry | Silicate", "Biosphere | Vegetation | Phytoplankton", "Biosphere | Microbiota | Bacteria", "Niskin Bottles", "IMOS Node | SA-IMOS | Southern Australian Integrated Marine Observing System", "Virus", "Picophytoplankton", "latitude", "longitude", "wind_speed", "wind_from_direction", "depth", "sea_surface_temperature", "depth_of_chlorophyll_maximum", "concentration_of_chlorophyll_in_sea_water", "mass_concentration_of_suspended_matter_in_sea_water", "mass_concentration_of_particulate_inorganic_matter_in_sea_water", "mass_concentration_of_particulate_organic_matter_in_sea_water", "mole_concentration_of_nitrogen_in_ammonium_in_sea_water", "mole_concentration_of_nitrogen_in_nitrate_and_nitrite_in_sea_water", "mole_concentration_of_phosphorus_in_phosphate_in_sea_water", "mole_concentration_of_silicate_in_sea_water", "amount_of_picophytoplankton_in_sea_water", "amount_of_bacteria_in_sea_water", "amount_of_virus_in_sea_water"],
+  "license": [{
+     "@type": "DigitalDocument","name": "MD_Constraints",
+        "description": "useLimitation: Data, products and services from IMOS are provided 'as is 'without any warranty as to fitness for a particular purpose..   "},
+       {
+     "@type": "DigitalDocument","name": "MD_LegalConstraints",
+        "description": "graphic: reference: otherConstraints: The citation in a list of references is: 'IMOS [year-of-data-download], [Title], [data-access-URL], accessed [date-of-access]. '.   otherConstraints: Any users of IMOS data are required to clearly acknowledge the source of the material derived from IMOS in the format: 'Data was sourced from Australia s Integrated Marine Observing System (IMOS) IMOS is enabled by the National Collaborative Research Infrastructure strategy (NCRIS). 'If relevant, also credit other organisations involved in collection of this particular datastream (as listed in 'credit' in the metadata record)..   "}],
+  "publisher": "publisher not specified",
+  "spatialCoverage": {
+
+    "@type":"Place",
+      "geo":
+        {
+       "@type": "GeoShape",
+          "box": "135.0, -35.90 136.90, -34.90"
+            }}}
