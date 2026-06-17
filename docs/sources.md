@@ -1,6 +1,5 @@
 # Sources notes
 
-
 ## Source info
 
 Provides via graph call:  https://qlever-ui.geocodes-aws-dev.earthcube.org/deepoceans/GxLMVz
@@ -54,4 +53,4 @@ _config for deep ocean sources_
 Notes:
 
 * [AODN Example](https://catalogue.aodn.org.au/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/formatters/jsonld )
-* [old link to ui?](https://qlever-test.geocodes-aws-dev.earthcube.org/#/search/?q=bodc&searchExactMatch=false&resourceType=all)    
+* [old link to ui?](https://qlever-test.geocodes-aws-dev.earthcube.org/#/search/?q=bodc&searchExactMatch=false&resourceType=all)

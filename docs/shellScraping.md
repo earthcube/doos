@@ -1,5 +1,24 @@
 # Bash commands
 
+## Resources checks
+
+
+## Notes
+
+
+```bash
+curl -s  --header "Accept: text/html"   https://obis.org/dataset/dac63ff7-e96f-41fa-8ba9-710c7a92d098 | sed -n '/<script type=\"application\/ld+json\">/,/<\/script>/p' | sed 's/<\/script>//' | sed 's/<script type=\"application\/ld+json\">//' | jsonld format -q
+```
+
+
+```bash
+curl -s  --header "Accept: text/html"   "https://oss.geocodes-aws-dev.earthcube.org/geocodes/summoned%2Fbodc%2Fffac803ba549b522c0897a8fde842bdbe4bbb113.jsonld"  | jsonld format  
+```
+
+
+## Bash scraping
+
+
 What follows are some examples of commands and scripts that can be used for 
 quick inspection of resources like sitemaps or even to pull JSON-LD from pages.
 
@@ -55,4 +74,3 @@ curl -s  --header "Accept: text/html"   $url \
     | sed -n '/<script type=\"application\/ld+json\">/,/<\/script>/p' \
     | sed 's/<\/script>//' | sed 's/<script type=\"application\/ld+json\">//' 
 ```
-
