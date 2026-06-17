@@ -1,0 +1,16 @@
+[project]
+name = "obis-data"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "duckdb>=1.5.3",
+    "pandas>=3.0.3",
+    "pyarrow>=24.0.0",
+    "pyld>=3.0.0",
+    "pyoxigraph>=0.5.8",
+    "python-dwca-reader>=0.16.4",
+    "requests>=2.34.2",
+    "visidata>=3.3",
+]

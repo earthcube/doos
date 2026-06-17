@@ -1,136 +1,86 @@
-# OBIS Python Scripts
+# OBIS auxiliary depth graph
 
-This directory contains four Python scripts for processing OBIS (Ocean Biodiversity Information System) data, primarily focused on depth statistics from Parquet/DwC-A files and generating JSON-LD metadata.
+OBIS (Ocean Biogeographic Information System) does not expose per-dataset depth
+statistics through its API — getting them otherwise means walking every record,
+or querying awkward depth slices like
+`https://api.obis.org/dataset?startdepth=5000&enddepth=6000`.
 
-## Scripts Overview
+This repo builds an **auxiliary graph** of per-dataset depth ranges that can be
+tested with and shared back to OBIS, in the hope it helps integrate the values
+into the production service. The depth values come from the OBIS parquet export
+(https://obis.org/data/access/), where `depth` is OBIS's interpretation of the
+Darwin Core `minimumDepthInMeters` / `maximumDepthInMeters` fields. We aggregate
+those per dataset and emit schema.org JSON-LD following the ODIS depth pattern:
+https://github.com/iodepo/odis-arch/blob/master/book/thematics/depth/index.md
 
-**depthTriples.py**
-- Reads `idMinMaxDepth.parquet`, queries matching JSON-LD files via DuckDB to resolve dataset URLs.
-- Generates schema.org JSON-LD files with `variableMeasured` depth properties (using min/max).
-- Writes separate outputs for all records and strict (non-null) records.
-- No command line parameters (hardcoded paths and directories).
-- Example: `python depthTriples.py`
+## Install
 
-**ibis_test1.py**
-- Computes minimum and maximum depth per `dataset_id` from a large OBIS Parquet file using Ibis and DuckDB.
-- Outputs aggregated results to `idMinMaxDepth.parquet`.
-- No command line parameters (hardcoded paths).
-- Example: `python ibis_test1.py`
+Managed with [uv](https://docs.astral.sh/uv/) (Python ≥ 3.13):
 
-**dwcaPandas.py**
-- Demonstrates loading a Darwin Core Archive (DwC-A) ZIP using `dwca.read` and converting the core occurrence file to a Pandas DataFrame.
-- Prints info, head, and depth statistics for the example archive.
-- No command line parameters (hardcoded ZIP path).
-- Example: `python dwcaPandas.py`
-
-**dwcaReader.py**
-- Example/tutorial script demonstrating the `dwca.read` library features: metadata access, descriptor inspection, term querying, row iteration, and utility functions for Darwin Core terms.
-- Uses a sample DwC-A archive to explore structure and data.
-- No command line parameters (hardcoded ZIP path).
-- Example: `python dwcaReader.py`
-
-None of the scripts accept CLI arguments or flags (use `argparse` or `sys.argv` for future enhancements). They are currently demonstration/exploratory tools with hardcoded file paths.
-
----
-
-
-
-There is no way currently to get depth statistics by dataset from the API except by going through all records 
-but I wouldn't recommend that. 
-
-One thing you could do is get dataset lists for depth slices, 
-eg https://api.obis.org/dataset?startdepth=5000&enddepth=6000
-
-This is not the best approach since you have to query by ranges and get the related resources.
-
-However, there is a parquet export from https://obis.org/data/access/ .  Pieter said
-that the parquet has depth which is an interpretation of the darwin 
-core fields minimumDepthInMeters and maximumDepthInMeters.   So this might be the best route.
-
-Pieter doesn't have time to work on this right away, but it might be easy for us to make an 
-"auxiliary" graph that we can test with and also share with Pieter.  In the hopes it helps
-him integrate the values into the production service. 
-
- SELECT *
-· FROM read_json('./obis/*.jsonld',
-·                format = 'auto',
-‣                columns = {url: 'VARCHAR',
-·                           name: 'VARCHAR'});
-
-
-Can take the vale from the parquet, duck search the json and build the new
-variableMeasure entries.   
-
-just need to update the JSON-LD now with depth values like seen
-in: https://github.com/iodepo/odis-arch/blob/master/book/thematics/depth/index.md
-
-
-```python
-import json
-
-json_string = '{"myArray": [1, 2, 3]}'
-
-# Load the JSON string into a Python dictionary
-data = json.loads(json_string)
-
-# Insert a new node at index 1
-data["myArray"].insert(1, "new value")
-
-# Write the updated JSON data back to a string
-updated_json_string = json.dumps(data, indent=4)
-
-print(updated_json_string)
+```bash
+uv sync
 ```
 
-## Depth example
+## Usage
 
-```json
-   {
-  "@context": {
-    "@vocab": "https://schema.org/"
-  },
-  "@id": "https://example.org/dataset/12345",
-  "@type": "Dataset",
-  "variableMeasured": [
-    {
-      "@type": "PropertyValue",
-      "name": "minimumDepthInMeters",
-      "description": "Parsed and validated by OBIS.",
-      "value": "34.4",
-      "propertyID": "https://obis.org/data/access/",
-      "measurementTechnique": "Parsed and validated by OBIS.",
-      "unitText": "m",
-      "unitCode": [
-        "https://qudt.org/vocab/unit/M", "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
-        "http://dbpedia.org/resource/Metre"
-      ]
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "maximumDepthInMeters",
-      "description": "Parsed and validated by OBIS.",
-      "value": "123.4",
-      "propertyID": "https://obis.org/data/access/",
-      "measurementTechnique": "Parsed and validated by OBIS.",
-      "unitText": "m",
-      "unitCode": [
-        "https://qudt.org/vocab/unit/M", "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
-        "http://dbpedia.org/resource/Metre"
-      ]
-    }
-  ]
-}
+The entire pipeline lives in `build_depth_graph.py`, with one function per stage.
+Each stage consumes the previous stage's output.
+
+```bash
+uv run python build_depth_graph.py             # run all three stages
+uv run python build_depth_graph.py --stage 2 3 # run a subset of stages
+uv run python build_depth_graph.py --help      # all path overrides
 ```
 
-or
+| Stage | Function | In → Out |
+|-------|----------|----------|
+| 1 | `aggregate_depth` | `obis_<date>.parquet` → `idMinMaxDepth.parquet` (min/max depth per `dataset_id`, via DuckDB) |
+| 2 | `generate_jsonld` | `idMinMaxDepth.parquet` + `jsonld/obis_source/*.jsonld` → `jsonld/output_raw/` and `jsonld/output_raw_strict/` |
+| 3 | `build_nquads` | `jsonld/output_raw_strict/` (default; override with `--nq-from`) → `output.nq` (pyld URDNA2015 normalize → pyoxigraph named graphs) |
 
+Notes:
+
+- **Stage 1 needs the OBIS export**, `obis_20240625.parquet`, downloaded from
+  https://obis.org/data/access/. It is large and not committed. If you only have
+  `idMinMaxDepth.parquet`, run `--stage 2 3`.
+- **Stage 2** resolves each dataset's canonical `@id` by matching `dataset_id`
+  against the `url` field of the harvested source JSON-LD in
+  `jsonld/obis_source/`. Datasets with no matching source url cannot be given a
+  valid `@id` and are skipped (the count is logged).
+- `output_raw/` contains every dataset; `output_raw_strict/` is the subset with
+  both a non-null min and max depth. **Stage 3 builds `output.nq` from the strict
+  set by default** (clean depth values); pass `--nq-from ./jsonld/output_raw` to
+  use the full set instead.
+- Re-running stage 2 regenerates both output dirs from scratch (it clears the
+  `*_depth.jsonld` files first), so they always reflect the current run.
+
+### Loading into a triplestore (separate, alternative step)
+
+Stage 3 and the shell loaders are **alternatives** — both consume the stage-2
+JSON-LD independently. Use stage 3 for a local `output.nq`; use the loaders to
+push directly into a live SPARQL endpoint (e.g. Blazegraph):
+
+```bash
+# POST every file in a directory to a SPARQL update endpoint
+./scripts/jsonldDirLoader.sh ./jsonld/output_raw_strict http://localhost:9999/blazegraph/namespace/kb/sparql
+
+# Same, but stream the source files from a Minio bucket
+./scripts/jsonldLoader.sh mybucket http://localhost:9999/blazegraph/namespace/kb/sparql
+```
+
+Both require external CLIs: `jsonld` ([jsonld.js](https://github.com/digitalbazaar/jsonld.js)),
+`mc` ([Minio client](https://min.io/docs/minio/linux/reference/minio-mc.html)), and `curl`.
+
+## Emitted JSON-LD
+
+The script emits the single-`depth` `PropertyValue` form (`DEPTH_TEMPLATE` in
+`build_depth_graph.py` is the source of truth), with `minValue`/`maxValue` per
+dataset:
 
 ```json
- {
-  "@context": {
-    "@vocab": "https://schema.org/"
-  },
-  "@id": "https://example.org/dataset/12345",
+{
+  "@context": { "@vocab": "https://schema.org/" },
+  "@id": "https://obis.org/dataset/12345",
   "@type": "Dataset",
   "variableMeasured": [
     {
@@ -143,12 +93,23 @@ or
       "measurementTechnique": "Parsed and validated by OBIS.",
       "unitText": "m",
       "unitCode": [
-        "https://qudt.org/vocab/unit/M", "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
         "http://dbpedia.org/resource/Metre"
       ]
     }
   ]
 }
-
-
 ```
+
+The ODIS depth pattern also allows separate `minimumDepthInMeters` and
+`maximumDepthInMeters` `PropertyValue` entries (each with a single `value`); this
+project uses the combined `depth` form above.
+
+## Other files
+
+- `dwca/dwcaReader.py`, `dwca/dwcaPandas.py` — exploratory utilities for reading
+  Darwin Core Archive (`.zip`) files with `python-dwca-reader`; not part of the
+  depth pipeline.
+- `obis_release.ttl` — an external reference dump (a full OBIS graph harvested by
+  gleaner.io / Ocean InfoHub); not generated by this code.
