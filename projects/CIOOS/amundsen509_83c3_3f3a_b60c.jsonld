@@ -1,0 +1,1680 @@
+{
+  "@context":  {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "sc": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "dct": "http://purl.org/dc/terms/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "ArcticNet 0603c - Hudson Bay and Foxe Basin CTD data",
+  "headline": "amundsen509",
+  "isLiveDataset": true,
+  "distribution": [
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_096.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_096.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_097.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_097.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_098.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_098.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_099.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_099.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_100.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_100.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_101.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_101.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_102.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_102.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_103.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_103.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_104.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_104.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_105.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_105.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_106.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_106.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_107.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_107.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_108.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_108.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_109.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_109.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_110.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_110.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_111.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_111.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_112.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_112.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_113.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_113.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_114.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_114.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_115.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_115.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileObject",
+    "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_116.int.nc",
+    "contentSize": "68731 B",
+    "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_116.int.nc",
+    "encodingFormat": "application/x-netcdf"
+  },
+  {
+    "@type": "cr:FileSet",
+    "@id": "amundsen509Files",
+    "description": "Files that contain the data.",
+    "encodingFormat": "application/json",
+    "includes": "https://erddap.amundsenscience.com/erddap/files/amundsen509/*.*"
+  }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "dataRecordSet",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/platform_name",
+          "description": "Platform Name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "platform_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/platform_id",
+          "description": "Platform WMO ID",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "platform_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/filename",
+          "description": "Source File Name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "filename"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/cruise_name",
+          "description": "Cruise Name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "cruise_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/cruise_number",
+          "description": "Cruise Number",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "cruise_number"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/cast_number",
+          "description": "Cast Number",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "cast_number"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/station",
+          "description": "Station",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "station"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/time",
+          "description": "Initial Start Time",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "time"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/latitude",
+          "description": "Initial Latitude",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "latitude"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/longitude",
+          "description": "Initial Longitude",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "longitude"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/PRES",
+          "description": "Sea Pressure",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "PRES"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/depth",
+          "description": "Depth",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "depth"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/TE90",
+          "description": "Temperature (ITS-90)",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "TE90"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/PSAL",
+          "description": "Practical Salinity",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "PSAL"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/OXYM",
+          "description": "Dissolved Oxygen",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "OXYM"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/pH",
+          "description": "Sea water pH",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "pH"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/NTRA",
+          "description": "Nitrate (NO3-N)",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "NTRA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/FLOR",
+          "description": "chl-a fluorescence",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "FLOR"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/CDOM",
+          "description": "CDOM fluorescence",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "CDOM"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/TRAN",
+          "description": "Light Transmission",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "TRAN"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/TURB",
+          "description": "Turbidity",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "TURB"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/PSAR",
+          "description": "Sea Water PAR",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "PSAR"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/SPAR",
+          "description": "Surface PAR",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "SPAR"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/SIGT",
+          "description": "Sigma-T",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": {
+              "@id": "amundsen509Files"
+            },
+            "extract": {
+              "column": "SIGT"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "description": "The CTD data was obtained during leg #0603 of the 2006 ArcticNet scientific cruise. The data were collected from October 25 to 27, 2006, aboard the CCGS Amundsen. There were 21 CTD casts, associated to 18 oceanographic stations, in the Hudson Bay and Foxe Basin. The following parameters were measured: temperature, conductivity and pressure (with a Sea-Bird SBE-9plus), dissolved oxygen (Sea-Bird SBE-43), pH (Sea-Bird SBE-18-I), fluorescence (Seapoint chlorophyll fluorometer), nitrate concentration (Satlantic MBARI-ISUS 5T), transmittance (Wetlabs C-Star transmissiometer), light intensity (PAR; Biospherical Instruments QCP2300) and surface light intensity (sPAR; Biospherical Instruments QCP2200). Quality control procedures were applied to the data. Data are available on the Polar Data Catalogue and at the Marine Environmental Data Service (MEDS) of Fisheries and Oceans Canada.\ncdm_data_type=Profile\ncdm_profile_variables=filename,platform_name,platform_id,cruise_name,cruise_number,cast_number,station,time,latitude,longitude\ncomment=##Limitations:\nPurpose: The physical data are one of the tools used to characterize the water masses and, to some extent, the water circulation in the Hudson Bay and Foxe Basin.\n\n Supplemental Information: Summary: Not Applicable Research Program(s): ArcticNet. For further information: pdc@arcticnet.ulaval.ca\ncontributor_name=Yves, Gratton;Dany, Dumont;Marie-Emmanuelle, Rail;Annie, Simard;Stéphane, Thanassekos;ArcticNet;Amundsen Science;Amundsen Science\ncontributor_role=principalInvestigator,originator;collaborator;collaborator;collaborator;collaborator;pointOfContact,owner,distributor;owner,distributor;pointOfContact,custodian\nConventions=COARDS,ACDD-1.3,CF-1.6,CF-1.7,CF-1.8,CF-1.9\ndoi=https://doi.org/10.5884/509\nEasternmost_Easting=-75.8348\nfeatureType=Profile\ngeospatial_lat_max=67.8837\ngeospatial_lat_min=63.5352\ngeospatial_lat_units=degrees_north\ngeospatial_lon_max=-75.8348\ngeospatial_lon_min=-82.1352\ngeospatial_lon_units=degrees_east\ngeospatial_vertical_max=375.94323902465544\ngeospatial_vertical_min=1.9800019165374572\ngeospatial_vertical_positive=down\ngeospatial_vertical_units=m\nid=ccin-509\ninfoUrl=https://catalogue.hakai.org/dataset/ca-cioos_None\ninstitution=ArcticNet\nkeywords_vocabulary=CIOOS: CIOOS Essential Ocean Variables Vocabulary\nmax_depth_m=340.08\nmetadata_form=https://cioos-siooc.github.io/metadata-entry-form#/en/amundsen/c8GqCtwH6sZnf3HtZhCgkOsmtoh1/ccin-509\nmetadata_link=https://doi.org/10.5884/509\nmin_depth_m=2.64\nnaming_authority=ca.cioos\nNorthernmost_Northing=67.8837\noriginal_filename=CTD_2006003_116_1_DN.ODF\npdc_ccin=509\nplatform=ship\nplatform_vocabulary=https://vocab.nerc.ac.uk/collection/L06/current/\nprogress=completed\nproject=ArcticNet\nsounding_m=353\nsourceUrl=(local files)\nSouthernmost_Northing=63.5352\nstandard_name_vocabulary=CF Standard Name Table v79\nsubsetVariables=platform_name,platform_id,cruise_name,cruise_number,cast_number,station\ntime_coverage_end=2006-10-27T18:08:00Z\ntime_coverage_start=2006-10-25T09:09:00Z\nWesternmost_Easting=-82.1352",
+  "url": "https://erddap.amundsenscience.com/erddap/tabledap/amundsen509.html",
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "ERDDAP Data Server at Amundsen Science",
+    "sameAs": "https://erddap.amundsenscience.com/erddap"
+  },
+  "keywords": [
+    "ArcticNet",
+    "CIOOS:oceanColour",
+    "CIOOS:oceanSurfaceHeatFlux",
+    "CIOOS:oxygen",
+    "CIOOS:particulateMatter",
+    "CIOOS:subSurfaceSalinity",
+    "CIOOS:subSurfaceTemperature",
+    "Conductivity",
+    "CTD profiles",
+    "Fluorescence",
+    "Foxe Basin",
+    "Hudson Bay",
+    "Nitrates",
+    "Oxygen",
+    "Photosynthetically available radiation (PAR)",
+    "Salinity",
+    "Temperature",
+    "Transmittance"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "platform_name",
+      "alternateName": "Platform Name",
+      "description": "Platform Name",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Platform Name"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "platform_name"
+        }
+      ],
+      "propertyID": "platform_name"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "platform_id",
+      "alternateName": "Platform WMO ID",
+      "description": "Platform WMO ID",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 2.147483647E9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Platform WMO ID"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "platform_id"
+        }
+      ],
+      "maxValue": 7510846,
+      "minValue": 7510846,
+      "propertyID": "platform_id"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "filename",
+      "alternateName": "Source File Name",
+      "description": "Source File Name",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "cf_role",
+          "value": "profile_id"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Source File Name"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cruise_name",
+      "alternateName": "Cruise Name",
+      "description": "Cruise Name",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Cruise Name"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cruise_number",
+      "alternateName": "Cruise Number",
+      "description": "Cruise Number",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Cruise Number"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cast_number",
+      "alternateName": "Cast Number",
+      "description": "Cast Number",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 2.147483647E9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Cast Number"
+        }
+      ],
+      "maxValue": 116,
+      "minValue": 96
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "station",
+      "alternateName": "Station",
+      "description": "Station",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Station"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "alternateName": "Initial Start Time",
+      "description": "Initial Start Time",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "T"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Initial Start Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        }
+      ],
+      "maxValue": "2006-10-27T18:08:00Z",
+      "minValue": "2006-10-25T09:09:00Z",
+      "propertyID": "time"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "alternateName": "Initial Latitude",
+      "description": "Initial Latitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "Y"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Initial Latitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "latitude"
+        }
+      ],
+      "maxValue": 67.8837,
+      "minValue": 63.5352,
+      "propertyID": "latitude",
+      "unitText": "degrees_north"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "alternateName": "Initial Longitude",
+      "description": "Initial Longitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lon"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "X"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Initial Longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "longitude"
+        }
+      ],
+      "maxValue": -75.8348,
+      "minValue": -82.1352,
+      "propertyID": "longitude",
+      "unitText": "degrees_east"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PRES",
+      "alternateName": "Sea Pressure",
+      "description": "Sea Pressure",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "alternative_label",
+          "value": "Pres_Z"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "coords",
+          "value": "True"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Pressure"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_name",
+          "value": "Pressure (spatial coordinate) exerted by the water body by profiling pressure sensor and correction to read zero at sea level"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_urn",
+          "value": "SDN:P01::PRESPR01"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_name",
+          "value": "Decibars"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_urn",
+          "value": "SDN:P06::UPDB"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_water_pressure_due_to_sea_water"
+        }
+      ],
+      "maxValue": 380,
+      "minValue": 2,
+      "propertyID": "sea_water_pressure_due_to_sea_water",
+      "unitText": "decibars"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth",
+      "alternateName": "Depth",
+      "description": "Depth",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Height"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateZisPositive",
+          "value": "down"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "Z"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Depth"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_values",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "positive",
+          "value": "down"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "depth"
+        }
+      ],
+      "maxValue": 375.94323902465544,
+      "minValue": 1.9800019165374572,
+      "propertyID": "depth",
+      "unitText": "m"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "TE90",
+      "alternateName": "Temperature (ITS-90)",
+      "description": "Temperature (ITS-90)",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "alternative_label",
+          "value": "CTDTmp90"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Temperature (ITS-90)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_name",
+          "value": "Temperature (ITS-90) of the water body by CTD or STD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_urn",
+          "value": "SDN:P01::TEMPS901"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_name",
+          "value": "Degrees Celsius"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_urn",
+          "value": "SDN:P06::UPAA"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_water_temperature"
+        }
+      ],
+      "maxValue": 1.895,
+      "minValue": -1.594,
+      "propertyID": "sea_water_temperature",
+      "unitText": "degC"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PSAL",
+      "alternateName": "Practical Salinity",
+      "description": "Practical Salinity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "alternative_label",
+          "value": "P_sal_CTD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Practical Salinity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_name",
+          "value": "Practical salinity of the water body by CTD and computation using UNESCO 1983 algorithm"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_urn",
+          "value": "SDN:P01::PSALST01"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_name",
+          "value": "Practical salinity units"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_urn",
+          "value": "SDN:P06::PSUX"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_water_practical_salinity"
+        }
+      ],
+      "maxValue": 33.392,
+      "minValue": 31.298,
+      "propertyID": "sea_water_practical_salinity",
+      "unitText": "PSU"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "OXYM",
+      "alternateName": "Dissolved Oxygen",
+      "description": "Dissolved Oxygen",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "alternative_label",
+          "value": "WC_dissO2_IS"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Dissolved Oxygen"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_name",
+          "value": "Concentration of oxygen {O2 CAS 7782-44-7} per unit volume of the water body [dissolved plus reactive particulate phase] by in-situ sensor"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_urn",
+          "value": "SDN:P01::DOXYZZ01"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_name",
+          "value": "Micromoles per litre"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_urn",
+          "value": "SDN:P06::UPOX"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "mole_concentration_of_dissolved_molecular_oxygen_in_sea_water"
+        }
+      ],
+      "maxValue": 8.111,
+      "minValue": 6.947,
+      "propertyID": "mole_concentration_of_dissolved_molecular_oxygen_in_sea_water",
+      "unitText": "uM"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pH",
+      "alternateName": "Sea water pH",
+      "description": "Sea water pH",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea water pH"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_values",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_name",
+          "value": "pH (total scale) {pH[T]} of the water body"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_urn",
+          "value": "SDN:P01::PHMASSXX"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_name",
+          "value": "pH units"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_urn",
+          "value": "SDN:P06::UUPH"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_water_ph_reported_on_total_scale"
+        }
+      ],
+      "maxValue": 8.182,
+      "minValue": 7.998,
+      "propertyID": "sea_water_ph_reported_on_total_scale",
+      "unitText": "1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "NTRA",
+      "alternateName": "Nitrate (NO3-N)",
+      "description": "Nitrate (NO3-N)",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Nitrate (NO3-N)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_name",
+          "value": "Concentration of nitrate {NO3- CAS 14797-55-8} per unit volume of the water body [unknown phase]"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_urn",
+          "value": "SDN:P01::NTRAZZXX"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_name",
+          "value": "Millimoles per cubic metre"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_urn",
+          "value": "SDN:P06::MMCM"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "mole_concentration_of_nitrate_in_sea_water"
+        }
+      ],
+      "maxValue": 23.723,
+      "minValue": 13.019,
+      "propertyID": "mole_concentration_of_nitrate_in_sea_water",
+      "unitText": "mmol/m^3"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "FLOR",
+      "alternateName": "chl-a fluorescence",
+      "description": "chl-a fluorescence",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "alternative_label",
+          "value": "chla_water_ISfluor"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "chl-a fluorescence"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_values",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_name",
+          "value": "Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >unknown phase] by in-situ chlorophyll fluorometer"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_urn",
+          "value": "SDN:P01::CPHLPR01"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_name",
+          "value": "Micrograms per litre"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_urn",
+          "value": "SDN:P06::UGPL"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "mass_concentration_of_chlorophyll_a_in_sea_water"
+        }
+      ],
+      "maxValue": 1.61,
+      "minValue": 0.04,
+      "propertyID": "mass_concentration_of_chlorophyll_a_in_sea_water",
+      "unitText": "ug/L"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CDOM",
+      "alternateName": "CDOM fluorescence",
+      "description": "CDOM fluorescence",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "alternative_label",
+          "value": "CDOM_fluor_WETLabs"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "CDOM fluorescence"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_values",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_name",
+          "value": "Milligrams per cubic metre"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_urn",
+          "value": "SDN:P06::UMMC"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "concentration_of_colored_dissolved_organic_matter_in_sea_water_expressed_as_equivalent_mass_fraction_of_quinine_sulfate_dihydrate"
+        }
+      ],
+      "propertyID": "concentration_of_colored_dissolved_organic_matter_in_sea_water_expressed_as_equivalent_mass_fraction_of_quinine_sulfate_dihydrate",
+      "unitText": "mg/m^3"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "TRAN",
+      "alternateName": "Light Transmission",
+      "description": "Light Transmission",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "alternative_label",
+          "value": "Trans_Red_25cm"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Light Transmission"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_name",
+          "value": "Transmittance (red light wavelength) per 25cm of the water body by 25cm path length red light transmissometer"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_urn",
+          "value": "SDN:P01::POPTDR01"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_name",
+          "value": "Percent"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_urn",
+          "value": "SDN:P06::UPCT"
+        }
+      ],
+      "maxValue": 106.27,
+      "minValue": 85.31,
+      "unitText": "%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "TURB",
+      "alternateName": "Turbidity",
+      "description": "Turbidity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "alternative_label",
+          "value": "Turbidity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Turbidity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_values",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_name",
+          "value": "Turbidity of water in the water body"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_urn",
+          "value": "SDN:P01::TURBXXXX"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_name",
+          "value": "Formazin Nephelometric Units"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_urn",
+          "value": "SDN:P06::UFNU"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_water_turbidity"
+        }
+      ],
+      "propertyID": "sea_water_turbidity",
+      "unitText": "FTU"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PSAR",
+      "alternateName": "Sea Water PAR",
+      "description": "Sea Water PAR",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "alternative_label",
+          "value": "SubsurVPAR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sea Water PAR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_name",
+          "value": "Downwelling vector irradiance as photons of electromagnetic radiation (PAR wavelengths) in the water body by cosine-collector radiometer"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_urn",
+          "value": "SDN:P01::IRRDUV01"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_name",
+          "value": "MicroEinsteins per square metre per second"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_urn",
+          "value": "SDN:P06::UMES"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "downwelling_photosynthetic_photon_flux_in_sea_water"
+        }
+      ],
+      "maxValue": 64.998,
+      "minValue": 0,
+      "propertyID": "downwelling_photosynthetic_photon_flux_in_sea_water",
+      "unitText": "uEinsteins/s/m^2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SPAR",
+      "alternateName": "Surface PAR",
+      "description": "Surface PAR",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "alternative_label",
+          "value": "SurfVPAR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Surface PAR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_name",
+          "value": "Downwelling vector irradiance as photons of electromagnetic radiation (PAR wavelengths) in the atmosphere by cosine-collector radiometer"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_urn",
+          "value": "SDN:P01::IRRDSV01"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_name",
+          "value": "MicroEinsteins per square metre per second"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_urn",
+          "value": "SDN:P06::UMES"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "surface_downwelling_photosynthetic_photon_flux_in_sea_water"
+        }
+      ],
+      "maxValue": 158.043,
+      "minValue": 0.322,
+      "propertyID": "surface_downwelling_photosynthetic_photon_flux_in_sea_water",
+      "unitText": "uEinsteins/s/m^2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SIGT",
+      "alternateName": "Sigma-T",
+      "description": "Sigma-T",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "alternative_label",
+          "value": "SigmaT"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Sigma-T"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_name",
+          "value": "Sigma-T of the water body by computation from salinity and temperature using UNESCO algorithm"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_parameter_urn",
+          "value": "SDN:P01::SIGTEQST"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_name",
+          "value": "Kilograms per cubic metre"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "sdn_uom_urn",
+          "value": "SDN:P06::UKMC"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "sea_water_sigma_t"
+        }
+      ],
+      "maxValue": 26.868,
+      "minValue": 25.047,
+      "propertyID": "sea_water_sigma_t",
+      "unitText": "kg/m^3"
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "ArcticNet",
+    "email": "pdc@arcticnet.ulaval.ca",
+    "sameAs": "amundsenscience.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Amundsen Science",
+    "email": "amundsen.data@as.ulaval.ca",
+    "sameAs": "https://amundsenscience.com"
+  },
+  "dateCreated": "2024-06-26",
+  "dateModified": "2024-06-26T00:00:00Z",
+  "identifier": "ca.cioos/ccin-509",
+  "version": "1.0",
+  "temporalCoverage": "2006-10-25T09:09:00Z/2006-10-27T18:08:00Z",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "63.5352 -82.1352 67.8837 -75.8348"
+    }
+  }
+}
