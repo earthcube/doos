@@ -30,6 +30,7 @@ I'll then follow up with how this connects with DeCoder and others.
     - https://github.com/earthcube/doos/tree/main/scripts
       - ```python3 sparqlQueryl.py --query ../SPARQL/depthAssay.rq```
 - Data sources tracker: [`docs/sources.md`](../sources.md)
+- Generatd triples: https://github.com/earthcube/doos/blob/main/projects/README.md
 - Older
   - CCHDO pipelines: [`projects/CCHDO/README.md`](https://github.com/earthcube/doos/tree/main/projects/CCHDO)
 
