@@ -7,7 +7,43 @@
 
 ---
 
-## Executive summary
+## Human Summary
+
+- Resource focus
+  - BCO-DMO: [scanner](https://github.com/earthcube/doos/tree/main/projects/BCO-DMO/scanner)
+  - OBIS [OBIS auxillary depth graph](https://github.com/earthcube/doos/tree/main/projects/CCHDO)
+  - generates the depth data via ERDDAP interaction
+  - BODC plan: [`BODC`]([../../projects/BODC/PLAN.md](https://github.com/earthcube/doos/tree/main/projects/BODC))
+    - validates and retrieves the depth data they expose
+
+- Validation focus
+  - GeoCroissant (https://github.com/earthcube/doos/tree/main/mapping/Croissant)
+  - SHACL shapes: [`SHACL/README.md`](../../SHACL/README.md)
+  - Validator suite: [`scripts/shapeValidator/README.md`](../../scripts/shapeValidator/README.md)
+  - Query
+    - https://github.com/earthcube/doos/blob/main/build/Dockerfile
+      - ```docker run --rm -p 7878:7878 doos-oxigraph```
+    - https://github.com/earthcube/doos/tree/main/scripts
+      - ```python3 sparqlQueryl.py --query ../SPARQL/depthAssay.rq```
+- Data sources tracker: [`docs/sources.md`](../sources.md)
+- Older
+  - CCHDO pipelines: [`projects/CCHDO/README.md`](https://github.com/earthcube/doos/tree/main/projects/CCHDO)
+
+
+### Approach shift and alignment with DeCODER et al (ie OIH, AGU)
+
+I'm starting to look at the "DOOS" repo as a "skill bundle" connected with some context and PKG (Karpathy style).  So, skills and context as collection that can be instanced by a harness.  I'm trying opencode and hermes. This is similar to the Genesis Skill Repository (https://gitlab.osti.gov/genesis/genesis-skills/)and other similar approaches.  Perhaps not the most accessible so then also thinking about what a containerized web UI (as if Docker is easier for people).
+
+This views DOOS as a whole repo with a focus and not a collection of scripts and one off elements.  Still, the intenent would be to allow an individual "skill" to express approaches and assets (code and data) that people could take and leverage independently.  This is how we are working now.  
+
+Further to the first point.  A key element of the "context" is the existing and living DeCODER graph.  This forms a key context core.  For example, the OBIS and BODC "skills" uses the DeCODER graph as the core starting salt.   
+
+Regardless of whether this _skill bundle_ approach comes to fruition, it provides a more holistic view of the repo and its goals.   Could the _bundle_ 
+
+
+---
+
+## "Executive" summary
 
 May and June 2026 focused on **deepening the transform/validate toolchain**, **launching
 the CCHDO dual-output pipeline** (schema.org + MLCommons Croissant), **scaling SHACL
@@ -29,7 +65,6 @@ readiness.
 2. **shapeValidator** — parallel pyrudof + Parquet streaming for production-scale validation
 3. **BODC** — depth inventory, live harvest, SHACL validation, and export of 442 validated series
 4. **AI/SHACL skills** — six-stage `shaclskills` bundle with LangGraph orchestration
-5. **Repo hygiene** — documentation, mapping reorganization, OBIS refresh, Oxigraph Docker image
 
 ---
 
