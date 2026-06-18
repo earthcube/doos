@@ -68,12 +68,12 @@ classDef resources fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
     Group1 --> Connections
 
     %% Force uniform box sizing for all nodes
-    style S1 width:200px,height:50px
-    style skills width:200px,height:50px
-    style context width:200px,height:50px
-    style kg width:200px,height:50px
-    style S3 width:200px,height:50px
-    style S4 width:200px,height:50px
+    style S1 width:150px,height:50px
+    style skills width:150px,height:50px
+    style context width:150px,height:50px
+    style kg width:150px,height:50px
+    style S3 width:150px,height:50px
+    style S4 width:150px,height:50px
 ```
 
 
