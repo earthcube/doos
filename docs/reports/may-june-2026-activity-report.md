@@ -343,8 +343,8 @@ From [`README.md`](../../README.md):
 ```mermaid
 quadrantChart
     title Provider maturity (qualitative)
-    x Transform ready
-    y Depth profile ready
+    x-axis Low transform readiness --> High transform readiness
+    y-axis Low depth-profile readiness --> High depth-profile readiness
     quadrant-1 Production candidates
     quadrant-2 Needs transform
     quadrant-3 Early exploration
