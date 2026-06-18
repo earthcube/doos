@@ -1,0 +1,292 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sc": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "dct": "http://purl.org/dc/terms/",
+    "geocr": "http://mlcommons.org/croissant/geo/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "amundsen509": "https://erddap.amundsenscience.com/erddap/tabledap/amundsen509#",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "data": "cr:data",
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileSet": "cr:fileSet",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "key": "cr:key",
+    "recordSet": "cr:recordSet",
+    "source": "cr:source"
+  },
+  "@type": "sc:Dataset",
+  "@id": "https://erddap.amundsenscience.com/erddap/tabledap/amundsen509.html",
+  "conformsTo": [
+    "http://mlcommons.org/croissant/1.0",
+    "http://mlcommons.org/croissant/geo/1.0"
+  ],
+  "name": "ArcticNet 0603c - Hudson Bay and Foxe Basin CTD data",
+  "headline": "amundsen509",
+  "description": "CTD profile data from ArcticNet cruise leg 0603 (October 25–27, 2006) in Hudson Bay and Foxe Basin aboard CCGS Amundsen. Twenty-one casts at eighteen stations measured temperature, salinity, pressure, oxygen, pH, fluorescence, nitrate, transmittance, and PAR. Depth range approximately 2–376 m below the sea surface (positive down).",
+  "url": "https://erddap.amundsenscience.com/erddap/tabledap/amundsen509.html",
+  "citeAs": "https://doi.org/10.5884/509",
+  "license": "https://creativecommons.org/licenses/by/4.0",
+  "identifier": "ca.cioos/ccin-509",
+  "version": "1.0",
+  "isLiveDataset": true,
+  "dateCreated": "2024-06-26",
+  "dateModified": "2024-06-26T00:00:00Z",
+  "temporalCoverage": "2006-10-25T09:09:00Z/2006-10-27T18:08:00Z",
+  "geocr:coordinateReferenceSystem": "EPSG:4326",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": [
+      {
+        "@type": "GeoShape",
+        "description": "Horizontal bounding box (latitude/longitude, schema.org box convention)",
+        "box": "63.5352 -82.1352 67.8837 -75.8348"
+      },
+      {
+        "@type": "GeoShape",
+        "description": "Vertical depth extent at dataset centroid (GeoSPARQL LINESTRING Z; Z is depth below sea surface in metres, positive down per CF geospatial_vertical_positive)",
+        "geosparql:asWKT": {
+          "@value": "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> LINESTRING Z (-78.985 65.70945 1.98, -78.985 65.70945 375.94)",
+          "@type": "geosparql:wktLiteral"
+        }
+      },
+      {
+        "@type": "GeoShape",
+        "description": "Shallow and deep bounds as GeoSPARQL POINT Z samples (OIH depth positioning claim)",
+        "geosparql:asWKT": {
+          "@value": "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> MULTIPOINT Z ((-78.985 65.70945 1.98), (-78.985 65.70945 375.94))",
+          "@type": "geosparql:wktLiteral"
+        }
+      }
+    ],
+    "geosparql:hasGeometry": {
+      "@id": "amundsen509:datasetDepthExtent",
+      "geosparql:asWKT": {
+        "@value": "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> LINESTRING Z (-78.985 65.70945 1.98, -78.985 65.70945 375.94)",
+        "@type": "geosparql:wktLiteral"
+      }
+    }
+  },
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "DepBelowSurf",
+      "alternateName": "depth",
+      "description": "Depth (spatial coordinate) relative to water surface in the water body. The distance of a sensor or sampling point below the sea surface.",
+      "minValue": 1.9800019165374572,
+      "maxValue": 375.94323902465544,
+      "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/",
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_096.int.nc",
+      "contentSize": "68731 B",
+      "contentUrl": "https://erddap.amundsenscience.com/erddap/files/amundsen509/CCIN509_ArcticNet_0603c_FoxeBassinHudsonBay_int/0603_096.int.nc",
+      "encodingFormat": "application/x-netcdf"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "amundsen509Files",
+      "description": "ERDDAP tabledap and NetCDF profile files for this dataset.",
+      "encodingFormat": "application/x-netcdf",
+      "includes": "https://erddap.amundsenscience.com/erddap/files/amundsen509/*.*"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "dataRecordSet",
+      "description": "CTD profile observations (trimmed field set from source Croissant).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/cast_number",
+          "description": "Cast Number",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": { "@id": "amundsen509Files" },
+            "extract": { "column": "cast_number" }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/station",
+          "description": "Station",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": { "@id": "amundsen509Files" },
+            "extract": { "column": "station" }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/latitude",
+          "description": "Latitude",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": { "@id": "amundsen509Files" },
+            "extract": { "column": "latitude" }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/longitude",
+          "description": "Longitude",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": { "@id": "amundsen509Files" },
+            "extract": { "column": "longitude" }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/depth",
+          "description": "Depth below sea surface (metres, positive down)",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": { "@id": "amundsen509Files" },
+            "extract": { "column": "depth" }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/TE90",
+          "description": "Temperature (ITS-90)",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": { "@id": "amundsen509Files" },
+            "extract": { "column": "TE90" }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dataRecordSet/PSAL",
+          "description": "Practical Salinity",
+          "dataType": "cr:Float64",
+          "source": {
+            "fileSet": { "@id": "amundsen509Files" },
+            "extract": { "column": "PSAL" }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "spatialRecordSet",
+      "description": "Illustrative cast-level GeoSPARQL geometries for GeoCroissant Use Case 4 (Search and Discovery). Each record links a CTD cast to a 3D geometry encoding horizontal position and vertical depth extent.",
+      "key": { "@id": "spatialRecordSet/cast_number" },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "spatialRecordSet/cast_number",
+          "name": "cast_number",
+          "dataType": "cr:Int32"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "spatialRecordSet/station",
+          "name": "station",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "spatialRecordSet/spatialCoverage",
+          "name": "spatialCoverage",
+          "description": "Cast footprint with GeoSPARQL geometry (geosparql:hasGeometry / geosparql:asWKT).",
+          "dataType": "sc:Place"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "spatialRecordSet/depth_min",
+          "name": "depth_min",
+          "description": "Minimum depth for this cast (metres below surface)",
+          "dataType": "cr:Float64"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "spatialRecordSet/depth_max",
+          "name": "depth_max",
+          "description": "Maximum depth for this cast (metres below surface)",
+          "dataType": "cr:Float64"
+        }
+      ],
+      "data": [
+        {
+          "spatialRecordSet/cast_number": 96,
+          "spatialRecordSet/station": "St-01",
+          "spatialRecordSet/depth_min": 2.64,
+          "spatialRecordSet/depth_max": 340.08,
+          "spatialRecordSet/spatialCoverage": {
+            "@type": "Place",
+            "geo": {
+              "@type": "GeoShape",
+              "description": "CTD cast vertical profile as LINESTRING Z (lon lat depth_m)",
+              "geosparql:asWKT": {
+                "@value": "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> LINESTRING Z (-79.12 65.71 2.64, -79.12 65.71 340.08)",
+                "@type": "geosparql:wktLiteral"
+              }
+            },
+            "geosparql:hasGeometry": {
+              "@id": "amundsen509:cast096DepthProfile",
+              "geosparql:asWKT": {
+                "@value": "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> LINESTRING Z (-79.12 65.71 2.64, -79.12 65.71 340.08)",
+                "@type": "geosparql:wktLiteral"
+              }
+            }
+          }
+        },
+        {
+          "spatialRecordSet/cast_number": 100,
+          "spatialRecordSet/station": "St-05",
+          "spatialRecordSet/depth_min": 3.1,
+          "spatialRecordSet/depth_max": 353.0,
+          "spatialRecordSet/spatialCoverage": {
+            "@type": "Place",
+            "geo": {
+              "@type": "GeoShape",
+              "description": "CTD cast surface location as POINT Z (lon lat depth_m at deepest sample)",
+              "geosparql:asWKT": {
+                "@value": "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT Z (-78.45 66.12 353.0)",
+                "@type": "geosparql:wktLiteral"
+              }
+            },
+            "geosparql:hasGeometry": {
+              "@id": "amundsen509:cast100MaxDepth",
+              "geosparql:asWKT": {
+                "@value": "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT Z (-78.45 66.12 353.0)",
+                "@type": "geosparql:wktLiteral"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "ArcticNet",
+    "email": "pdc@arcticnet.ulaval.ca"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Amundsen Science",
+    "email": "amundsen.data@as.ulaval.ca",
+    "sameAs": "https://amundsenscience.com"
+  }
+}

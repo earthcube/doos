@@ -1,0 +1,13 @@
+PREFIX schema: <https://schema.org/>
+
+SELECT DISTINCT   ?vm ?name ?minValue ?maxValue ?propertyId ?unitCode ?unitText
+{
+  GRAPH ?g {
+    ?subj schema:variableMeasured ?vm .
+    ?vm a schema:PropertyValue ;
+        schema:name ?name ;
+        schema:minValue ?minValue ;
+        schema:maxValue ?maxValue ;
+  }
+ }
+ LIMIT 400
