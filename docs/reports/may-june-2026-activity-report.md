@@ -9,6 +9,10 @@
 
 ## Human Summary
 
+I'm getting a better focus and feel for DOOS in a larger context.
+As part of that I'll break this report down into two main sections.
+I'll then follow up with how this connects with DeCoder and others.
+
 - Resource focus
   - BCO-DMO: [scanner](https://github.com/earthcube/doos/tree/main/projects/BCO-DMO/scanner)
   - OBIS [OBIS auxillary depth graph](https://github.com/earthcube/doos/tree/main/projects/CCHDO)
@@ -39,6 +43,40 @@ This views DOOS as a whole repo with a focus and not a collection of scripts and
 Further to the first point.  A key element of the "context" is the existing and living DeCODER graph.  This forms a key context core.  For example, the OBIS and BODC "skills" uses the DeCODER graph as the core starting salt.   
 
 Regardless of whether this _skill bundle_ approach comes to fruition, it provides a more holistic view of the repo and its goals.   Could the _bundle_ 
+
+
+```mermaid
+flowchart LR
+classDef resources fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+
+    S1[DeCODER]:::resources --> skills
+    
+    subgraph Group1 ["DOOS"]
+        context["Context"]:::resources --> skills["Skills"]:::resources
+        skills --> kg["Graphs"]:::resources
+        val["Validation"] --> skills
+    end
+
+    kg --> S1
+
+    subgraph Connections ["Connections"]
+        direction LR
+        S3[AGU Resilience]:::resources
+        S4[OIH]:::resources
+    end
+
+    Group1 --> Connections
+
+    %% Force uniform box sizing for all nodes
+    style S1 width:200px,height:50px
+    style skills width:200px,height:50px
+    style context width:200px,height:50px
+    style kg width:200px,height:50px
+    style S3 width:200px,height:50px
+    style S4 width:200px,height:50px
+```
+
+
 
 
 ---
