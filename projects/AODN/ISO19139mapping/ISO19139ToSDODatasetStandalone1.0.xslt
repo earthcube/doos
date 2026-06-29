@@ -45,7 +45,8 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         select="concat($uppercase, $smallcase, $numbers, $otherchar)"/>
 
 
-    <xsl:variable name="authorRoles" select="'editor,coAuthor,author,orginator'"/>
+    <xsl:variable name="authorRoles" select="'editor,coAuthor,author,originator,principalInvestigator'"/>
+    <xsl:variable name="creatorRoles" select="'editor,coAuthor,author,originator,principalInvestigator'"/>
 
         <xsl:template match="//gmd:MD_Metadata | gmi:MI_Metadata">
         <!-- <xsl:template name="iso2sdo"> -->
@@ -212,13 +213,20 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                 <xsl:variable name="candidate3">
                     <xsl:value-of select="normalize-space(//gmd:dataSetURI/gco:CharacterString)"/>
                 </xsl:variable>
-                <xsl:value-of
-                    select="
-                        concat('urn:', normalize-space(translate($candidate3,
-                        translate($candidate3, $allowedsymbols, ''), '')))"/>
-                <xsl:if test="contains(//gmd:dataSetURI/gco:CharacterString, 'http')">
+                <xsl:choose>
+                    <xsl:when test="starts-with(translate($candidate3, $uppercase, $smallcase), 'http')">
+                        <xsl:value-of select="$candidate3"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of
+                            select="
+                                concat('urn:', normalize-space(translate($candidate3,
+                                translate($candidate3, $allowedsymbols, ''), '')))"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:if test="starts-with(translate($candidate3, $uppercase, $smallcase), 'http')">
                     <xsl:text>",&#10;            "url": "</xsl:text>
-                    <xsl:value-of select="normalize-space(//gmd:dataSetURI/gco:CharacterString)"/>
+                    <xsl:value-of select="$candidate3"/>
                 </xsl:if>
                 <xsl:text>"&#10;}</xsl:text>
                 <xsl:if test="//gmd:citation//gmd:identifier">
@@ -309,7 +317,9 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         </xsl:variable>
             <!-- smr 2021-06-23 update to handle profiles like seaDataNet that have their own DataIdentification element -->
         <xsl:variable name="publisher"
-            select="//gmd:identificationInfo//gmd:citation//gmd:citedResponsibleParty[translate(*//@codeListValue, $uppercase, $smallcase) = 'publisher']"/>
+            select="//gmd:identificationInfo//gmd:citation//gmd:citedResponsibleParty[
+                translate(*//@codeListValue, $uppercase, $smallcase) = 'publisher' or
+                translate(*//@codeListValue, $uppercase, $smallcase) = 'resourceprovider']"/>
 
         <xsl:variable name="citation">
             <!-- ISO19115 only allows one citation per gmd:MD_DataIdentification;  -->
@@ -447,8 +457,8 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         </xsl:variable>
          
         <xsl:variable name="DataCatalogName"
-            select="'Name of catalog source for record being transformed'"/>
-        <xsl:variable name="DataCatalogURL" select="'not defined'"/>
+            select="'Australian Ocean Data Network (AODN)'"/>
+        <xsl:variable name="DataCatalogURL" select="'https://portal.aodn.org.au/'"/>
 
         <xsl:variable name="contributors">
             <xsl:if
@@ -607,7 +617,7 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         <!-- default values to use in lieu of extracted provider; customize
       logic in format/profile-specific implementations to decide which to use-->
         <xsl:variable name="providerDefault" select="'provider not specified'"/>
-        <xsl:variable name="publisherDefault" select="'publisher not specified'"/>
+        <xsl:variable name="publisherDefault" select="''"/>
         <xsl:variable name="publishingPrinciplesDefault" select="'not defined yet'"/>
         <xsl:variable name="provider" select="''"/>
         <!-- use distributor contact information for providers -->
@@ -621,11 +631,26 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                 count(descendant::gmd:code) > 0]) > 0"/>
 
 
-        <xsl:variable name="hasVariables" select="false()"/>
+        <xsl:variable name="hasVariables"
+            select="count(//gmd:contentInfo//gmd:MD_SampleDimension[gmd:name//gmd:code/gco:CharacterString[normalize-space() != '']]) > 0"/>
+        <xsl:variable name="hasIdentifiers"
+            select="
+                string-length(normalize-space(//gmd:dataSetURI/gco:CharacterString)) > 0 or
+                //gmd:citation//gmd:identifier or
+                string-length(//gmd:citation//gmd:ISBN/gco:CharacterString) > 0 or
+                string-length(//gmd:citation//gmd:ISSN/gco:CharacterString) > 0"/>
+        <xsl:variable name="hasCreators"
+            select="
+                count(//gmd:identificationInfo//gmd:pointOfContact/gmd:CI_ResponsibleParty[
+                    contains(concat(',', $creatorRoles, ','), concat(',', gmd:role/gmd:CI_RoleCode/@codeListValue, ','))]) +
+                count(//gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty[
+                    contains(concat(',', $creatorRoles, ','), concat(',', *//gmd:CI_RoleCode/@codeListValue, ',')) and *//gmd:CI_RoleCode]) > 0"/>
+        <xsl:variable name="datasetIsHttp"
+            select="starts-with(translate($datasetURI, $uppercase, $smallcase), 'http')"/>
 
         <!-- construct the JSON with xsl text elements. &#10; is carriage return -->
         <xsl:text>{&#10;  "@context": {&#10;</xsl:text>
-        <xsl:text> "@vocab": "http://schema.org/"</xsl:text>
+        <xsl:text> "@vocab": "https://schema.org/"</xsl:text>
         <xsl:if test="$additionalContexts and string-length($additionalContexts) > 0">
             <xsl:text>, &#10;</xsl:text>
             <xsl:value-of select="$additionalContexts"/>
@@ -662,23 +687,26 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         </xsl:call-template>
         <xsl:text>",&#10;</xsl:text>
 
-        <xsl:text>  "creator":&#10;</xsl:text>
-        <xsl:text>[</xsl:text>
-        <xsl:for-each
-            select="
-                //gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty[contains('editor,coAuthor,author,originator', *//gmd:CI_RoleCode/@codeListValue)
-                and *//gmd:CI_RoleCode]">
-            <xsl:apply-templates select="gmd:CI_ResponsibleParty">
-                <xsl:with-param name="role">
-                    <xsl:value-of select="'creator'"/>
-                </xsl:with-param>
-            </xsl:apply-templates>
-            <xsl:if test="position() != last()">
-                <xsl:text>,&#10;</xsl:text>
-            </xsl:if>
-        </xsl:for-each>
-        <xsl:text>],&#10;</xsl:text>
-
+        <xsl:if test="$hasCreators">
+            <xsl:text>  "creator":&#10;</xsl:text>
+            <xsl:text>[</xsl:text>
+            <xsl:for-each
+                select="
+                    //gmd:identificationInfo//gmd:pointOfContact/gmd:CI_ResponsibleParty[
+                        contains(concat(',', $creatorRoles, ','), concat(',', gmd:role/gmd:CI_RoleCode/@codeListValue, ','))] |
+                    //gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty[
+                        contains(concat(',', $creatorRoles, ','), concat(',', *//gmd:CI_RoleCode/@codeListValue, ',')) and *//gmd:CI_RoleCode]/gmd:CI_ResponsibleParty">
+                <xsl:apply-templates select=".">
+                    <xsl:with-param name="role">
+                        <xsl:value-of select="'creator'"/>
+                    </xsl:with-param>
+                </xsl:apply-templates>
+                <xsl:if test="position() != last()">
+                    <xsl:text>,&#10;</xsl:text>
+                </xsl:if>
+            </xsl:for-each>
+            <xsl:text>],&#10;</xsl:text>
+        </xsl:if>
 
         <xsl:text>  "datePublished": "</xsl:text>
         <xsl:value-of select="normalize-space($datePublished)"/>
@@ -693,6 +721,11 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         </xsl:call-template>
         <xsl:text>",&#10;</xsl:text>
 
+        <xsl:if test="$datasetIsHttp">
+            <xsl:text>  "url": "</xsl:text>
+            <xsl:value-of select="$datasetURI"/>
+            <xsl:text>",&#10;</xsl:text>
+        </xsl:if>
 
         <xsl:text>  "distribution": [&#10;</xsl:text>
         <!-- logic here is very messy because of the convoluted distribution model in ISO19115; there is no explicit binding 
@@ -777,13 +810,13 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         </xsl:for-each>
         <xsl:text>  ],&#10;</xsl:text>
 
-        <xsl:if test="string-length(string($datasetIdentifiers)) > 0">
+        <xsl:if test="$hasIdentifiers">
             <xsl:text>  "identifier": &#10;</xsl:text>
             <xsl:value-of select="$datasetIdentifiers"/>
             <xsl:text>,&#10;</xsl:text>
         </xsl:if>
 
-        <xsl:if test="string-length($DataCatalogName) > 0 or string-length($DataCatalogURL) > 0">
+        <xsl:if test="string-length($DataCatalogName) > 0 and string-length($DataCatalogURL) > 0">
             <xsl:text>  "includedInDataCatalog": {&#10; 
     "@type":"DataCatalog",&#10;</xsl:text>
             <xsl:if test="$DataCatalogName">
@@ -816,7 +849,7 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
             <xsl:text>,&#10;</xsl:text>
         </xsl:if>
 
-        <xsl:if test="string-length($publisherDefault) > 0 or count($publisher/child::node()) > 0">
+        <xsl:if test="count($publisher/gmd:CI_ResponsibleParty) > 0">
             <xsl:text>  "publisher": </xsl:text>
             <xsl:choose>
                 <xsl:when test="count($publisher/child::node()) > 0">
@@ -824,7 +857,9 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                         <xsl:text>[&#10;</xsl:text>
                     </xsl:if>
                     <xsl:for-each select="$publisher/gmd:CI_ResponsibleParty">
-                        <xsl:apply-templates select="."/>
+                        <xsl:apply-templates select=".">
+                            <xsl:with-param name="role" select="'publisher'"/>
+                        </xsl:apply-templates>
                         <xsl:if test="position() != last()">
                             <xsl:text>,&#10;</xsl:text>
                         </xsl:if>
@@ -1008,9 +1043,7 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
 
         <xsl:if test="$hasVariables">
             <xsl:text>  "variableMeasured": [</xsl:text>
-            <xsl:call-template name="variableMeasured">
-                <xsl:with-param name="variableList"> </xsl:with-param>
-            </xsl:call-template>
+            <xsl:call-template name="variableMeasured"/>
             <xsl:text>]</xsl:text>
         </xsl:if>
         <xsl:text>}</xsl:text>
@@ -1344,59 +1377,79 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
 
     </xsl:template>
 
-    <!--variableMeasured not implemented here -->
     <xsl:template name="variableMeasured">
-        <xsl:param name="variableList"/>
-        <!-- returns JSON array of schema.org Person objects -->
+        <xsl:for-each
+            select="//gmd:contentInfo//gmd:MD_SampleDimension[gmd:name//gmd:code/gco:CharacterString[normalize-space() != '']]">
+            <xsl:variable name="varCode">
+                <xsl:value-of
+                    select="normalize-space((gmd:name/gmd:RS_Identifier/gmd:code/gco:CharacterString | gmd:name/gmd:MD_Identifier/gmd:code/gco:CharacterString)[1])"/>
+            </xsl:variable>
+            <xsl:if test="string-length($varCode) > 0">
+                <xsl:variable name="varName">
+                    <xsl:choose>
+                        <xsl:when test="translate($varCode, $uppercase, $smallcase) = 'depth'">
+                            <xsl:text>DepBelowSurf</xsl:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="$varCode"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>
+                <xsl:variable name="varCodeSpace">
+                    <xsl:value-of
+                        select="normalize-space((gmd:name/gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString)[1])"/>
+                </xsl:variable>
+                <xsl:variable name="varDescription">
+                    <xsl:value-of select="normalize-space(gmd:description/gco:CharacterString)"/>
+                </xsl:variable>
+                <xsl:variable name="varUnitsText">
+                    <xsl:value-of
+                        select="normalize-space((gmd:units/gml:BaseUnit/gml:name | gmd:units/gml:DerivedUnit/gml:identifier)[1])"/>
+                </xsl:variable>
 
-        <xsl:text>[</xsl:text>
-        <xsl:for-each select="$variableList/child::node()">
-            <!-- handle each person in the list -->
-            <xsl:variable name="variableID" select="'variableID'"/>
-            <xsl:variable name="varDescription" select="'distFormat'"/>
-            <xsl:variable name="varUnitsText" select="'distPublishDate'"/>
-            <xsl:variable name="varURL" select="'distIdentifier'"/>
-            <xsl:variable name="varName" select="'distIdentifier'"/>
-            <xsl:variable name="varValue" select="'distIdentifier'"/>
+                <xsl:text>{&#10;</xsl:text>
+                <xsl:text>    "@type": "PropertyValue",&#10;</xsl:text>
+                <xsl:text>    "additionalType": "earthcollab:Parameter",&#10;</xsl:text>
+                <xsl:text>    "name": "</xsl:text>
+                <xsl:value-of select="$varName"/>
+                <xsl:text>"</xsl:text>
 
-            <xsl:text>{&#10;</xsl:text>
+                <xsl:if test="translate($varCode, $uppercase, $smallcase) = 'depth'">
+                    <xsl:text>,&#10;    "alternateName": "</xsl:text>
+                    <xsl:value-of select="$varCode"/>
+                    <xsl:text>"</xsl:text>
+                </xsl:if>
 
-            <xsl:if test="$variableID">
-                <xsl:text>      "@id": "</xsl:text>
-                <xsl:value-of select="$variableID"/>
-                <xsl:text>",&#10;</xsl:text>
+                <xsl:if test="string-length($varCodeSpace) > 0">
+                    <xsl:text>,&#10;    "propertyID": "</xsl:text>
+                    <xsl:value-of select="$varCodeSpace"/>
+                    <xsl:text>",&#10;    "url": "</xsl:text>
+                    <xsl:value-of select="concat($varCodeSpace, '/', $varCode)"/>
+                    <xsl:text>"</xsl:text>
+                </xsl:if>
+
+                <xsl:if test="string-length($varDescription) > 0">
+                    <xsl:text>,&#10;    "description": "</xsl:text>
+                    <xsl:call-template name="string-replace-all">
+                        <xsl:with-param name="text" select="$varDescription"/>
+                        <xsl:with-param name="replace" select="string('&#34;')"/>
+                        <xsl:with-param name="by" select='string("\&apos;")'/>
+                    </xsl:call-template>
+                    <xsl:text>"</xsl:text>
+                </xsl:if>
+
+                <xsl:if test="string-length($varUnitsText) > 0">
+                    <xsl:text>,&#10;    "unitText": "</xsl:text>
+                    <xsl:value-of select="$varUnitsText"/>
+                    <xsl:text>"</xsl:text>
+                </xsl:if>
+
+                <xsl:text>&#10;  }</xsl:text>
+                <xsl:if test="position() != last()">
+                    <xsl:text>,&#10;</xsl:text>
+                </xsl:if>
             </xsl:if>
-
-            <xsl:text>    "@type": "PropertyValue",&#10;    "additionalType": "earthcollab:Parameter",&#10;</xsl:text>
-
-            <xsl:if test="$varDescription">
-                <xsl:text>      "description": "</xsl:text>
-                <xsl:value-of select="$varDescription"/>
-                <xsl:text>",&#10;</xsl:text>
-            </xsl:if>
-
-            <xsl:text>      "unitText": "</xsl:text>
-            <xsl:value-of select="$varUnitsText"/>
-            <xsl:text>",&#10;</xsl:text>
-
-            <xsl:if test="$varURL">
-                <xsl:text>      "url": "</xsl:text>
-                <xsl:value-of select="$varURL"/>
-                <xsl:text>",&#10;</xsl:text>
-            </xsl:if>
-
-            <xsl:if test="$varValue">
-                <xsl:text>      "value": "</xsl:text>
-                <xsl:value-of select="$varValue"/>
-                <xsl:text>"&#10;</xsl:text>
-            </xsl:if>
-
-            <!-- more content might be available; insert here -->
-
-            <xsl:text>}&#10;</xsl:text>
         </xsl:for-each>
-
-        <xsl:text>],&#10;</xsl:text>
     </xsl:template>
 
 

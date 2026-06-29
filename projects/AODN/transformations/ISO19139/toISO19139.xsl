@@ -217,6 +217,15 @@
   </xsl:template>
 
 
+  <xsl:template match="mdb:metadataLinkage" priority="5">
+    <gmd:dataSetURI>
+      <gco:CharacterString>
+        <xsl:value-of select="cit:CI_OnlineResource/cit:linkage/gco2:CharacterString"/>
+      </gco:CharacterString>
+    </gmd:dataSetURI>
+  </xsl:template>
+
+
   <xsl:template match="mdb:identificationInfo">
     <gmd:identificationInfo>
       <xsl:apply-templates select="@*"/>
@@ -1088,7 +1097,6 @@
                        mdb:dateInfo|
                        mdb:metadataProfile|
                        mdb:alternativeMetadataReference|
-                       mdb:metadataLinkage|
                        mcc:MD_Identifier/mcc:description|
                        mrl:LI_Source/mrl:scope|
                        mrl:sourceSpatialResolution|
