@@ -23,6 +23,9 @@ from urllib.request import Request, urlopen
 from pyld import jsonld
 from pyoxigraph import DefaultGraph, RdfFormat, Store
 
+from defs.depth_columns import enrich_jsonld_depth, iso19139_sibling_path
+from depth_from_distribution import probe_depth_record
+
 DEFAULT_GRAPH = DefaultGraph()
 
 AODN_DIR = Path(__file__).resolve().parent
@@ -111,6 +114,12 @@ def process_record(
     output_dir: Path,
     catalog_api: str,
     write_nt: bool,
+    probe_depth: bool = False,
+    depth_try_all: bool = False,
+    depth_verbose: bool = False,
+    depth_engine: str = "pandas",
+    depth_crawl_prefix: bool = True,
+    enrich_jsonld: bool = False,
 ) -> dict:
     """Transform one record and write artifacts under output_dir."""
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -144,6 +153,35 @@ def process_record(
             if isinstance(item, dict)
         ),
     }
+
+    if probe_depth or enrich_jsonld:
+        depth_report_path = output_dir / f"{record_id}_depth_report.json"
+        iso_path = iso19139_sibling_path(jsonld_path)
+        report, depth_range = probe_depth_record(
+            doc,
+            jsonld_path=jsonld_path,
+            iso19139_path=iso_path if iso_path.is_file() else None,
+            try_all=depth_try_all,
+            verbose=depth_verbose,
+            engine=depth_engine,  # type: ignore[arg-type]
+            crawl_prefix=depth_crawl_prefix,
+        )
+        depth_report_path.write_text(
+            json.dumps(report, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        manifest["depth_report"] = str(depth_report_path)
+        if depth_range:
+            manifest["observed_depth_min"] = depth_range["min"]
+            manifest["observed_depth_max"] = depth_range["max"]
+
+        if enrich_jsonld and depth_range:
+            doc = enrich_jsonld_depth(doc, depth_range)
+            jsonld_path.write_text(
+                json.dumps(doc, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            manifest["jsonld_enriched"] = True
 
     if write_nt:
         nt_path = output_dir / f"{record_id}.nt"
@@ -196,6 +234,37 @@ def main():
         action="store_true",
         help="Skip N-Triples export",
     )
+    parser.add_argument(
+        "--probe-depth",
+        action="store_true",
+        help="Download tabular distributions and probe depth column min/max",
+    )
+    parser.add_argument(
+        "--depth-try-all",
+        action="store_true",
+        help="With --probe-depth, probe every tabular/prefix distribution",
+    )
+    parser.add_argument(
+        "--depth-verbose",
+        action="store_true",
+        help="With --probe-depth, log skipped/failed distributions to stderr",
+    )
+    parser.add_argument(
+        "--depth-engine",
+        choices=["pandas", "polars"],
+        default="pandas",
+        help="Tabular loader for csv/tsv/parquet when probing depth",
+    )
+    parser.add_argument(
+        "--no-crawl-prefix",
+        action="store_true",
+        help="With --probe-depth, skip expanding ?prefix= S3 listing URLs",
+    )
+    parser.add_argument(
+        "--enrich-jsonld",
+        action="store_true",
+        help="Write observed depth min/max into DepBelowSurf (implies --probe-depth)",
+    )
     args = parser.parse_args()
 
     if not args.uuid and not args.uuid_file and not args.input_xml:
@@ -208,6 +277,15 @@ def main():
         output_dir = AODN_DIR / "runs" / stamp
 
     write_nt = not args.no_nt
+    probe_depth = args.probe_depth or args.enrich_jsonld
+    depth_kwargs = {
+        "probe_depth": probe_depth,
+        "depth_try_all": args.depth_try_all,
+        "depth_verbose": args.depth_verbose,
+        "depth_engine": args.depth_engine,
+        "depth_crawl_prefix": not args.no_crawl_prefix,
+        "enrich_jsonld": args.enrich_jsonld,
+    }
     manifests = []
 
     try:
@@ -219,6 +297,7 @@ def main():
                     output_dir=output_dir,
                     catalog_api=args.catalog_api,
                     write_nt=write_nt,
+                    **depth_kwargs,
                 )
             )
         elif args.uuid:
@@ -229,6 +308,7 @@ def main():
                     output_dir=output_dir,
                     catalog_api=args.catalog_api,
                     write_nt=write_nt,
+                    **depth_kwargs,
                 )
             )
         elif args.uuid_file:
@@ -241,6 +321,7 @@ def main():
                         output_dir=record_dir,
                         catalog_api=args.catalog_api,
                         write_nt=write_nt,
+                        **depth_kwargs,
                     )
                 )
 

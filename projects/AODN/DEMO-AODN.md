@@ -217,6 +217,69 @@ wc -l demo-output/528f280c-b151-45c4-9526-e0746510a617.nt
 
 The `grep` should show the dataset typed as `https://schema.org/Dataset`. `wc -l` should report 273 lines for this record (matching `triple_count` in `run.json`).
 
+## Step 7 — Probe depth columns in a distribution (optional)
+
+Download a tabular `distribution` from the JSON-LD metadata and compute
+min/max for depth-related columns. Requires `openpyxl` and `xlrd` for Excel.
+
+```bash
+uv pip install openpyxl xlrd
+
+python depth_from_distribution.py \
+  --jsonld demo-output/528f280c-b151-45c4-9526-e0746510a617.jsonld \
+  --output demo-output/depth_report.json
+```
+
+Probe every tabular distribution and cross-check against the ISO 19139 vertical extent sibling file:
+
+```bash
+python depth_from_distribution.py \
+  --jsonld demo-output/528f280c-b151-45c4-9526-e0746510a617.jsonld \
+  --try-all \
+  --verbose \
+  --output demo-output/depth_report_all.json
+```
+
+Expected highlights in `best`:
+
+| Column | min | max |
+|---|---|---|
+| `Sampling depth` | 5 | 75 |
+| `Max Depth (m)` | 49 | 104 |
+
+`metadata_comparison` uses `528f280c-..._iso19139.xml` (0–75 m vertical extent). `Sampling depth` (5–75) should be `within_metadata_extent: true`; `Max Depth (m)` (up to 104) may fall outside and flag `consistent: false`.
+
+## Step 8 — Pipeline depth probe and JSON-LD enrichment (optional)
+
+Run depth probing as part of the pipeline and write observed min/max into
+`DepBelowSurf` inside `variableMeasured`:
+
+```bash
+python run_pipeline.py \
+  --input-xml ./AODN_GN4_depth_metadata.xml \
+  --output-dir ./demo-output \
+  --no-nt \
+  --probe-depth \
+  --enrich-jsonld \
+  --depth-verbose
+```
+
+Or enrich an existing JSON-LD file in place:
+
+```bash
+python depth_from_distribution.py \
+  --jsonld demo-output/528f280c-b151-45c4-9526-e0746510a617.jsonld \
+  --enrich-jsonld \
+  --output demo-output/depth_report.json
+```
+
+After enrichment, the `DepBelowSurf` entry should include `minValue`, `maxValue`,
+and a human-readable `value` string (e.g. `5.0–104.0 m`).
+
+Prefix-listing distributions (`?prefix=...` on `data.aodn.org.au`) are expanded
+via the public `imos-data` S3 ListObjects API. Directories that contain only
+non-tabular files (e.g. `.fcs`, `.zip`) are skipped with `no_tabular_objects`.
+
 ## Output files
 
 After a successful run, `demo-output/` contains:
@@ -228,6 +291,8 @@ After a successful run, `demo-output/` contains:
 | `528f280c-....jsonld` | Final schema.org JSON-LD |
 | `528f280c-....nt` | N-Triples RDF export |
 | `run.json` | Pipeline manifest |
+| `depth_report.json` | Depth min/max from best tabular distribution (Step 7) |
+| `{id}_depth_report.json` | Depth probe report from pipeline `--probe-depth` (Step 8) |
 
 ## Variations
 
@@ -264,3 +329,5 @@ python run_pipeline.py \
 | `saxonche` import error | Run `uv sync` from monorepo root |
 | Empty `variableMeasured` | Source record lacks `gmd:contentInfo/gmd:MD_SampleDimension` |
 | SHACL FAIL on `depth_one` | Record has no `depth` sample dimension (no `DepBelowSurf` mapping) |
+| Depth probe finds no columns | Distribution may lack depth fields; try `--try-all --verbose` |
+| Excel import error | Run `uv pip install openpyxl xlrd` |

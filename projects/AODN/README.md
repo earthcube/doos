@@ -59,6 +59,20 @@ uv sync   # saxonche, lxml, pyld, pyoxigraph
 | **lxml** | `aodnTransform.py` — XSLT 1.0 (ISO 19139 → JSON-LD) |
 | **pyld** | `run_pipeline.py` — JSON-LD normalization |
 | **pyoxigraph** | `run_pipeline.py` — N-Triples export |
+| **openpyxl**, **xlrd** | `depth_from_distribution.py` — Excel `.xlsx` / `.xls` support |
+| **polars** (optional) | `depth_from_distribution.py` — faster csv/tsv/parquet loading (`--engine polars`) |
+
+For depth probing on Excel distributions:
+
+```bash
+uv pip install openpyxl xlrd
+```
+
+Optional polars engine for csv/tsv/parquet:
+
+```bash
+uv pip install polars
+```
 
 ## Scripts
 
@@ -78,6 +92,9 @@ python run_pipeline.py --uuid-file uuids.txt --output-dir ./runs/batch
 
 # JSON-LD only (skip N-Triples)
 python run_pipeline.py --uuid <uuid> --no-nt
+
+# Probe depth from tabular distributions and enrich DepBelowSurf min/max
+python run_pipeline.py --uuid <uuid> --probe-depth --enrich-jsonld --output-dir ./demo-output
 ```
 
 **Arguments:**
@@ -90,6 +107,12 @@ python run_pipeline.py --uuid <uuid> --no-nt
 | `--catalog-api` | GeoNetwork API base (default: `https://catalogue-imos.aodn.org.au/geonetwork/srv/api`) |
 | `--output-dir` | Output directory (default: `./runs/<timestamp>`) |
 | `--no-nt` | Skip N-Triples export |
+| `--probe-depth` | Download tabular distributions and compute depth min/max |
+| `--depth-try-all` | Probe every tabular/prefix distribution (not just the first match) |
+| `--depth-verbose` | Log skipped/failed distributions during depth probe |
+| `--depth-engine` | `pandas` (default) or `polars` for csv/tsv/parquet |
+| `--no-crawl-prefix` | Skip expanding `?prefix=` S3 listing URLs |
+| `--enrich-jsonld` | Write observed `minValue`/`maxValue` into `DepBelowSurf` (implies `--probe-depth`) |
 
 **Outputs per record:**
 
@@ -99,6 +122,7 @@ python run_pipeline.py --uuid <uuid> --no-nt
 | `{id}_iso19139.xml` | Intermediate ISO 19139 |
 | `{id}.jsonld` | schema.org JSON-LD |
 | `{id}.nt` | N-Triples (unless `--no-nt`) |
+| `{id}_depth_report.json` | Depth probe report (with `--probe-depth`) |
 | `run.json` | Run manifest with paths and summary stats |
 
 ### convert_script.py
@@ -110,6 +134,36 @@ Step 1 only: transforms XML using XSLT 2.0/3.0 via Saxon.
 - `-input` / `--input-file`: Source XML file (required)
 - `-xslt` / `--xslt-file`: XSLT stylesheet (required)
 - `-output` / `--output-file`: Output file path (required)
+
+### depth_from_distribution.py
+
+Download a tabular `distribution` from a JSON-LD metadata file and compute
+min/max for depth-related columns (`.csv`, `.tsv`, `.parquet`, `.xls`, `.xlsx`).
+
+```bash
+python depth_from_distribution.py \
+  --jsonld demo-output/528f280c-b151-45c4-9526-e0746510a617.jsonld \
+  --output depth_report.json
+
+# Probe every tabular distribution and cross-check against ISO vertical extent
+python depth_from_distribution.py \
+  --jsonld demo-output/528f280c-b151-45c4-9526-e0746510a617.jsonld \
+  --try-all --verbose
+```
+
+**Arguments:**
+
+| Flag | Description |
+|---|---|
+| `--jsonld` | schema.org Dataset JSON-LD file (required) |
+| `--output` | Optional JSON report path (default: stdout) |
+| `--distribution-url` | Force a specific distribution URL |
+| `--try-all` | Probe all tabular distributions; include `attempts` in report |
+| `--iso19139` | ISO 19139 XML for vertical extent check (default: `{stem}_iso19139.xml` sibling) |
+| `--verbose` | Log skipped/failed distributions to stderr |
+| `--engine` | `pandas` (default) or `polars` for csv/tsv/parquet |
+| `--no-crawl-prefix` | Skip expanding `?prefix=` S3 listing distributions |
+| `--enrich-jsonld` | Write observed min/max into `DepBelowSurf` in the JSON-LD file |
 
 ### aodnTransform.py
 
@@ -152,3 +206,6 @@ python aodnTransform.py \
 | `runs/` | Default output location for `run_pipeline.py` (created on demand) |
 | `AODN_GN4_depth_metadata.xml` | Sample ISO 19115-3 record for offline testing |
 | `DEMO-AODN.md` | End-to-end live-fetch walkthrough |
+| `defs/depth_columns.py` | Depth column matching, metadata compare, JSON-LD enrichment |
+| `defs/prefix_listing.py` | Resolve tabular files from AODN `?prefix=` S3 listings |
+| `depth_from_distribution.py` | Download distribution and probe depth min/max |
