@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-DOOS (Deep Ocean Observation System) is an EarthCube monorepo for harvesting, converting, validating, and federating ocean observation metadata. Each provider with a subproject lives under `projects/`: ARGO, OBIS, ERDDAP, BCO-DMO, CCHDO, AODN, BODC, CIOOS. (EMODNET, OceanSITES, and marine-regions are candidate sources tracked in `README.md`/`docs/sources.md`, not yet subprojects.) Data is transformed to RDF/JSON-LD conforming to Schema.org + GeoSPARQL, validated against OIH depth profile SHACL shapes.
+DOOS (Deep Ocean Observation System) is an EarthCube monorepo for harvesting, converting, validating, and federating ocean observation metadata. Each provider with a subproject lives under `projects/`: ARGO, OBIS, ERDDAP, CCHDO, AODN, BODC, CIOOS. BCO-DMO ingest is in `skills/bco-dmo-scan/`. (EMODNET, OceanSITES, and marine-regions are candidate sources tracked in `README.md`/`docs/sources.md`, not yet subprojects.) Data is transformed to RDF/JSON-LD conforming to Schema.org + GeoSPARQL, validated against OIH depth profile SHACL shapes.
 
 The end goal is a federated SPARQL graph (live endpoints linked from `README.md`) that exposes a consistent **depth profile** across providers.
 
@@ -66,7 +66,7 @@ python path/to/script.py --help
 
 1. **Ingest** — fetch metadata from HTTP APIs, sitemaps, files (NetCDF, GeoParquet, XML, JSON-LD)
 2. **Transform** — map to Schema.org + GeoSPARQL RDF via one of five approaches, chosen per provider:
-   - JSON-LD templates (BCO-DMO, OBIS)
+   - JSON-LD templates (OBIS); in-memory JSON-LD → merged N-Triples (BCO-DMO via `skills/bco-dmo-scan/`)
    - RML rules run through `morph-kgc` (ARGO, geoparquet)
    - XSLT via `saxonche` for ISO-19139/19115 XML sources (AODN — see `projects/AODN/transformations/`)
    - SSSOM-driven mapping (`mapping/SSSOM/sssom_to_jsonld.py`): a `.sssom.tsv` file declares flat-JSON→schema.org field correspondences with `source_jsonpath`/`target_jsonpath` extension slots, and the script drives the transform entirely from that file — no field names hard-coded
@@ -79,7 +79,8 @@ python path/to/script.py --help
 
 | Path | Purpose |
 |---|---|
-| `projects/` | Per-provider subprojects (ARGO, OBIS, BCO-DMO, CCHDO, ERDDAP, AODN, BODC, CIOOS) |
+| `projects/` | Per-provider subprojects (ARGO, OBIS, CCHDO, ERDDAP, AODN, BODC, CIOOS) |
+| `skills/bco-dmo-scan/` | BCO-DMO ERDDAP search, ISO depth scan, merged N-Triples (`assets/run_pipeline.py`) |
 | `mapping/SSSOM/` | SSSOM-driven flat-JSON → schema.org JSON-LD transform (`kobo/` holds a GAIA Kobo metadata-form → schema.org mapping) |
 | `mapping/Croissant/` | MLCommons Croissant JSON-LD outputs |
 | `scripts/shapeValidator/` | SHACL validation suite — three engines (pyshacl, pyrudof, pyoxigraph) |

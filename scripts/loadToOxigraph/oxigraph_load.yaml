@@ -11,9 +11,8 @@
 # Quad formats (nq, trig) are loaded into the dataset preserving their
 # embedded graph names. Triple formats are loaded into the `graph` IRI.
 #
-# Output locations are taken from projects/README.md. BCO-DMO uses the
-# JSON-LD output under projects/BCO-DMO/scanner/output (the ./BCO-DMO/output
-# files listed in the README are depth-analysis reports, not RDF).
+# Output locations are taken from projects/README.md. BCO-DMO N-Triples are
+# published under skills/bco-dmo-scan/output/output.nt.
 
 endpoint: http://localhost:7878
 
@@ -37,6 +36,6 @@ sources:
     format: nq
 
   - name: bcodmo
-    path: projects/BCO-DMO/scanner/output  # directory of per-dataset .jsonld files
-    format: jsonld
+    path: skills/bco-dmo-scan/output/output.nt
+    format: nt
     graph: urn:doos:bcodmo

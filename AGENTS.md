@@ -13,7 +13,8 @@ consistent **depth profile** across providers.
 **Never commit unless the user explicitly asks.**
 
 Key dirs:
-- `projects/`: Per-provider subprojects (ARGO, OBIS, ERDDAP, BCO-DMO, CCHDO, AODN, BODC, CIOOS)
+- `projects/`: Per-provider subprojects (ARGO, OBIS, ERDDAP, CCHDO, AODN, BODC, CIOOS)
+- `skills/bco-dmo-scan/`: BCO-DMO ERDDAP search, ISO depth scan, merged N-Triples (`output.nt`)
 - `mapping/SSSOM/`: SSSOM-driven flat-JSON → schema.org JSON-LD transform (`kobo/` holds a GAIA Kobo metadata-form mapping)
 - `mapping/Croissant/`: MLCommons Croissant JSON-LD outputs
 - `scripts/shapeValidator/`: SHACL validation tools (validateToOxigraph.py, validateToParquet.py, validateToRudof.py, validateToParquetRudof.py, benchmark_shacl_engines.py)
@@ -76,7 +77,7 @@ pytest tests/test_foo.py::test_bar  # Single test
 ### Data pipeline
 1. **Ingest** — fetch metadata from HTTP APIs, sitemaps, files (NetCDF, GeoParquet, XML, JSON-LD)
 2. **Transform** — map to Schema.org + GeoSPARQL RDF via one of five approaches, chosen per provider:
-   - JSON-LD templates (BCO-DMO, OBIS)
+   - JSON-LD templates (OBIS); in-memory JSON-LD → merged N-Triples (BCO-DMO via `skills/bco-dmo-scan/`)
    - RML rules run through `morph-kgc` (ARGO, geoparquet)
    - XSLT via `saxonche` for ISO-19139/19115 XML sources (AODN — see `projects/AODN/transformations/`)
    - SSSOM-driven mapping (`mapping/SSSOM/sssom_to_jsonld.py`): a `.sssom.tsv` file declares flat-JSON→schema.org field correspondences; the script drives the transform entirely from that file — no field names hard-coded

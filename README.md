@@ -22,7 +22,7 @@ surface measurements (`DepBelowSurf`) are present and queryable across all sourc
 | OBIS | Ocean Biodiversity Information System | Augmenting graphs ready |
 | ERDDAP | NOAA OSMC via ERDDAP | Indexing |
 | CCHDO | CCHDO bottle file data | Indexing |
-| BCO-DMO | Biological and Chemical Oceanography Data Management | Starting |
+| BCO-DMO | Biological and Chemical Oceanography Data Management (`skills/bco-dmo-scan/`) | Starting |
 | AODN | Australian Ocean Data Network | Needs mapping workflow |
 | BODC | British Oceanographic Data Centre | Indexing |
 | CIOOS | Canadian Integrated Ocean Observing System | Candidate |
