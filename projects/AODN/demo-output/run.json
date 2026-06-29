@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-06-29T00:26:32.583515+00:00",
+  "output_dir": "/home/fils/src/Projects/earthcube/doos/projects/AODN/demo-output",
+  "records": [
+    {
+      "record_id": "528f280c-b151-45c4-9526-e0746510a617",
+      "source_xml": "demo-output/528f280c-b151-45c4-9526-e0746510a617_source.xml",
+      "iso19139_xml": "demo-output/528f280c-b151-45c4-9526-e0746510a617_iso19139.xml",
+      "jsonld": "demo-output/528f280c-b151-45c4-9526-e0746510a617.jsonld",
+      "dataset_id": "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617",
+      "variable_measured_count": 18,
+      "has_dep_below_surf": true,
+      "nt": "demo-output/528f280c-b151-45c4-9526-e0746510a617.nt",
+      "triple_count": 273
+    }
+  ]
+}

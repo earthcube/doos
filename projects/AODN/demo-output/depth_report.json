@@ -1,0 +1,103 @@
+{
+  "dataset_id": "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617",
+  "dataset_name": "SAIMOS - Biological and Flow Cytometry data collected from CTD stations in South Australia, in April 2015",
+  "metadata_depth_hints": [
+    "DepBelowSurf",
+    "depth",
+    "depth_of_chlorophyll_maximum"
+  ],
+  "iso19139_path": "demo-output/528f280c-b151-45c4-9526-e0746510a617_iso19139.xml",
+  "metadata_vertical_extent": {
+    "min": 0.0,
+    "max": 75.0
+  },
+  "observed_depth_range": {
+    "min": 5.0,
+    "max": 104.0,
+    "primary_column": "Max Depth (m)",
+    "column_count": 2
+  },
+  "best": {
+    "distribution_name": "Summary of biological and nutrient data collected from each station.",
+    "distribution_url": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls",
+    "format": "xls",
+    "findings": [
+      {
+        "sheet": "2015 data summary",
+        "rows": 9,
+        "depth_columns": [
+          {
+            "column": "Max Depth (m)",
+            "matched_by": "variableMeasured:DepBelowSurf",
+            "min": 49.0,
+            "max": 104.0,
+            "count": 3
+          },
+          {
+            "column": "Sampling depth",
+            "matched_by": "variableMeasured:DepBelowSurf",
+            "min": 5.0,
+            "max": 75.0,
+            "count": 9
+          }
+        ]
+      }
+    ]
+  },
+  "distribution": {
+    "distribution_name": "Summary of biological and nutrient data collected from each station.",
+    "distribution_url": "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls",
+    "format": "xls",
+    "findings": [
+      {
+        "sheet": "2015 data summary",
+        "rows": 9,
+        "depth_columns": [
+          {
+            "column": "Max Depth (m)",
+            "matched_by": "variableMeasured:DepBelowSurf",
+            "min": 49.0,
+            "max": 104.0,
+            "count": 3
+          },
+          {
+            "column": "Sampling depth",
+            "matched_by": "variableMeasured:DepBelowSurf",
+            "min": 5.0,
+            "max": 75.0,
+            "count": 9
+          }
+        ]
+      }
+    ]
+  },
+  "metadata_comparison": {
+    "iso_vertical_extent": {
+      "min": 0.0,
+      "max": 75.0
+    },
+    "columns": [
+      {
+        "column": "Max Depth (m)",
+        "sheet": "2015 data summary",
+        "data_min": 49.0,
+        "data_max": 104.0,
+        "metadata_min": 0.0,
+        "metadata_max": 75.0,
+        "within_metadata_extent": false
+      },
+      {
+        "column": "Sampling depth",
+        "sheet": "2015 data summary",
+        "data_min": 5.0,
+        "data_max": 75.0,
+        "metadata_min": 0.0,
+        "metadata_max": 75.0,
+        "within_metadata_extent": true
+      }
+    ],
+    "consistent": false,
+    "message": "one or more depth column ranges fall outside ISO vertical extent"
+  },
+  "enriched_jsonld": "demo-output/528f280c-b151-45c4-9526-e0746510a617.jsonld"
+}

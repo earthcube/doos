@@ -1,0 +1,273 @@
+_:afe3dd7ee4a708a6be148bbc0cf271d6 <https://schema.org/box> "135.0, -35.90 136.90, -34.90" .
+_:afe3dd7ee4a708a6be148bbc0cf271d6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/GeoShape> .
+_:fc79deb211b7f30993399f4654028c4d <https://schema.org/name> "MD_Constraints" .
+_:fc79deb211b7f30993399f4654028c4d <https://schema.org/description> "useLimitation: Data, products and services from IMOS are provided 'as is 'without any warranty as to fitness for a particular purpose..   " .
+_:fc79deb211b7f30993399f4654028c4d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DigitalDocument> .
+_:da12cedbd6c14e2c78d06372dc573e6d <https://schema.org/name> "amount_of_bacteria_in_sea_water" .
+_:da12cedbd6c14e2c78d06372dc573e6d <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:da12cedbd6c14e2c78d06372dc573e6d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:c3a022958233b2dad27a6148b62b58e9 <https://schema.org/url> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names/wind_speed" .
+_:c3a022958233b2dad27a6148b62b58e9 <https://schema.org/propertyID> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names" .
+_:c3a022958233b2dad27a6148b62b58e9 <https://schema.org/name> "wind_speed" .
+_:c3a022958233b2dad27a6148b62b58e9 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:c3a022958233b2dad27a6148b62b58e9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:d71ea62a49f542e99ec53da179cb1f0e <https://schema.org/name> "SARDI Aquatic Sciences" .
+_:d71ea62a49f542e99ec53da179cb1f0e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Organization> .
+_:a1f721a399a0ad3527b2b99575b7b5b6 <https://schema.org/name> "mole_concentration_of_phosphorus_in_phosphate_in_sea_water" .
+_:a1f721a399a0ad3527b2b99575b7b5b6 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:a1f721a399a0ad3527b2b99575b7b5b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:c25590ffae6cd29c80791c433e464ba5 <https://schema.org/url> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names/depth" .
+_:c25590ffae6cd29c80791c433e464ba5 <https://schema.org/propertyID> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names" .
+_:c25590ffae6cd29c80791c433e464ba5 <https://schema.org/name> "DepBelowSurf" .
+_:c25590ffae6cd29c80791c433e464ba5 <https://schema.org/description> "Maximum and sampling depth both recorded." .
+_:c25590ffae6cd29c80791c433e464ba5 <https://schema.org/alternateName> "depth" .
+_:c25590ffae6cd29c80791c433e464ba5 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:c25590ffae6cd29c80791c433e464ba5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:ffa58f157475d3751cc114fec15aac0 <https://schema.org/roleName> "credit" .
+_:ffa58f157475d3751cc114fec15aac0 <https://schema.org/description> "" .
+_:ffa58f157475d3751cc114fec15aac0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Role> .
+_:caa44e367ead7e82f3a21e70afd92180 <https://schema.org/name> "mole_concentration_of_nitrogen_in_ammonium_in_sea_water" .
+_:caa44e367ead7e82f3a21e70afd92180 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:caa44e367ead7e82f3a21e70afd92180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:b98852c4cd3f37759eb3f77b1aae2f30 <https://schema.org/name> "mass_concentration_of_particulate_inorganic_matter_in_sea_water" .
+_:b98852c4cd3f37759eb3f77b1aae2f30 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:b98852c4cd3f37759eb3f77b1aae2f30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:c2e983069f91aa108762e54bfac349f2 <https://schema.org/url> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names/sea_surface_temperature" .
+_:c2e983069f91aa108762e54bfac349f2 <https://schema.org/propertyID> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names" .
+_:c2e983069f91aa108762e54bfac349f2 <https://schema.org/name> "sea_surface_temperature" .
+_:c2e983069f91aa108762e54bfac349f2 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:c2e983069f91aa108762e54bfac349f2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:e405a5e6ae261345d942110139fa93b7 <https://schema.org/url> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names/longitude" .
+_:e405a5e6ae261345d942110139fa93b7 <https://schema.org/propertyID> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names" .
+_:e405a5e6ae261345d942110139fa93b7 <https://schema.org/name> "longitude" .
+_:e405a5e6ae261345d942110139fa93b7 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:e405a5e6ae261345d942110139fa93b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:f17c81f2cfdc77854fdad0df2233ad1c <https://schema.org/roleName> "resourceProvider" .
+_:f17c81f2cfdc77854fdad0df2233ad1c <https://schema.org/publisher> _:d81ae1d106aac36310bcd541e819a6bf .
+_:f17c81f2cfdc77854fdad0df2233ad1c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Role> .
+_:c79157765c24b7d2474912ec9bea980 <https://schema.org/name> "mass_concentration_of_particulate_organic_matter_in_sea_water" .
+_:c79157765c24b7d2474912ec9bea980 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:c79157765c24b7d2474912ec9bea980 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:e7db96e2f9bed8411a00eb7b01ebf514 <https://schema.org/url> "https://portal.aodn.org.au/" .
+_:e7db96e2f9bed8411a00eb7b01ebf514 <https://schema.org/name> "Australian Ocean Data Network (AODN)" .
+_:e7db96e2f9bed8411a00eb7b01ebf514 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataCatalog> .
+_:a45a121c0de0fb1e2c5d45ccc5925d35 <https://schema.org/url> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names/latitude" .
+_:a45a121c0de0fb1e2c5d45ccc5925d35 <https://schema.org/propertyID> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names" .
+_:a45a121c0de0fb1e2c5d45ccc5925d35 <https://schema.org/name> "latitude" .
+_:a45a121c0de0fb1e2c5d45ccc5925d35 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:a45a121c0de0fb1e2c5d45ccc5925d35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:d81ae1d106aac36310bcd541e819a6bf <https://schema.org/name> "Integrated Marine Observing System (IMOS)" .
+_:d81ae1d106aac36310bcd541e819a6bf <https://schema.org/email> "imos@imos.org.au" .
+_:d81ae1d106aac36310bcd541e819a6bf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Organization> .
+_:dc0e2957343b846fd1ebb9144f8e3afc <https://schema.org/roleName> "SAIMOS Biological Leader; principalInvestigator" .
+_:dc0e2957343b846fd1ebb9144f8e3afc <https://schema.org/creator> _:b360fdf4b2f6243e82a63b3de94190f7 .
+_:dc0e2957343b846fd1ebb9144f8e3afc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Role> .
+_:c63cf0643a55cd984a6a2bcc4d69d139 <https://schema.org/url> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names/mole_concentration_of_silicate_in_sea_water" .
+_:c63cf0643a55cd984a6a2bcc4d69d139 <https://schema.org/propertyID> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names" .
+_:c63cf0643a55cd984a6a2bcc4d69d139 <https://schema.org/name> "mole_concentration_of_silicate_in_sea_water" .
+_:c63cf0643a55cd984a6a2bcc4d69d139 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:c63cf0643a55cd984a6a2bcc4d69d139 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:bf1507c9c51a422039ac0128752156d0 <https://schema.org/url> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names/concentration_of_chlorophyll_in_sea_water" .
+_:bf1507c9c51a422039ac0128752156d0 <https://schema.org/propertyID> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names" .
+_:bf1507c9c51a422039ac0128752156d0 <https://schema.org/name> "concentration_of_chlorophyll_in_sea_water" .
+_:bf1507c9c51a422039ac0128752156d0 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:bf1507c9c51a422039ac0128752156d0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:ffdf4d5151c9ca9940a89db2bd7665a2 <https://schema.org/name> "mole_concentration_of_nitrogen_in_nitrate_and_nitrite_in_sea_water" .
+_:ffdf4d5151c9ca9940a89db2bd7665a2 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:ffdf4d5151c9ca9940a89db2bd7665a2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:dbc19d894e4eb12a7faf26540f2f9261 <https://schema.org/url> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names/wind_from_direction" .
+_:dbc19d894e4eb12a7faf26540f2f9261 <https://schema.org/propertyID> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names" .
+_:dbc19d894e4eb12a7faf26540f2f9261 <https://schema.org/name> "wind_from_direction" .
+_:dbc19d894e4eb12a7faf26540f2f9261 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:dbc19d894e4eb12a7faf26540f2f9261 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:c5b3d263d63f2eb081683f002f401837 <https://schema.org/url> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names/mass_concentration_of_suspended_matter_in_sea_water" .
+_:c5b3d263d63f2eb081683f002f401837 <https://schema.org/propertyID> "http://cf-pcmdi.llnl.gov/documents/cf-standard-names" .
+_:c5b3d263d63f2eb081683f002f401837 <https://schema.org/name> "mass_concentration_of_suspended_matter_in_sea_water" .
+_:c5b3d263d63f2eb081683f002f401837 <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:c5b3d263d63f2eb081683f002f401837 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:b7edfcd82b25d038ac3ce349fcc672a7 <https://schema.org/name> "MD_LegalConstraints" .
+_:b7edfcd82b25d038ac3ce349fcc672a7 <https://schema.org/description> "graphic: reference: otherConstraints: The citation in a list of references is: 'IMOS [year-of-data-download], [Title], [data-access-URL], accessed [date-of-access]. '.   otherConstraints: Any users of IMOS data are required to clearly acknowledge the source of the material derived from IMOS in the format: 'Data was sourced from Australia s Integrated Marine Observing System (IMOS) IMOS is enabled by the National Collaborative Research Infrastructure strategy (NCRIS). 'If relevant, also credit other organisations involved in collection of this particular datastream (as listed in 'credit' in the metadata record)..   " .
+_:b7edfcd82b25d038ac3ce349fcc672a7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DigitalDocument> .
+_:f97c620291945f1187bf41e02a949f40 <https://schema.org/value> "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617" .
+_:f97c620291945f1187bf41e02a949f40 <https://schema.org/url> "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617" .
+_:f97c620291945f1187bf41e02a949f40 <https://schema.org/propertyID> "gmd:datasetURI" .
+_:f97c620291945f1187bf41e02a949f40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:bc6cd6b36446cc0c6cc5bd2c90d3a63a <https://schema.org/name> "amount_of_picophytoplankton_in_sea_water" .
+_:bc6cd6b36446cc0c6cc5bd2c90d3a63a <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:bc6cd6b36446cc0c6cc5bd2c90d3a63a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:ebc3a9b7b7c8c7b15f5b7079afa4da6 <https://schema.org/geo> _:afe3dd7ee4a708a6be148bbc0cf271d6 .
+_:ebc3a9b7b7c8c7b15f5b7079afa4da6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Place> .
+_:b360fdf4b2f6243e82a63b3de94190f7 <https://schema.org/name> "van Ruth, Paul" .
+_:b360fdf4b2f6243e82a63b3de94190f7 <https://schema.org/email> "Paul.vanruth@sa.gov.au" .
+_:b360fdf4b2f6243e82a63b3de94190f7 <https://schema.org/affiliation> _:d71ea62a49f542e99ec53da179cb1f0e .
+_:b360fdf4b2f6243e82a63b3de94190f7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+_:ba916e130235f497b03a9524421975ff <https://schema.org/name> "depth_of_chlorophyll_maximum" .
+_:ba916e130235f497b03a9524421975ff <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:ba916e130235f497b03a9524421975ff <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+_:a7497934b25ffa8d8aa61775a8b8168e <https://schema.org/name> "amount_of_virus_in_sea_water" .
+_:a7497934b25ffa8d8aa61775a8b8168e <https://schema.org/additionalType> "earthcollab:Parameter" .
+_:a7497934b25ffa8d8aa61775a8b8168e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/PropertyValue> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:da12cedbd6c14e2c78d06372dc573e6d .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:c3a022958233b2dad27a6148b62b58e9 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:a1f721a399a0ad3527b2b99575b7b5b6 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:c25590ffae6cd29c80791c433e464ba5 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:caa44e367ead7e82f3a21e70afd92180 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:b98852c4cd3f37759eb3f77b1aae2f30 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:c2e983069f91aa108762e54bfac349f2 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:e405a5e6ae261345d942110139fa93b7 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:c79157765c24b7d2474912ec9bea980 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:a45a121c0de0fb1e2c5d45ccc5925d35 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:c63cf0643a55cd984a6a2bcc4d69d139 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:bf1507c9c51a422039ac0128752156d0 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:ffdf4d5151c9ca9940a89db2bd7665a2 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:dbc19d894e4eb12a7faf26540f2f9261 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:c5b3d263d63f2eb081683f002f401837 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:bc6cd6b36446cc0c6cc5bd2c90d3a63a .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:ba916e130235f497b03a9524421975ff .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/variableMeasured> _:a7497934b25ffa8d8aa61775a8b8168e .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/url> "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/spatialCoverage> _:ebc3a9b7b7c8c7b15f5b7079afa4da6 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/publisher> _:f17c81f2cfdc77854fdad0df2233ad1c .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/name> "SAIMOS - Biological and Flow Cytometry data collected from CTD stations in South Australia, in April 2015" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/license> _:fc79deb211b7f30993399f4654028c4d .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/license> _:b7edfcd82b25d038ac3ce349fcc672a7 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "wind_speed" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "wind_from_direction" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "sea_surface_temperature" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "mole_concentration_of_silicate_in_sea_water" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "mole_concentration_of_phosphorus_in_phosphate_in_sea_water" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "mole_concentration_of_nitrogen_in_nitrate_and_nitrite_in_sea_water" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "mole_concentration_of_nitrogen_in_ammonium_in_sea_water" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "mass_concentration_of_suspended_matter_in_sea_water" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "mass_concentration_of_particulate_organic_matter_in_sea_water" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "mass_concentration_of_particulate_inorganic_matter_in_sea_water" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "longitude" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "latitude" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "depth_of_chlorophyll_maximum" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "depth" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "concentration_of_chlorophyll_in_sea_water" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "amount_of_virus_in_sea_water" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "amount_of_picophytoplankton_in_sea_water" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "amount_of_bacteria_in_sea_water" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Virus" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Picophytoplankton" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Oceans | Ocean Winds | Surface Winds" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Oceans | Ocean Temperature | Sea Surface Temperature" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Oceans | Ocean Chemistry | Suspended Solids" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Oceans | Ocean Chemistry | Silicate" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Oceans | Ocean Chemistry | Phosphate" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Oceans | Ocean Chemistry | Organic Matter" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Oceans | Ocean Chemistry | Nitrogen" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Oceans | Ocean Chemistry | Inorganic Matter" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Oceans | Ocean Chemistry | Chlorophyll" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Oceans | Bathymetry | Water Depth" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Niskin Bottles" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "IMOS Node | SA-IMOS | Southern Australian Integrated Marine Observing System" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Biosphere | Vegetation | Phytoplankton" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/keywords> "Biosphere | Microbiota | Bacteria" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/includedInDataCatalog> _:e7db96e2f9bed8411a00eb7b01ebf514 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/identifier> _:f97c620291945f1187bf41e02a949f40 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/distribution> <https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_pico_May2014onwards.doc> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/distribution> <https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_BacteriaViruses_May2014onwards.doc> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/distribution> <https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_BioExcel_summary_May2014onwards.doc> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/distribution> <http://en.bio-soft.net/other/WinMDI.html> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/distribution> <http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/distribution> <http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/distribution> <http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/distribution> <http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/distribution> <http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/distribution> <http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/distribution> <http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/description> "Flow cytometry data was collected in April 2015, in waters off South Australia. The general purpose of the study is to be able to establish background knowledge on the ecosystem on the continental shelf of South Australia and the impact of upwelling/saline outflow events on microbial communities to ultimately develop a biogeochemical model of the region. Sampling was carried out during cruises conducted on board the RV Ngerin as part of the Southern Australian Integrated Marine System (SAIMOS). During each cruise, the physical, chemical and biological properties of the chlorophyll fluorescence maximum (DCM) layer were investigated. Flow cytometry data has been collected for picophytoplankton, bacteria and viruses. Six main stations have been sampled over the course of the study, five are located on the 100 m isobath, i.e. RS (35.508S, 136.278E), B2 (35.418S, 136.148E), B3 (35.258S, 136.048E), SAM2CP/B4 (35.168S, 135.418E) and SAM5CB/B5 (35.008S, 135.198E), and one from an offshore station (B1; 36.188S, 136.178E) located southwest of Kangaroo Island. Note that combining the distances between stations (1425 nautical miles), the average component of the current velocity at middepth along the shelf (0.01 m s21) and the average speed of the vessel (i.e. 9 knots) indicate that different water masses were sampled at each station. Additional samples have on occasion been collected from the National Reference Station (NRS) at Kangaroo Island (35.832S, 136.447E) and the SA Spencer Gulf Mouth Mooring (SAM8SG, 35.25S, 136.690E), where the saline outflow occurs." .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/datePublished> "2015-11-24T10:00:00" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/creator> _:dc0e2957343b846fd1ebb9144f8e3afc .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/contributor> _:ffa58f157475d3751cc114fec15aac0 .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/citation> "(2015-11-24T10:00:00), SAIMOS - Biological and Flow Cytometry data collected from CTD stations in South Australia, in April 2015, Integrated Marine Observing System (IMOS), https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617." .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/additionalType> "vivo:Dataset" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <https://schema.org/additionalType> "geolink:Dataset" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Dataset> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_pico_May2014onwards.doc> <https://schema.org/url> "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_pico_May2014onwards.doc" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_pico_May2014onwards.doc> <https://schema.org/fileFormat> "fcs files" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_pico_May2014onwards.doc> <https://schema.org/fileFormat> "Microsoft Excel v.2007" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_pico_May2014onwards.doc> <https://schema.org/description> "Explanation of Picophytoplankton file names (fcs files). Service Protocol: Explanation of Picophytoplankton file names (fcs files). " .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_pico_May2014onwards.doc> <https://schema.org/additionalType> "dcat:distribution" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_pico_May2014onwards.doc> <http://www.w3.org/ns/dcat#accessURL> "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_pico_May2014onwards.doc" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_pico_May2014onwards.doc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_BacteriaViruses_May2014onwards.doc> <https://schema.org/url> "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_BacteriaViruses_May2014onwards.doc" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_BacteriaViruses_May2014onwards.doc> <https://schema.org/fileFormat> "fcs files" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_BacteriaViruses_May2014onwards.doc> <https://schema.org/fileFormat> "Microsoft Excel v.2007" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_BacteriaViruses_May2014onwards.doc> <https://schema.org/description> "Explanation of bacteria/virus file names (fcs files). Service Protocol: Explanation of bacteria/virus file names (fcs files). " .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_BacteriaViruses_May2014onwards.doc> <https://schema.org/additionalType> "dcat:distribution" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_BacteriaViruses_May2014onwards.doc> <http://www.w3.org/ns/dcat#accessURL> "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_BacteriaViruses_May2014onwards.doc" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_SAIMOS_BacteriaViruses_May2014onwards.doc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_BioExcel_summary_May2014onwards.doc> <https://schema.org/url> "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_BioExcel_summary_May2014onwards.doc" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_BioExcel_summary_May2014onwards.doc> <https://schema.org/fileFormat> "fcs files" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_BioExcel_summary_May2014onwards.doc> <https://schema.org/fileFormat> "Microsoft Excel v.2007" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_BioExcel_summary_May2014onwards.doc> <https://schema.org/description> "Explanation of column headings in excel summary document.. Service Protocol: Explanation of column headings in excel summary document.. " .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_BioExcel_summary_May2014onwards.doc> <https://schema.org/additionalType> "dcat:distribution" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_BioExcel_summary_May2014onwards.doc> <http://www.w3.org/ns/dcat#accessURL> "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_BioExcel_summary_May2014onwards.doc" .
+<https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/528f280c-b151-45c4-9526-e0746510a617/attachments/README_BioExcel_summary_May2014onwards.doc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> .
+<http://en.bio-soft.net/other/WinMDI.html> <https://schema.org/url> "http://en.bio-soft.net/other/WinMDI.html" .
+<http://en.bio-soft.net/other/WinMDI.html> <https://schema.org/name> "Link to free Winmdi software for visualisation and analysis of fcs files" .
+<http://en.bio-soft.net/other/WinMDI.html> <https://schema.org/fileFormat> "fcs files" .
+<http://en.bio-soft.net/other/WinMDI.html> <https://schema.org/fileFormat> "Microsoft Excel v.2007" .
+<http://en.bio-soft.net/other/WinMDI.html> <https://schema.org/description> "Service Protocol: . " .
+<http://en.bio-soft.net/other/WinMDI.html> <https://schema.org/additionalType> "dcat:distribution" .
+<http://en.bio-soft.net/other/WinMDI.html> <http://www.w3.org/ns/dcat#accessURL> "http://en.bio-soft.net/other/WinMDI.html" .
+<http://en.bio-soft.net/other/WinMDI.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls> <https://schema.org/url> "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls> <https://schema.org/name> "Summary of biological and nutrient data collected from each station." .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls> <https://schema.org/fileFormat> "fcs files" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls> <https://schema.org/fileFormat> "Microsoft Excel v.2007" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls> <https://schema.org/description> "Service Protocol: . " .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls> <https://schema.org/additionalType> "dcat:distribution" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls> <http://www.w3.org/ns/dcat#accessURL> "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/saimosBioData201504_update.xls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls> <https://schema.org/url> "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls> <https://schema.org/name> "Picophytoplankton processed data" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls> <https://schema.org/fileFormat> "fcs files" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls> <https://schema.org/fileFormat> "Microsoft Excel v.2007" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls> <https://schema.org/description> "Service Protocol: . " .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls> <https://schema.org/additionalType> "dcat:distribution" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls> <http://www.w3.org/ns/dcat#accessURL> "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_Picophyto_FV02.xls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx> <https://schema.org/url> "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx> <https://schema.org/name> "Chlorophyll pigment processed data" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx> <https://schema.org/fileFormat> "fcs files" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx> <https://schema.org/fileFormat> "Microsoft Excel v.2007" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx> <https://schema.org/description> "Service Protocol: . " .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx> <https://schema.org/additionalType> "dcat:distribution" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx> <http://www.w3.org/ns/dcat#accessURL> "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_ANMN_BGC_Chlpigs_FV01.xlsx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls> <https://schema.org/url> "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls> <https://schema.org/name> "Bacteria/Virus Processed data" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls> <https://schema.org/fileFormat> "fcs files" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls> <https://schema.org/fileFormat> "Microsoft Excel v.2007" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls> <https://schema.org/description> "Service Protocol: . " .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls> <https://schema.org/additionalType> "dcat:distribution" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls> <http://www.w3.org/ns/dcat#accessURL> "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_SAIMOS_AMNM_VB_FV02.xls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx> <https://schema.org/url> "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx> <https://schema.org/name> "Phytoplankton community composition and abundance data" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx> <https://schema.org/fileFormat> "fcs files" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx> <https://schema.org/fileFormat> "Microsoft Excel v.2007" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx> <https://schema.org/description> "Service Protocol: . " .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx> <https://schema.org/additionalType> "dcat:distribution" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx> <http://www.w3.org/ns/dcat#accessURL> "http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx" .
+<http://data.aodn.org.au/IMOS/SAIMOS/Biogeochem/2015/04/2015_04_ANMN_SAIMOS_PHYNUM_FV00.xlsx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/> <https://schema.org/url> "http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/" .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/> <https://schema.org/name> "Picophytoplankton Flow Cytometry data (fcs files)" .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/> <https://schema.org/fileFormat> "fcs files" .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/> <https://schema.org/fileFormat> "Microsoft Excel v.2007" .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/> <https://schema.org/description> "Service Protocol: . " .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/> <https://schema.org/additionalType> "dcat:distribution" .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/> <http://www.w3.org/ns/dcat#accessURL> "http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/" .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/Picophytoplankton_Flow_Cytometry_Data/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/> <https://schema.org/url> "http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/" .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/> <https://schema.org/name> "BacteriaVirus Flow Cytometry data (fcs files)" .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/> <https://schema.org/fileFormat> "fcs files" .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/> <https://schema.org/fileFormat> "Microsoft Excel v.2007" .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/> <https://schema.org/description> "Service Protocol: . " .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/> <https://schema.org/additionalType> "dcat:distribution" .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/> <http://www.w3.org/ns/dcat#accessURL> "http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/" .
+<http://data.aodn.org.au/?prefix=IMOS/SAIMOS/Biogeochem/2015/04/BacteriaVirus_Flow_Cytometry_data/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DataDownload> .
