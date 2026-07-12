@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/813317",
+  "@type": "Dataset",
+  "name": "[GPpr09 Particulate Th and Pa] - Depth profiles of seawater particulate 232Th, 230Th, and 231Pa from R/V Sonne cruise SO245 (UltraPac, GPpr09) during Dec 2015 to Jan 2016 (Supply and removal of trace elements in the subtropical South Pacific)",
+  "description": "This dataset contains depth profiles of seawater particulate 232Th, 230Th, and 231Pa from R/V Sonne cruise SO245 (UltraPac, GPpr09).\n\ncdm_data_type = Other\nVARIABLES:\nStation_ID (unitless)\nStart_Date_UTC (unitless)\nStart_Time_UTC (unitless)\ntime (Start ISO Date Time UTC, seconds since 1970-01-01T00:00:00Z)\nEnd_Date_UTC (unitless)\nEnd_Time_UTC (unitless)\nEnd_ISO_DateTime_UTC (End ISO Date Time UTC, unitless)\nlatitude (degrees_north)\nlongitude (degrees_east)\nEnd_Latitude (Latitude, degrees North)\nEnd_Longitude (Longitude, degrees East)\nEvent_ID (unitless)\nSample_ID (unitless)\ndepth (Sample Depth, m)\nTh_232_TP_CONC_PUMP_oboqio (pmol/kg)\nSD1_Th_232_TP_CONC_PUMP_oboqio (pmol/kg)\nFlag_Th_232_TP_CONC_PUMP_oboqio (unitless)\nTh_230_TP_CONC_PUMP_e6mfsz (uBq/kg)\nSD1_Th_230_TP_CONC_PUMP_e6mfsz (uBq/kg)\nFlag_Th_230_TP_CONC_PUMP_e6mfsz (unitless)\nPa_231_TP_CONC_PUMP_r0ifiu (uBq/kg)\nSD1_Pa_231_TP_CONC_PUMP_r0ifiu (uBq/kg)\nFlag_Pa_231_TP_CONC_PUMP_r0ifiu (unitless)\nTh_230_TP_XS_CONC_PUMP (uBq/kg)\nSD1_Th_230_TP_XS_CONC_PUMP (uBq/kg)\nFlag_Th_230_TP_XS_CONC_PUMP (unitless)\nPa_231_TP_XS_CONC_PUMP (uBq/kg)\nSD1_Pa_231_TP_XS_CONC_PUMP (uBq/kg)\nFlag_Pa_231_TP_XS_CONC_PUMP (unitless)\n",
+  "identifier": "bcodmo_dataset_813317",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sample_Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/813350",
+      "description": "Sample Depth",
+      "minValue": 20.0,
+      "maxValue": 5000.0,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/813317"
+}

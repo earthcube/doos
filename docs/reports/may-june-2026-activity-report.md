@@ -14,7 +14,7 @@ As part of that I'll break this report down into two main sections.
 I'll then follow up with how this connects with DeCoder and others.
 
 - Resource focus
-  - BCO-DMO: [scanner](https://github.com/earthcube/doos/tree/main/projects/BCO-DMO/scanner)
+  - BCO-DMO: [bco-dmo-scan skill](https://github.com/earthcube/doos/tree/main/skills/bco-dmo-scan)
   - OBIS [OBIS auxillary depth graph](https://github.com/earthcube/doos/tree/main/projects/CCHDO)
   - generates the depth data via ERDDAP interaction
   - BODC plan: [`BODC`]([../../projects/BODC/PLAN.md](https://github.com/earthcube/doos/tree/main/projects/BODC))
@@ -391,7 +391,7 @@ Refreshed [`projects/OBIS/`](../../projects/OBIS/):
 
 - Added JSON-LD metadata for **12 new datasets** in scanner output
 - Scanner URL fixes and access review documentation
-- See [`projects/BCO-DMO/scanner/README.md`](../../projects/BCO-DMO/scanner/README.md)
+- See [`skills/bco-dmo-scan/README.md`](../../skills/bco-dmo-scan/README.md) (scanner moved from `projects/BCO-DMO/`)
 
 ### ERDDAP (`f7565c6`, 17 Jun)
 

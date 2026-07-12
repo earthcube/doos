@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/780926",
+  "@type": "Dataset",
+  "name": "[16S rRNA gene from DNA] - 16S rRNA gene (from DNA) from samples collected on cruise Chikyu-331 in the Okinawa Trough, Japan from September to October 2010 (An In-Depth analysis of the subvent biosphere within Okinawa Backarc Basin (IODP 331, Iheya North Hydrothermal Field) sediments)",
+  "description": "The purpose of this dataset was to investigate taxonomic changes via the 16S rRNA gene from extractable DNA across 45 meters of recovered core. The temperature gradient in this section of the dynamic Iheya North Hydrothermal system was estimated to be ~3C/m. The interval transitions sharply from low-temperature marine mud to hydrothermally altered clay.\n\ncdm_data_type = Other\nVARIABLES:\nCruise_ID (unitless)\nIODP_Sample_Number (unitless)\nlatitude (degrees_north)\nlongitude (degrees_east)\nWater_depth (meters)\nTop_Depth (meters below seafloor)\nBottom_Depth (meters below seafloor)\nSediment_type (unitless)\nEstimated_Temp (degrees Celsius)\nMGRAST_Accession_ID (unitless)\nNotes (unitless)\n",
+  "identifier": "bcodmo_dataset_780926",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Water_depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/780948",
+      "description": "Water Depth",
+      "minValue": 886.0,
+      "maxValue": 1060.0,
+      "unitText": "meters",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Top_Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/780949",
+      "description": "Top Depth",
+      "minValue": 0.23,
+      "maxValue": 44.51,
+      "unitText": "meters below seafloor"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Bottom_Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/780950",
+      "description": "Bottom Depth",
+      "minValue": 0.38,
+      "maxValue": 44.66,
+      "unitText": "meters below seafloor"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/780926"
+}

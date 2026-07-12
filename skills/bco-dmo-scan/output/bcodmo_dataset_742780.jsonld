@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/742780",
+  "@type": "Dataset",
+  "name": "[ARK27-3: Bulk MCA hydrolysis rates] - Microbial enzyme activities: peptidase activities in bulk seawater samples from the RV\\Polarstern cruise ARKXXVII/3 in the Central Arctic Ocean and Laptev Sea, Aug-Sept. 2012 (Latitudinal and depth-related contrasts in enzymatic capabilities of pelagic microbial communities: Predictable patterns in the ocean?)",
+  "description": "This dataset includes peptidase activities measured in bulk (not filter-fractionated) seawater. Links to archived CTD data are also provided. Five substrates linked to a 7-amido-4-methyl coumarin (MCA) fluorophore, one amino acid \\u2013 leucine \\u2013 and four oligopeptides \\u2013 the chymotrypsin substrates alanine-alanine-phenylalanine (AAF) and alanine-alanine-proline-phenylalanine (AAPF), and the trypsin substrates glutamine-alanine-arginine (QAR) and glutamic acid-gylcine-arginine (EGR) \\u2013 were used to measure exo- and endo-acting peptidase activities, respectively.\n\ncdm_data_type = Other\nVARIABLES:\nstation_no (unitless)\ndepth_no (Depth, unitless)\ndepth_m (Depth, meters)\ncast_no (unitless)\ntime (ISO Date Time UTC, seconds since 1970-01-01T00:00:00Z)\nlatitude (degrees_north)\nlongitude (degrees_east)\nsubstrate (unitless)\ntimepoint (unitless)\ntime_elapsed_hr (hours)\nrep1_rate (nanomoles/liter/hour (nmol L-1 h-1))\nrep2_rate (nanomoles/liter/hour (nmol L-1 h-1))\nrep3_rate (nanomoles/liter/hour (nmol L-1 h-1))\naverage (nanomoles/liter/hour (nmol L-1 h-1))\nstd_dev (nanomoles/liter/hour (nmol L-1 h-1))\ncomments (unitless)\n",
+  "identifier": "bcodmo_dataset_742780",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "depth_no",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/742804",
+      "description": "Depth",
+      "unitText": "unitless"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth_m",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/742805",
+      "description": "Depth",
+      "minValue": 1.0,
+      "maxValue": 4350.0,
+      "unitText": "meters",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/742780"
+}

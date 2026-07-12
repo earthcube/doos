@@ -184,8 +184,8 @@ discovery and reduce noise from non-series pages in the general sitemap.
 | SHACL report | `output/shacl_results.json` | Pass/fail against `depth_one.ttl` |
 | N-Quads export | `output/bodc_harvest.nq` | Federated-graph-ready serialization |
 
-Reference implementation: `projects/BCO-DMO/bcodmo-depth/scripts/JsonLdDepthAnalyzer.py`
-(fetch JSON-LD → analyze depth in distributions). BODC differs in that depth ranges
+Reference implementation: `skills/bco-dmo-scan/assets/defs/iso_measurements.py`
+(ISO 19115 + ERDDAP info → ODIS depth JSON-LD). BODC differs in that depth ranges
 are already present in metadata `variableMeasured` — distribution download is
 optional, not required.
 

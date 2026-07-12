@@ -7,15 +7,22 @@ files or directories) and pushes them to an Oxigraph server over the SPARQL
 Graph Store HTTP Protocol. Pair this with build/Dockerfile, which starts an
 in-memory Oxigraph server with a union default graph.
 
+Optionally export the full store (all named graphs) as a single N-Quads file
+via GET /store after loading.
+
 Usage:
   # 1. start the server (in-memory)
   docker build -t doos-oxigraph build/
-  docker run --rm -p 7878:7878 doos-oxigraph
+  docker run --rm --network host doos-oxigraph
 
-  # 2. load the configured sources
-  python scripts/loadToOxigraph/loadToOxigraph.py
+  # 2. load the configured sources (and optionally dump N-Quads)
+  python scripts/loadToOxigraph/loadToOxigraph.py --wait
+  python scripts/loadToOxigraph/loadToOxigraph.py --wait --export output/doos.nq
 
-  # 3. test the endpoint
+  # 3. dump an already-loaded store without re-loading sources
+  python scripts/loadToOxigraph/loadToOxigraph.py --export-only --export output/doos.nq
+
+  # 4. test the endpoint
   python scripts/sparqlQueryl.py http://localhost:7878/query --query SPARQL/get100.rq
 """
 
@@ -34,6 +41,9 @@ REPO_ROOT = SCRIPT_DIR.parent.parent
 DEFAULT_CONFIG = SCRIPT_DIR / "oxigraph_load.yaml"
 USER_AGENT = "DOOS-OxigraphLoader/1.0"
 HTTP_TIMEOUT = 30
+# Full-store dumps can be large; allow a long read timeout (connect stays short).
+EXPORT_TIMEOUT = (HTTP_TIMEOUT, 600)
+EXPORT_CHUNK_SIZE = 1 << 20  # 1 MiB
 
 # format -> (mime type, is_quads, [file extensions])
 FORMATS = {
@@ -141,6 +151,39 @@ def load_source(endpoint: str, source: dict) -> int:
     return len(files)
 
 
+def export_nquads(endpoint: str, output: Path) -> None:
+    """Dump the full Oxigraph dataset as N-Quads to *output*.
+
+    Uses GET /store with Accept: application/n-quads so named graphs are
+    preserved in the fourth column. Streams the body to disk.
+    """
+    store_url = f"{endpoint.rstrip('/')}/store"
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "application/n-quads",
+    }
+    output = Path(output)
+    if output.parent and str(output.parent) not in (".", ""):
+        output.parent.mkdir(parents=True, exist_ok=True)
+
+    print(f"\nExporting store to {output} (application/n-quads)...")
+    with requests.get(
+        store_url,
+        headers=headers,
+        stream=True,
+        timeout=EXPORT_TIMEOUT,
+    ) as resp:
+        resp.raise_for_status()
+        nbytes = 0
+        with output.open("wb") as fh:
+            for chunk in resp.iter_content(chunk_size=EXPORT_CHUNK_SIZE):
+                if chunk:
+                    fh.write(chunk)
+                    nbytes += len(chunk)
+
+    print(f"  wrote {nbytes:,} bytes to {output}")
+
+
 def graph_count(endpoint: str, top: int = 15) -> None:
     """Print total triple count and a capped named-graph list for a sanity check."""
     query_url = f"{endpoint.rstrip('/')}/query"
@@ -204,34 +247,61 @@ def parse_args():
         action="store_true",
         help="Wait for the server to come up before loading",
     )
+    parser.add_argument(
+        "--export",
+        type=Path,
+        default=None,
+        metavar="PATH",
+        help="After load (or alone with --export-only), dump the full store "
+        "as N-Quads to PATH (named graphs preserved)",
+    )
+    parser.add_argument(
+        "--export-only",
+        action="store_true",
+        help="Skip loading sources; only dump the store (requires --export)",
+    )
     return parser.parse_args()
 
 
 def main():
-    """Read the config and load each source into Oxigraph."""
+    """Read the config and load each source into Oxigraph; optional N-Quads export."""
     args = parse_args()
 
-    if not args.config.exists():
+    if args.export_only and not args.export:
+        print("Error: --export-only requires --export PATH", file=sys.stderr)
+        sys.exit(1)
+
+    if not args.config.exists() and not args.export_only:
         print(f"Error: config not found: {args.config}", file=sys.stderr)
         sys.exit(1)
 
     try:
-        config = yaml.safe_load(args.config.read_text(encoding="utf-8")) or {}
+        config = {}
+        if args.config.exists():
+            config = yaml.safe_load(args.config.read_text(encoding="utf-8")) or {}
         endpoint = args.endpoint or config.get("endpoint")
         if not endpoint:
             raise ValueError("no endpoint set (config 'endpoint' or --endpoint)")
-        sources = config.get("sources") or []
-        if not sources:
-            raise ValueError("config has no 'sources'")
 
         if args.wait:
             wait_for_server(endpoint)
 
-        total_files = 0
-        for source in sources:
-            total_files += load_source(endpoint, source)
+        if not args.export_only:
+            sources = config.get("sources") or []
+            if not sources:
+                raise ValueError("config has no 'sources'")
 
-        print(f"\nDone: loaded {total_files} file(s) into {endpoint}")
+            total_files = 0
+            for source in sources:
+                total_files += load_source(endpoint, source)
+
+            print(f"\nDone: loaded {total_files} file(s) into {endpoint}")
+        else:
+            print(f"Export-only mode: skipping load from config ({endpoint})")
+
+        if args.export:
+            export_nquads(endpoint, args.export)
+
         graph_count(endpoint)
     except requests.HTTPError as e:
         print(f"Error: HTTP {e.response.status_code} from server: {e}", file=sys.stderr)

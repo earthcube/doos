@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/893293",
+  "@type": "Dataset",
+  "name": "[32Si and 14C Production - Profiles - from DY131] - Depth profiles in the euphotic zone of nitrate, silicate, and phosphate concentrations and profiles of silicic acid uptake rates from EXPORTS cruise DY131 in the North Atlantic during May 2021 (Collaborative Research: Diatoms, Food Webs and Carbon Export - Leveraging NASA EXPORTS to Test the Role of Diatom Physiology in the Biological Carbon Pump)",
+  "description": "32Si and 14C Production - Profiles - from DY131\n\ncdm_data_type = Other\nVARIABLES:\nCruise (cruise during which sample was collected\\)\ntime (ISO Date Time UTC, seconds since 1970-01-01T00:00:00Z)\nEvent (Event number from R2R event log)\nActivity (which instrument was used for sample collection)\nStation (station identifier)\nCast (CTD or TM cast number)\nlatitude (degrees_north)\nlongitude (degrees_east)\nTarget_Depth (meters (m))\nActual_Depth (meters (m))\nLight_Level (unitless (percent))\nPhosphate (millimoles per cubic meter (mmol m^3))\nPhosphate_Flag (unitless)\nSilicate (millimoles per cubic meter (mmol m^3))\nSilicate_Flag (unitless)\nNitrite (millimoles per cubic meter (mmol m^3))\nNitrite_Flag (unitless)\nNitrate_and_Nitrite (millimoles per cubic meter (mmol m^3))\nNitrate_and_Nitrite_Flag (unitless)\nBlank_Corrected_POC (milligrams per cubic meter (mg m^3))\nPOC_Flag (unitless)\nBlank_Corrected_PON (milligrams per cubic meter (mg m^3))\nPON_Flag (unitless)\nchl_a_0_6um_to_5um (micrograms per cubic meter (ug m^3))\nchl_a_gt_5um (micrograms per cubic meter (ug m^3))\nbSi_0_6um_to_5um (nanomoles Si per liter (nmol Si L^1))\nbSi_gt_5um (nanomoles Si per liter (nmol Si L^1))\n... (4 more variables)\n",
+  "identifier": "bcodmo_dataset_893293",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Target_Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/893347",
+      "description": "Target_Depth",
+      "minValue": 4.0,
+      "maxValue": 125.0,
+      "unitText": "meters (m)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Actual_Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/893348",
+      "description": "Actual_Depth",
+      "minValue": 5.4,
+      "maxValue": 126.7,
+      "unitText": "meters (m)"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/893293"
+}

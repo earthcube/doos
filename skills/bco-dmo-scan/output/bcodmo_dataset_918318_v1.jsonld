@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/918318",
+  "@type": "Dataset",
+  "name": "[Edmunds et al. 2023 Oecologia: Seawater Temperature] - Benthic seawater temperature at 10m depth in Moorea, French Polynesia from 2005 to 2021 (Moorea Coral Reef Long-Term Ecological Research site)",
+  "description": "Data Abstract:\n\nBenthic seawater temperature from bottom-mounted thermistors deployed in Moorea, French Polynesia. \n These seawater temperature data support the temperature analysis in Edmunds et al. (2023).\n\n\nResults paper abstract, Edmunds et al. (2023) :\n* [See \"Related Datasets\" section for access to related datasets discussed here]\n\nUnderstanding population dynamics is a long-standing objective of ecology, but the need for progress in this area has become urgent. For coral reefs, achieving this objective is impeded by a lack of information on settlement versus post-settlement events in determining recruitment and population size. Declines in coral abundance are often inferred to be associated with reduced densities of recruits, which could arise from mechanisms occurring at larval settlement, or throughout post-settlement stages. This study uses annual measurements from 2008 to 2021 of coral cover, the density of coral settlers (S), the density of small corals (SC), and environmental conditions, to evaluate the roles of settlement versus post-settlement events in determining rates of coral recruitment and changes in coral cover at Moorea, French Polynesia. Coral cover, S, SC, and the SC:S ratio (a proxy for post-settlement success), and environmental conditions, were used in generalized additive models (GAMs) to show that: (a) coral cover was more strongly related to SC and SC:S than S, and (b) SC:S was highest when preceded by cool seawater, low concentrations of Chlorophyll a, and low flow speeds, and S showed evidence of declining with elevated temperature. Together, these results suggest that changes in coral cover in Moorea are more strongly influenced by post-settlement events than settlement. The key to understanding coral community resilience may lie in elucidating the factors attenuating the bottleneck between settlers and small corals.\n\ncdm_data_type = Other\nVARIABLES:\nSite (unitless)\nData_Source (unitless)\nISO_Date (unitless)\n... (4 more variables)\n",
+  "identifier": "bcodmo_dataset_918318_v1",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Temperature",
+      "alternateName": "water temperature at measurement depth",
+      "propertyID": "http://lod.bco-dmo.org/id/parameter/733",
+      "description": "Temperature",
+      "minValue": 25.33,
+      "maxValue": 30.3,
+      "unitText": "degrees Celsius (degC)"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/918318"
+}

@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/717495",
+  "@type": "Dataset",
+  "name": "[EN584 LV polysaccharide hydrolysis rates] - Measurements of polysaccharide hydrolase activities in large volume mesocosm incubations RV/Endeavor EN584, July 2016 (Patterns of activities project) (Latitudinal and depth-related contrasts in enzymatic capabilities of pelagic microbial communities: Predictable patterns in the ocean?)",
+  "description": "Measurements of polysaccharide hydrolase activities in large volume mesocosm incubations RV/Endeavor EN584, July 2016. See Niskin Bottle and Cast List EN584 to link specific casts and bottles to each experiment: https://www.bco-dmo.org/dataset/717427.\n\ncdm_data_type = Other\nVARIABLES:\ncruise_id (unitless)\nstation (unitless)\ncast (unitless)\ndepth_id (Depth, unitless)\ndepth (m)\ntreatment (unitless)\nmeso_no (unitless)\nsubstrate (unitless)\ntimepoint (unitless)\ntime_elapsed_hr (hours)\nrep1_rate (nanomol monosaccharide/liter/hour)\nrep2_rate (nanomol monosaccharide/liter/hour)\nrep3_rate (nanomol monosaccharide/liter/hour)\naverage (nanomol monosaccharide/liter/hour)\nstd_dev (nanomol monosaccharide/liter/hour)\n",
+  "identifier": "bcodmo_dataset_717495",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "depth_id",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/718090",
+      "description": "Depth",
+      "unitText": "unitless"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth_m",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/718091"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/717495"
+}

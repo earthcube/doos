@@ -4,6 +4,8 @@
 #   docker build -t doos-oxigraph build/
 #
 # Run (in-memory, nothing persisted; data is lost on container stop):
+#   docker run --rm --network host doos-oxigraph
+# If port mapping works on your host, this also works:
 #   docker run --rm -p 7878:7878 doos-oxigraph
 #
 # Then load the provider graphs from the repo root:

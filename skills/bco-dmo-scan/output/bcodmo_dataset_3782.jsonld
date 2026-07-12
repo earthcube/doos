@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/3782",
+  "@type": "Dataset",
+  "name": "[Niskin bottle samples] - Niskin bottle water samples and CTD measurements at water sample depths collected at Bermuda Atlantic Time-Series sites in the Sargasso Sea ongoing from 1988 (Bermuda Atlantic Time-series Study)",
+  "description": "Niskin bottle samples. CTD measurements at water sample depths and Niskin bottle water samples from the Bermuda Atlantic Time-series Study (BATS) and from Station S, located 25 km SE of Bermuda (32\u00b010N, 64\u00b030W) Measurements have been collected since 1988 and include nutrients, biogeochemical concentration, bacterial enumeration, and cyanobacteria..\n\ncdm_data_type = Point\nVARIABLES:\ncruise_type (unitless)\ncruise_type_text (unitless)\ncruise_number (unitless)\ncast_number (unitless)\ndecy (year)\ntime (ISO Datetime, seconds since 1970-01-01T00:00:00Z)\nlatitude (degrees_north)\nlongitude (degrees_east)\nfilename (unitless)\nId (unitless)\ndepth (m)\nniskin_number (unitless)\np1 (nanograms per kilogram)\np2 (nanograms per kilogram)\np3 (nanograms per kilogram)\np4 (nanograms per kilogram)\np5 (nanograms per kilogram)\np6 (nanograms per kilogram)\np7 (nanograms per kilogram)\np8 (nanograms per kilogram)\np9 (nanograms per kilogram)\np10 (nanograms per kilogram)\np11 (nanograms per kilogram)\np12 (nanograms per kilogram)\n... (41 more variables)\n",
+  "identifier": "bcodmo_dataset_3782",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/948800",
+      "description": "Depth",
+      "minValue": 0.0,
+      "maxValue": 6001.5,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "QF_Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/948801"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/3782"
+}

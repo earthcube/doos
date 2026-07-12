@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/719712",
+  "@type": "Dataset",
+  "name": "[EN556 bulk water polysaccharide hydrolysis rates] - Hydrolysis rates from bulk water sample incubations from R/V Endeavor cruise EN556 in 2015 (Latitudinal and depth-related contrasts in enzymatic capabilities of pelagic microbial communities: Predictable patterns in the ocean?)",
+  "description": "This dataset includes polysaccharide hydrolysis rates to measure microbial enzyme activities and bacterial productivity.\n\ncdm_data_type = Other\nVARIABLES:\ncruise_id (unitless)\nstation (unitless)\ncast (unitless)\ndepth_no (Depth, unitless)\ndepth (m)\nsubstrate (unitless)\ntimepoint (unitless)\ntime_elapsed_hr (hours)\nrep1_rate (nanomol monosaccharide/liter/hour)\nrep2_rate (nanomol monosaccharide/liter/hour)\nrep3_rate (nanomol monosaccharide/liter/hour)\naverage (nanomol monosaccharide/liter/hour)\nstd_dev (nanomol monosaccharide/liter/hour)\n",
+  "identifier": "bcodmo_dataset_719712",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "depth_no",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/891902",
+      "description": "Depth",
+      "unitText": "unitless"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth_m",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/891903"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/719712"
+}

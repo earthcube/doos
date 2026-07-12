@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/707023",
+  "@type": "Dataset",
+  "name": "[HMS 5m Hydrography] - Temperature, oxygen, pH, depth, and conductivity measured at 5 m depth at Hopkins Marine Station from 18-April 2013 to 14-June 2013 (Ocean Acidification: Collaborative Research: Interactive effects of acidification, low dissolved oxygen and temperature on abalone population dynamics within the California Current)",
+  "description": "oxygen, pH, depth, and conductivity measured at 5 m depth at Hopkins Marine Station from 18-April 2013 to 14-June 2013.\n\ncdm_data_type = Other\nVARIABLES:\nsite (unitless)\nlatitude (degrees_north)\nlongitude (degrees_east)\ndepth (m)\nISO_DateTime_PDT (ISO Date Time PDT, unitless)\ntemp_pH_sensor (Temp P H Sensor, degrees Celsius)\npH (Sea Water Ph Reported On Total Scale, unitless)\ncond_CTD (millisiemens per centimeter (mS/cm))\ntemp_CTD (degrees Celsius)\ndepth_CTD (Depth, meters)\noxygen (micromoles O2 per liter (\u00b5moles O2/liter))\n",
+  "identifier": "bcodmo_dataset_707023",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "depth_avg",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/707036"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth_CTD",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/707042",
+      "description": "Depth",
+      "minValue": 3.75,
+      "maxValue": 6.36,
+      "unitText": "meters",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/707023"
+}

@@ -18,12 +18,12 @@ endpoint: http://localhost:7878
 
 sources:
   - name: argo
-    path: projects/ARGO/data/output      # directory of per-profile .nt files
+    path: projects/ARGO/data/output # directory of per-profile .nt files
     format: nt
     graph: urn:doos:argo
 
   - name: obis
-    path: projects/OBIS/output.nq         # consolidated N-Quads (carries graph names)
+    path: projects/OBIS/output.nq # consolidated N-Quads (carries graph names)
     format: nq
 
   - name: aodn

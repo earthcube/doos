@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/781114",
+  "@type": "Dataset",
+  "name": "[16S rRNA gene from RNA] - 16S rRNA gene (from RNA) from samples collected on cruise Chikyu-331 in the Okinawa Trough, Japan from September to October 2010 (An In-Depth analysis of the subvent biosphere within Okinawa Backarc Basin (IODP 331, Iheya North Hydrothermal Field) sediments)",
+  "description": "RNA extractions were attempted from sediments at Sites C0014 and C0017 to selectively investigate the active microbial populations at these sites. This study was conducted to supplement the gene-based and metagenomic studies. However, the results from sequenced reverse transcribe 16S rRNA demonstrate the sensitivity of extraction and amplification to external nucleic acids and attest to the challenges in working with low biomass environmental samples. Inconsistencies between primersets and replicates make conclusions about the results of this RNA study extremely tenuous.\n\ncdm_data_type = Other\nVARIABLES:\nCruise_ID (unitless)\nSample_Name (unitless)\nlatitude (degrees_north)\nlongitude (degrees_east)\nWater_depth (meters)\nTop_Depth (meters below seafloor)\nBottom_Depth (meters below seafloor)\nSediment_type (unitless)\nEstimated_Temp (degrees Celsius)\nNucleic_Acid_amplified (unitless)\nPrimer_Set_16S_rRNA (Primer Set 16 S R RNA, unitless)\nIllumina_dataset (unitless)\nNotes (unitless)\n",
+  "identifier": "bcodmo_dataset_781114",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Water_depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/781126",
+      "description": "Water Depth",
+      "minValue": 1059.0,
+      "maxValue": 1229.5,
+      "unitText": "meters",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Top_Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/781127",
+      "description": "Top Depth",
+      "minValue": 0.23,
+      "maxValue": 63.72,
+      "unitText": "meters below seafloor"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Bottom_Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/781128",
+      "description": "Bottom Depth",
+      "minValue": 0.38,
+      "maxValue": 63.633,
+      "unitText": "meters below seafloor"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/781114"
+}

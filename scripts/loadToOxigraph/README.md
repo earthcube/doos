@@ -40,10 +40,27 @@ Run all commands from the repository root.
 ```bash
 # 1. Build and start the in-memory Oxigraph server (data is lost on stop)
 docker build -t doos-oxigraph build/
-docker run --rm -p 7878:7878 doos-oxigraph
+docker run --rm --network host doos-oxigraph
 
 # 2. In another terminal, load the configured sources
 python scripts/loadToOxigraph/loadToOxigraph.py --wait
+
+# Optional: load and dump the full store (all named graphs) as one N-Quads file
+python scripts/loadToOxigraph/loadToOxigraph.py --wait --export output/doos.nq
+```
+
+Use `--network host` so Oxigraph listens directly on the host at port 7878.
+On some systems, `docker run -p 7878:7878` accepts TCP connections but never
+returns HTTP responses (the loader then times out after 30s with
+`Connection aborted / timed out`). Host networking avoids Docker's port proxy.
+
+The config endpoint is `http://localhost:7878` (`oxigraph_load.yaml`). Do not
+use `0.0.0.0` as the client URL — that is a bind address, not a connect target.
+
+If port mapping works on your host, this alternative is fine:
+
+```bash
+docker run --rm -p 7878:7878 doos-oxigraph
 ```
 
 `--wait` polls the endpoint until the server is ready before loading. On success
@@ -75,8 +92,38 @@ python scripts/loadToOxigraph/loadToOxigraph.py --help
 | `--config PATH` | YAML source config (default: `oxigraph_load.yaml` next to the script). |
 | `--endpoint URL` | Override the endpoint from the config (e.g. `http://localhost:7878`). |
 | `--wait` | Wait for the server to come up before loading. |
+| `--export PATH` | After load, dump the **entire** store as N-Quads to `PATH` (named graphs preserved in the fourth column). |
+| `--export-only` | Skip loading sources; only dump the store. Requires `--export`. |
 
-## Test query against the running container
+### Exporting the store as N-Quads
+
+After data is in Oxigraph, you can write a single N-Quads file of the full
+dataset (every named graph). The loader issues:
+
+```http
+GET {endpoint}/store
+Accept: application/n-quads
+```
+
+and streams the body to disk. This is **not** a default-graph triple dump: each
+quad carries its graph name, so provider-level graphs (`urn:doos:argo`, …) and
+per-record graphs from N-Quads sources are retained.
+
+```bash
+# Load then export
+python scripts/loadToOxigraph/loadToOxigraph.py --wait --export output/doos.nq
+
+# Export whatever is already loaded (no re-POST of sources)
+python scripts/loadToOxigraph/loadToOxigraph.py --export-only --export output/doos.nq
+```
+
+Equivalent with `curl`:
+
+```bash
+curl -f -H 'Accept: application/n-quads' http://localhost:7878/store -o doos.nq
+```
+
+## Test query against the running server
 
 Use the repo's [`sparqlQueryl.py`](../sparqlQueryl.py) with the simple
 [`get100.rq`](../../SPARQL/get100.rq) query (`SELECT * WHERE { ?s ?p ?o } LIMIT 100`):
