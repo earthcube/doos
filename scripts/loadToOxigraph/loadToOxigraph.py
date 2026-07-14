@@ -7,8 +7,18 @@ files or directories) and pushes them to an Oxigraph server over the SPARQL
 Graph Store HTTP Protocol. Pair this with build/Dockerfile, which starts an
 in-memory Oxigraph server with a union default graph.
 
+Named graphs:
+  - Triple formats (nt, ttl, jsonld) require a config ``graph`` IRI; the payload
+    is POSTed into that named graph.
+  - Quad formats (nq, trig) without ``graph`` keep the embedded graph names.
+  - Quad formats *with* ``graph`` collapse all triples into that IRI (embedded
+    graph names are discarded) and POST as N-Triples with ``?graph=``.
+
 Optionally export the full store (all named graphs) as a single N-Quads file
 via GET /store after loading.
+
+Optionally apply a SPARQL UPDATE that aliases depth ``variableMeasured`` names
+to ``DepBelowSurf`` (``--alias``; default file ``SPARQL/alias_depthbelowsurf.ru``).
 
 Usage:
   # 1. start the server (in-memory)
@@ -19,14 +29,21 @@ Usage:
   python scripts/loadToOxigraph/loadToOxigraph.py --wait
   python scripts/loadToOxigraph/loadToOxigraph.py --wait --export output/doos.nq
 
+  # 2b. load and apply DepBelowSurf name aliases
+  python scripts/loadToOxigraph/loadToOxigraph.py --wait --alias
+
   # 3. dump an already-loaded store without re-loading sources
   python scripts/loadToOxigraph/loadToOxigraph.py --export-only --export output/doos.nq
+
+  # 3b. alias only (skip load) against a running store
+  python scripts/loadToOxigraph/loadToOxigraph.py --export-only --alias
 
   # 4. test the endpoint
   python scripts/sparqlQueryl.py http://localhost:7878/query --query SPARQL/get100.rq
 """
 
 import argparse
+import io
 import sys
 import time
 from pathlib import Path
@@ -34,11 +51,13 @@ from urllib.parse import quote
 
 import requests
 import yaml
+from pyoxigraph import DefaultGraph, RdfFormat, Store
 from tqdm import tqdm
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent.parent
 DEFAULT_CONFIG = SCRIPT_DIR / "oxigraph_load.yaml"
+DEFAULT_ALIAS_UPDATE = REPO_ROOT / "SPARQL" / "alias_depthbelowsurf.ru"
 USER_AGENT = "DOOS-OxigraphLoader/1.0"
 HTTP_TIMEOUT = 30
 # Full-store dumps can be large; allow a long read timeout (connect stays short).
@@ -54,6 +73,13 @@ FORMATS = {
     "jsonld": ("application/ld+json", False, ["jsonld", "json"]),
 }
 
+# config format key -> pyoxigraph RdfFormat for quad payloads
+QUAD_RDF_FORMATS = {
+    "nq": RdfFormat.N_QUADS,
+    "trig": RdfFormat.TRIG,
+}
+NT_MIME = "application/n-triples"
+
 
 def resolve_files(path: Path, exts: list[str]) -> list[Path]:
     """Return the files for a source path (a single file or a directory)."""
@@ -65,6 +91,27 @@ def resolve_files(path: Path, exts: list[str]) -> list[Path]:
             files.extend(sorted(path.glob(f"*.{ext}")))
         return files
     return []
+
+
+def quads_to_ntriples(data: bytes, fmt: str) -> bytes:
+    """Collapse a quad-format payload into N-Triples (drop graph terms).
+
+    Loads N-Quads or TriG into an in-memory store, then serializes every triple
+    from the default graph and all named graphs as N-Triples. Used when a YAML
+    ``graph`` IRI overrides embedded named graphs on a quad source.
+    """
+    rdf_format = QUAD_RDF_FORMATS.get(fmt)
+    if rdf_format is None:
+        raise ValueError(f"cannot collapse format '{fmt}' to N-Triples")
+
+    store = Store()
+    store.load(io.BytesIO(data), rdf_format)
+
+    out = io.BytesIO()
+    store.dump(out, RdfFormat.N_TRIPLES, from_graph=DefaultGraph())
+    for graph_name in store.named_graphs():
+        store.dump(out, RdfFormat.N_TRIPLES, from_graph=graph_name)
+    return out.getvalue()
 
 
 def wait_for_server(endpoint: str, retries: int = 30, delay: float = 1.0) -> None:
@@ -108,7 +155,12 @@ def post_data(store_url: str, data: bytes, mime: str, graph: str | None) -> None
 
 
 def load_source(endpoint: str, source: dict) -> int:
-    """Load one configured source. Returns the number of files loaded."""
+    """Load one configured source. Returns the number of files loaded.
+
+    For quad formats (nq, trig): if ``graph`` is set, embedded graph names are
+    discarded and all triples are loaded into that IRI; if omitted, graphs from
+    the data are preserved. Triple formats always require ``graph``.
+    """
     name = source.get("name", "?")
     fmt = source.get("format")
     if fmt not in FORMATS:
@@ -116,16 +168,16 @@ def load_source(endpoint: str, source: dict) -> int:
     mime, is_quads, exts = FORMATS[fmt]
 
     graph = source.get("graph")
-    if is_quads and graph:
-        print(
-            f"  note: source '{name}' is a quad format; ignoring 'graph' "
-            f"(graph names come from the data)",
-            file=sys.stderr,
-        )
-        graph = None
+    override_quads = bool(is_quads and graph)
     if not is_quads and not graph:
         raise ValueError(
             f"source '{name}': triple format '{fmt}' requires a 'graph' IRI"
+        )
+    if override_quads:
+        print(
+            f"  note: source '{name}' is a quad format with 'graph' set; "
+            f"collapsing embedded graphs into {graph}",
+            file=sys.stderr,
         )
 
     raw_path = Path(source["path"])
@@ -144,11 +196,49 @@ def load_source(endpoint: str, source: dict) -> int:
             post_data(store_url, f.read_bytes(), mime, graph)
     else:
         blob = b"\n".join(f.read_bytes() for f in files)
-        with tqdm(total=1, desc=f"{name} ({fmt}, {len(files)} file(s))") as bar:
-            post_data(store_url, blob, mime, graph)
+        post_mime = mime
+        post_graph = graph
+        if override_quads:
+            # Strip graph terms, then POST as N-Triples into the target graph.
+            blob = quads_to_ntriples(blob, fmt)
+            post_mime = NT_MIME
+            post_graph = graph
+        elif is_quads:
+            # Preserve embedded graph names; do not pass ?graph=.
+            post_graph = None
+        desc = f"{name} ({fmt}, {len(files)} file(s))"
+        if override_quads:
+            desc += f" -> {graph}"
+        with tqdm(total=1, desc=desc) as bar:
+            post_data(store_url, blob, post_mime, post_graph)
             bar.update(1)
 
     return len(files)
+
+
+def apply_sparql_update(endpoint: str, update_file: Path) -> None:
+    """POST a SPARQL UPDATE file to the endpoint's /update service.
+
+    Used for post-load transforms such as aliasing depth variableMeasured
+    names to DepBelowSurf (see SPARQL/alias_depthbelowsurf.ru).
+    """
+    path = update_file if update_file.is_absolute() else REPO_ROOT / update_file
+    if not path.is_file():
+        raise FileNotFoundError(f"SPARQL update file not found: {path}")
+
+    update_url = f"{endpoint.rstrip('/')}/update"
+    body = path.read_text(encoding="utf-8")
+    # Strip leading comment-only lines for a cleaner log line; send full body.
+    print(f"\nApplying SPARQL UPDATE from {path} -> {update_url}")
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Content-Type": "application/sparql-update",
+    }
+    resp = requests.post(
+        update_url, data=body.encode("utf-8"), headers=headers, timeout=HTTP_TIMEOUT
+    )
+    resp.raise_for_status()
+    print(f"  OK (HTTP {resp.status_code})")
 
 
 def export_nquads(endpoint: str, output: Path) -> None:
@@ -258,17 +348,33 @@ def parse_args():
     parser.add_argument(
         "--export-only",
         action="store_true",
-        help="Skip loading sources; only dump the store (requires --export)",
+        help="Skip loading sources; only dump and/or apply --alias "
+        "(requires --export and/or --alias)",
+    )
+    parser.add_argument(
+        "--alias",
+        nargs="?",
+        const=DEFAULT_ALIAS_UPDATE,
+        default=None,
+        type=Path,
+        metavar="UPDATE",
+        help="After load (or alone with --export-only), POST a SPARQL UPDATE "
+        "that aliases designated depth variableMeasured names to DepBelowSurf. "
+        f"Optional path to a .ru file (default: "
+        f"{DEFAULT_ALIAS_UPDATE.relative_to(REPO_ROOT)})",
     )
     return parser.parse_args()
 
 
 def main():
-    """Read the config and load each source into Oxigraph; optional N-Quads export."""
+    """Read the config and load each source into Oxigraph; optional alias/export."""
     args = parse_args()
 
-    if args.export_only and not args.export:
-        print("Error: --export-only requires --export PATH", file=sys.stderr)
+    if args.export_only and not args.export and not args.alias:
+        print(
+            "Error: --export-only requires --export PATH and/or --alias",
+            file=sys.stderr,
+        )
         sys.exit(1)
 
     if not args.config.exists() and not args.export_only:
@@ -298,6 +404,11 @@ def main():
             print(f"\nDone: loaded {total_files} file(s) into {endpoint}")
         else:
             print(f"Export-only mode: skipping load from config ({endpoint})")
+
+        # After load so aliases apply to newly ingested data; before export so
+        # dumped N-Quads include DepBelowSurf when both flags are used.
+        if args.alias is not None:
+            apply_sparql_update(endpoint, args.alias)
 
         if args.export:
             export_nquads(endpoint, args.export)

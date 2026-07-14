@@ -36,7 +36,7 @@ sources:
     format: nq
     # Omit graph to keep per-dataset graphs (http://oceaninfohub.org/graph/obisdepth/...).
     # Uncomment to collapse into one named graph:
-    graph: urn:doos:obis
+    # graph: urn:doos:obis
 
   - name: aodn
     path: projects/AODN/output/output.json
@@ -48,7 +48,7 @@ sources:
     format: nq
     # Omit graph to keep per-series graphs (urn:doos:bodc:harvest:...).
     # Uncomment to collapse into one named graph:
-    graph: urn:doos:bodc
+    # graph: urn:doos:bodc
 
   - name: bcodmo
     path: skills/bco-dmo-scan/output/output.nt

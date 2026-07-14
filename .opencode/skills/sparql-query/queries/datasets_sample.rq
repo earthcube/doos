@@ -1,0 +1,14 @@
+# Sample schema:Dataset resources with common discovery fields.
+# Params: LIMIT
+PREFIX schema: <https://schema.org/>
+
+SELECT DISTINCT ?dataset ?name ?url ?description ?g
+WHERE {
+  GRAPH ?g {
+    ?dataset a schema:Dataset .
+    OPTIONAL { ?dataset schema:name ?name . }
+    OPTIONAL { ?dataset schema:url ?url . }
+    OPTIONAL { ?dataset schema:description ?description . }
+  }
+}
+LIMIT {{LIMIT}}
