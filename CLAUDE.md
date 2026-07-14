@@ -89,7 +89,7 @@ python path/to/script.py --help
 | `SPARQL/` | Reusable SPARQL queries (`.rq`) and update scripts |
 | `scripts/text2query/` | DSPy natural language → SPARQL |
 | `scripts/SPARQLupdate/` | `insertUpdates.py` — apply SPARQL UPDATE inserts to a graph |
-| `.opencode/skills/` | AI skills: `fair-assessment`, `oih-graph` |
+| `.opencode/skills/` | AI skills: `fair-assessment`, `oih-graph`, `sparql-query` |
 | `skills/` | Standalone skills: `crateskill` (RO-Crate), `shaclskills` (SHACL workflow) |
 | `docs/` | Project notes — `sources.md` tracks provider status |
 
@@ -170,5 +170,6 @@ Output formats: N-Triples (`.nt`), N-Quads (`.nq`), Turtle (`.ttl`).
 ## OpenCode skills
 
 Use the `skill` tool when relevant:
-- `fair-assessment` — evaluate FAIR compliance of a dataset/metadata record
-- `oih-graph` — execute SPARQL queries against OIH metadata graphs
+- `fair-assessment` — guided FAIR practices interview (person/repository), not automated metadata scoring
+- `oih-graph` — experimental MCP/graph inspection (prefer `sparql-query` for SPARQL)
+- `sparql-query` — run curated schema.org SPARQL templates or ad-hoc SPARQL against an endpoint URL

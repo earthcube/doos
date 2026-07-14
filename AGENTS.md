@@ -23,7 +23,7 @@ Key dirs:
 - `scripts/SPARQLupdate/`: `insertUpdates.py` — apply SPARQL UPDATE inserts to a graph
 - `SHACL/`: Shapes files (.ttl)
 - `SPARQL/`: Reusable queries (.rq) and update scripts
-- `.opencode/skills/`: AI skills (`fair-assessment`, `oih-graph`)
+- `.opencode/skills/`: AI skills (`fair-assessment`, `oih-graph`, `sparql-query`)
 - `skills/`: Standalone skills (`crateskill` RO-Crate, `shaclskills` SHACL workflow)
 - `docs/`: Notes (sources.md tracks provider status)
 
@@ -177,8 +177,9 @@ inputs. Use `tempfile.mkdtemp(prefix='...')` for temp dirs.
 
 ## Skills
 OpenCode skills (`.opencode/skills/`) — use the `skill` tool when relevant:
-- `fair-assessment` — evaluate FAIR compliance of a dataset/metadata record
-- `oih-graph` — execute SPARQL queries against OIH metadata graphs
+- `fair-assessment` — guided FAIR practices interview (person/repository), not automated metadata scoring
+- `oih-graph` — experimental MCP/graph inspection (prefer `sparql-query` for SPARQL)
+- `sparql-query` — run curated schema.org SPARQL templates or ad-hoc SPARQL against an endpoint URL
 
 Standalone skills (`skills/`): `crateskill` (RO-Crate), `shaclskills` (SHACL workflow).
 
