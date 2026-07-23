@@ -20,7 +20,7 @@
 # the store from a previous run. POST appends; clear the store (or restart
 # in-memory Oxigraph) if you need a clean slate.
 #
-# Output locations are taken from projects/README.md. BCO-DMO N-Triples are
+# Output locations are taken from projects/dataLocations.md. BCO-DMO N-Triples are
 # published under skills/bco-dmo-scan/output/output.nt.
 
 endpoint: http://localhost:7878
