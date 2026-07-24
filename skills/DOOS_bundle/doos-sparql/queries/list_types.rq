@@ -1,0 +1,13 @@
+# Distinct rdf:type values with counts (named graphs).
+# Params: LIMIT
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?type (COUNT(DISTINCT ?s) AS ?count)
+WHERE {
+  GRAPH ?g {
+    ?s a ?type .
+  }
+}
+GROUP BY ?type
+ORDER BY DESC(?count)
+LIMIT {{LIMIT}}

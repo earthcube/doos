@@ -1,5 +1,0 @@
-# Pipeline run outputs (per-run working directories)
-runs/
-# Python caches
-__pycache__/
-*.pyc

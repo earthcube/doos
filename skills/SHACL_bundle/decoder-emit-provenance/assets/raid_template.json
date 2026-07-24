@@ -1,0 +1,67 @@
+{
+  "_about": "Best-effort RAiD v1.6-style record for a decoder pipeline run. RAiD models research ACTIVITIES, so the fit is approximate (PLAN.md §4.6). Block NAMES follow RAiD v1.6; 'type'/'schemaUri' values marked PLACEHOLDER need real RAiD controlled-vocabulary IRIs before any registration. The authoritative pipeline facts live under 'x_pipeline'. Reference: https://metadata.raid.org/en/v1.6/",
+  "identifier": {
+    "id": "",
+    "schemaUri": "https://raid.org/",
+    "registrationAgency": { "id": "", "schemaUri": "https://ror.org/" },
+    "owner": { "id": "", "schemaUri": "https://ror.org/" },
+    "raidAgencyUrl": "",
+    "license": "Creative Commons CC-0",
+    "version": 1,
+    "_status": "unregistered-local-identifier"
+  },
+  "title": [
+    {
+      "text": "",
+      "type": { "id": "PLACEHOLDER", "schemaUri": "https://vocabulary.raid.org/title.type.schema/" },
+      "startDate": "",
+      "endDate": "",
+      "language": { "id": "eng", "schemaUri": "https://iso639-3.sil.org/" }
+    }
+  ],
+  "date": { "startDate": "", "endDate": "" },
+  "description": [
+    {
+      "text": "",
+      "type": { "id": "PLACEHOLDER", "schemaUri": "https://vocabulary.raid.org/description.type.schema/" },
+      "language": { "id": "eng", "schemaUri": "https://iso639-3.sil.org/" }
+    }
+  ],
+  "access": {
+    "type": { "id": "https://vocabularies.coar-repositories.org/access_rights/c_abf2/", "schemaUri": "https://vocabularies.coar-repositories.org/access_rights/" },
+    "statement": { "text": "Open metadata record.", "language": { "id": "eng", "schemaUri": "https://iso639-3.sil.org/" } }
+  },
+  "contributor": [
+    {
+      "id": "",
+      "schemaUri": "https://orcid.org/",
+      "roles": [ { "id": "PLACEHOLDER", "schemaUri": "https://credit.niso.org/" } ],
+      "_note": "Automated pipeline agent — no ORCID. See x_pipeline.agent."
+    }
+  ],
+  "organisation": [
+    {
+      "id": "",
+      "schemaUri": "https://ror.org/",
+      "roles": [ { "id": "PLACEHOLDER", "schemaUri": "https://vocabulary.raid.org/organisation.role.schema/" } ],
+      "_note": "EarthCube / DOOS — no ROR set here."
+    }
+  ],
+  "relatedObject": [],
+  "alternateIdentifier": [],
+  "x_pipeline": {
+    "flow": "decoder",
+    "run_id": "",
+    "source_url": "",
+    "dataset_iri": "",
+    "extraction_source": "",
+    "extracted_fields": [],
+    "shape": "",
+    "n_triples": null,
+    "repair_passes": 0,
+    "n_fixes_applied": 0,
+    "final_conforms": null,
+    "final_violations": null,
+    "final_warnings": null
+  }
+}

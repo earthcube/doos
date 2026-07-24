@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/742235",
+  "@type": "Dataset",
+  "name": "[ARK27-3: Bulk FLA hydrolysis rates] - Microbial enzyme activities: polysaccharide hydrolase activities in bulk seawater samples from the RV\\Polarstern cruise ARKXXVII/3 in the Central Arctic Ocean and Laptev Sea, Aug-Sept. 2012 (Latitudinal and depth-related contrasts in enzymatic capabilities of pelagic microbial communities: Predictable patterns in the ocean?)",
+  "description": "This dataset includes polysaccharide hydrolysis rates measured in bulk (not filter-fractionated) seawater. Links to archived CTD data are also provided.\n\ncdm_data_type = Other\nVARIABLES:\nstation_no (unitless)\ndepth_no (Depth, unitless)\ndepth (m)\ncast_no (unitless)\ntime (ISO Date Time UTC, seconds since 1970-01-01T00:00:00Z)\nlatitude (degrees_north)\nlongitude (degrees_east)\nsubstrate (unitless)\ntimepoint (unitless)\ntime_elapsed_hr (hours)\nrep1_rate (nanomoles/liter/hour (nmol L-1 h-1))\nrep2_rate (nanomoles/liter/hour (nmol L-1 h-1))\nrep3_rate (nanomoles/liter/hour (nmol L-1 h-1))\naverage (nanomoles/liter/hour (nmol L-1 h-1))\nstd_dev (nanomoles/liter/hour (nmol L-1 h-1))\ncomments (unitless)\n",
+  "identifier": "bcodmo_dataset_742235",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "depth_no",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/742741",
+      "description": "Depth",
+      "unitText": "unitless"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth_m",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/742742"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/742235"
+}

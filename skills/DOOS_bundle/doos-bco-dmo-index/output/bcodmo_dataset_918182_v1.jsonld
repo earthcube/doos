@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/918182",
+  "@type": "Dataset",
+  "name": "[In situ seawater temperature at Heron Island (2015-2020)] - Measurements of seawater temperature, depth, and photosynthetically active radiation (PAR) across seven sites at Heron Island, southern Great Barrier Reef from 2015 to 2020 (Influence of environmental pH variability and thermal sensitivity on the resilience of reef-building corals to acidification stress)",
+  "description": "Increasing ocean temperatures threaten coral reefs globally, but corals residing in habitats that experience high thermal variability are thought to be better adapted to survive climate-induced heat stress. Here, we used long-term ecological observations and in situ temperature data from Heron Island, southern Great Barrier Reef to investigate how temperature dynamics within various thermally variable vs. thermally stable reef habitats change during a marine heatwave and the resulting consequences for coral community survival. This data set includes the in-field measurements of seawater temperature, depth, and photosynthetically active radiation (PAR) across seven sites at Heron Island, southern Great Barrier Reef.\n\ncdm_data_type = Other\nVARIABLES:\nISO_DateTime_AEST (unitless)\ntime (Iso_datetime_utc, seconds since 1970-01-01T00:00:00Z)\nSite (unitless)\nLatitude (degrees_north)\nlongitude (degrees_east)\nDate_AEST (unitless)\ndepth (m)\nPAR (micromoles quanta per square meter per second (umol quanta m-2 s-1))\nTemperature (degrees Celsius)\n",
+  "identifier": "bcodmo_dataset_918182_v1",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/918202",
+      "description": "Depth",
+      "minValue": -17.376,
+      "maxValue": 16.386,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/918182"
+}

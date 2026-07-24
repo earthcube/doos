@@ -21,7 +21,7 @@
 # in-memory Oxigraph) if you need a clean slate.
 #
 # Output locations are taken from projects/dataLocations.md. BCO-DMO N-Triples are
-# published under skills/bco-dmo-scan/output/output.nt.
+# published under skills/DOOS_bundle/doos-bco-dmo-index/output/output.nt.
 
 endpoint: http://localhost:7878
 
@@ -51,6 +51,6 @@ sources:
     graph: urn:doos:bodc
 
   - name: bcodmo
-    path: skills/bco-dmo-scan/output/output.nt
+    path: skills/DOOS_bundle/doos-bco-dmo-index/output/output.nt
     format: nt
     graph: urn:doos:bcodmo

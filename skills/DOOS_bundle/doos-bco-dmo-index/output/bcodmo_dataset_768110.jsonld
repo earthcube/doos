@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/768110",
+  "@type": "Dataset",
+  "name": "[Palau lakes physical description] - Physical description of marine lakes: surface area, distance to ocean, tidal efficiency, depth, and stratification (Do Parallel Patterns Arise from Parallel Processes?)",
+  "description": "Physical description of marine lakes including surface area, distance to ocean, tidal efficiency, depth, and stratification.\n\ncdm_data_type = Other\nVARIABLES:\nlake (unitless)\nlake_code (unitless)\nvolume_m3 (meters^3)\nsurface_area_m2 (meters^2)\ndistance_to_ocean_min_m (meters)\ndistance_to_ocean_mean_m (meters)\ndistance_to_ocean_median_m (meters)\ntidal_lag_time_minutes (minutes)\ntidal_efficiency (unitless)\nmean_transect_length_m (meters)\ndepth (Max Actual Depth M, m)\nperimeter_m (meters)\nhabitable_surface_area_cylinder (meters^2)\nhabitable_surface_area_frustum (meters^2)\nstratified (unitless)\n",
+  "identifier": "bcodmo_dataset_768110",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "max_actual_depth_m",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/768130",
+      "description": "Max Actual Depth M",
+      "minValue": 0.91,
+      "maxValue": 22.56,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "HOBO 30-foot depth Titanium water level data loggers (Part # U20-001-01-Ti)",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-instrument/768137"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/768110"
+}

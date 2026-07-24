@@ -1,0 +1,46 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/752902",
+  "@type": "Dataset",
+  "name": "[FieldData_FidalgoBay_July2017] - Water quality data and Olympia oyster abundance counts from depth-specific sampling collected by boat in Fidalgo Bay, WA, during July 2017 (RUI: Will climate change cause 'lazy larvae'? Effects of climate stressors on larval behavior and dispersal)",
+  "description": "This dataset reports water quality data and Olympia oyster abundance counts from depth-specific sampling collected by boat in Fidalgo Bay, WA, during July 2017. These data were published in the following Masters Thesis: McIntyre, Brooke A., \\Vertical Distribution of Olympia oyster (Ostrea lurida) larvae in Fidalgo Bay, WA\\ (2018). WWU Graduate School Collection. 694. https://cedar.wwu.edu/wwuet/694\n\ncdm_data_type = Other\nVARIABLES:\ntime (ISO Date Time UTC, seconds since 1970-01-01T00:00:00Z)\ndate_local (unitless)\ntime_local (unitless)\ntide_category (unitless)\nprofile (unitless)\ndepth_seafloor_m (Depth, meters)\ndepth_sample_m (Depth, meters)\ndepth_cat (Depth, unitless)\ncurrent_velocity_m_s (meters per second)\nchla_ug_L (Concentration Of Chlorophyll In Sea Water, micrograms per liter seawater)\ntemp_c (degrees Celcius)\nsalinity (Sea Water Practical Salinity, PSU)\nwind_anemometer_m_s (meters per second)\noyster_larvae_100L (Oyster Larvae 100 L, larvae per 100-Liters seawater)\noyster_larvae_m3 (larvae per cubic meter)\n",
+  "identifier": "bcodmo_dataset_752902",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "depth_seafloor_m",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/752920",
+      "description": "Depth",
+      "minValue": 2.5,
+      "maxValue": 4.5,
+      "unitText": "meters",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth_sample_m",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/752921",
+      "description": "Depth",
+      "minValue": 0.5,
+      "maxValue": 4.0,
+      "unitText": "meters",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth_cat",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/752922",
+      "description": "Depth",
+      "unitText": "unitless"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/752902"
+}

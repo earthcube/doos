@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 1 extracted metadata (01_extracted.json)",
+  "description": "Fixed MINIMAL field set (PLAN.md §4.1). Keys are always present; absent values are null / []. 'source' records how the data was obtained.",
+  "type": "object",
+  "required": ["url", "name", "description", "keywords", "source"],
+  "additionalProperties": false,
+  "properties": {
+    "url": { "type": ["string", "null"], "description": "The dataset URL." },
+    "name": { "type": ["string", "null"] },
+    "description": { "type": ["string", "null"] },
+    "keywords": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "source": {
+      "type": "string",
+      "enum": ["embedded-jsonld", "llm-extracted", "none"],
+      "description": "embedded-jsonld = parsed from the page's schema.org; llm-extracted = inferred by the LLM; none = no metadata obtained."
+    }
+  }
+}

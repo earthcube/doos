@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/737347",
+  "@type": "Dataset",
+  "name": "[Tagged kelp size and depth] - Kelp plant size, holdfast size, and depth from five transects at three sites in Santa Barbara Channel, 2015 to 2017 (Linking nearshore kelp forest dynamics to sandy beach ecosystems)",
+  "description": "This dataset reports depth and size of kelp found along five transects in Santa Barbara Channel in summer of 2015 and 2016, and fall of 2017.\n\ncdm_data_type = Other\nVARIABLES:\nYear (unitlesss)\nSite (unitlesss)\nTransect (unitlesss)\nTag_id (unitlesss)\nMonth (unitlesss)\nDay (unitlesss)\nDepth_ft (Depth, feet)\ndepth_m (Depth, meters)\nDistance_m (meters)\nFronds_1_m (meters)\nMax_diameter_1_cm (centimeters)\nOrthogonal_diameter_cm (centimeters)\n",
+  "identifier": "bcodmo_dataset_737347",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Depth_ft",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/737360",
+      "description": "Depth",
+      "minValue": 2.0,
+      "maxValue": 50.0,
+      "unitText": "feet"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth_m",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/737361",
+      "description": "Depth",
+      "minValue": 0.61,
+      "maxValue": 15.24,
+      "unitText": "meters",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/737347"
+}

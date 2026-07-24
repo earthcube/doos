@@ -1,0 +1,15 @@
+# Find schema:Dataset by case-insensitive name fragment.
+# Params: NAME_FRAGMENT, LIMIT
+PREFIX schema: <https://schema.org/>
+
+SELECT DISTINCT ?dataset ?name ?url ?description ?g
+WHERE {
+  GRAPH ?g {
+    ?dataset a schema:Dataset ;
+             schema:name ?name .
+    OPTIONAL { ?dataset schema:url ?url . }
+    OPTIONAL { ?dataset schema:description ?description . }
+    FILTER(CONTAINS(LCASE(STR(?name)), LCASE("{{NAME_FRAGMENT}}")))
+  }
+}
+LIMIT {{LIMIT}}

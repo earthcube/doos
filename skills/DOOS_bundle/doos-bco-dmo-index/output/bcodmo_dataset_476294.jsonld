@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/476294",
+  "@type": "Dataset",
+  "name": "[Shark dive profiles] - Temperature-depth profiles from archival tags deployed on basking sharks tagged from F/V Ezyduzit in the Northwest Atlantic Ocean from 2004-2011 (Basking Shark Geochem Tracers project) (Resolving Migratory Connectivity of Basking Sharks (Cetorhinus maximus) in the Western Atlantic Ocean: Integrating Novel Geochemical Tracers with Satellite Archival Tags)",
+  "description": "This dataset contains pop-up satellite archival transmitting (PSAT) tag data for 25 individual basking sharks tagged in the North Atlantic Ocean in 2004-2011. Platform terminal transmission (PTT) numbers are used as individual identification numbers throughout the dataset. Unique identification (UID) numbers provide a daily index value.\n\ncdm_data_type = Other\nVARIABLES:\nptt (dimensionless)\ndate (unitless)\nuid (dimensionless)\nday (dd (01 to 31))\nmonth (mm (01 to 12))\nyear (unitless)\ndepth (m)\ntemp_min (degrees Celsius)\ntemp_max (degrees Celsius)\ntemp_mean (degrees Celsius)\n",
+  "identifier": "bcodmo_dataset_476294",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/476309",
+      "description": "Depth",
+      "minValue": 0.0,
+      "maxValue": 1504.0,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/476294"
+}

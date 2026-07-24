@@ -112,7 +112,7 @@ full re-description of every dataset field.
 | CCHDO | per-file `*.schema.shacl.jsonld`, `*.croissant.jsonld` |
 | CIOOS | exploratory; sample JSON in-tree |
 | OBIS | `OBIS/jsonld/output_raw_strict/`, `OBIS/output.nq` |
-| BCO-DMO (outside this dir) | `skills/bco-dmo-scan/output/output.nt` |
+| BCO-DMO (outside this dir) | `skills/DOOS_bundle/doos-bco-dmo-index/output/output.nt` |
 
 See each subdirectory’s own `README.md` for install steps, CLI flags, and
 detailed file layouts.

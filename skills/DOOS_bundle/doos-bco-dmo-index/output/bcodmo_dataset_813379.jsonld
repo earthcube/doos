@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/813379",
+  "@type": "Dataset",
+  "name": "[NBP1702 Dissolved Th and Pa] - Depth profiles of seawater dissolved 232Th, 230Th, and 231Pa from RVIB Nathaniel B. Palmer cruise NBP1702 from January to March 2017 (Water Mass Structure and Bottom Water Formation in the Ice-age Southern Ocean)",
+  "description": "This dataset contains depth profiles of seawater dissolved 232Th, 230Th, and 231Pa from cruise NBP1702 (GEOTRACES-compliant).\n\ncdm_data_type = Other\nVARIABLES:\nStation_ID (unitless)\nStart_Date_UTC (unitless)\nStart_Time_UTC (unitless)\ntime (Start ISO Date Time UTC, seconds since 1970-01-01T00:00:00Z)\nEnd_Date_UTC (unitless)\nEnd_Time_UTC (unitless)\nEnd_ISO_DateTime_UTC (End ISO Date Time UTC, unitless)\nlatitude (degrees_north)\nlongitude (degrees_east)\nEnd_Latitude (Latitude, degrees North)\nEnd_Longitude (Longitude, degrees East)\nEvent_ID (unitless)\nSample_ID (unitless)\ndepth (Sample Depth, m)\nTh_230_D_CONC_BOTTLE_xucmu6 (uBq/kg)\nSD1_Th_230_D_CONC_BOTTLE_xucmu6 (uBq/kg)\nFlag_Th_230_D_CONC_BOTTLE_xucmu6 (None)\nTh_232_D_CONC_BOTTLE_bwiimj (pmol/kg)\nSD1_Th_232_D_CONC_BOTTLE_bwiimj (pmol/kg)\nFlag_Th_232_D_CONC_BOTTLE_bwiimj (None)\nPa_231_D_CONC_BOTTLE_yq8ckw (uBq/kg)\nSD1_Pa_231_D_CONC_BOTTLE_yq8ckw (uBq/kg)\nFlag_Pa_231_D_CONC_BOTTLE_yq8ckw (None)\nTh_230_D_XS_CONC_BOTTLE (uBq/kg)\nTh_230_D_XS_CONC_BOTTLE_ERR (uBq/kg)\nTh_230_D_XS_CONC_BOTTLE_FLAG (none)\nPa_231_D_XS_CONC_BOTTLE (uBq/kg)\nPa_231_D_XS_CONC_BOTTLE_ERR (uBq/kg)\nPa_231_D_XS_CONC_BOTTLE_FLAG (none)\n",
+  "identifier": "bcodmo_dataset_813379",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sample_Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/813460",
+      "description": "Sample Depth",
+      "minValue": 4.513,
+      "maxValue": 5247.235,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pressure",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/857084"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/813379"
+}

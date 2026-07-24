@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/471977",
+  "@type": "Dataset",
+  "name": "[jumbo squid time-at-depth] - Time-at-depth data (to generate histograms) from tagged jumbo squid from R/V R4107, R/V Pacific Storm, Chartered Vessels, R/V cruises in the Monterey Bay vicinity and Gulf of California from 2004-2009 (Hypoxia and the ecology, behavior and physiology of jumbo squid, Dosidicus gigas)",
+  "description": "Time-at-depth data (to generate histograms) from tagged jumbo squid from R/V R4107, R/V Pacific Storm, Chartered Vessels, R/V cruises in the Monterey Bay vicinity and Gulf of California from 2004-2009\n\ncdm_data_type = Other\nVARIABLES:\nsquid_id (dimensionless)\ntag_id (dimensionless)\ndescrip (dimensionless)\ndorsal_mantle_len (centimeters (cm))\ndate_start (unitless)\nlatitude (degrees_north)\nlongitude (degrees_east)\ndate_end (unitless)\nlat_end (Latitude, decimal degrees)\nlon_end (Longitude, decimal degrees)\nsampling_time (number of days)\nmax_depth (meters (m))\nrecovered (yes/no)\ndeploy_day (dimensionless)\ndepth (m)\ncount_night (Number of counts (1 count = 75 seconds))\ncount_day (Number of counts (1 count = 75 seconds))\n",
+  "identifier": "bcodmo_dataset_471977",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "max_depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/472000",
+      "description": "Max Depth",
+      "minValue": 400.0,
+      "maxValue": 1400.0,
+      "unitText": "meters (m)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth_m",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/472003"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/471977"
+}

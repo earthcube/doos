@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/806065",
+  "@type": "Dataset",
+  "name": "[Pore Water Depth Profiles CL2016] - Sediment pore water and solid phase geochemical analyses from samples collected on R/V Savannah cruise SAV-16-16 at the Cape Lookout Continental Shelf and Slope during May 2016 (Source, Composition, and Stability of Soluble Iron Fluxing from Continental Margin Sediments)",
+  "description": "Sediment pore water and solid phase geochemical analyses from samples collected on R/V Savannah cruise SAV-16-16 at the Cape Lookout Continental Shelf and Slope during May 2016.\n\ncdm_data_type = Other\nVARIABLES:\nYear (unitless)\nMonth (unitless)\nDay (unitless)\nCollection_Type (unitless)\nStation (unitless)\nlongitude (degrees_east)\nlatitude (degrees_north)\nsample_ID (unitless)\nSediment_depth (centimeters (cm))\nSO4 (millimolar (mM))\nsdSO4 (Sd SO4, millimolar (mM))\nPO4 (Mass Concentration Of Phosphate In Sea Water, micromolar (uM))\nsdPO4 (Sd PO4, micromolar (uM))\nDIC (millimolar (mM))\nsdDIC (Sd DIC, millimolar (mM))\ndate (unitless)\n",
+  "identifier": "bcodmo_dataset_806065",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sediment_depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/806094",
+      "description": "Sediment Depth",
+      "minValue": -0.5,
+      "maxValue": 18.4,
+      "unitText": "centimeters (cm)"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/806065"
+}

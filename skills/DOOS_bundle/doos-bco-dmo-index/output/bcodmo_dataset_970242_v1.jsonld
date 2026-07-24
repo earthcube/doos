@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/970242",
+  "@type": "Dataset",
+  "name": "[AMT-30 iodine: depth profiles] - Iodine depth profile data collected from RRS Discovery cruise AMT-30 from February 23 - March 27th, 2023 (Collaborative Research: Experimental constraints on the rates and mechanisms of iodine redox transformations in seawater)",
+  "description": "This dataset includes the depth profile data described in the following study abstract (see \"Related Datasets\" for more data from this study):\n\nThe oxidized iodine species, iodate, is abundant in well-oxygenated marine waters and can be tracked in sediments to reconstruct ancient oxygen availability. Despite known modern marine spatial variations in both iodate and reduced iodide, the rates, pathways, and locations of iodate formation remain poorly understood for temporal gradients across Earth history. To quantify rates and pathways of iodate formation across an ocean basin, we performed ship-board tracer experiments in euphotic waters with known gradients in iodine speciation on an Atlantic Meridional Transect (45\u00b0S and 37\u00b0N). We performed incubations at depths corresponding to 7% and 1% of ambient surface light levels, thus tracking the boundaries of the deep chlorophyl maximum (DCM), from 11 stations along the transect. All incubations were spiked with a 129I (t1/2 ~15.7 My) tracer and mimicked ambient conditions. We observed iodate production via multiple pathways. The most common observation was a lack of significant iodate production, with iodate production limited to 7 of the 22 locations and nearly exclusively observed at the DCM and outside the nitrogen and iron limited South Atlantic Gyre. Iodate formation from direct iodide oxidation is inferred in only two locations based on increases in iodate 129I/127I ratios. At the other locations, decreases in iodate 129I/127I ratios imply that rapid reactions with and overturning of alternative natural iodine pools, likely iodine intermediates, are an important factor for iodate production. Our work emphasizes that the rates and pathways of iodate production are spatially heterogenous in the Atlantic Ocean. Future work is needed to determine the drivers, temporal variations, and trends within global ocean basins.\n\ncdm_data_type = Other\nVARIABLES:\nsample_ID (unitless)\nstation_number (unitless)\nlatitude (degrees_north)\nlongitude (degrees_east)\nDate_Collected_AST (unitless)\nTime_Collected_AST (unitless)\n... (6 more variables)\n",
+  "identifier": "bcodmo_dataset_970242_v1",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "depth_m",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/970566"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/970242"
+}

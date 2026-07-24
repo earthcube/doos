@@ -23,7 +23,7 @@ Each provider's RDF is pushed to the running server over the SPARQL
 | OBIS | `projects/OBIS/output.nq` | N-Quads | embedded graph names |
 | AODN | `projects/AODN/output/output.json` | JSON-LD | `urn:doos:aodn` |
 | BODC | `projects/BODC/output/bodc_harvest.nq` | N-Quads | embedded graph names |
-| BCO-DMO | `skills/bco-dmo-scan/output/output.nt` | N-Triples | `urn:doos:bcodmo` |
+| BCO-DMO | `skills/DOOS_bundle/doos-bco-dmo-index/output/output.nt` | N-Triples | `urn:doos:bcodmo` |
 
 Triple formats (`nt`, `ttl`, `jsonld`) are loaded into the named graph declared by
 `graph:` in the config. Quad formats (`nq`, `trig`) already carry their own graph

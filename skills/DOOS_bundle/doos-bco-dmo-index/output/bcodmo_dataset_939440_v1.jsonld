@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/939440",
+  "@type": "Dataset",
+  "name": "[Eelgrass shoot lengths] - Eelgrass shoot lengths measured at two depths within each of four coastal sites in Massachusetts, USA in 2019 (RUI: Collaborative Research: Trait differentiation and local adaptation to depth within meadows of the foundation seagrass Zostera marina)",
+  "description": "This dataset includes eelgrass shoot lengths measured at two depths within each of four different sites in Massachusetts, USA in late June and early July 2019. Like many marine foundation species, eelgrass often spans strong environmental gradients over relatively small spatial scales - this data set provides information on phenotypic differentiation across the depth gradient at multiple sites in the Gulf of Maine.\n\ncdm_data_type = Other\nVARIABLES:\nDate (unitless)\nSite (unitless)\nlatitude (degrees_north)\nlongitude (degrees_east)\nDepth (unitless)\nPermanent_Quadrat (unitless)\nSample_Quadrat (unitless)\nHeight (centimeters (cm))\n",
+  "identifier": "bcodmo_dataset_939440_v1",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/939462"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/939440"
+}

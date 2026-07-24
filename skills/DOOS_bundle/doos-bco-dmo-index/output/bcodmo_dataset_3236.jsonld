@@ -1,0 +1,48 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/3236",
+  "@type": "Dataset",
+  "name": "[moorings_depth and pressure 2001] - Southern Ocean 2001 moorings: depth and pressure vs. time from ARSV Laurence M. Gould LMG0103, LMG0201A in the Southern Ocean from 2001-2002 (SOGLOBEC project) (U.S. GLOBEC Southern Ocean)",
+  "description": "Southern Ocean 2001 moorings: depth and pressure vs. time from ARSV Laurence M. Gould LMG0103, LMG0201A in the Southern Ocean from 2001-2002.\n\ncdm_data_type = Other\nVARIABLES:\nmooring\nyear_start\nlatitude (degrees_north)\nlongitude (degrees_east)\ndepth_w (Depth, meters)\nrotangle (degrees)\ndepth (m)\nyrday_gmt\njulian_day\npress (decibars)\nyear\nmonth_gmt\nday_gmt\nhour_gmt (whole hours)\nminute_gmt (whole minutes)\n",
+  "identifier": "bcodmo_dataset_3236",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/19729",
+      "description": "Depth",
+      "minValue": 47.0,
+      "maxValue": 804.0,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth_w",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/19736",
+      "description": "Depth",
+      "minValue": 447.0,
+      "maxValue": 811.0,
+      "unitText": "meters",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "press",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/19738",
+      "description": "Press",
+      "minValue": 44.105233,
+      "maxValue": 814.07077,
+      "unitText": "decibars"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/3236"
+}

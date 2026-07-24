@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/709181",
+  "@type": "Dataset",
+  "name": "[NLT time series: 2014-2016 temperature and depth] - Nearshore Larval Transport (NLT) temperature time-series data from nearshore La Jolla, Southern California, 2014-2016 (Nearshore larval transport: physical and biological processes)",
+  "description": "This dataset includes temperature and water depth time series data from intertidal, 1, 2, 5, 6, and 8-meter sites located nearshore Calumet Park, La Jolla, Southern California, April 2014 through November 2016.\n\ncdm_data_type = Other\nVARIABLES:\nsampling_year (unitless)\nseason (unitless)\nsite (unitless)\nsite_name (unitless)\ndepth (m)\nlatitude (degrees_north)\nlongitude (degrees_east)\nmonth (unitless)\nyear (unitless)\nday (unitless)\nhour (unitless)\ntime (ISO Date Time UTC, seconds since 1970-01-01T00:00:00Z)\nyrday_utc (unitless)\ndepth_w (Depth, meters)\ntemp (Temperature, degrees Celsius)\n",
+  "identifier": "bcodmo_dataset_709181",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "depth_temp",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/709214"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth_w",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/709221",
+      "description": "Depth",
+      "minValue": 0.39,
+      "maxValue": 10.23,
+      "unitText": "meters",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/709181"
+}

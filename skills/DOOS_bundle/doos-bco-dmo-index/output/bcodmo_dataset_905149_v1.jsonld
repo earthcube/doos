@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/905149",
+  "@type": "Dataset",
+  "name": "[HOTS & BATS Depth Profile Fluorescence] - Fluorescence data from a depth profile collected at 200 m depth intervals at the Bermuda Atlantic Time Series Station (BATS) in August 2019 and at the Hawaii Ocean Time Series Staiton Aloha in July 2021 (The fate of lysis products of picocyanobacteria contributes to marine humic-like chromophoric dissolved organic matter)",
+  "description": "This dataset contains the Parallel Factor Analysis data derived from excitation emission matrix data from solid-phase extracted.\n\ncdm_data_type = Other\nVARIABLES:\nlocation (unitless)\nlatitude (degrees_north)\nlongitude (degrees_east)\ndepth (m)\nFmax1 (Raman units (RU))\nFmax2 (Raman units (RU))\nFmax3 (Raman units (RU))\nFmax4 (Raman units (RU))\n",
+  "identifier": "bcodmo_dataset_905149_v1",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/908470",
+      "description": "Depth",
+      "minValue": 0.0,
+      "maxValue": 4760.0,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/905149"
+}

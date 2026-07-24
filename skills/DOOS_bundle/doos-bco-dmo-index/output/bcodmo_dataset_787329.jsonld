@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/787329",
+  "@type": "Dataset",
+  "name": "[MOCNESS Event Logs Metabolic Index] - Date, time, location, and depth range for MOCNESS tows from R/V Oceanus in the Eastern Tropical Pacific, Tropical Eastern Pacific from 2016-04-17 to 2016-05-02 (Collaborative Research: A metabolic index to predict the consequences of climate change for midwater ecosystems)",
+  "description": "Date, time, location, and depth range for MOCNESS tows\n\ncdm_data_type = Other\nVARIABLES:\ncruise_id (unitless)\nStation (unitless)\nMOC (unitless)\nTow_Type (unitless)\ntime (ISO Date Time UTC, seconds since 1970-01-01T00:00:00Z)\nDate_Local (unitless)\nDate_UTC (unitless)\nTime_In_Local (unitless)\nTime_Out_Local (unitless)\nTime_In_UTC (unitless)\nTime_Out_UTC (unitless)\nlatitude (degrees_north)\nlongitude (degrees_east)\nLat_Out (Latitude, decimal degrees)\nLon_Out (Longitude, decimal degrees)\nDay_Night (unitless)\nMin_Depth (meters (m))\ndepth (Max Depth, m)\nComments (unitless)\n",
+  "identifier": "bcodmo_dataset_787329",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Min_Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/787364",
+      "description": "Min Depth",
+      "minValue": 0.0,
+      "maxValue": 600.0,
+      "unitText": "meters (m)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Max_Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/787365",
+      "description": "Max Depth",
+      "minValue": 100.0,
+      "maxValue": 1000.0,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/787329"
+}

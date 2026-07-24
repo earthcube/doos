@@ -1,6 +1,0 @@
-{
-  "url": "https://example.org/datasets/ocean-temps",
-  "name": "North Atlantic Sea Surface Temperature",
-  "description": "A multi-year record of sea surface temperature observations collected across the North Atlantic basin, aggregated from buoy and satellite sources.",
-  "keywords": ["ocean", "temperature", "north atlantic", "sst"]
-}

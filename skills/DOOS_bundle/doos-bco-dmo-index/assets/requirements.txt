@@ -1,0 +1,4 @@
+requests
+tqdm
+pyld
+pyoxigraph>=0.4

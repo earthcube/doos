@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/749941",
+  "@type": "Dataset",
+  "name": "[Sponge density and cover] - Percent cover and density of sponges at multiple sites in Caribbean and Pacific from shallow to mesophotic depths (Collaborative Research: Sponge Growth is Nitrogen Limited over the Shallow to Mesophotic Depth Gradient)",
+  "description": "Percent cover and density of sponges at multiple sites in Caribbean and Pacific from shallow to mesophotic depths.\n\ncdm_data_type = Other\nVARIABLES:\nsite (unitless)\nlatitude (degrees_north)\nlongitude (degrees_east)\nNotes (unitless)\ndepth (m)\nPercent_Cover (variable)\nPercent_Cover_SE (percent (%))\nAbundance (per meter squared (m^-2))\nAbundance_SE (per meter squared (m^-2))\n",
+  "identifier": "bcodmo_dataset_749941",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/749947",
+      "description": "Depth",
+      "minValue": 1.0,
+      "maxValue": 150.0,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/749941"
+}

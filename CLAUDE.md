@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-DOOS (Deep Ocean Observation System) is an EarthCube monorepo for harvesting, converting, validating, and federating ocean observation metadata. Each provider with a subproject lives under `projects/`: ARGO, OBIS, ERDDAP, CCHDO, AODN, BODC, CIOOS. BCO-DMO ingest is in `skills/bco-dmo-scan/`. (EMODNET, OceanSITES, and marine-regions are candidate sources tracked in `README.md`/`docs/sources.md`, not yet subprojects.) Data is transformed to RDF/JSON-LD conforming to Schema.org + GeoSPARQL, validated against OIH depth profile SHACL shapes.
+DOOS (Deep Ocean Observation System) is an EarthCube monorepo for harvesting, converting, validating, and federating ocean observation metadata. Each provider with a subproject lives under `projects/`: ARGO, OBIS, ERDDAP, CCHDO, AODN, BODC, CIOOS. BCO-DMO ingest is in `skills/DOOS_bundle/doos-bco-dmo-index/`. (EMODNET, OceanSITES, and marine-regions are candidate sources tracked in `README.md`/`docs/sources.md`, not yet subprojects.) Data is transformed to RDF/JSON-LD conforming to Schema.org + GeoSPARQL, validated against OIH depth profile SHACL shapes.
 
 The end goal is a federated SPARQL graph (live endpoints linked from `README.md`) that exposes a consistent **depth profile** across providers.
 
@@ -66,7 +66,7 @@ python path/to/script.py --help
 
 1. **Ingest** — fetch metadata from HTTP APIs, sitemaps, files (NetCDF, GeoParquet, XML, JSON-LD)
 2. **Transform** — map to Schema.org + GeoSPARQL RDF via one of five approaches, chosen per provider:
-   - JSON-LD templates (OBIS); in-memory JSON-LD → merged N-Triples (BCO-DMO via `skills/bco-dmo-scan/`)
+   - JSON-LD templates (OBIS); in-memory JSON-LD → merged N-Triples (BCO-DMO via `skills/DOOS_bundle/doos-bco-dmo-index/`)
    - RML rules run through `morph-kgc` (ARGO, geoparquet)
    - XSLT via `saxonche` for ISO-19139/19115 XML sources (AODN — see `projects/AODN/transformations/`)
    - SSSOM-driven mapping (`mapping/SSSOM/sssom_to_jsonld.py`): a `.sssom.tsv` file declares flat-JSON→schema.org field correspondences with `source_jsonpath`/`target_jsonpath` extension slots, and the script drives the transform entirely from that file — no field names hard-coded
@@ -80,7 +80,7 @@ python path/to/script.py --help
 | Path | Purpose |
 |---|---|
 | `projects/` | Per-provider subprojects (ARGO, OBIS, CCHDO, ERDDAP, AODN, BODC, CIOOS) |
-| `skills/bco-dmo-scan/` | BCO-DMO ERDDAP search, ISO depth scan, merged N-Triples (`assets/run_pipeline.py`) |
+| `skills/DOOS_bundle/doos-bco-dmo-index/` | BCO-DMO ERDDAP search, ISO depth scan, merged N-Triples (`assets/run_pipeline.py`) |
 | `mapping/SSSOM/` | SSSOM-driven flat-JSON → schema.org JSON-LD transform (`kobo/` holds a GAIA Kobo metadata-form → schema.org mapping) |
 | `mapping/Croissant/` | MLCommons Croissant JSON-LD outputs |
 | `scripts/shapeValidator/` | SHACL validation suite — three engines (pyshacl, pyrudof, pyoxigraph) |
@@ -89,8 +89,8 @@ python path/to/script.py --help
 | `SPARQL/` | Reusable SPARQL queries (`.rq`) and update scripts |
 | `scripts/text2query/` | DSPy natural language → SPARQL |
 | `scripts/SPARQLupdate/` | `insertUpdates.py` — apply SPARQL UPDATE inserts to a graph |
-| `.opencode/skills/` | AI skills: `fair-assessment`, `oih-graph`, `sparql-query` |
-| `skills/` | Standalone skills: `crateskill` (RO-Crate), `shaclskills` (SHACL workflow) |
+| `skills/DOOS_bundle/` | AI skills: `doos-bco-dmo-index`, `doos-sparql`, `doos-fair-interview`, `doos-graph-inspect`, `doos-rocrate-from-url` |
+| `skills/SHACL_bundle/` | SHACL decoder pipeline skills (`decoder-*`) |
 | `docs/` | Project notes — `sources.md` tracks provider status |
 
 ### Validation engines
@@ -167,9 +167,13 @@ Output formats: N-Triples (`.nt`), N-Quads (`.nq`), Turtle (`.ttl`).
 
 **User-Agent and timeouts:** always set `User-Agent` and `timeout=30` on HTTP calls.
 
-## OpenCode skills
+## Skills
 
-Use the `skill` tool when relevant:
-- `fair-assessment` — guided FAIR practices interview (person/repository), not automated metadata scoring
-- `oih-graph` — experimental MCP/graph inspection (prefer `sparql-query` for SPARQL)
-- `sparql-query` — run curated schema.org SPARQL templates or ad-hoc SPARQL against an endpoint URL
+Skills under `skills/DOOS_bundle/` — use when relevant:
+- `doos-bco-dmo-index` — BCO-DMO ERDDAP search + ISO depth scan → N-Triples
+- `doos-sparql` — curated schema.org SPARQL templates or ad-hoc SPARQL against an endpoint
+- `doos-fair-interview` — guided FAIR practices interview (person/repository), not automated scoring
+- `doos-graph-inspect` — experimental MCP/graph inspection (prefer `doos-sparql` for SPARQL)
+- `doos-rocrate-from-url` — download a file URL into an Attached RO-Crate 1.2
+
+Also: `skills/SHACL_bundle/` — SHACL decoder pipeline (`decoder-*` skills).

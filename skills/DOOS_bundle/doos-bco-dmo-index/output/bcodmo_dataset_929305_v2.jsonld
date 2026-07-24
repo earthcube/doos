@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/929305",
+  "@type": "Dataset",
+  "name": "[STING macronutrient concentrations] - Dissolved Macronutrient Concentrations from Depth Profiles and Incubation Experiments from STING I Cruise AE2305 on R/V Atlantic Explorer in the Gulf of Mexico from February to March 2023 (Collaborative Research: Linking iron and nitrogen sources in an oligotrophic coastal margin: Nitrogen fixation and the role of boundary fluxes)",
+  "description": "Concentrations of inorganic dissolved macronutrients, including phosphate, nitrate plus nitrite (N+N), silicic acid, and nitrite, from phytoplankton shipboard incubation experiments and depth profiles collected on STING I cruise AE2305 on R/V Atlantic Explorer in the Gulf of Mexico from February to March 2023.\n\nThis project investigates how groundwater discharge delivers important nutrients to the coastal ecosystems of the West Florida Shelf. Preliminary studies indicate that groundwater may supply both dissolved organic nitrogen (DON) and iron in this region. In coastal ecosystems like the West Florida Shelf that have very low nitrate and ammonium concentrations, DON is the main form of nitrogen available to organisms. Nitrogen cycling is strongly affected by iron availability because iron is essential for both photosynthesis and for nitrogen fixation. This study will investigate the sources and composition of DON and iron, and their influence on the coastal ecosystem. The team will sample offshore groundwater wells, river and estuarine waters, and conduct two expeditions across the West Florida Shelf in winter and summer.\n\ncdm_data_type = Other\nVARIABLES:\nEVTNBR (unitless)\ntime (Iso_datetime_utc, seconds since 1970-01-01T00:00:00Z)\nDATE_UTC (unitless)\nTIME_UTC (unitless)\nDATE_GMT (unitless)\nTIME_GMT (unitless)\nlatitude (degrees_north)\nlongitude (degrees_east)\nPLATFORM (unitless)\nCASTNBR (unitless)\nSTNNBR (unitless)\nBTLNBR (unitless)\ndepth (m)\nPO4 (micromoles per liter (uM))\n... (20 more variables)\n",
+  "identifier": "bcodmo_dataset_929305_v2",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "DEPTH",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/997561"
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/929305"
+}

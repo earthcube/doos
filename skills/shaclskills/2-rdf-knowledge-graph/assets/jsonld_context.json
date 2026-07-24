@@ -1,8 +1,0 @@
-{
-  "@context": {
-    "@vocab": "https://schema.org/",
-    "schema": "https://schema.org/",
-    "url": { "@type": "@id" },
-    "keywords": { "@container": "@set" }
-  }
-}

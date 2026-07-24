@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/742819",
+  "@type": "Dataset",
+  "name": "[NBP1608 Station Nutrients] - Dissolved macronutrient concentrations from depth profiles from RVIB Nathaniel B. Palmer cruise NBP1608 in the Southern Ocean from September to October 2016 (Collaborative Research: Investigating Iron-binding Ligands in Southern Ocean Diatom Communities: The Role of Diatom-Bacteria Associations)",
+  "description": "Dissolved macronutrient concentrations from depth profiles from RVIB Nathaniel B. Palmer cruise NBP1608 in the Southern Ocean from September to October 2016.\n\ncdm_data_type = Other\nVARIABLES:\nEVTNBR (unitless)\nDATE (unitless)\nGMT (unitless)\ntime (ISO Date Time GMT, seconds since 1970-01-01T00:00:00Z)\nlatitude (degrees_north)\nlongitude (degrees_east)\nPLATFORM (unitless)\nCASTNBR (unitless)\nSTNNBR (unitless)\nBTLNBR (unitless)\ndepth (m)\nNO3_NO2 (micromoles per liter (uM))\nNO3_NO2_STDEV (micromoles per liter (uM))\nNO3_NO2_pcnt_RSD (unitless (percent))\nNO3_NO2_INSTR (unitless)\nPO4 (micromoles per liter (uM))\nPO4_STDEV (micromoles per liter (uM))\nPO4_pcnt_RSD (unitless (percent))\nPO4_INSTR (unitless)\nSiO4 (Si O4, micromoles per liter (uM))\nSiO4_STDEV (Si O4 STDEV, micromoles per liter (uM))\nSiO4_pcnt_RSD (Si O4 Pcnt RSD, unitless (percent))\nSiO4_INSTR (Si O4 INSTR, unitless)\nNO2 (micromoles per liter (uM))\nNO2_STDEV (micromoles per liter (uM))\nNO2_pcnt_RSD (unitless (percent))\n... (5 more variables)\n",
+  "identifier": "bcodmo_dataset_742819",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "DEPTH",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/742858",
+      "description": "Depth",
+      "minValue": 5.0,
+      "maxValue": 3500.0,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/742819"
+}

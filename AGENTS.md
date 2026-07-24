@@ -14,7 +14,7 @@ consistent **depth profile** across providers.
 
 Key dirs:
 - `projects/`: Per-provider subprojects (ARGO, OBIS, ERDDAP, CCHDO, AODN, BODC, CIOOS)
-- `skills/bco-dmo-scan/`: BCO-DMO ERDDAP search, ISO depth scan, merged N-Triples (`output.nt`)
+- `skills/DOOS_bundle/doos-bco-dmo-index/`: BCO-DMO ERDDAP search, ISO depth scan, merged N-Triples (`output.nt`)
 - `mapping/SSSOM/`: SSSOM-driven flat-JSON → schema.org JSON-LD transform (`kobo/` holds a GAIA Kobo metadata-form mapping)
 - `mapping/Croissant/`: MLCommons Croissant JSON-LD outputs
 - `scripts/shapeValidator/`: SHACL validation tools (validateToOxigraph.py, validateToParquet.py, validateToRudof.py, validateToParquetRudof.py, benchmark_shacl_engines.py)
@@ -23,8 +23,8 @@ Key dirs:
 - `scripts/SPARQLupdate/`: `insertUpdates.py` — apply SPARQL UPDATE inserts to a graph
 - `SHACL/`: Shapes files (.ttl)
 - `SPARQL/`: Reusable queries (.rq) and update scripts
-- `.opencode/skills/`: AI skills (`fair-assessment`, `oih-graph`, `sparql-query`)
-- `skills/`: Standalone skills (`crateskill` RO-Crate, `shaclskills` SHACL workflow)
+- `skills/DOOS_bundle/`: AI skills (`doos-bco-dmo-index`, `doos-sparql`, `doos-fair-interview`, `doos-graph-inspect`, `doos-rocrate-from-url`)
+- `skills/SHACL_bundle/`: SHACL decoder pipeline skills (`decoder-*`)
 - `docs/`: Notes (sources.md tracks provider status)
 
 ## Environment Setup
@@ -77,7 +77,7 @@ pytest tests/test_foo.py::test_bar  # Single test
 ### Data pipeline
 1. **Ingest** — fetch metadata from HTTP APIs, sitemaps, files (NetCDF, GeoParquet, XML, JSON-LD)
 2. **Transform** — map to Schema.org + GeoSPARQL RDF via one of five approaches, chosen per provider:
-   - JSON-LD templates (OBIS); in-memory JSON-LD → merged N-Triples (BCO-DMO via `skills/bco-dmo-scan/`)
+   - JSON-LD templates (OBIS); in-memory JSON-LD → merged N-Triples (BCO-DMO via `skills/DOOS_bundle/doos-bco-dmo-index/`)
    - RML rules run through `morph-kgc` (ARGO, geoparquet)
    - XSLT via `saxonche` for ISO-19139/19115 XML sources (AODN — see `projects/AODN/transformations/`)
    - SSSOM-driven mapping (`mapping/SSSOM/sssom_to_jsonld.py`): a `.sssom.tsv` file declares flat-JSON→schema.org field correspondences; the script drives the transform entirely from that file — no field names hard-coded
@@ -176,12 +176,14 @@ No secrets in code. Always set `User-Agent` and `timeout=30` on HTTP calls. Vali
 inputs. Use `tempfile.mkdtemp(prefix='...')` for temp dirs.
 
 ## Skills
-OpenCode skills (`.opencode/skills/`) — use the `skill` tool when relevant:
-- `fair-assessment` — guided FAIR practices interview (person/repository), not automated metadata scoring
-- `oih-graph` — experimental MCP/graph inspection (prefer `sparql-query` for SPARQL)
-- `sparql-query` — run curated schema.org SPARQL templates or ad-hoc SPARQL against an endpoint URL
+Skills under `skills/DOOS_bundle/` — use when relevant:
+- `doos-bco-dmo-index` — BCO-DMO ERDDAP search + ISO depth scan → N-Triples
+- `doos-sparql` — curated schema.org SPARQL templates or ad-hoc SPARQL against an endpoint
+- `doos-fair-interview` — guided FAIR practices interview (person/repository), not automated scoring
+- `doos-graph-inspect` — experimental MCP/graph inspection (prefer `doos-sparql` for SPARQL)
+- `doos-rocrate-from-url` — download a file URL into an Attached RO-Crate 1.2
 
-Standalone skills (`skills/`): `crateskill` (RO-Crate), `shaclskills` (SHACL workflow).
+Also: `skills/SHACL_bundle/` — SHACL decoder pipeline (`decoder-*` skills).
 
 ## Verification After Changes
 1. Lint/format/typecheck (`ruff`, `black`, `mypy`)

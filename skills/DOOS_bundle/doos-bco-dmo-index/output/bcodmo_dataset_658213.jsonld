@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/658213",
+  "@type": "Dataset",
+  "name": "[Coral disease mapping and site information] - Locations and depths of sites used in coral disease mapping from the Caribbean in 2012 (Contagious coral diseases project) (Are coral diseases contagious?)",
+  "description": "Locations and depths of sites used in coral disease mapping from the Caribbean in 2012 (Contagious coral diseases project)\n\ncdm_data_type = Other\nVARIABLES:\nsite_location (unitless)\nsurvey_date (unitless)\nsite_number (unitless)\ndepth_max (Depth, meters)\nlatitude (degrees_north)\nlongitude (degrees_east)\n",
+  "identifier": "bcodmo_dataset_658213",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "depth_max",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/658271",
+      "description": "Depth",
+      "minValue": 4.6,
+      "maxValue": 12.2,
+      "unitText": "meters",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/658213"
+}

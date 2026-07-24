@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://www.bco-dmo.org/dataset/783755",
+  "@type": "Dataset",
+  "name": "[Mussel Larvae Vertical Distribution] - Depth distribution of mussel larvae in eastern Gulf of Maine from R/V C-Hawk day cruises in the Eastern Gulf of Maine from 2012 to 2014 (Intertidal community assembly and dynamics: Integrating broad-scale regional variation in environmental forcing and benthic-pelagic coupling)",
+  "description": "Depth distribution of mussel larvae in eastern Gulf of Maine from R/V C-Hawk day cruises in the Eastern Gulf of Maine from 2012 to 2014\n\ncdm_data_type = Other\nVARIABLES:\nSample_Date (unitless)\nSite_name (unitless)\nlatitude (degrees_north)\nlongitude (degrees_east)\nStart_time (unitless)\nEnd_time (unitless)\nTidal_Phase (unitless)\ndepth (m)\nnum_Mytilus_sp (per individual)\npercent_of_Water_column_total (percent)\nStart_DateTime_UTC (Start Date Time UTC, unitless)\ntime (End Date Time UTC, seconds since 1970-01-01T00:00:00Z)\n",
+  "identifier": "bcodmo_dataset_783755",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Depth",
+      "propertyID": "http://lod.bco-dmo.org/id/dataset-parameter/785775",
+      "description": "Depth",
+      "minValue": 0.0,
+      "maxValue": 17.0,
+      "unitText": "m",
+      "unitCode": [
+        "https://qudt.org/vocab/unit/M",
+        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"
+      ]
+    }
+  ],
+  "url": "https://www.bco-dmo.org/dataset/783755"
+}
