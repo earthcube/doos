@@ -115,7 +115,11 @@ def quads_to_ntriples(data: bytes, fmt: str) -> bytes:
 
 
 def wait_for_server(endpoint: str, retries: int = 30, delay: float = 1.0) -> None:
-    """Block until the SPARQL endpoint answers, or exit after retries."""
+    """Block until the SPARQL endpoint answers, or exit after retries.
+
+    ``retries`` and ``delay`` control total wait budget (retries * delay seconds).
+    Docker compose load jobs should pass a higher ``--wait-retries`` on slow starts.
+    """
     query_url = f"{endpoint.rstrip('/')}/query"
     headers = {"User-Agent": USER_AGENT}
     for attempt in range(retries):
@@ -338,6 +342,20 @@ def parse_args():
         help="Wait for the server to come up before loading",
     )
     parser.add_argument(
+        "--wait-retries",
+        type=int,
+        default=30,
+        metavar="N",
+        help="With --wait, number of attempts (default: 30; use ~90 in Docker)",
+    )
+    parser.add_argument(
+        "--wait-delay",
+        type=float,
+        default=1.0,
+        metavar="SEC",
+        help="With --wait, seconds between attempts (default: 1.0)",
+    )
+    parser.add_argument(
         "--export",
         type=Path,
         default=None,
@@ -390,7 +408,11 @@ def main():
             raise ValueError("no endpoint set (config 'endpoint' or --endpoint)")
 
         if args.wait:
-            wait_for_server(endpoint)
+            wait_for_server(
+                endpoint,
+                retries=max(1, args.wait_retries),
+                delay=max(0.1, args.wait_delay),
+            )
 
         if not args.export_only:
             sources = config.get("sources") or []

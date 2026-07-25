@@ -1,0 +1,44 @@
+# Keep Docker build context small for MCP / load images.
+
+.git
+.github
+.venv
+**/.venv
+**/__pycache__
+**/*.py[cod]
+**/.pytest_cache
+**/.ruff_cache
+**/.mypy_cache
+**/target
+**/node_modules
+
+# Secrets and local notes
+secret/
+scratch/
+.idea/
+
+# Large / regenerable data (load service mounts the host monorepo instead)
+projects/ARGO/data/
+projects/OBIS/jsonld/
+projects/OBIS/store/
+projects/CCHDO/schema/
+skills/**/runs/
+skills/**/output/
+skills/SHACL_bundle/runs/
+skills/SHACL_bundle/tests/
+**/diff_artifacts/
+scripts/shapeValidator/results/
+scripts/shapeValidator/conccurrent/parquet_output/
+scripts/shapeValidator/rust/target/
+
+# Build artifacts
+dist/
+build/**/target
+*.egg-info/
+uv.lock
+
+# Docs images / notebooks (not needed in MCP image)
+docs/images/
+**/*.ipynb
+**/*.png
+**/*.jpg

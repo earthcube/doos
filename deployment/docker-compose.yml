@@ -1,0 +1,84 @@
+# DOOS discovery stack: Oxigraph + RDF load + Discovery MCP (HTTP).
+#
+# From monorepo root:
+#   docker compose -f deployment/docker-compose.yml up --build
+#
+# Endpoints (host):
+#   SPARQL  http://localhost:7878/query
+#   MCP     http://localhost:8765/mcp
+#
+# Skip loading RDF (empty store + MCP only):
+#   docker compose -f deployment/docker-compose.yml up --build oxigraph mcp
+#
+# Note: the Oxigraph image is minimal (no shell); load uses --wait instead of a
+# healthcheck. Persisted store is in the oxigraph-data volume.
+
+name: doos
+
+services:
+  oxigraph:
+    image: ghcr.io/oxigraph/oxigraph:0.5.5
+    container_name: doos-oxigraph
+    # Oxigraph 0.5.x: flags after the `serve` subcommand
+    command:
+      - serve
+      - --location
+      - /data
+      - --union-default-graph
+      - --bind
+      - 0.0.0.0:7878
+    ports:
+      # Override host port if 7878 is taken: DOOS_OXIGRAPH_PORT=17878
+      - "${DOOS_OXIGRAPH_PORT:-7878}:7878"
+    volumes:
+      - oxigraph-data:/data
+    restart: unless-stopped
+
+  load:
+    build:
+      context: ..
+      dockerfile: build/Dockerfile.load
+    image: doos-load:local
+    container_name: doos-load
+    depends_on:
+      - oxigraph
+    # Host monorepo so oxigraph_load.yaml paths resolve (ARGO, OBIS, …)
+    volumes:
+      - ..:/app
+    environment:
+      PYTHONUNBUFFERED: "1"
+    entrypoint: ["python", "scripts/loadToOxigraph/loadToOxigraph.py"]
+    command:
+      - --wait
+      - --wait-retries
+      - "90"
+      - --wait-delay
+      - "2"
+      - --endpoint
+      - http://oxigraph:7878
+    restart: "no"
+
+  mcp:
+    build:
+      context: ..
+      dockerfile: build/Dockerfile.mcp
+    image: doos-mcp:local
+    container_name: doos-mcp
+    depends_on:
+      load:
+        condition: service_completed_successfully
+    ports:
+      # Override host port if 8765 is taken: DOOS_MCP_PORT=18765
+      - "${DOOS_MCP_PORT:-8765}:8765"
+    environment:
+      DOOS_ROOT: /app
+      PYTHONPATH: /app/src
+      DOOS_MCP_TRANSPORT: streamable-http
+      DOOS_MCP_HOST: "0.0.0.0"
+      DOOS_MCP_PORT: "8765"
+      DOOS_MCP_PATH: /mcp
+      DOOS_SPARQL_ENDPOINT: http://oxigraph:7878/query
+    restart: unless-stopped
+
+volumes:
+  oxigraph-data:

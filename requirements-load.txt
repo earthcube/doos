@@ -1,0 +1,5 @@
+# Deps for scripts/loadToOxigraph/loadToOxigraph.py (compose init job).
+requests>=2.32.0
+PyYAML>=6.0
+tqdm>=4.66.0
+pyoxigraph>=0.5.0

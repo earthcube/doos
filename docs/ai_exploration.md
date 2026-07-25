@@ -37,6 +37,6 @@ the python multi-agent approach with Blueprint, but then mention we could extend
 
 Architecture menu (not yet implemented):
 
-1. **DOOS discovery MCP** — expose Oxigraph/QLever + curated SPARQL templates as MCP tools.
+1. **DOOS discovery MCP** — implemented (v1) in `src/mcp_server/`: Oxigraph + curated SPARQL templates as tools, host-side text→SPARQL via cookbook/patterns resources + `ask_graph` prompt, plus `prompts/` FAIR/Blueprint prompts. See `src/mcp_server/README.md`.
 2. **Provider FAIR crawler multi-agent** — extract → map → SHACL → review → export per source.
 3. **Shared skill catalog** — align DOOS and ai-blueprint-core skills (assess, intake, extract, validate) under one layout and conventions.

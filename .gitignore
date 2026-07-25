@@ -8,6 +8,8 @@ wheels/
 # Virtual environments
 .venv
 .idea
+.pytest_cache
+.ruff_cache
 /scratch/
 /secret/
 /projects/ARGO/data/

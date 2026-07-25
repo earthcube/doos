@@ -1,0 +1,43 @@
+# DOOS Discovery MCP — slim image (streamable-http by default).
+#
+# Build (from monorepo root):
+#   docker build -f build/Dockerfile.mcp -t doos-mcp .
+#
+# Run (expects a SPARQL endpoint; compose sets oxigraph):
+#   docker run --rm -p 8765:8765 \
+#     -e DOOS_SPARQL_ENDPOINT=http://host.docker.internal:7878/query \
+#     doos-mcp
+#
+# Default MCP URL inside the container: http://0.0.0.0:8765/mcp
+# Host clients: http://127.0.0.1:8765/mcp
+
+FROM python:3.13-slim
+
+WORKDIR /app
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app/src \
+    DOOS_ROOT=/app \
+    DOOS_MCP_TRANSPORT=streamable-http \
+    DOOS_MCP_HOST=0.0.0.0 \
+    DOOS_MCP_PORT=8765 \
+    DOOS_MCP_PATH=/mcp \
+    DOOS_SPARQL_ENDPOINT=http://oxigraph:7878/query
+
+COPY requirements-mcp.txt /app/requirements-mcp.txt
+RUN pip install --no-cache-dir -r /app/requirements-mcp.txt
+
+# Runtime assets for tools / resources / prompts
+COPY src/mcp_server /app/src/mcp_server
+COPY prompts /app/prompts
+COPY skills/DOOS_bundle/doos-sparql /app/skills/DOOS_bundle/doos-sparql
+COPY scripts/text2query/patterns.txt /app/scripts/text2query/patterns.txt
+
+# Skill catalog (SKILL.md only — large outputs excluded by .dockerignore)
+COPY skills /app/skills
+
+EXPOSE 8765
+
+# Host/port come from env (config.py); bind 0.0.0.0 for published ports.
+CMD ["python", "-m", "mcp_server", "--transport", "streamable-http", "--host", "0.0.0.0", "--port", "8765"]

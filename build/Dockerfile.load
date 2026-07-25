@@ -1,0 +1,31 @@
+# One-shot loader: push monorepo RDF outputs into Oxigraph.
+#
+# Build (from monorepo root):
+#   docker build -f build/Dockerfile.load -t doos-load .
+#
+# Runtime expects the monorepo mounted at /app so paths in
+# scripts/loadToOxigraph/oxigraph_load.yaml resolve (projects/, skills/, …).
+#
+#   docker run --rm --network <compose_net> \
+#     -v "$PWD":/app \
+#     doos-load \
+#     python scripts/loadToOxigraph/loadToOxigraph.py \
+#       --wait --endpoint http://oxigraph:7878
+
+FROM python:3.13-slim
+
+WORKDIR /app
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+COPY requirements-load.txt /tmp/requirements-load.txt
+RUN pip install --no-cache-dir -r /tmp/requirements-load.txt
+
+# Scripts are usually provided by the monorepo bind-mount at runtime.
+# Keep a copy in the image so --help works without a mount.
+COPY scripts/loadToOxigraph /app/scripts/loadToOxigraph
+COPY SPARQL/alias_depthbelowsurf.ru /app/SPARQL/alias_depthbelowsurf.ru
+
+ENTRYPOINT ["python", "scripts/loadToOxigraph/loadToOxigraph.py"]
+CMD ["--wait", "--endpoint", "http://oxigraph:7878"]

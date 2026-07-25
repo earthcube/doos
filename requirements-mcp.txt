@@ -1,0 +1,4 @@
+# Slim deps for the DOOS Discovery MCP server (src/mcp_server).
+# Not the full monorepo pyproject.toml.
+mcp[cli]>=1.28.0
+SPARQLWrapper>=2.0.0
