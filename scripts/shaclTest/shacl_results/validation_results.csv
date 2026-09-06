@@ -1,0 +1,3 @@
+severity,component,focus_node,path,value,source_shape,message
+Violation,MinCountConstraintComponent,http://example.org/base/nan,https://schema.org/description,,_:1_b0,
+Violation,MinCountConstraintComponent,http://example.org/base/nan,https://schema.org/name,,_:1_b1,

@@ -1,0 +1,15 @@
+PREFIX schema: <https://schema.org/>
+CONSTRUCT {
+  ?s ?p ?o .
+  ?o ?p2 ?o2 .
+}
+WHERE {
+  {
+    SELECT DISTINCT ?s WHERE {
+      ?s a schema:Dataset .
+    }
+    LIMIT 1000
+  }
+  ?s ?p ?o .
+  OPTIONAL { ?o ?p2 ?o2 . }
+}

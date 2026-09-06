@@ -1,0 +1,164 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://www.example.org/schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+
+
+ex:AltNameShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:message "Needs to be Text"@en ;
+    sh:property [
+        sh:path schema:alternateName ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+    ] ;
+.
+
+ex:CreatorShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:message "Needs to be a Person or Organization"@en ;
+    sh:property [
+        sh:path schema:creator ;
+        sh:minCount 1 ;
+        sh:or (
+            [ sh:class schema:Person ]
+            [ sh:class schema:Organization ]
+        ) ;
+    ] ;
+.
+
+ex:CitationShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:message "Needs to be a Text or CreativeWork"@en ;
+    sh:property [
+        sh:path schema:citation ;
+        sh:minCount 1 ;
+        sh:or (
+            [ sh:nodeKind sh:Literal ]
+            [ sh:class schema:CreativeWork ]
+        ) ;
+    ] ;
+.
+
+ex:IdentifierShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:message "Needs to be a URL, Text or PropertyValue"@en ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:or (
+            [ sh:nodeKind sh:Literal ]
+            [ sh:nodeKind sh:IRI ]
+            [ sh:class schema:PropertyValue ]
+        ) ;
+    ] ;
+.
+
+ex:KeywordsShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:message "Needs to be Text"@en ;
+    sh:property [
+        sh:path schema:keywords ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+    ] ;
+.
+
+ex:LicenseShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:message "Needs to be a URL or Text"@en ;
+    sh:property [
+        sh:path schema:license ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:or (
+            [ sh:nodeKind sh:Literal ]
+            [ sh:nodeKind sh:IRI ]
+        ) ;
+    ] ;
+.
+
+ex:SameAsShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:message "Needs to be a URL"@en ;
+    sh:property [
+        sh:path schema:sameAs ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRIOrLiteral ;
+    ] ;
+.
+
+ex:SpatialCoverageShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:message "Needs to be Text or Place"@en ;
+    sh:property [
+        sh:path schema:spatialCoverage ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:or (
+            [ sh:nodeKind sh:Literal ]
+            [ sh:class schema:Place ]
+        ) ;
+    ] ;
+.
+
+ex:TemporalCoverageShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:message "Needs to be Text"@en ;
+    sh:property [
+        sh:path schema:temporalCoverage ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+    ] ;
+.
+
+ex:VariableMeasuredShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:message "Needs to be Text or PropertyValue"@en ;
+    sh:property [
+        sh:path schema:variableMeasured ;
+        sh:minCount 1 ;
+        sh:or (
+            [ sh:nodeKind sh:Literal ]
+            [ sh:class schema:PropertyValue ]
+        ) ;
+    ] ;
+.
+
+ex:VersionShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:message "Needs to be Text or Number"@en ;
+    sh:property [
+        sh:path schema:version ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+    ] ;
+.
+
+ex:URLShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:message "Needs to be a URL"@en ;
+    sh:property [
+        sh:path schema:url ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRIOrLiteral ;
+    ] ;
+.

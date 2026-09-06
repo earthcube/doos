@@ -20,6 +20,7 @@ dependencies = [
     "pyshacl>=0.31.0",
     "rdflib>=7.6.0",
     "saxonche>=12.9.0",
+    "shacl>=0.1.10",
     "sparqlwrapper>=2.0.0",
     "tabulate>=0.9.0",
     "tavily>=1.1.0",
