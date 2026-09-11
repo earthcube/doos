@@ -1,4 +1,4 @@
-# DOOS Activity Report — May & June 2026
+# DOOS Activity Report — September 2026
 
 **Repository:** [earthcube/doos](https://github.com/earthcubeprojects/doos)  
 **Reporting period:** September 2026  
