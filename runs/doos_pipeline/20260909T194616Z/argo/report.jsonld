@@ -1,0 +1,290 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/doos/pipeline#",
+    "schema": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "doos": "https://w3id.org/doos/pipeline#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "dateCreated": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "startedAtTime": {
+      "@id": "prov:startedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "endedAtTime": {
+      "@id": "prov:endedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "wasGeneratedBy": "prov:wasGeneratedBy",
+    "used": "prov:used",
+    "hasPart": {
+      "@id": "schema:hasPart",
+      "@container": "@set"
+    },
+    "count": {
+      "@id": "doos:count",
+      "@type": "xsd:integer"
+    },
+    "fileCount": {
+      "@type": "xsd:integer"
+    },
+    "byteCount": {
+      "@type": "xsd:integer"
+    },
+    "recordCount": {
+      "@type": "xsd:integer"
+    },
+    "tripleCount": {
+      "@type": "xsd:integer"
+    },
+    "namedGraphCount": {
+      "@type": "xsd:integer"
+    },
+    "parseErrorCount": {
+      "@type": "xsd:integer"
+    },
+    "truncated": {
+      "@type": "xsd:boolean"
+    }
+  },
+  "@id": "urn:doos:report:argo:20260909T194616Z",
+  "@type": [
+    "PipelineReport",
+    "prov:Entity",
+    "schema:Dataset"
+  ],
+  "name": "DOOS pipeline report: argo",
+  "description": "DOOS graph generation report for argo: 2458 file(s), 2458 record(s), 46702 triple(s).",
+  "dateCreated": "2026-09-09T19:46:16.062654+00:00",
+  "provider": "argo",
+  "providerStatus": "ready",
+  "providerDescription": "ARGO GeoParquet \u2192 JSON-LD template \u2192 N-Triples",
+  "namedGraph": "urn:doos:argo",
+  "conformsTo": "https://w3id.org/doos/pipeline#PipelineReport",
+  "wasGeneratedBy": {
+    "@id": "urn:doos:report:argo:20260909T194616Z#activity",
+    "@type": "prov:Activity",
+    "name": "doos_pipeline argo",
+    "used": [
+      "/home/fils/src/Projects/earthcube/doos/projects/ARGO/data/output"
+    ],
+    "startedAtTime": "2026-09-09T19:46:16.062654+00:00",
+    "endedAtTime": "2026-09-09T19:46:16.062654+00:00",
+    "exitCode": null,
+    "dryRun": false,
+    "steps": [],
+    "software": {
+      "@type": "schema:SoftwareApplication",
+      "name": "doos_pipeline",
+      "softwareVersion": "0.1.0"
+    }
+  },
+  "distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "contentUrl": "/home/fils/src/Projects/earthcube/doos/projects/ARGO/data/output",
+      "encodingFormat": "nt",
+      "name": "output",
+      "shaclEligible": true,
+      "exists": true
+    }
+  ],
+  "metrics": {
+    "@type": "RunMetrics",
+    "fileCount": 2458,
+    "byteCount": 8063170,
+    "recordCount": 2458,
+    "tripleCount": 46702,
+    "namedGraphCount": 0,
+    "parseErrorCount": 0,
+    "truncated": false,
+    "sha256": null,
+    "typeHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.opengis.net/ont/sf#Point",
+          "curie": "sf:Point",
+          "count": 2458
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/PropertyValue",
+          "curie": "schema:PropertyValue",
+          "count": 2458
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/Dataset",
+          "curie": "schema:Dataset",
+          "count": 2458
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 3
+    },
+    "predicateHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/unitCode",
+          "curie": "schema:unitCode",
+          "count": 7374
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "curie": "rdf:type",
+          "count": 7374
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/description",
+          "curie": "schema:description",
+          "count": 4916
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/name",
+          "curie": "schema:name",
+          "count": 4916
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.opengis.net/ont/geosparql#crs",
+          "curie": "geosparql:crs",
+          "count": 2458
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+          "curie": "geosparql:hasGeometry",
+          "count": 2458
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/measurementTechnique",
+          "curie": "schema:measurementTechnique",
+          "count": 2458
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+          "curie": "geosparql:asWKT",
+          "count": 2458
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/propertyID",
+          "curie": "schema:propertyID",
+          "count": 2458
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/title",
+          "curie": "schema:title",
+          "count": 2458
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/unitText",
+          "curie": "schema:unitText",
+          "count": 2458
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/variableMeasured",
+          "curie": "schema:variableMeasured",
+          "count": 2458
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/maxValue",
+          "curie": "schema:maxValue",
+          "count": 2458
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 13
+    },
+    "namespaceHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/",
+          "curie": "schema:",
+          "count": 31954
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.opengis.net/ont/geosparql#",
+          "curie": "geosparql:",
+          "count": 7374
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+          "curie": "rdf:",
+          "count": 7374
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 3
+    },
+    "depth": {
+      "@type": "DepthMetrics",
+      "variableMeasuredCount": 2458,
+      "depthPropertyValueCount": 2458,
+      "depthWithRangeCount": 0,
+      "variableNameHistogram": {
+        "@type": "Histogram",
+        "bucket": [
+          {
+            "@type": "HistogramBucket",
+            "name": "depth",
+            "count": 2458
+          }
+        ],
+        "otherCount": 0,
+        "distinctCount": 1
+      },
+      "depthNameHistogram": {
+        "@type": "Histogram",
+        "bucket": [
+          {
+            "@type": "HistogramBucket",
+            "name": "depth",
+            "count": 2458
+          }
+        ],
+        "otherCount": 0,
+        "distinctCount": 1
+      }
+    },
+    "completeness": {
+      "@type": "CompletenessMetrics",
+      "recordCount": 2458,
+      "withName": 2458,
+      "withDescription": 2458,
+      "withUrl": 0,
+      "withDepBelowSurf": 0,
+      "withDepthVariable": 2458,
+      "withDepthRange": 0,
+      "nameRatio": 1.0,
+      "descriptionRatio": 1.0,
+      "urlRatio": 0.0,
+      "depBelowSurfRatio": 0.0,
+      "depthVariableRatio": 1.0,
+      "depthRangeRatio": 0.0
+    }
+  },
+  "parseError": [],
+  "manifest": null
+}

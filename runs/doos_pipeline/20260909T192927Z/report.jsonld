@@ -1,0 +1,717 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/doos/pipeline#",
+    "schema": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "doos": "https://w3id.org/doos/pipeline#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "dateCreated": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "startedAtTime": {
+      "@id": "prov:startedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "endedAtTime": {
+      "@id": "prov:endedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "wasGeneratedBy": "prov:wasGeneratedBy",
+    "used": "prov:used",
+    "hasPart": {
+      "@id": "schema:hasPart",
+      "@container": "@set"
+    },
+    "count": {
+      "@id": "doos:count",
+      "@type": "xsd:integer"
+    },
+    "fileCount": {
+      "@type": "xsd:integer"
+    },
+    "byteCount": {
+      "@type": "xsd:integer"
+    },
+    "recordCount": {
+      "@type": "xsd:integer"
+    },
+    "tripleCount": {
+      "@type": "xsd:integer"
+    },
+    "namedGraphCount": {
+      "@type": "xsd:integer"
+    },
+    "parseErrorCount": {
+      "@type": "xsd:integer"
+    },
+    "truncated": {
+      "@type": "xsd:boolean"
+    }
+  },
+  "@id": "urn:doos:report:bcodmo:20260909T192927Z",
+  "@type": [
+    "PipelineReport",
+    "prov:Entity",
+    "schema:Dataset"
+  ],
+  "name": "DOOS pipeline report: bcodmo",
+  "description": "DOOS graph generation report for bcodmo: 1 file(s), 76 record(s), 1301 triple(s).",
+  "dateCreated": "2026-09-09T19:29:27.197775+00:00",
+  "provider": "bcodmo",
+  "providerStatus": "working",
+  "providerDescription": "BCO-DMO ERDDAP inventory + ISO depth scan \u2192 N-Triples",
+  "namedGraph": "urn:doos:bcodmo",
+  "conformsTo": "https://w3id.org/doos/pipeline#PipelineReport",
+  "wasGeneratedBy": {
+    "@id": "urn:doos:report:bcodmo:20260909T192927Z#activity",
+    "@type": "prov:Activity",
+    "name": "doos_pipeline bcodmo",
+    "used": [
+      "/home/fils/src/Projects/earthcube/doos/projects/BCO-DMO/output/output.nt"
+    ],
+    "startedAtTime": "2026-09-09T19:29:27.197775+00:00",
+    "endedAtTime": "2026-09-09T19:29:27.197775+00:00",
+    "exitCode": null,
+    "dryRun": false,
+    "steps": [],
+    "software": {
+      "@type": "schema:SoftwareApplication",
+      "name": "doos_pipeline",
+      "softwareVersion": "0.1.0"
+    }
+  },
+  "distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "contentUrl": "/home/fils/src/Projects/earthcube/doos/projects/BCO-DMO/output/output.nt",
+      "encodingFormat": "nt",
+      "name": "output.nt",
+      "shaclEligible": true,
+      "exists": true
+    }
+  ],
+  "metrics": {
+    "@type": "RunMetrics",
+    "fileCount": 1,
+    "byteCount": 223418,
+    "recordCount": 76,
+    "tripleCount": 1301,
+    "namedGraphCount": 0,
+    "parseErrorCount": 0,
+    "truncated": false,
+    "sha256": "c4b008c0af3f9741519771bafad546dc58ea1e526c66a60f0992f094d3a7ae8e",
+    "typeHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/PropertyValue",
+          "curie": "schema:PropertyValue",
+          "count": 126
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/Dataset",
+          "curie": "schema:Dataset",
+          "count": 76
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 2
+    },
+    "predicateHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/name",
+          "curie": "schema:name",
+          "count": 202
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "curie": "rdf:type",
+          "count": 202
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/description",
+          "curie": "schema:description",
+          "count": 167
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/propertyID",
+          "curie": "schema:propertyID",
+          "count": 126
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/variableMeasured",
+          "curie": "schema:variableMeasured",
+          "count": 126
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/unitCode",
+          "curie": "schema:unitCode",
+          "count": 92
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/unitText",
+          "curie": "schema:unitText",
+          "count": 91
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/identifier",
+          "curie": "schema:identifier",
+          "count": 77
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/url",
+          "curie": "schema:url",
+          "count": 76
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/minValue",
+          "curie": "schema:minValue",
+          "count": 68
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/maxValue",
+          "curie": "schema:maxValue",
+          "count": 68
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/alternateName",
+          "curie": "schema:alternateName",
+          "count": 6
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 12
+    },
+    "namespaceHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/",
+          "curie": "schema:",
+          "count": 1099
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+          "curie": "rdf:",
+          "count": 202
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 2
+    },
+    "depth": {
+      "@type": "DepthMetrics",
+      "variableMeasuredCount": 126,
+      "depthPropertyValueCount": 123,
+      "depthWithRangeCount": 67,
+      "variableNameHistogram": {
+        "@type": "Histogram",
+        "bucket": [
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_m",
+            "count": 20
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Depth",
+            "count": 11
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_no",
+            "count": 11
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth",
+            "count": 10
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Sample_Depth",
+            "count": 8
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_id",
+            "count": 5
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "DEPTH",
+            "count": 4
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Sediment_depth",
+            "count": 3
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Bottom_Depth",
+            "count": 3
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Water_depth",
+            "count": 3
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Top_Depth",
+            "count": 3
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_sample_comment",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_sample",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Max_Depth",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Min_Depth",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_sample_m",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_seafloor_m",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Btm_depth",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_w",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_temp",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Kistler Piezoresistive Pressure Sensor 4260M00",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Paine Electronics Pressure Transducer series 211-75-710, part number 211-75-710-05",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Temperature",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Sediment_depth_cm",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Actual_Depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Target_Depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Pressure",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "MaxDepth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "MinDepth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "HOBO 30-foot depth Titanium water level data loggers (Part # U20-001-01-Ti)",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "max_actual_depth_m",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_des",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "middepth_cm",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_cat",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Btl_Depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Depth_ft",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_CTD",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_avg",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_max",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "max_depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_comment",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "QF_Depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "press",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_wet",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "snow_depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_strat",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_dens",
+            "count": 1
+          }
+        ],
+        "otherCount": 0,
+        "distinctCount": 47
+      },
+      "depthNameHistogram": {
+        "@type": "Histogram",
+        "bucket": [
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_m",
+            "count": 20
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Depth",
+            "count": 11
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_no",
+            "count": 11
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth",
+            "count": 10
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Sample_Depth",
+            "count": 8
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_id",
+            "count": 5
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "DEPTH",
+            "count": 4
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Sediment_depth",
+            "count": 3
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Bottom_Depth",
+            "count": 3
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Water_depth",
+            "count": 3
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Top_Depth",
+            "count": 3
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_sample_comment",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_sample",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Max_Depth",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Min_Depth",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_sample_m",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_seafloor_m",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Btm_depth",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_w",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_temp",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Sediment_depth_cm",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Actual_Depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Target_Depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Pressure",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "MaxDepth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "MinDepth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "HOBO 30-foot depth Titanium water level data loggers (Part # U20-001-01-Ti)",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "max_actual_depth_m",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_des",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "middepth_cm",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_cat",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Btl_Depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Depth_ft",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_CTD",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_avg",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_max",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "max_depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_comment",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "QF_Depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "press",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_wet",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "snow_depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_strat",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "depth_dens",
+            "count": 1
+          }
+        ],
+        "otherCount": 0,
+        "distinctCount": 44
+      }
+    },
+    "completeness": {
+      "@type": "CompletenessMetrics",
+      "recordCount": 76,
+      "withName": 76,
+      "withDescription": 76,
+      "withUrl": 76,
+      "withDepBelowSurf": 0,
+      "withDepthVariable": 75,
+      "withDepthRange": 51,
+      "nameRatio": 1.0,
+      "descriptionRatio": 1.0,
+      "urlRatio": 1.0,
+      "depBelowSurfRatio": 0.0,
+      "depthVariableRatio": 0.9868,
+      "depthRangeRatio": 0.6711
+    }
+  },
+  "parseError": [],
+  "manifest": null
+}

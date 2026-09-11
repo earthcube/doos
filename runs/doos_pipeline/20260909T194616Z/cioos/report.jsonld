@@ -1,0 +1,332 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/doos/pipeline#",
+    "schema": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "doos": "https://w3id.org/doos/pipeline#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "dateCreated": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "startedAtTime": {
+      "@id": "prov:startedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "endedAtTime": {
+      "@id": "prov:endedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "wasGeneratedBy": "prov:wasGeneratedBy",
+    "used": "prov:used",
+    "hasPart": {
+      "@id": "schema:hasPart",
+      "@container": "@set"
+    },
+    "count": {
+      "@id": "doos:count",
+      "@type": "xsd:integer"
+    },
+    "fileCount": {
+      "@type": "xsd:integer"
+    },
+    "byteCount": {
+      "@type": "xsd:integer"
+    },
+    "recordCount": {
+      "@type": "xsd:integer"
+    },
+    "tripleCount": {
+      "@type": "xsd:integer"
+    },
+    "namedGraphCount": {
+      "@type": "xsd:integer"
+    },
+    "parseErrorCount": {
+      "@type": "xsd:integer"
+    },
+    "truncated": {
+      "@type": "xsd:boolean"
+    }
+  },
+  "@id": "urn:doos:report:cioos:20260909T194644Z",
+  "@type": [
+    "PipelineReport",
+    "prov:Entity",
+    "schema:Dataset"
+  ],
+  "name": "DOOS pipeline report: cioos",
+  "description": "DOOS graph generation report for cioos: 1 file(s), 1 record(s), 41 triple(s).",
+  "dateCreated": "2026-09-09T19:46:44.430053+00:00",
+  "provider": "cioos",
+  "providerStatus": "exploratory",
+  "providerDescription": "CIOOS CKAN \u2192 schema.org dict mapping (exploratory)",
+  "namedGraph": null,
+  "conformsTo": "https://w3id.org/doos/pipeline#PipelineReport",
+  "wasGeneratedBy": {
+    "@id": "urn:doos:report:cioos:20260909T194644Z#activity",
+    "@type": "prov:Activity",
+    "name": "doos_pipeline cioos",
+    "used": [
+      "/home/fils/src/Projects/earthcube/doos/projects/CIOOS/exampleSDO.json"
+    ],
+    "startedAtTime": "2026-09-09T19:46:44.430053+00:00",
+    "endedAtTime": "2026-09-09T19:46:44.430053+00:00",
+    "exitCode": null,
+    "dryRun": false,
+    "steps": [],
+    "software": {
+      "@type": "schema:SoftwareApplication",
+      "name": "doos_pipeline",
+      "softwareVersion": "0.1.0"
+    }
+  },
+  "distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "contentUrl": "/home/fils/src/Projects/earthcube/doos/projects/CIOOS/exampleSDO.json",
+      "encodingFormat": "json",
+      "name": "exampleSDO.json",
+      "shaclEligible": false,
+      "exists": true
+    }
+  ],
+  "metrics": {
+    "@type": "RunMetrics",
+    "fileCount": 1,
+    "byteCount": 1702,
+    "recordCount": 1,
+    "tripleCount": 41,
+    "namedGraphCount": 0,
+    "parseErrorCount": 0,
+    "truncated": false,
+    "sha256": "6e435e5b9fa1e4f7d470c36979d84cf3974ce3d488e7a4e06a8520f62cf2c72a",
+    "typeHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/PropertyValue",
+          "curie": "schema:PropertyValue",
+          "count": 4
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/Organization",
+          "curie": "schema:Organization",
+          "count": 2
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/Dataset",
+          "curie": "schema:Dataset",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/Place",
+          "curie": "schema:Place",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/GeoShape",
+          "curie": "schema:GeoShape",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/DataDownload",
+          "curie": "schema:DataDownload",
+          "count": 1
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 6
+    },
+    "predicateHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "curie": "rdf:type",
+          "count": 10
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/name",
+          "curie": "schema:name",
+          "count": 8
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/value",
+          "curie": "schema:value",
+          "count": 3
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/additionalProperty",
+          "curie": "schema:additionalProperty",
+          "count": 3
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/identifier",
+          "curie": "schema:identifier",
+          "count": 3
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/description",
+          "curie": "schema:description",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/keywords",
+          "curie": "schema:keywords",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/isAccessibleForFree",
+          "curie": "schema:isAccessibleForFree",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/publisher",
+          "curie": "schema:publisher",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/polygon",
+          "curie": "schema:polygon",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/variableMeasured",
+          "curie": "schema:variableMeasured",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/geo",
+          "curie": "schema:geo",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/spatialCoverage",
+          "curie": "schema:spatialCoverage",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/url",
+          "curie": "schema:url",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/license",
+          "curie": "schema:license",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/creator",
+          "curie": "schema:creator",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/distribution",
+          "curie": "schema:distribution",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/temporalCoverage",
+          "curie": "schema:temporalCoverage",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/contentUrl",
+          "curie": "schema:contentUrl",
+          "count": 1
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 19
+    },
+    "namespaceHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/",
+          "curie": "schema:",
+          "count": 31
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+          "curie": "rdf:",
+          "count": 10
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 2
+    },
+    "depth": {
+      "@type": "DepthMetrics",
+      "variableMeasuredCount": 1,
+      "depthPropertyValueCount": 0,
+      "depthWithRangeCount": 0,
+      "variableNameHistogram": {
+        "@type": "Histogram",
+        "bucket": [
+          {
+            "@type": "HistogramBucket",
+            "name": "EOV: other",
+            "count": 1
+          }
+        ],
+        "otherCount": 0,
+        "distinctCount": 1
+      },
+      "depthNameHistogram": {
+        "@type": "Histogram",
+        "bucket": [],
+        "otherCount": 0,
+        "distinctCount": 0
+      }
+    },
+    "completeness": {
+      "@type": "CompletenessMetrics",
+      "recordCount": 1,
+      "withName": 1,
+      "withDescription": 1,
+      "withUrl": 1,
+      "withDepBelowSurf": 0,
+      "withDepthVariable": 0,
+      "withDepthRange": 0,
+      "nameRatio": 1.0,
+      "descriptionRatio": 1.0,
+      "urlRatio": 1.0,
+      "depBelowSurfRatio": 0.0,
+      "depthVariableRatio": 0.0,
+      "depthRangeRatio": 0.0
+    }
+  },
+  "parseError": [],
+  "manifest": null
+}

@@ -1,0 +1,726 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/doos/pipeline#",
+    "schema": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "doos": "https://w3id.org/doos/pipeline#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "dateCreated": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "startedAtTime": {
+      "@id": "prov:startedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "endedAtTime": {
+      "@id": "prov:endedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "wasGeneratedBy": "prov:wasGeneratedBy",
+    "used": "prov:used",
+    "hasPart": {
+      "@id": "schema:hasPart",
+      "@container": "@set"
+    },
+    "count": {
+      "@id": "doos:count",
+      "@type": "xsd:integer"
+    },
+    "fileCount": {
+      "@type": "xsd:integer"
+    },
+    "byteCount": {
+      "@type": "xsd:integer"
+    },
+    "recordCount": {
+      "@type": "xsd:integer"
+    },
+    "tripleCount": {
+      "@type": "xsd:integer"
+    },
+    "namedGraphCount": {
+      "@type": "xsd:integer"
+    },
+    "parseErrorCount": {
+      "@type": "xsd:integer"
+    },
+    "truncated": {
+      "@type": "xsd:boolean"
+    }
+  },
+  "@id": "urn:doos:report:bodc:20260909T194641Z",
+  "@type": [
+    "PipelineReport",
+    "prov:Entity",
+    "schema:Dataset"
+  ],
+  "name": "DOOS pipeline report: bodc",
+  "description": "DOOS graph generation report for bodc: 2 file(s), 447 record(s), 54416 triple(s).",
+  "dateCreated": "2026-09-09T19:46:41.764216+00:00",
+  "provider": "bodc",
+  "providerStatus": "indexing",
+  "providerDescription": "BODC harvest of existing schema.org JSON-LD (no field transform)",
+  "namedGraph": "urn:doos:bodc",
+  "conformsTo": "https://w3id.org/doos/pipeline#PipelineReport",
+  "wasGeneratedBy": {
+    "@id": "urn:doos:report:bodc:20260909T194641Z#activity",
+    "@type": "prov:Activity",
+    "name": "doos_pipeline bodc",
+    "used": [
+      "/home/fils/src/Projects/earthcube/doos/projects/BODC/output/bodc_harvest.nq",
+      "/home/fils/src/Projects/earthcube/doos/projects/BODC/output/bodc_validated.nq"
+    ],
+    "startedAtTime": "2026-09-09T19:46:41.764216+00:00",
+    "endedAtTime": "2026-09-09T19:46:41.764216+00:00",
+    "exitCode": null,
+    "dryRun": false,
+    "steps": [],
+    "software": {
+      "@type": "schema:SoftwareApplication",
+      "name": "doos_pipeline",
+      "softwareVersion": "0.1.0"
+    }
+  },
+  "distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "contentUrl": "/home/fils/src/Projects/earthcube/doos/projects/BODC/output/bodc_harvest.nq",
+      "encodingFormat": "nq",
+      "name": "bodc_harvest.nq",
+      "shaclEligible": true,
+      "exists": true
+    },
+    {
+      "@type": "schema:DataDownload",
+      "contentUrl": "/home/fils/src/Projects/earthcube/doos/projects/BODC/output/bodc_validated.nq",
+      "encodingFormat": "nq",
+      "name": "bodc_validated.nq",
+      "shaclEligible": true,
+      "exists": true
+    }
+  ],
+  "metrics": {
+    "@type": "RunMetrics",
+    "fileCount": 2,
+    "byteCount": 11244838,
+    "recordCount": 447,
+    "tripleCount": 54416,
+    "namedGraphCount": 447,
+    "parseErrorCount": 0,
+    "truncated": false,
+    "sha256": null,
+    "typeHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/DefinedTerm",
+          "curie": "schema:DefinedTerm",
+          "count": 3449
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/PropertyValue",
+          "curie": "schema:PropertyValue",
+          "count": 2931
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/DataDownload",
+          "curie": "schema:DataDownload",
+          "count": 894
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/Organization",
+          "curie": "schema:Organization",
+          "count": 817
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/GeoCoordinates",
+          "curie": "schema:GeoCoordinates",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/Event",
+          "curie": "schema:Event",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/Place",
+          "curie": "schema:Place",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/Dataset",
+          "curie": "schema:Dataset",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/Role",
+          "curie": "schema:Role",
+          "count": 442
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/Person",
+          "curie": "schema:Person",
+          "count": 442
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/Grant",
+          "curie": "schema:Grant",
+          "count": 370
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 11
+    },
+    "predicateHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "curie": "rdf:type",
+          "count": 11133
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/name",
+          "curie": "schema:name",
+          "count": 8533
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/url",
+          "curie": "schema:url",
+          "count": 5386
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/inDefinedTermSet",
+          "curie": "schema:inDefinedTermSet",
+          "count": 3449
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/keywords",
+          "curie": "schema:keywords",
+          "count": 3449
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/description",
+          "curie": "schema:description",
+          "count": 3378
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/propertyID",
+          "curie": "schema:propertyID",
+          "count": 2931
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/variableMeasured",
+          "curie": "schema:variableMeasured",
+          "count": 2926
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/contentUrl",
+          "curie": "schema:contentUrl",
+          "count": 894
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/encodingFormat",
+          "curie": "schema:encodingFormat",
+          "count": 894
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/distribution",
+          "curie": "schema:distribution",
+          "count": 894
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/creator",
+          "curie": "schema:creator",
+          "count": 884
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/provider",
+          "curie": "schema:provider",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/temporalCoverage",
+          "curie": "schema:temporalCoverage",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/version",
+          "curie": "schema:version",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/identifier",
+          "curie": "schema:identifier",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/longitude",
+          "curie": "schema:longitude",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/legalName",
+          "curie": "schema:legalName",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/about",
+          "curie": "schema:about",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/geo",
+          "curie": "schema:geo",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/dateModified",
+          "curie": "schema:dateModified",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/publisher",
+          "curie": "schema:publisher",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/datePublished",
+          "curie": "schema:datePublished",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/isAccessibleForFree",
+          "curie": "schema:isAccessibleForFree",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/spatialCoverage",
+          "curie": "schema:spatialCoverage",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/license",
+          "curie": "schema:license",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/latitude",
+          "curie": "schema:latitude",
+          "count": 447
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/familyName",
+          "curie": "schema:familyName",
+          "count": 442
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/roleName",
+          "curie": "schema:roleName",
+          "count": 442
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/givenName",
+          "curie": "schema:givenName",
+          "count": 442
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/minValue",
+          "curie": "schema:minValue",
+          "count": 432
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/maxValue",
+          "curie": "schema:maxValue",
+          "count": 432
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/funding",
+          "curie": "schema:funding",
+          "count": 370
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/funder",
+          "curie": "schema:funder",
+          "count": 370
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/value",
+          "curie": "schema:value",
+          "count": 15
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/unitCode",
+          "curie": "schema:unitCode",
+          "count": 5
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/unitText",
+          "curie": "schema:unitText",
+          "count": 5
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/additionalProperty",
+          "curie": "schema:additionalProperty",
+          "count": 5
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 38
+    },
+    "namespaceHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/",
+          "curie": "schema:",
+          "count": 43283
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+          "curie": "rdf:",
+          "count": 11133
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 2
+    },
+    "depth": {
+      "@type": "DepthMetrics",
+      "variableMeasuredCount": 2926,
+      "depthPropertyValueCount": 442,
+      "depthWithRangeCount": 432,
+      "variableNameHistogram": {
+        "@type": "Histogram",
+        "bucket": [
+          {
+            "@type": "HistogramBucket",
+            "name": "DepBelowSurf",
+            "count": 442
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "SampRef",
+            "count": 441
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "C22_flag",
+            "count": 441
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "RosPos",
+            "count": 441
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "WC_dissO2_Winkler",
+            "count": 109
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "SiOx_Unfilt_ColAA",
+            "count": 82
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "NO3+NO2_Unfilt_ColAA",
+            "count": 82
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "PO4_Unfilt_ColAA",
+            "count": 82
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "FireSeqNo",
+            "count": 72
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "NO2_Unfilt_ColAA",
+            "count": 70
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "chl-a_water>GF/F_FA_fluor",
+            "count": 52
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "SDO2",
+            "count": 52
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "TotAlk/kg",
+            "count": 46
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "TCO2/kg",
+            "count": 46
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "SiOx",
+            "count": 43
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "PO4",
+            "count": 43
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "NO3+NO2",
+            "count": 43
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "PON_>GF/F_Acid_ElemAnal",
+            "count": 41
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "POC_>GF/F_Acid_ElemAnal",
+            "count": 41
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "PartCa>0.8um",
+            "count": 38
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "PartOpalSi",
+            "count": 37
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "NH4nano_fluor",
+            "count": 24
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "NH4_Unfilt_Col",
+            "count": 22
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "SD_Totalk/kg",
+            "count": 14
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "TCO2/kg_SD",
+            "count": 14
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "chl-a_water>20um_fluor",
+            "count": 10
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "SD_NH4nano",
+            "count": 9
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "chl-a_water>GF/F_SD_fluor",
+            "count": 9
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "chl-a_water_10-20um_fluor",
+            "count": 8
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "chl-a_water_2-5um_fluor",
+            "count": 8
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "chl-a_water_GF/F-2um_fluor",
+            "count": 7
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "chl-a_water_5-10um_fluor",
+            "count": 7
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ElapsedTimeSinceMidnightUTC",
+            "count": 6
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Date(Loch_Day)",
+            "count": 6
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "CurrSpd_CM",
+            "count": 5
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "CurrDir",
+            "count": 5
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Temp",
+            "count": 5
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "chl-a_water>10um_fluor",
+            "count": 4
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "chl-a_water>0.2um_fluor",
+            "count": 4
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "WColHt+AtPr_MW",
+            "count": 3
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "NO3+NO2SD",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "SD_PO4",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "SD_NO2",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "SD_SiO4",
+            "count": 2
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Chl",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "pCO2",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "Record_No",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "SD_chl-a_water>20um_fluor",
+            "count": 1
+          }
+        ],
+        "otherCount": 0,
+        "distinctCount": 48
+      },
+      "depthNameHistogram": {
+        "@type": "Histogram",
+        "bucket": [
+          {
+            "@type": "HistogramBucket",
+            "name": "DepBelowSurf",
+            "count": 442
+          }
+        ],
+        "otherCount": 0,
+        "distinctCount": 1
+      }
+    },
+    "completeness": {
+      "@type": "CompletenessMetrics",
+      "recordCount": 447,
+      "withName": 447,
+      "withDescription": 447,
+      "withUrl": 447,
+      "withDepBelowSurf": 442,
+      "withDepthVariable": 442,
+      "withDepthRange": 432,
+      "nameRatio": 1.0,
+      "descriptionRatio": 1.0,
+      "urlRatio": 1.0,
+      "depBelowSurfRatio": 0.9888,
+      "depthVariableRatio": 0.9888,
+      "depthRangeRatio": 0.9664
+    }
+  },
+  "parseError": [],
+  "manifest": null
+}

@@ -1,0 +1,794 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/doos/pipeline#",
+    "schema": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "doos": "https://w3id.org/doos/pipeline#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "dateCreated": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "startedAtTime": {
+      "@id": "prov:startedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "endedAtTime": {
+      "@id": "prov:endedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "wasGeneratedBy": "prov:wasGeneratedBy",
+    "used": "prov:used",
+    "hasPart": {
+      "@id": "schema:hasPart",
+      "@container": "@set"
+    },
+    "count": {
+      "@id": "doos:count",
+      "@type": "xsd:integer"
+    },
+    "fileCount": {
+      "@type": "xsd:integer"
+    },
+    "byteCount": {
+      "@type": "xsd:integer"
+    },
+    "recordCount": {
+      "@type": "xsd:integer"
+    },
+    "tripleCount": {
+      "@type": "xsd:integer"
+    },
+    "namedGraphCount": {
+      "@type": "xsd:integer"
+    },
+    "parseErrorCount": {
+      "@type": "xsd:integer"
+    },
+    "truncated": {
+      "@type": "xsd:boolean"
+    }
+  },
+  "@id": "urn:doos:report:cchdo:20260909T194644Z",
+  "@type": [
+    "PipelineReport",
+    "prov:Entity",
+    "schema:Dataset"
+  ],
+  "name": "DOOS pipeline report: cchdo",
+  "description": "DOOS graph generation report for cchdo: 2 file(s), 1 record(s), 1377 triple(s).",
+  "dateCreated": "2026-09-09T19:46:44.411490+00:00",
+  "provider": "cchdo",
+  "providerStatus": "indexing",
+  "providerDescription": "CCHDO NetCDF attrs \u2192 intermediate RDF \u2192 SHACL-AF JSON-LD",
+  "namedGraph": null,
+  "conformsTo": "https://w3id.org/doos/pipeline#PipelineReport",
+  "wasGeneratedBy": {
+    "@id": "urn:doos:report:cchdo:20260909T194644Z#activity",
+    "@type": "prov:Activity",
+    "name": "doos_pipeline cchdo",
+    "used": [
+      "/home/fils/src/Projects/earthcube/doos/projects/CCHDO/33RR20220430_bottle.schema.shacl.jsonld",
+      "/home/fils/src/Projects/earthcube/doos/projects/CCHDO/33RR20220430_bottle.croissant.jsonld"
+    ],
+    "startedAtTime": "2026-09-09T19:46:44.411490+00:00",
+    "endedAtTime": "2026-09-09T19:46:44.411490+00:00",
+    "exitCode": null,
+    "dryRun": false,
+    "steps": [],
+    "software": {
+      "@type": "schema:SoftwareApplication",
+      "name": "doos_pipeline",
+      "softwareVersion": "0.1.0"
+    }
+  },
+  "distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "contentUrl": "/home/fils/src/Projects/earthcube/doos/projects/CCHDO/33RR20220430_bottle.schema.shacl.jsonld",
+      "encodingFormat": "jsonld",
+      "name": "33RR20220430_bottle.schema.shacl.jsonld",
+      "shaclEligible": true,
+      "exists": true
+    },
+    {
+      "@type": "schema:DataDownload",
+      "contentUrl": "/home/fils/src/Projects/earthcube/doos/projects/CCHDO/33RR20220430_bottle.croissant.jsonld",
+      "encodingFormat": "jsonld",
+      "name": "33RR20220430_bottle.croissant.jsonld",
+      "shaclEligible": false,
+      "exists": true
+    }
+  ],
+  "metrics": {
+    "@type": "RunMetrics",
+    "fileCount": 2,
+    "byteCount": 84776,
+    "recordCount": 1,
+    "tripleCount": 1377,
+    "namedGraphCount": 0,
+    "parseErrorCount": 0,
+    "truncated": false,
+    "sha256": null,
+    "typeHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/PropertyValue",
+          "curie": "schema:PropertyValue",
+          "count": 81
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://mlcommons.org/croissant/Field",
+          "curie": "cr:Field",
+          "count": 81
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/Dataset",
+          "curie": "schema:Dataset",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://mlcommons.org/croissant/RecordSet",
+          "curie": "cr:RecordSet",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/Dataset",
+          "curie": "schema:Dataset",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://mlcommons.org/croissant/FileObject",
+          "curie": "cr:FileObject",
+          "count": 1
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 6
+    },
+    "predicateHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "curie": "rdf:type",
+          "count": 166
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/name",
+          "curie": "schema:name",
+          "count": 84
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/name",
+          "curie": "schema:name",
+          "count": 82
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/variableMeasured",
+          "curie": "schema:variableMeasured",
+          "count": 81
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/additionalType",
+          "curie": "schema:additionalType",
+          "count": 81
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://mlcommons.org/croissant/extract",
+          "curie": "cr:extract",
+          "count": 81
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://mlcommons.org/croissant/column",
+          "curie": "cr:column",
+          "count": 81
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://mlcommons.org/croissant/source",
+          "curie": "cr:source",
+          "count": 81
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://mlcommons.org/croissant/isArray",
+          "curie": "cr:isArray",
+          "count": 81
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://mlcommons.org/croissant/field",
+          "curie": "cr:field",
+          "count": 81
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://mlcommons.org/croissant/arrayShape",
+          "curie": "cr:arrayShape",
+          "count": 81
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://mlcommons.org/croissant/fileObject",
+          "curie": "cr:fileObject",
+          "count": 81
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://mlcommons.org/croissant/dataType",
+          "curie": "cr:dataType",
+          "count": 81
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/description",
+          "curie": "schema:description",
+          "count": 55
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/description",
+          "curie": "schema:description",
+          "count": 55
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/propertyID",
+          "curie": "schema:propertyID",
+          "count": 46
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/unitText",
+          "curie": "schema:unitText",
+          "count": 37
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/measurementTechnique",
+          "curie": "schema:measurementTechnique",
+          "count": 33
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/valueReference",
+          "curie": "schema:valueReference",
+          "count": 5
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/distribution",
+          "curie": "schema:distribution",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/encodingFormat",
+          "curie": "schema:encodingFormat",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://purl.org/dc/terms/conformsTo",
+          "curie": "dct:conformsTo",
+          "count": 1
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://mlcommons.org/croissant/recordSet",
+          "curie": "cr:recordSet",
+          "count": 1
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 23
+    },
+    "namespaceHistogram": {
+      "@type": "Histogram",
+      "bucket": [
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://mlcommons.org/croissant/",
+          "curie": "cr:",
+          "count": 649
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "https://schema.org/",
+          "curie": "schema:",
+          "count": 420
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+          "curie": "rdf:",
+          "count": 166
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://schema.org/",
+          "curie": "schema:",
+          "count": 141
+        },
+        {
+          "@type": "HistogramBucket",
+          "@id": "http://purl.org/dc/terms/",
+          "curie": "dct:",
+          "count": 1
+        }
+      ],
+      "otherCount": 0,
+      "distinctCount": 5
+    },
+    "depth": {
+      "@type": "DepthMetrics",
+      "variableMeasuredCount": 81,
+      "depthPropertyValueCount": 2,
+      "depthWithRangeCount": 0,
+      "variableNameHistogram": {
+        "@type": "Histogram",
+        "bucket": [
+          {
+            "@type": "HistogramBucket",
+            "name": "ctd_fluor_raw_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "oxygen",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "flow_cytometry_placeholder_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "nitrous_oxide_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "del_carbon_13_dic_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "nitrite",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "dna_placeholder",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "total_dissolved_nitrogen_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ctd_fluor_raw",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "del_carbon_13_dic",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "flow_cytometry_placeholder",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "nitrite_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "pressure_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ph_temperature",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ctd_transmissometer_raw",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ctd_transmissometer_raw_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "phosphate_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "silicate_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "btm_depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "sulfur_hexifluoride_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ph_temperature_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ref_temperature",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ctd_oxygen",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ctd_oxygen_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "nitrous_oxide",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "sample",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ctd_temperature_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ph_total_h_scale",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "longitude",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "cfc_11_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ref_temperature_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "phosphate",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "profile_type",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "sulfur_hexifluoride",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "bottle_salinity_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "hplc_placeholder",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ctd_temperature",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "particulate_organic_carbon_l_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "total_carbon_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "del_carbon_14_dic",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "particulate_chemical_oxygen_demand_l_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "bottle_time",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "total_carbon",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ctd_salinity_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "particulate_organic_phosphorus_l",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "bottle_number",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "del_carbon_14_dic_error",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "cast",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "particulate_organic_phosphorus_l_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "station",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "bottle_latitude",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "nitrate",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "particulate_organic_nitrogen_l_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "bottle_salinity",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ctd_salinity",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "particulate_organic_nitrogen_l",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "cfc_12_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "cfc_12",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "geometry_container",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "nitrate_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "silicate",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "particulate_chemical_oxygen_demand_l",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "latitude",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "bottle_number_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "total_alkalinity",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "dissolved_organic_carbon",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "oxygen_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "hplc_placeholder_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "time",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "total_dissolved_nitrogen",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "section_id",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "particulate_organic_carbon_l",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "del_carbon_14_dic_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "total_alkalinity_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "dna_placeholder_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "pressure",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "bottle_longitude",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "dissolved_organic_carbon_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "ph_total_h_scale_qc",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "expocode",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "cfc_11",
+            "count": 1
+          }
+        ],
+        "otherCount": 0,
+        "distinctCount": 81
+      },
+      "depthNameHistogram": {
+        "@type": "Histogram",
+        "bucket": [
+          {
+            "@type": "HistogramBucket",
+            "name": "btm_depth",
+            "count": 1
+          },
+          {
+            "@type": "HistogramBucket",
+            "name": "pressure",
+            "count": 1
+          }
+        ],
+        "otherCount": 0,
+        "distinctCount": 2
+      }
+    },
+    "completeness": {
+      "@type": "CompletenessMetrics",
+      "recordCount": 1,
+      "withName": 1,
+      "withDescription": 0,
+      "withUrl": 0,
+      "withDepBelowSurf": 0,
+      "withDepthVariable": 1,
+      "withDepthRange": 0,
+      "nameRatio": 1.0,
+      "descriptionRatio": 0.0,
+      "urlRatio": 0.0,
+      "depBelowSurfRatio": 0.0,
+      "depthVariableRatio": 1.0,
+      "depthRangeRatio": 0.0
+    }
+  },
+  "parseError": [],
+  "manifest": null
+}

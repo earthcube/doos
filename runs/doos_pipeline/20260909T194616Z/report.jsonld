@@ -1,0 +1,240 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/doos/pipeline#",
+    "schema": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "doos": "https://w3id.org/doos/pipeline#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "dateCreated": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "startedAtTime": {
+      "@id": "prov:startedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "endedAtTime": {
+      "@id": "prov:endedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "wasGeneratedBy": "prov:wasGeneratedBy",
+    "used": "prov:used",
+    "hasPart": {
+      "@id": "schema:hasPart",
+      "@container": "@set"
+    },
+    "count": {
+      "@id": "doos:count",
+      "@type": "xsd:integer"
+    },
+    "fileCount": {
+      "@type": "xsd:integer"
+    },
+    "byteCount": {
+      "@type": "xsd:integer"
+    },
+    "recordCount": {
+      "@type": "xsd:integer"
+    },
+    "tripleCount": {
+      "@type": "xsd:integer"
+    },
+    "namedGraphCount": {
+      "@type": "xsd:integer"
+    },
+    "parseErrorCount": {
+      "@type": "xsd:integer"
+    },
+    "truncated": {
+      "@type": "xsd:boolean"
+    }
+  },
+  "@id": "urn:doos:report:set:20260909T194645Z",
+  "@type": [
+    "PipelineReportSet",
+    "prov:Entity",
+    "schema:Dataset"
+  ],
+  "name": "DOOS pipeline report set",
+  "dateCreated": "2026-09-09T19:46:45.872211+00:00",
+  "hasPart": [
+    {
+      "@id": "urn:doos:report:argo:20260909T194616Z",
+      "@type": "PipelineReport",
+      "provider": "argo",
+      "name": "DOOS pipeline report: argo",
+      "recordCount": 2458,
+      "tripleCount": 46702,
+      "fileCount": 2458,
+      "completeness": {
+        "@type": "CompletenessMetrics",
+        "recordCount": 2458,
+        "withName": 2458,
+        "withDescription": 2458,
+        "withUrl": 0,
+        "withDepBelowSurf": 0,
+        "withDepthVariable": 2458,
+        "withDepthRange": 0,
+        "nameRatio": 1.0,
+        "descriptionRatio": 1.0,
+        "urlRatio": 0.0,
+        "depBelowSurfRatio": 0.0,
+        "depthVariableRatio": 1.0,
+        "depthRangeRatio": 0.0
+      }
+    },
+    {
+      "@id": "urn:doos:report:obis:20260909T194617Z",
+      "@type": "PipelineReport",
+      "provider": "obis",
+      "name": "DOOS pipeline report: obis",
+      "recordCount": 4756,
+      "tripleCount": 63388,
+      "fileCount": 1,
+      "completeness": {
+        "@type": "CompletenessMetrics",
+        "recordCount": 4756,
+        "withName": 0,
+        "withDescription": 0,
+        "withUrl": 0,
+        "withDepBelowSurf": 0,
+        "withDepthVariable": 4756,
+        "withDepthRange": 4756,
+        "nameRatio": 0.0,
+        "descriptionRatio": 0.0,
+        "urlRatio": 0.0,
+        "depBelowSurfRatio": 0.0,
+        "depthVariableRatio": 1.0,
+        "depthRangeRatio": 1.0
+      }
+    },
+    {
+      "@id": "urn:doos:report:bodc:20260909T194641Z",
+      "@type": "PipelineReport",
+      "provider": "bodc",
+      "name": "DOOS pipeline report: bodc",
+      "recordCount": 447,
+      "tripleCount": 54416,
+      "fileCount": 2,
+      "completeness": {
+        "@type": "CompletenessMetrics",
+        "recordCount": 447,
+        "withName": 447,
+        "withDescription": 447,
+        "withUrl": 447,
+        "withDepBelowSurf": 442,
+        "withDepthVariable": 442,
+        "withDepthRange": 432,
+        "nameRatio": 1.0,
+        "descriptionRatio": 1.0,
+        "urlRatio": 1.0,
+        "depBelowSurfRatio": 0.9888,
+        "depthVariableRatio": 0.9888,
+        "depthRangeRatio": 0.9664
+      }
+    },
+    {
+      "@id": "urn:doos:report:aodn:20260909T194644Z",
+      "@type": "PipelineReport",
+      "provider": "aodn",
+      "name": "DOOS pipeline report: aodn",
+      "recordCount": 1,
+      "tripleCount": 159,
+      "fileCount": 1,
+      "completeness": {
+        "@type": "CompletenessMetrics",
+        "recordCount": 1,
+        "withName": 1,
+        "withDescription": 1,
+        "withUrl": 0,
+        "withDepBelowSurf": 0,
+        "withDepthVariable": 0,
+        "withDepthRange": 0,
+        "nameRatio": 1.0,
+        "descriptionRatio": 1.0,
+        "urlRatio": 0.0,
+        "depBelowSurfRatio": 0.0,
+        "depthVariableRatio": 0.0,
+        "depthRangeRatio": 0.0
+      }
+    },
+    {
+      "@id": "urn:doos:report:cchdo:20260909T194644Z",
+      "@type": "PipelineReport",
+      "provider": "cchdo",
+      "name": "DOOS pipeline report: cchdo",
+      "recordCount": 1,
+      "tripleCount": 1377,
+      "fileCount": 2,
+      "completeness": {
+        "@type": "CompletenessMetrics",
+        "recordCount": 1,
+        "withName": 1,
+        "withDescription": 0,
+        "withUrl": 0,
+        "withDepBelowSurf": 0,
+        "withDepthVariable": 1,
+        "withDepthRange": 0,
+        "nameRatio": 1.0,
+        "descriptionRatio": 0.0,
+        "urlRatio": 0.0,
+        "depBelowSurfRatio": 0.0,
+        "depthVariableRatio": 1.0,
+        "depthRangeRatio": 0.0
+      }
+    },
+    {
+      "@id": "urn:doos:report:cioos:20260909T194644Z",
+      "@type": "PipelineReport",
+      "provider": "cioos",
+      "name": "DOOS pipeline report: cioos",
+      "recordCount": 1,
+      "tripleCount": 41,
+      "fileCount": 1,
+      "completeness": {
+        "@type": "CompletenessMetrics",
+        "recordCount": 1,
+        "withName": 1,
+        "withDescription": 1,
+        "withUrl": 1,
+        "withDepBelowSurf": 0,
+        "withDepthVariable": 0,
+        "withDepthRange": 0,
+        "nameRatio": 1.0,
+        "descriptionRatio": 1.0,
+        "urlRatio": 1.0,
+        "depBelowSurfRatio": 0.0,
+        "depthVariableRatio": 0.0,
+        "depthRangeRatio": 0.0
+      }
+    },
+    {
+      "@id": "urn:doos:report:bcodmo:20260909T194645Z",
+      "@type": "PipelineReport",
+      "provider": "bcodmo",
+      "name": "DOOS pipeline report: bcodmo",
+      "recordCount": 76,
+      "tripleCount": 1301,
+      "fileCount": 1,
+      "completeness": {
+        "@type": "CompletenessMetrics",
+        "recordCount": 76,
+        "withName": 76,
+        "withDescription": 76,
+        "withUrl": 76,
+        "withDepBelowSurf": 0,
+        "withDepthVariable": 75,
+        "withDepthRange": 51,
+        "nameRatio": 1.0,
+        "descriptionRatio": 1.0,
+        "urlRatio": 1.0,
+        "depBelowSurfRatio": 0.0,
+        "depthVariableRatio": 0.9868,
+        "depthRangeRatio": 0.6711
+      }
+    }
+  ],
+  "workDir": "/home/fils/src/Projects/earthcube/doos/runs/doos_pipeline/20260909T194616Z"
+}
