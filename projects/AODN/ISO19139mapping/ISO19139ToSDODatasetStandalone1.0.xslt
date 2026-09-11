@@ -570,10 +570,11 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                     <xsl:text>"name": "</xsl:text>
                     <xsl:value-of select="local-name()"/>
                     <xsl:text>"</xsl:text>
-                    <xsl:if test="child::*/child::*">
-                        <xsl:text>,&#10;        </xsl:text>
-                    </xsl:if>
                 </xsl:for-each>
+                <!-- Always emit description; comma after name whenever name was emitted -->
+                <xsl:if test="child::*">
+                    <xsl:text>,&#10;        </xsl:text>
+                </xsl:if>
                 <xsl:text>"description": "</xsl:text>
                 <xsl:for-each select="child::*/child::*">
                     <xsl:value-of select="concat(local-name(), ': ')"/>
@@ -592,11 +593,8 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                         </xsl:when>
                         <xsl:when test="string-length(gco:CharacterString) > 0">
                             <xsl:variable name="thetext">
-                                <xsl:call-template name="string-replace-all">
+                                <xsl:call-template name="json-escape">
                                     <xsl:with-param name="text" select="normalize-space(gco:CharacterString)"/>
-                                    
-                                    <xsl:with-param name="replace" select="string('&#34;')"/>
-                                    <xsl:with-param name="by" select='string("\&apos;")'/>
                                 </xsl:call-template>
                             </xsl:variable>
                             <xsl:value-of select="concat($thetext, '.   ')"/>
@@ -664,12 +662,8 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         <xsl:text>  "additionalType": [&#10;    "geolink:Dataset",&#10;    "vivo:Dataset"&#10;  ],&#10;</xsl:text>
 
         <xsl:text>  "name": "</xsl:text>
-        <!-- escape (with '\') any double quotes (&#34;) that show up in  the name string -->
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text" select="normalize-space($name)"/>
-            <xsl:with-param name="replace" select="string('&#34;')"/>
-            <xsl:with-param name="by" select="string('\&#34;')"/>
-        </xsl:call-template>
+        <!-- CharacterString already JSON-escapes; emit directly -->
+        <xsl:value-of select="normalize-space($name)"/>
         <xsl:text>",&#10;</xsl:text>
 
         <xsl:if test="string-length($alternateName) > 0">
@@ -679,11 +673,9 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         </xsl:if>
 
         <xsl:text>  "citation": "</xsl:text>
-            <!-- escape (with '\') any double quotes (&#34;) to single quote (&apos;) that show up in  the citation string -->
-        <xsl:call-template name="string-replace-all">
+        <!-- JSON-escape quotes and backslashes in the citation string -->
+        <xsl:call-template name="json-escape">
             <xsl:with-param name="text" select="normalize-space($citation)"/>
-            <xsl:with-param name="replace" select="string('&#34;')"/>
-            <xsl:with-param name="by" select='string("\&apos;")'/>
         </xsl:call-template>
         <xsl:text>",&#10;</xsl:text>
 
@@ -713,12 +705,8 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         <xsl:text>",&#10;</xsl:text>
 
         <xsl:text>  "description": "</xsl:text>
-        <!-- clean up any double quotes in the text -->
-        <xsl:call-template name="string-replace-all">
-            <xsl:with-param name="text" select="normalize-space($description)"/>
-            <xsl:with-param name="replace" select="string('&#34;')"/>
-            <xsl:with-param name="by" select='string("\&apos;")'/>
-        </xsl:call-template>
+        <!-- CharacterString already JSON-escapes; emit directly -->
+        <xsl:value-of select="normalize-space($description)"/>
         <xsl:text>",&#10;</xsl:text>
 
         <xsl:if test="$datasetIsHttp">
@@ -843,13 +831,19 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         <xsl:value-of select="$keywords"/>
         <xsl:text>],&#10;</xsl:text>
 
+        <xsl:variable name="hasPublisher"
+            select="count($publisher/gmd:CI_ResponsibleParty) > 0"/>
+
         <xsl:if test="string-length(string($license)) > 0">
             <xsl:text>  "license": </xsl:text>
             <xsl:value-of select="$license"/>
-            <xsl:text>,&#10;</xsl:text>
+            <!-- trailing comma only when more properties follow -->
+            <xsl:if test="$hasPublisher or $hasSpatial or $hasVariables">
+                <xsl:text>,&#10;</xsl:text>
+            </xsl:if>
         </xsl:if>
 
-        <xsl:if test="count($publisher/gmd:CI_ResponsibleParty) > 0">
+        <xsl:if test="$hasPublisher">
             <xsl:text>  "publisher": </xsl:text>
             <xsl:choose>
                 <xsl:when test="count($publisher/child::node()) > 0">
@@ -875,10 +869,9 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                     <xsl:text>"</xsl:text>
                 </xsl:otherwise>
             </xsl:choose>
-        </xsl:if>
-
-        <xsl:if test="$hasSpatial or $hasVariables">
-            <xsl:text>,&#10;</xsl:text>
+            <xsl:if test="$hasSpatial or $hasVariables">
+                <xsl:text>,&#10;</xsl:text>
+            </xsl:if>
         </xsl:if>
 
         <xsl:if test="$hasSpatial">
@@ -1285,9 +1278,8 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
             select="
                 concat($por/parent::node()/preceding-sibling::gmd:transferSize/gco:Real, ' ',
                 normalize-space($por/parent::node()/preceding-sibling::gmd:unitsOfDistribution/gco:CharacterString))"/>
-        <xsl:variable name="distDescription">
+        <xsl:variable name="distDescriptionRaw">
             <!-- gather other useful content from the CI_OnlineResource element -->
-            <xsl:text>"</xsl:text>
             <xsl:if
                 test="string-length(normalize-space($por/gmd:description/gco:CharacterString)) > 0">
                 <xsl:value-of select="normalize-space($por/gmd:description/gco:CharacterString)"/>
@@ -1317,6 +1309,12 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                 <xsl:value-of select="normalize-space($por/gmd:function/child::node()/text())"/>
                 <xsl:text>.   </xsl:text>
             </xsl:if>
+        </xsl:variable>
+        <xsl:variable name="distDescription">
+            <xsl:text>"</xsl:text>
+            <xsl:call-template name="json-escape">
+                <xsl:with-param name="text" select="normalize-space($distDescriptionRaw)"/>
+            </xsl:call-template>
             <xsl:text>"</xsl:text>
         </xsl:variable>
 
@@ -1430,10 +1428,8 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
 
                 <xsl:if test="string-length($varDescription) > 0">
                     <xsl:text>,&#10;    "description": "</xsl:text>
-                    <xsl:call-template name="string-replace-all">
+                                        <xsl:call-template name="json-escape">
                         <xsl:with-param name="text" select="$varDescription"/>
-                        <xsl:with-param name="replace" select="string('&#34;')"/>
-                        <xsl:with-param name="by" select='string("\&apos;")'/>
                     </xsl:call-template>
                     <xsl:text>"</xsl:text>
                 </xsl:if>
@@ -1454,6 +1450,26 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
 
 
     <!--############################################################-->
+    <!--## JSON string escaping (backslash first, then quote)       ##-->
+    <!--############################################################-->
+    <xsl:template name="json-escape">
+        <xsl:param name="text"/>
+        <!-- Escape \ first so later \" inserts are not re-escaped -->
+        <xsl:variable name="escapedBackslash">
+            <xsl:call-template name="string-replace-all">
+                <xsl:with-param name="text" select="$text"/>
+                <xsl:with-param name="replace">\</xsl:with-param>
+                <xsl:with-param name="by">\\</xsl:with-param>
+            </xsl:call-template>
+        </xsl:variable>
+        <xsl:call-template name="string-replace-all">
+            <xsl:with-param name="text" select="$escapedBackslash"/>
+            <xsl:with-param name="replace" select="string('&#34;')"/>
+            <xsl:with-param name="by" select="string('\&#34;')"/>
+        </xsl:call-template>
+    </xsl:template>
+
+    <!--############################################################-->
     <!--## Template to replace strings                           ##-->
     <!--############################################################-->
     <!-- template from https://stackoverflow.com/questions/3067113/xslt-string-replace/3067130 -->
@@ -1462,7 +1478,7 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         <xsl:param name="text"/>
         <xsl:param name="replace"/>
         <xsl:param name="by"/>
-        <xsl:variable name="ascii">!"#$%&amp;'()*+,-./0123456789:;=>&#60;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~</xsl:variable>
+        <xsl:variable name="ascii">!"#$%&amp;'()*+,-./0123456789:;=>&#60;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</xsl:variable>
         <!-- just a bunch of spaces, need one for each special character -->
         <xsl:variable name="spaces" select="'                                                                                             '" />
         
@@ -1502,7 +1518,7 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
 		you will have to use the recursive template in 39432344 to replace them one-by-one 
 		the xsl:copy in the for-each below are from the template -->
         <!-- SMR 2019-05-29 add escape sequence for '<' (&#60;) -->
-        <xsl:variable name="ascii">!"#$%&amp;'()*+,-./0123456789:;=>&#60;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~</xsl:variable>
+        <xsl:variable name="ascii">!"#$%&amp;'()*+,-./0123456789:;=>&#60;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</xsl:variable>
         <xsl:variable name="spaces" select="'                                                                                             '" />
         <!--
 		<xsl:template match="input">
@@ -1515,7 +1531,9 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         <xsl:for-each select="*">
             <xsl:choose>
                 <xsl:when test="local-name(.) = 'CharacterString'">
-                    <xsl:value-of select="normalize-space(translate(., translate(., $ascii, ''), $spaces))"/>
+                    <xsl:call-template name="json-escape">
+                        <xsl:with-param name="text" select="normalize-space(translate(., translate(., $ascii, ''), $spaces))"/>
+                    </xsl:call-template>
                 </xsl:when>
                 <xsl:when test="local-name(.) = 'PT_FreeText'">
                     <!-- <b><xsl:value-of select="name(ancestor-or-self::*[2])" /></b> -->
@@ -1532,7 +1550,9 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                         <xsl:attribute name="href">
                             <xsl:value-of select="@xlink:href"/>
                         </xsl:attribute>
-                        <xsl:value-of select="normalize-space(translate(., translate(., $ascii, ''), $spaces))"/>
+                        <xsl:call-template name="json-escape">
+                            <xsl:with-param name="text" select="normalize-space(translate(., translate(., $ascii, ''), $spaces))"/>
+                        </xsl:call-template>
                     </a>
                 </xsl:when>
                 <xsl:otherwise>

@@ -287,6 +287,7 @@ def main():
         "enrich_jsonld": args.enrich_jsonld,
     }
     manifests = []
+    failures: list[dict] = []
 
     try:
         if args.input_xml:
@@ -314,28 +315,53 @@ def main():
         elif args.uuid_file:
             for uuid in load_uuid_file(Path(args.uuid_file)):
                 record_dir = output_dir / uuid
-                manifests.append(
-                    process_record(
-                        uuid=uuid,
-                        input_xml=None,
-                        output_dir=record_dir,
-                        catalog_api=args.catalog_api,
-                        write_nt=write_nt,
-                        **depth_kwargs,
+                try:
+                    manifests.append(
+                        process_record(
+                            uuid=uuid,
+                            input_xml=None,
+                            output_dir=record_dir,
+                            catalog_api=args.catalog_api,
+                            write_nt=write_nt,
+                            **depth_kwargs,
+                        )
                     )
-                )
+                except Exception as e:
+                    # Continue batch on per-UUID failure; do not abort the run.
+                    print(f"Error processing {uuid}: {e}", file=sys.stderr)
+                    failures.append({"uuid": uuid, "error": str(e)})
+                    manifests.append(
+                        {
+                            "record_id": uuid,
+                            "error": str(e),
+                        }
+                    )
 
         run_manifest = {
             "started_at": datetime.now(timezone.utc).isoformat(),
             "output_dir": str(output_dir.resolve()),
             "records": manifests,
+            "success_count": sum(1 for m in manifests if "error" not in m),
+            "failure_count": len(failures),
+            "failures": failures,
         }
         manifest_path = output_dir / "run.json"
+        output_dir.mkdir(parents=True, exist_ok=True)
         manifest_path.write_text(
             json.dumps(run_manifest, indent=2),
             encoding="utf-8",
         )
         print(json.dumps(run_manifest, indent=2))
+        if args.uuid_file and failures:
+            total = len(manifests)
+            print(
+                f"Batch summary: {run_manifest['success_count']}/{total} succeeded, "
+                f"{len(failures)} failed",
+                file=sys.stderr,
+            )
+            # Non-zero only when every UUID failed.
+            if run_manifest["success_count"] == 0:
+                sys.exit(1)
     except (RuntimeError, subprocess.CalledProcessError, ValueError) as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
