@@ -766,7 +766,8 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                 <xsl:with-param name="pfor" select="$format"/>
                 <xsl:with-param name="prp" select="$distributorContact"/>
             </xsl:call-template>
-            <xsl:if test="following::gmd:onLine">
+            <!-- Only comma between transferOptions onlines actually emitted (not any following::gmd:onLine). -->
+            <xsl:if test="position() != last()">
                 <xsl:text>,&#10;</xsl:text>
             </xsl:if>
         </xsl:for-each>
@@ -790,8 +791,7 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                 <xsl:with-param name="pfor" select="$format"/>
                 <xsl:with-param name="prp" select="$distributorContact"/>
             </xsl:call-template>
-            <xsl:if
-                test="following::gmd:distributorTransferOptions//gmd:onLine or parent::node()/following-sibling::gmd:onLine">
+            <xsl:if test="position() != last()">
                 <xsl:text>,&#10;</xsl:text>
             </xsl:if>
         </xsl:for-each>
@@ -1337,7 +1337,9 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         </xsl:if>
         <xsl:if test="string-length($distName) > 0">
             <xsl:text>,&#10;      "name": "</xsl:text>
-            <xsl:value-of select="normalize-space($distName)"/>
+            <xsl:call-template name="json-escape">
+                <xsl:with-param name="text" select="normalize-space($distName)"/>
+            </xsl:call-template>
             <xsl:if test="string-length($accessURL) = 0">
                 <xsl:value-of
                     select="'. Invalid URL provided in original metadata, see the @id string'"/>
