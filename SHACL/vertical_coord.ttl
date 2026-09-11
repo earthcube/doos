@@ -1,0 +1,41 @@
+@prefix : <http://example.org/shapes/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Portable Dataset shape for *raw* provider JSON-LD / RDF.
+# Accepts depth-named OR in-water pressure-named variableMeasured values.
+# Keep SHACL/depth_one.ttl strict (DepBelowSurf only) for post-map graphs.
+# Alias inventory + NERC links: vertical_coord_aliases.md
+
+:VerticalCoordDatasetShape a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:property [
+        sh:path schema:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "name" ;
+        sh:message "Dataset must have exactly one name"
+    ] ;
+    sh:property [
+        sh:path schema:description ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "description" ;
+        sh:message "Dataset must have exactly one description"
+    ] ;
+    sh:property [
+        sh:path schema:variableMeasured ;
+        sh:qualifiedValueShape :VerticalCoordVariableShape ;
+        sh:qualifiedMinCount 1 ;
+        sh:name "variableMeasured with depth or pressure name" ;
+        sh:message "Dataset must have at least one variableMeasured whose name is a depth or in-water pressure alias (see vertical_coord_aliases.md)"
+    ] .
+
+:VerticalCoordVariableShape a sh:NodeShape ;
+    sh:property [
+        sh:path schema:name ;
+        sh:in ( "DepBelowSurf" "depth" "Depth" "DEPTH" "DEPH" "z" "Z" "Sample_Depth" "depth_m" "depth_sample" "depth_CTD" "depth nominal" "btm_depth" "Btm_depth" "Bottom_Depth" "Water_depth" "package_depth" "observation_depth" "OBSERVATION_DEPTH" "Actual_Depth" "Target_Depth" "Top_Depth" "Start_depth" "Max_Depth" "max_depth" "MaxDepth" "Min_Depth" "MinDepth" "middepth_cm" "Btl_Depth" "Sediment_depth" "depth_seafloor_m" "Sea Floor Depth Below Sea Surface" "depth_of_chlorophyll_maximum" "fm_depth" "sm_depth" "OBSERVATION DEPTH" "observation depth" "PRES" "pressure" "Pressure" "press" "CTDPRS" "sea_water_pressure" "sea water pressure" "SEA WATER PRESSURE" "SEA PRESSURE" "ctd_pressure_raw" "downcast_pressure" "rev_pressure" "odf_pressure" "Pres_MCat" "Pres_Mcat_interp" "Pres_Z" "PRES_ADJUSTED" "pressure_qc" "PRES_QC" "Sea Water Pressure" )
+    ] .
