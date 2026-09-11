@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:book.odis.org)",
+      "WebFetch(domain:book.oceaninfohub.org)"
+    ]
+  }
+}

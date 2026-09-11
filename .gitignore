@@ -1,3 +1,6 @@
+# Wrapper CLI run manifests
+/runs/
+
 # Python-generated files
 __pycache__/
 *.py[oc]
@@ -23,3 +26,4 @@ wheels/
 /.idea/vcs.xml
 /projects/OBIS/store/
 /projects/OBIS/jsonld/
+/projects/BCO-DMO/runs/

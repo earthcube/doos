@@ -19,8 +19,13 @@ This directory contains:
 | `assets/export_nt.py` | Rebuild `output.nt` from existing JSON-LD or `iso_summary.json` |
 | `SKILL.md` | Agent harness instructions (optional — not required to run the tools) |
 | `references/` | ERDDAP search syntax notes |
-| `runs/` | Default pipeline output per run (gitignored, created on first run) |
-| `output/output.nt` | Published N-Triples for Oxigraph load (`scripts/loadToOxigraph/`) |
+| `runs/` | Default pipeline output per run when this skill CLI is invoked directly (gitignored) |
+| `output/` | Legacy per-dataset JSON-LD and an older `output.nt` snapshot |
+
+The **indexer facade and published N-Triples** for Oxigraph / `doos_pipeline` are
+[`projects/BCO-DMO/`](../../../projects/BCO-DMO/) (`output/output.nt`). Prefer that
+CLI when the goal is a loadable graph. This skill remains the harvest/transform
+implementation.
 
 No agent harness is required. Run the Python tools directly from the command line.
 
@@ -77,12 +82,15 @@ tracked in version control.
 
 ### Publishing for Oxigraph
 
-`scripts/loadToOxigraph/oxigraph_load.yaml` loads BCO-DMO from
-`skills/DOOS_bundle/doos-bco-dmo-index/output/output.nt`. After a pipeline run:
+Prefer the project facade, which runs this pipeline and publishes
+`projects/BCO-DMO/output/output.nt` (the path in `oxigraph_load.yaml`):
 
 ```bash
-cp skills/DOOS_bundle/doos-bco-dmo-index/runs/<timestamp>/output.nt skills/DOOS_bundle/doos-bco-dmo-index/output/output.nt
+python projects/BCO-DMO/run_pipeline.py --search depth --limit 5
 ```
+
+Invoking this skill CLI directly still writes `runs/<timestamp>/` here and does
+**not** update the published load path.
 
 To rebuild `output.nt` from legacy per-dataset JSON-LD files (or from
 `iso_summary.json` with `--iso-summary`):
@@ -230,12 +238,13 @@ harnesses. The CLI tools above work independently of any agent.
 
 ## DOOS pipeline role
 
-1. **Seed/search** via `run_pipeline.py` (or `main.py erddap`) → inventory +
+1. **Seed/search** via this `run_pipeline.py` (or `main.py erddap`) → inventory +
    per-dataset access routes.
 2. **Transform** via the ISO stage: combine ISO 19115 (semantic identity) with
    ERDDAP info JSON (numeric ranges, units) → merged `output.nt`.
-3. Downstream: SHACL validation against OIH depth shapes, export to SPARQL
-   endpoints (not handled in this skill).
+3. **Publish / load:** prefer `projects/BCO-DMO/run_pipeline.py`, then
+   `scripts/loadToOxigraph/` (`urn:doos:bcodmo`). SHACL is downstream, not in
+   this skill.
 
 ## Dependencies
 

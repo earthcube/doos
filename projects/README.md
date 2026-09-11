@@ -102,6 +102,21 @@ full re-description of every dataset field.
 
 ---
 
+## BCO-DMO
+
+**Biological and Chemical Oceanography Data Management Office** — ERDDAP inventory
++ ISO 19115 depth/pressure scan → schema.org N-Triples.
+
+The harvest and mapping live in
+[`skills/DOOS_bundle/doos-bco-dmo-index/`](../skills/DOOS_bundle/doos-bco-dmo-index/).
+This subproject is a facade: `run_pipeline.py` subprocesses that skill CLI, writes
+run artifacts under `BCO-DMO/runs/`, and publishes `BCO-DMO/output/output.nt`.
+Depth `variableMeasured` names stay native (`depth`, `Sample_Depth`, …);
+`DepBelowSurf` is added at Oxigraph load (`--alias`). Not included in
+`doos_pipeline run --all` (network/catalog-scale; use `--include-heavy`).
+
+---
+
 ## Output locations (reference)
 
 | Provider | Typical outputs |
@@ -112,7 +127,7 @@ full re-description of every dataset field.
 | CCHDO | per-file `*.schema.shacl.jsonld`, `*.croissant.jsonld` |
 | CIOOS | exploratory; sample JSON in-tree |
 | OBIS | `OBIS/jsonld/output_raw_strict/`, `OBIS/output.nq` |
-| BCO-DMO (outside this dir) | `skills/DOOS_bundle/doos-bco-dmo-index/output/output.nt` |
+| BCO-DMO | `BCO-DMO/output/output.nt` (publish from `runs/<ts>/output.nt`) |
 
 See each subdirectory’s own `README.md` for install steps, CLI flags, and
 detailed file layouts.

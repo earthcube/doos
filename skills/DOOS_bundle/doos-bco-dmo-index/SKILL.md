@@ -22,7 +22,10 @@ write merged N-Triples (`output.nt`) following the
 [ODIS depth pattern](https://book.odis.org/thematics/depth/index.html).
 
 Indexer code lives in `assets/`. Human CLI documentation: `README.md` in this
-directory.
+directory. The `projects/BCO-DMO/` facade subprocesses this CLI and publishes
+`projects/BCO-DMO/output/output.nt` for Oxigraph / `doos_pipeline`. Use that
+facade when the user wants a loadable graph; use this skill CLI for search-only
+runs and agent intake.
 
 ## Workflow
 

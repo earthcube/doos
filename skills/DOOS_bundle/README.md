@@ -59,9 +59,10 @@ flowchart TB
 
 Searches the BCO-DMO ERDDAP catalog (or walks the full catalog), inventories
 access routes, scans ISO 19115 for depth/pressure variables, and builds
-schema.org JSON-LD in the ODIS depth pattern. Primary output is merged
-`output.nt` suitable for Oxigraph load. Prefer `assets/run_pipeline.py` for the
-full flow; see the skill’s own `README.md` for CLI detail.
+schema.org JSON-LD in the ODIS depth pattern. Implementation CLI:
+`assets/run_pipeline.py`. Published N-Triples for Oxigraph load come from the
+indexer facade `projects/BCO-DMO/run_pipeline.py`. See the skill’s own
+`README.md` for CLI detail.
 
 *Use when:* indexing BCO-DMO, finding depth-related datasets, or producing
 BCO-DMO RDF for the federated graph.

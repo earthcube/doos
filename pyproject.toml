@@ -19,6 +19,7 @@ dependencies = [
     "pyrudof>=0.3.2",
     "pyshacl>=0.31.0",
     "rdflib>=7.6.0",
+    "reportlab[lib]>=5.0.1",
     "saxonche>=12.9.0",
     "shacl>=0.1.10",
     "sparqlwrapper>=2.0.0",

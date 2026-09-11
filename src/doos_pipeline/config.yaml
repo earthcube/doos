@@ -1,0 +1,153 @@
+# Wrapper registry for existing DOOS graph generators.
+# Paths are relative to the repository root unless noted.
+# Extra CLI args after `--` replace a step's default_args; they are not appended.
+
+runs_dir: runs/doos_pipeline
+shapes: SHACL/depth_one.ttl
+load_script: scripts/loadToOxigraph/loadToOxigraph.py
+
+providers:
+  argo:
+    description: ARGO GeoParquet → JSON-LD template → N-Triples
+    status: ready
+    runnable: true
+    run_on_all: false
+    cwd: projects/ARGO
+    graph: urn:doos:argo
+    steps:
+      - name: tordf
+        script: geopan.py
+        default_args:
+          - tordf
+          - -parquet
+          - argo_profiles_features_nmdis.parquet
+          - -mapping
+          - ./template/argo1.json
+    outputs:
+      - path: projects/ARGO/data/output
+        format: nt
+
+  obis:
+    description: OBIS auxiliary depth graph from occurrence parquet
+    status: ready
+    runnable: true
+    run_on_all: false
+    cwd: projects/OBIS
+    graph: urn:doos:obis
+    steps:
+      - name: build
+        script: build_depth_graph.py
+        default_args:
+          - --stage
+          - "2"
+          - "3"
+    outputs:
+      - path: projects/OBIS/output.nq
+        format: nq
+
+  bodc:
+    description: BODC harvest of existing schema.org JSON-LD (no field transform)
+    status: indexing
+    runnable: true
+    run_on_all: false
+    cwd: projects/BODC
+    graph: urn:doos:bodc
+    default_steps:
+      - inventory
+    steps:
+      - name: inventory
+        script: scripts/BodcDepthInventory.py
+      - name: harvest
+        script: scripts/BodcHarvest.py
+      - name: validate
+        script: scripts/BodcShaclValidate.py
+      - name: export
+        script: scripts/BodcExport.py
+      - name: verify
+        script: scripts/BodcVerifyFederation.py
+    outputs:
+      - path: projects/BODC/output/bodc_harvest.nq
+        format: nq
+      - path: projects/BODC/output/bodc_validated.nq
+        format: nq
+
+  aodn:
+    description: AODN ISO 19115-3 → ISO 19139 → schema.org JSON-LD (XSLT)
+    status: pipeline-exists
+    runnable: true
+    run_on_all: true
+    cwd: projects/AODN
+    graph: urn:doos:aodn
+    steps:
+      - name: pipeline
+        script: run_pipeline.py
+        default_args:
+          - --input-xml
+          - ./AODN_GN4_depth_metadata.xml
+          - --output-dir
+          - ./output
+    outputs:
+      - path: projects/AODN/output
+        format: mixed
+
+  cchdo:
+    description: CCHDO NetCDF attrs → intermediate RDF → SHACL-AF JSON-LD
+    status: indexing
+    runnable: true
+    run_on_all: true
+    cwd: projects/CCHDO
+    steps:
+      - name: extract
+        script: nc_metadata.py
+      - name: schema
+        script: nc_to_jsonld.py
+      - name: croissant
+        script: nc_to_croissant.py
+    default_steps:
+      - extract
+      - schema
+    outputs:
+      - path: projects/CCHDO/33RR20220430_bottle.schema.shacl.jsonld
+        format: jsonld
+      - path: projects/CCHDO/33RR20220430_bottle.croissant.jsonld
+        format: jsonld
+        shacl: false
+
+  cioos:
+    description: CIOOS CKAN → schema.org dict mapping (exploratory)
+    status: exploratory
+    runnable: true
+    run_on_all: true
+    cwd: projects/CIOOS
+    steps:
+      - name: convert
+        script: convert.py
+    outputs:
+      - path: projects/CIOOS/exampleSDO.json
+        format: json
+        shacl: false
+
+  bcodmo:
+    description: BCO-DMO ERDDAP inventory + ISO depth scan → N-Triples
+    status: working
+    runnable: true
+    run_on_all: false
+    cwd: projects/BCO-DMO
+    graph: urn:doos:bcodmo
+    steps:
+      - name: pipeline
+        script: run_pipeline.py
+    outputs:
+      - path: projects/BCO-DMO/output/output.nt
+        format: nt
+
+  erddap:
+    description: Notes and harvested ERDDAP JSON-LD examples — not a transform
+    status: notes
+    runnable: false
+    run_on_all: false
+    cwd: projects/ERDDAP
+    steps: []
+    outputs:
+      - path: projects/ERDDAP/summoned
+        format: jsonld

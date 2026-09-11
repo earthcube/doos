@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import xarray; print\\(xarray.__version__\\)\")",
+      "Bash(python3 -c \"import scipy; print\\(scipy.__version__\\)\")",
+      "Bash(pip3 list *)",
+      "Bash(python3 -c \"import sys; print\\(sys.executable\\)\")",
+      "Bash(pip list *)",
+      "Bash(ncdump -h 33RR20220430_bottle.nc)",
+      "Bash(/home/fils/src/Projects/earthcube/doos/.venv/bin/pip list *)",
+      "Bash(/usr/bin/python3.12 *)",
+      "Bash(/home/fils/src/Projects/earthcube/doos/.venv/bin/python -c \"import netCDF4; ds = netCDF4.Dataset\\('/home/fils/src/Projects/earthcube/doos/projects/CCHDO/33RR20220430_bottle.nc'\\); print\\('Global attrs:', list\\(ds.ncattrs\\(\\)\\)\\); print\\('Variables:', list\\(ds.variables.keys\\(\\)\\)\\)\")",
+      "Bash(/home/fils/src/Projects/earthcube/doos/.venv/bin/python -c \"import xarray as xr; ds = xr.open_dataset\\('/home/fils/src/Projects/earthcube/doos/projects/CCHDO/33RR20220430_bottle.nc'\\); print\\('Attrs:', list\\(ds.attrs.keys\\(\\)\\)\\); print\\('Vars:', list\\(ds.data_vars.keys\\(\\)\\)\\)\")",
+      "Bash(/home/fils/src/Projects/earthcube/doos/.venv/bin/python -m pip list)",
+      "Bash(/home/fils/src/Projects/earthcube/doos/.venv/bin/python *)",
+      "Bash(pip show *)",
+      "Bash(/home/fils/src/Projects/earthcube/doos/.venv/bin/pip show *)",
+      "Bash(uv add *)",
+      "Bash(python3 *)",
+      "WebFetch(domain:docs.mlcommons.org)",
+      "Bash(git -C /home/fils/src/Projects/earthcube/doos add projects/CCHDO/SHACL_AF/nc_metadata_to_croissant.ttl projects/CCHDO/nc_to_croissant.py projects/CCHDO/33RR20220430_bottle.croissant.jsonld)",
+      "Bash(git -C /home/fils/src/Projects/earthcube/doos commit -m ' *)",
+      "Bash(git -C /home/fils/src/Projects/earthcube/doos add projects/CCHDO/README.md)"
+    ]
+  }
+}

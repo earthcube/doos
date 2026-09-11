@@ -33,7 +33,7 @@ Host
   | OBIS | `projects/OBIS/output.nq` |
   | AODN | `projects/AODN/output/output.json` |
   | BODC | `projects/BODC/output/bodc_harvest.nq` |
-  | BCO-DMO | `skills/DOOS_bundle/doos-bco-dmo-index/output/output.nt` |
+  | BCO-DMO | `projects/BCO-DMO/output/output.nt` |
 
 ## Quickstart
 

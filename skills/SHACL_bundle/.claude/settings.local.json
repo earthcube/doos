@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/fils/src/Projects/earthcube/doos/scripts/**)",
+      "Read(//home/fils/src/Projects/earthcube/doos/**)",
+      "Bash(uv run python -c ' *)",
+      "Read(//tmp/**)",
+      "Bash(uv run --project /home/fils/src/Projects/earthcube/doos python -c ' *)",
+      "Bash(mkdir -p examples)",
+      "Bash(cp /tmp/s2test/01_extracted.json examples/01_extracted.example.json)",
+      "Bash(cp /tmp/s2test/02_graph.ttl examples/02_graph.example.ttl)",
+      "Bash(uv add *)",
+      "Bash(uv run *)",
+      "Bash(env -u LLM_API_KEY -u OPENROUTER_API_KEY uv run python -m orchestration.run --check-llm)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(LLM_TIMEOUT=30 LLM_MAX_RETRIES=0 timeout 200 uv run python -m orchestration.run \"https://www.usgs.gov/data/tabular-geochronologic-geochemical-and-isotopic-data-igneous-rocks-lane-mountain-area-san\" --run-id usgs_to --runs-dir /tmp/doos_runs)",
+      "Bash(LLM_DISABLE_THINKING=1 timeout 200 uv run python -m orchestration.run \"https://www.usgs.gov/data/tabular-geochronologic-geochemical-and-isotopic-data-igneous-rocks-lane-mountain-area-san\" --run-id usgs_nothink --runs-dir /tmp/doos_runs)",
+      "Bash(LLM_DISABLE_THINKING=1 LLM_TIMEOUT=120 timeout 240 uv run python -m orchestration.run \"https://www.usgs.gov/data/tabular-geochronologic-geochemical-and-isotopic-data-igneous-rocks-lane-mountain-area-san\" --run-id usgs_final --runs-dir /tmp/doos_runs --quiet)"
+    ]
+  }
+}

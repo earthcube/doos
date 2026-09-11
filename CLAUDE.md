@@ -29,7 +29,7 @@ The end goal is a federated SPARQL graph that exposes a consistent **depth profi
 | `projects/CCHDO/` | CCHDO bottle NetCDF | Intermediate RDF + SHACL-AF rules → schema.org / Croissant |
 | `projects/CIOOS/` | Canadian Integrated Ocean Observing System | Early CKAN → schema.org (exploratory) |
 | `projects/ERDDAP/` | NOAA OSMC / ERDDAP | Notes and harvested JSON-LD examples only — not a transform pipeline |
-| `skills/DOOS_bundle/doos-bco-dmo-index/` | BCO-DMO | ERDDAP search + ISO depth scan → merged N-Triples |
+| `projects/BCO-DMO/` | BCO-DMO | Facade: ERDDAP + ISO depth scan → N-Triples (skill implements) |
 
 Candidate sources not yet subprojects (see `docs/sources.md`): EMODNET, OceanSITES, marine-regions, Australian Antarctic Data Group.
 
@@ -40,7 +40,12 @@ When working inside a subproject, prefer that directory's own `README.md` (and `
 `pyproject.toml` requires Python `>=3.13`. Two dependency manifests coexist and intentionally differ:
 
 - `requirements.txt` — minimal RDF/validation core (`geopandas pandas rdflib pyshacl morph_kgc pyld pyarrow`). Enough for the validators and most `projects/` transforms.
-- `pyproject.toml` — fuller set: `dspy`, `langchain-openai`, `langchain-experimental`, `langgraph`, `playwright`, `pyrudof`, `pyshacl`, `rdflib`, `pyld`, `saxonche` (XSLT), `sparqlwrapper`, `tavily`, `netcdf4`, `ipykernel`, etc. Needed for `text2query/`, the pyrudof validator, AODN XSLT, CCHDO NetCDF, and `skills/SHACL_bundle/` orchestration.
+- `pyproject.toml` — fuller set: `dspy`, `langchain-openai`, `langchain-experimental`, `langgraph`, `playwright`, `pyrudof`, `pyshacl`, `rdflib`, `pyld`, `saxonche` (XSLT), `sparqlwrapper`, `tavily`, `netcdf4`, `ipykernel`, `mcp[cli]`, `shacl` (pwin engine), etc. Needed for `text2query/`, the pyrudof validator, AODN XSLT, CCHDO NetCDF, Discovery MCP, `scripts/shaclTest/`, and `skills/SHACL_bundle/` orchestration.
+
+Slim alternative manifests (images / one-off installs, not a third “full” stack):
+
+- `requirements-mcp.txt` — Discovery MCP only (`mcp[cli]`, `SPARQLWrapper`)
+- `requirements-load.txt` — Oxigraph loader (`requests`, `PyYAML`, `tqdm`, `pyoxigraph`)
 
 ```bash
 uv venv .venv --python 3.13
@@ -56,6 +61,8 @@ Subprojects may carry their own `pyproject.toml` / `.venv` and extra deps not in
 - `skills/DOOS_bundle/doos-bco-dmo-index/assets/requirements.txt` — `requests`, `tqdm`, `pyld`, `pyoxigraph`
 - `scripts/text2query/` also needs `rich`, `diskcache`, `aiohttp` (not always declared in root manifests)
 - SSSOM transform needs `pyyaml`, `jsonpath-ng`, `ply`
+- `src/doos_pipeline/` needs PyYAML (same as the Oxigraph loader) plus core RDF
+- `scripts/reportPdf/requirements.txt` — `reportlab` (PDF consumer only)
 
 ## Commands
 
@@ -91,6 +98,26 @@ docker build -t doos-oxigraph build/
 docker run --rm --network host doos-oxigraph   # or -p 7878:7878
 python scripts/loadToOxigraph/loadToOxigraph.py --wait
 python scripts/loadToOxigraph/loadToOxigraph.py --wait --export output/doos.nq
+python scripts/loadToOxigraph/loadToOxigraph.py --wait --alias   # DepBelowSurf name aliases
+```
+
+**Pipeline wrapper** (`PYTHONPATH=src`, same as Discovery MCP):
+```bash
+export PYTHONPATH=src
+python -m doos_pipeline list
+python -m doos_pipeline run --provider aodn
+python -m doos_pipeline run --all                  # local sample defaults only
+python -m doos_pipeline run --all --include-heavy  # also ARGO / OBIS / BODC / BCO-DMO
+python -m doos_pipeline report --provider cchdo
+python -m doos_pipeline validate --provider aodn
+python -m doos_pipeline load -- --wait --alias
+python scripts/reportPdf/report_to_pdf.py runs/doos_pipeline/<utc>/report.jsonld
+```
+
+**Experimental Dataset SHACL** (pwin/SHACL_Engine; not production):
+```bash
+python scripts/shaclTest/validate_datasets.py --limit 10
+python scripts/shaclTest/validate_datasets.py --shapes SHACL/depth_one.ttl --limit 20
 ```
 
 **Pytest** (dev dep; only a real suite under the SHACL decoder bundle today):
@@ -124,6 +151,24 @@ See `src/mcp_server/README.md` and `deployment/README.md`.
 4. **Export** — N-Triples / N-Quads / Turtle for SPARQL endpoints
 5. **Load / query** — load into Oxigraph or federated QLever; query via `SPARQL/`, `doos-sparql`, or `text2query/`
 
+Optional wrapper around steps 2–5 without changing provider CLIs: `src/doos_pipeline/` (see below). PDF rendering of wrapper metrics is `scripts/reportPdf/` (does not re-scan RDF).
+
+### Pipeline wrapper (`src/doos_pipeline/`)
+
+Subprocesses the **existing** per-provider scripts. It does not reimplement ingest, mapping, or RDF serialization, and it does not edit `projects/`. Registry: `src/doos_pipeline/config.yaml` (`cwd`, `script`, `default_args`, `default_steps`, `outputs`, `run_on_all`). Override the repo root with `DOOS_ROOT` if needed.
+
+| Command | Role |
+|---|---|
+| `list` | Registry status and whether published outputs exist |
+| `run` | Invoke a provider step (args after `--` replace that step's `default_args`) |
+| `report` | JSON-LD metrics over already-published files (`report.jsonld`) |
+| `validate` | SHACL on published files (does not rewrite them; default `SHACL/depth_one.ttl`) |
+| `load` | Forwards to `scripts/loadToOxigraph/loadToOxigraph.py` |
+
+`run --all` without `--include-heavy` only runs providers with `run_on_all: true` (AODN sample XML, CCHDO sample NetCDF, CIOOS example). Catalog-scale / network jobs (ARGO, OBIS, BODC harvest, BCO-DMO) stay off unless `--include-heavy`. ERDDAP is listed but `runnable: false`.
+
+Each `run` writes `runs/doos_pipeline/<utc>/run.json` and, unless `--no-report` or `--dry-run`, a sibling `report.jsonld` (`@type` `PipelineReport` or, with `--all`, `PipelineReportSet`). That file is the metrics contract for dashboards or PDF; this package does not generate PDF or HTML.
+
 ### Per-provider transform approaches
 
 | Provider | Approach | Entry point |
@@ -133,7 +178,7 @@ See `src/mcp_server/README.md` and `deployment/README.md`.
 | **BODC** | No field transform — Linked Systems UK already publishes schema.org JSON-LD with `DepBelowSurf`; inventory, harvest, SHACL, export | `projects/BODC/scripts/Bodc*.py` |
 | **AODN** | ISO 19115-3 → ISO 19139 (Saxon) → schema.org JSON-LD (lxml XSLT) → optional N-Triples; optional depth min/max from tabular distributions | `projects/AODN/run_pipeline.py`, `depth_from_distribution.py` |
 | **CCHDO** | NetCDF attrs → intermediate `cchdo:` RDF → `pyshacl.shacl_rules()` SHACL-AF SPARQL CONSTRUCT → schema.org or MLCommons Croissant | `projects/CCHDO/nc_to_jsonld.py`, `nc_to_croissant.py` |
-| **BCO-DMO** | ERDDAP catalog/search inventory + ISO 19115 depth/pressure scan → in-memory schema.org JSON-LD → merged N-Triples | `skills/DOOS_bundle/doos-bco-dmo-index/assets/run_pipeline.py` |
+| **BCO-DMO** | ERDDAP catalog/search inventory + ISO 19115 depth/pressure scan → in-memory schema.org JSON-LD → merged N-Triples (skill); facade publishes `output.nt` | `projects/BCO-DMO/run_pipeline.py` |
 | **CIOOS** | CKAN `package_show` → schema.org Dataset (exploratory; depth incomplete) | `projects/CIOOS/convert.py` |
 | **SSSOM (generic)** | `.sssom.tsv` with `source_jsonpath`/`target_jsonpath` drives flat-JSON → schema.org JSON-LD (no field names hard-coded) | `mapping/SSSOM/sssom_to_jsonld.py` |
 
@@ -145,30 +190,36 @@ Typical published outputs (see `projects/README.md`, `projects/dataLocations.md`
 | OBIS | `projects/OBIS/output.nq` |
 | BODC | `projects/BODC/output/bodc_harvest.nq`, `bodc_validated.nq` |
 | AODN | `projects/AODN/output/`, `demo-output/` |
-| BCO-DMO | `skills/DOOS_bundle/doos-bco-dmo-index/output/output.nt` (publish from `runs/<ts>/output.nt`) |
+| BCO-DMO | `projects/BCO-DMO/output/output.nt` (publish from `runs/<ts>/output.nt`) |
 | CCHDO | per-file `*.schema.shacl.jsonld`, `*.croissant.jsonld` |
 
 ### Key directories
 
 | Path | Purpose |
 |---|---|
-| `projects/` | Per-provider subprojects (ARGO, OBIS, CCHDO, ERDDAP, AODN, BODC, CIOOS); see `projects/README.md` |
+| `projects/` | Per-provider subprojects (ARGO, OBIS, CCHDO, ERDDAP, AODN, BODC, CIOOS, BCO-DMO); see `projects/README.md` |
 | `projects/dataLocations.md` | Canonical provider output paths for loaders |
+| `projects/BCO-DMO/` | BCO-DMO indexer facade (`run_pipeline.py` → published `output/output.nt`); implementation in the skill |
 | `skills/DOOS_bundle/doos-bco-dmo-index/` | BCO-DMO ERDDAP + ISO depth → N-Triples (`assets/run_pipeline.py`) |
 | `mapping/SSSOM/` | SSSOM-driven flat-JSON → schema.org JSON-LD (`kobo/` = GAIA Kobo form mapping) |
 | `mapping/Croissant/` | MLCommons Croissant / GeoCroissant JSON-LD samples and notes |
+| `mapping/AODN`, `mapping/ARGO` | Symlinks into `projects/`; edit the project dirs |
 | `scripts/shapeValidator/` | SHACL validation suite (pyshacl, pyrudof, parallel Parquet) |
 | `scripts/shapeValidator/defs/` | Shared utilities: `getGraphs.py`, `getConstruct.py`, `getShape.py`, `shaclValidator.py`, `parquet_streaming.py` |
+| `scripts/shaclTest/` | Experimental Dataset CONSTRUCT + pwin/SHACL_Engine (`validate_datasets.py`); not the production validator |
 | `scripts/loadToOxigraph/` | YAML-driven load of provider outputs into Oxigraph (`oxigraph_load.yaml`) |
 | `scripts/SPARQLupdate/` | `insertUpdates.py` — SPARQL UPDATE inserts into a graph endpoint |
 | `scripts/text2query/` | DSPy natural language → SPARQL (`text2SPARQL.py`) |
+| `scripts/reportPdf/` | Render a `doos_pipeline` `report.jsonld` to PDF (`report_to_pdf.py`) |
 | `scripts/sparqlQueryl.py` | Run a `.rq` file against an endpoint → pandas DataFrame |
 | `build/Dockerfile` | In-memory Oxigraph 0.5.x image (`doos-oxigraph`, port 7878, union default graph) |
 | `SHACL/` | OIH depth / Google Dataset shape files (`.ttl`) |
-| `SPARQL/` | Reusable SPARQL queries (`.rq`) and update scripts |
+| `SPARQL/` | Reusable SPARQL queries (`.rq`) and `alias_depthbelowsurf.ru` UPDATE |
 | `skills/DOOS_bundle/` | AI skills: `doos-bco-dmo-index`, `doos-sparql`, `doos-fair-interview`, `doos-graph-inspect`, `doos-rocrate-from-url` |
 | `skills/SHACL_bundle/` | Six-stage decoder pipeline (`decoder-*`) + LangGraph `orchestration/` |
 | `src/mcp_server/` | DOOS Discovery MCP — SPARQL tools, graph context resources, prompts (see README there) |
+| `src/doos_pipeline/` | Wrapper CLI over existing provider generators (does not reimplement ingest/mapping); registry `config.yaml`; writes `runs/doos_pipeline/` |
+| `runs/` | Gitignored wrapper run manifests (`runs/doos_pipeline/<utc>/`) |
 | `build/Dockerfile.mcp` | Slim MCP image |
 | `build/Dockerfile.load` | One-shot Oxigraph loader image |
 | `deployment/docker-compose.yml` | Oxigraph + load + MCP stack |
@@ -197,8 +248,9 @@ Deps: `mcp[cli]`, `SPARQLWrapper` (in `pyproject.toml`). See `src/mcp_server/REA
 - **`validateToRudof.py`** — Rust-based pyrudof engine; faster but no regex backreferences → use `SHACL/ERDDAP_simple.ttl` not `ERDDAP.ttl`
 - **`validateToParquetRudof.py`** — pyrudof engine with the parallel/Parquet harness (same `ERDDAP_simple.ttl` caveat)
 - **`benchmark_shacl_engines.py`** — compares the three engines on the same input
+- **`scripts/shaclTest/validate_datasets.py`** — experimental: CONSTRUCT N `schema:Dataset` neighborhoods, validate with pwin/SHACL_Engine (`import shacl`). Not a named-graph batch runner; use `shapeValidator/` for production OIH checks.
 
-All take `<endpoint> <shapefile.ttl>`; the endpoint is queried for named graphs which are each validated against the shapes.
+The `shapeValidator/` scripts take `<endpoint> <shapefile.ttl>`; the endpoint is queried for named graphs which are each validated against the shapes.
 
 ### SHACL shape files
 
@@ -222,6 +274,8 @@ Decoder shape (under skills):
 ### Local Oxigraph load
 
 `scripts/loadToOxigraph/oxigraph_load.yaml` maps provider outputs to named graphs (e.g. `urn:doos:argo`, `urn:doos:obis`, `urn:doos:aodn`, `urn:doos:bodc`, `urn:doos:bcodmo`). Triple formats require a `graph:`; quad formats may keep embedded graph names or collapse into one provider graph. Prefer `--network host` when Docker port mapping stalls HTTP responses.
+
+`--alias` POSTs `SPARQL/alias_depthbelowsurf.ru` after load: for `variableMeasured` PropertyValues whose `schema:name` is a known depth alias (`depth`, `DEPTH`, `depth_m`, …), INSERT an extra `schema:name "DepBelowSurf"` in the same named graph. Original names are left in place. Re-running is safe (`FILTER NOT EXISTS`). Also: `SPARQL/alias_depthbelowsurf.sh`.
 
 ## Code conventions
 
@@ -280,7 +334,7 @@ Output formats: N-Triples (`.nt`), N-Quads (`.nq`), Turtle (`.ttl`).
 
 Skills under `skills/DOOS_bundle/` — use when relevant:
 
-- `doos-bco-dmo-index` — BCO-DMO ERDDAP search + ISO depth scan → merged `output.nt` (prefer `assets/run_pipeline.py`)
+- `doos-bco-dmo-index` — BCO-DMO ERDDAP search + ISO depth scan (implementation). Indexer facade: `projects/BCO-DMO/run_pipeline.py` (publishes `output/output.nt`)
 - `doos-sparql` — curated schema.org SPARQL templates or ad-hoc SPARQL against an endpoint
 - `doos-fair-interview` — guided FAIR practices interview (person/repository), not automated scoring
 - `doos-graph-inspect` — experimental MCP/graph inspection (prefer `doos-sparql` for SPARQL)
@@ -291,6 +345,6 @@ Also: `skills/SHACL_bundle/` — decoder pipeline (URL → extract → lift RDF 
 ## Verification after changes
 
 1. Lint/format/typecheck (`ruff`, `black`, `mypy`) where applicable
-2. Run affected scripts: `python path/to/script.py --help`
+2. Run affected scripts: `python path/to/script.py --help` (wrapper: `PYTHONPATH=src python -m doos_pipeline --help`)
 3. Manual test RDF/SHACL output (or SHACL_bundle pytest for decoder changes)
 4. `git diff` + `git status` before any commit (only commit when the user asks)
