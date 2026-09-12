@@ -513,21 +513,19 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         <xsl:variable name="awardname" select="''"/>
         <xsl:variable name="awardURL" select="''"/>
         <xsl:variable name="keywords">
-            <xsl:for-each select="//gmd:descriptiveKeywords">
-                <!-- extract one or more keywords from each keywords group -->
-                <!-- use child::node() to catch CharacterString and Anchor -->
-                <xsl:for-each select="gmd:MD_Keywords/gmd:keyword">
+            <!-- Flatten keywords; commas only between actually written entries (no empty-group separators). -->
+            <xsl:variable name="fromDescriptive">
+                <xsl:for-each select="//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword">
+                    <!-- use child::node() to catch CharacterString and Anchor -->
+                    <xsl:if test="position() &gt; 1">
+                        <xsl:text>, </xsl:text>
+                    </xsl:if>
                     <xsl:text>"</xsl:text>
                     <xsl:value-of select="translate(normalize-space(child::node()/text()),'&quot;' , '')"/>
                     <xsl:text>"</xsl:text>
-                    <xsl:if test="following-sibling::gmd:keyword">
-                        <xsl:text>, </xsl:text>
-                    </xsl:if>
                 </xsl:for-each>
-                <xsl:if test="following::gmd:descriptiveKeywords">
-                    <xsl:text>, </xsl:text>
-                </xsl:if>
-            </xsl:for-each>
+            </xsl:variable>
+            <xsl:value-of select="$fromDescriptive"/>
 
             <xsl:variable name="subjectsString">
                 <xsl:for-each select="//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword">
@@ -535,13 +533,15 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                 </xsl:for-each>
             </xsl:variable>
 
+            <!-- Geo-identifier keywords: leading comma only when the array is already non-empty. -->
             <xsl:for-each
-                select="//gmd:extent//gmd:geographicIdentifier//gmd:code/gco:CharacterString">
-                <xsl:if test="not(contains($subjectsString, text()))">
-                    <xsl:text>,&#10;"</xsl:text>
-                    <xsl:value-of select="normalize-space(text())"/>
-                    <xsl:text>"</xsl:text>
+                select="//gmd:extent//gmd:geographicIdentifier//gmd:code/gco:CharacterString[not(contains($subjectsString, text()))]">
+                <xsl:if test="string-length(normalize-space($fromDescriptive)) &gt; 0 or position() &gt; 1">
+                    <xsl:text>,&#10;</xsl:text>
                 </xsl:if>
+                <xsl:text>"</xsl:text>
+                <xsl:value-of select="normalize-space(text())"/>
+                <xsl:text>"</xsl:text>
             </xsl:for-each>
         </xsl:variable>
 
@@ -561,9 +561,8 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                     <xsl:text>"URL": "</xsl:text>
                     <xsl:value-of select="normalize-space(@xlink:href)"/>
                     <xsl:text>"</xsl:text>
-                    <xsl:if test="child::*">
-                        <xsl:text>,&#10;       </xsl:text>
-                    </xsl:if>
+                    <!-- URL always followed by name and/or description — always emit comma. -->
+                    <xsl:text>,&#10;       </xsl:text>
                 </xsl:if>
                 <xsl:for-each select="child::*">
                     <!-- there should be only one -->
@@ -767,7 +766,8 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                 <xsl:with-param name="pfor" select="$format"/>
                 <xsl:with-param name="prp" select="$distributorContact"/>
             </xsl:call-template>
-            <xsl:if test="following::gmd:onLine">
+            <!-- Only comma between transferOptions onlines actually emitted (not any following::gmd:onLine). -->
+            <xsl:if test="position() != last()">
                 <xsl:text>,&#10;</xsl:text>
             </xsl:if>
         </xsl:for-each>
@@ -791,8 +791,7 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
                 <xsl:with-param name="pfor" select="$format"/>
                 <xsl:with-param name="prp" select="$distributorContact"/>
             </xsl:call-template>
-            <xsl:if
-                test="following::gmd:distributorTransferOptions//gmd:onLine or parent::node()/following-sibling::gmd:onLine">
+            <xsl:if test="position() != last()">
                 <xsl:text>,&#10;</xsl:text>
             </xsl:if>
         </xsl:for-each>
@@ -1338,7 +1337,9 @@ ISO The template includes root element xpath for ISO19139 and ISO19139-1 (see li
         </xsl:if>
         <xsl:if test="string-length($distName) > 0">
             <xsl:text>,&#10;      "name": "</xsl:text>
-            <xsl:value-of select="normalize-space($distName)"/>
+            <xsl:call-template name="json-escape">
+                <xsl:with-param name="text" select="normalize-space($distName)"/>
+            </xsl:call-template>
             <xsl:if test="string-length($accessURL) = 0">
                 <xsl:value-of
                     select="'. Invalid URL provided in original metadata, see the @id string'"/>
